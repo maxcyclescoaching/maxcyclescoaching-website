@@ -8,21 +8,26 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative h-[600px] bg-gradient-to-r from-primary to-blue-900 animate-fade-in">
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-          <div className="text-white">
-            <div className="flex items-center justify-center mb-6">
-              <img 
-                src="/lovable-uploads/16a35b81-27fd-4d26-bdfb-c50116d5f665.png" 
-                alt="MaxCyclesCoaching Logo" 
-                className="h-20 w-auto"
-              />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+      <section className="relative h-screen bg-gradient-to-r from-primary to-blue-900 animate-fade-in">
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1501854140801-50d01698950b" 
+            alt="Hero Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
+        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+          <div className="text-center text-white">
+            <img 
+              src="/lovable-uploads/16a35b81-27fd-4d26-bdfb-c50116d5f665.png" 
+              alt="MaxCyclesCoaching Logo" 
+              className="h-32 w-auto mx-auto mb-8"
+            />
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
               MaxCyclesCoaching
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-2xl">
+            <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
               Professionelles Radsport-Coaching, maßgeschneidert auf deine Ziele. Von Anfängern bis zu Elite-Athleten.
             </p>
             <Button size="lg" className="bg-secondary hover:bg-orange-600">
