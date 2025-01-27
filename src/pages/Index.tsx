@@ -12,8 +12,15 @@ const Index = () => {
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-white">
+            <div className="flex items-center justify-center mb-6">
+              <img 
+                src="/lovable-uploads/16a35b81-27fd-4d26-bdfb-c50116d5f665.png" 
+                alt="MaxCyclesCoaching Logo" 
+                className="h-20 w-auto"
+              />
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Max Cycles Coaching
+              MaxCyclesCoaching
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-2xl">
               Professionelles Radsport-Coaching, maßgeschneidert auf deine Ziele. Von Anfängern bis zu Elite-Athleten.

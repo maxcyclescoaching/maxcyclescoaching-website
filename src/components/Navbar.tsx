@@ -9,8 +9,13 @@ export const Navbar = () => {
     <nav className="bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          <div className="flex items-center">
-            <span className="text-xl font-bold text-primary">Max Cycles Coaching</span>
+          <div className="flex items-center space-x-2">
+            <img 
+              src="/lovable-uploads/16a35b81-27fd-4d26-bdfb-c50116d5f665.png" 
+              alt="MaxCyclesCoaching Logo" 
+              className="h-8 w-auto"
+            />
+            <span className="text-xl font-bold text-primary">MaxCyclesCoaching</span>
           </div>
           
           {/* Desktop Menu */}
