@@ -11,9 +11,9 @@ export const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/16a35b81-27fd-4d26-bdfb-c50116d5f665.png" 
+              src="/lovable-uploads/4a5f8ff2-226b-4518-a5d4-742d9e383d4f.png" 
               alt="MaxCyclesCoaching Logo" 
-              className="h-12 w-auto" // Keeping the increased size
+              className="h-12 w-auto" // Increased from h-8 to h-12
             />
             <span className="text-[#003366] text-xl sm:text-2xl font-bold">MaxCyclesCoaching</span>
           </div>
