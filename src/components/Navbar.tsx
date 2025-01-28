@@ -13,24 +13,24 @@ export const Navbar = () => {
             <img 
               src="/lovable-uploads/16a35b81-27fd-4d26-bdfb-c50116d5f665.png" 
               alt="MaxCyclesCoaching Logo" 
-              className="h-10 w-auto"
+              className="h-8 w-auto"
             />
-            <span className="text-2xl font-bold text-primary">MaxCyclesCoaching</span>
+            <span className="text-[#003366] text-xl sm:text-2xl font-bold">MaxCyclesCoaching</span>
           </div>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-gray-600 hover:text-primary">Über mich</a>
-            <a href="#philosophy" className="text-gray-600 hover:text-primary">Philosophie</a>
-            <a href="#services" className="text-gray-600 hover:text-primary">Leistungen</a>
-            <Button variant="default">Kontakt</Button>
+            <a href="#about" className="text-[#003366] hover:text-opacity-80">Über mich</a>
+            <a href="#philosophy" className="text-[#003366] hover:text-opacity-80">Philosophie</a>
+            <a href="#services" className="text-[#003366] hover:text-opacity-80">Leistungen</a>
+            <Button variant="default" className="bg-[#003366] hover:bg-[#002244]">Kontakt</Button>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-600 hover:text-primary focus:outline-none"
+              className="text-[#003366] hover:text-opacity-80 focus:outline-none"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -41,10 +41,10 @@ export const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <a href="#about" className="block px-3 py-2 text-gray-600 hover:text-primary">Über mich</a>
-              <a href="#philosophy" className="block px-3 py-2 text-gray-600 hover:text-primary">Philosophie</a>
-              <a href="#services" className="block px-3 py-2 text-gray-600 hover:text-primary">Leistungen</a>
-              <Button variant="default" className="w-full mt-2">Kontakt</Button>
+              <a href="#about" className="block px-3 py-2 text-[#003366] hover:text-opacity-80">Über mich</a>
+              <a href="#philosophy" className="block px-3 py-2 text-[#003366] hover:text-opacity-80">Philosophie</a>
+              <a href="#services" className="block px-3 py-2 text-[#003366] hover:text-opacity-80">Leistungen</a>
+              <Button variant="default" className="w-full mt-2 bg-[#003366] hover:bg-[#002244]">Kontakt</Button>
             </div>
           </div>
         )}
