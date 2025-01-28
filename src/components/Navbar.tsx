@@ -11,7 +11,7 @@ export const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/16a35b81-27fd-4d26-bdfb-c50116d5f665.png" 
+              src="/lovable-uploads/8bf710a7-19f2-42fd-99b9-beed022a88fe.png" 
               alt="MaxCyclesCoaching Logo" 
               className="h-8 w-auto"
             />
