@@ -11,7 +11,7 @@ const Index = () => {
       <section className="relative h-screen bg-[#003366] animate-fade-in">
         <div className="absolute inset-0">
           <img 
-            src="/lovable-uploads/4a5f8ff2-226b-4518-a5d4-742d9e383d4f.png" 
+            src="/lovable-uploads/hero_img.png" 
             alt="Hero Background" 
             className="w-full h-full object-cover"
           />
@@ -20,7 +20,7 @@ const Index = () => {
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
           <div className="text-center text-white">
             <img 
-              src="/lovable-uploads/16a35b81-27fd-4d26-bdfb-c50116d5f665.png" 
+              src="/lovable-uploads/logo_white.png" 
               alt="MaxCyclesCoaching Logo" 
               className="h-24 sm:h-32 w-auto mx-auto mb-6 sm:mb-8"
             />
