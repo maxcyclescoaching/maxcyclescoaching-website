@@ -11,7 +11,7 @@ const Index = () => {
       <section className="relative h-screen bg-[#003366] animate-fade-in">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1533740566848-5f7d3e04e3d7" 
+            src="/lovable-uploads/4a5f8ff2-226b-4518-a5d4-742d9e383d4f.png" 
             alt="Hero Background" 
             className="w-full h-full object-cover"
           />
