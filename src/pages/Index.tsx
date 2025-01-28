@@ -20,7 +20,7 @@ const Index = () => {
         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
           <div className="text-center text-white">
             <img 
-              src="/lovable-uploads/8bf710a7-19f2-42fd-99b9-beed022a88fe.png" 
+              src="/lovable-uploads/16a35b81-27fd-4d26-bdfb-c50116d5f665.png" 
               alt="MaxCyclesCoaching Logo" 
               className="h-24 sm:h-32 w-auto mx-auto mb-6 sm:mb-8"
             />
