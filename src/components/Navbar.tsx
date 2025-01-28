@@ -10,12 +10,13 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/logo_black.png" 
-              alt="MaxCyclesCoaching Logo" 
-              className="h-12 w-auto" // Increased from h-8 to h-12
-            />
-            <span className="text-[#003366] text-xl sm:text-2xl font-bold">MaxCyclesCoaching</span>
+            <a href="/">
+              <img 
+                src="/lovable-uploads/logo_black.png" 
+                alt="MaxCyclesCoaching Logo" 
+                className="h-12 w-auto" // Increased from h-8 to h-12
+              />
+            </a>
           </div>
           
           {/* Desktop Menu */}
