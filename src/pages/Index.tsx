@@ -30,9 +30,11 @@ const Index = () => {
             <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
               Professionelles Radsport-Coaching, maßgeschneidert auf deine Ziele. Von Anfängern bis zu Elite-Athleten.
             </p>
-            <Button size="lg" className="bg-[#003366] hover:bg-[#002244] text-white">
-              Starte jetzt <ArrowRight className="ml-2" />
-            </Button>
+            <a href="#about">
+              <Button size="lg" className="bg-[#003366] hover:bg-[#002244] text-white">
+                Starte jetzt <ArrowRight className="ml-2" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
