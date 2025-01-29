@@ -14,7 +14,7 @@ export const Navbar = () => {
               <img 
                 src="/lovable-uploads/logo_black.png" 
                 alt="MaxCyclesCoaching Logo" 
-                className="h-16 w-auto"
+                className="h-14 w-auto"
               />
             </a>
           </div>
@@ -24,7 +24,9 @@ export const Navbar = () => {
             <a href="#about" className="text-[#003366] hover:text-opacity-80">Über mich</a>
             <a href="#philosophy" className="text-[#003366] hover:text-opacity-80">Philosophie</a>
             <a href="#services" className="text-[#003366] hover:text-opacity-80">Leistungen</a>
-            <Button variant="default" className="bg-[#003366] hover:bg-[#002244]">Kontakt</Button>
+            <a href="#contact">
+              <Button variant="default" className="bg-[#003366] hover:bg-[#002244]">Kontakt</Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -45,7 +47,9 @@ export const Navbar = () => {
               <a href="#about" className="block px-3 py-2 text-[#003366] hover:text-opacity-80">Über mich</a>
               <a href="#philosophy" className="block px-3 py-2 text-[#003366] hover:text-opacity-80">Philosophie</a>
               <a href="#services" className="block px-3 py-2 text-[#003366] hover:text-opacity-80">Leistungen</a>
-              <Button variant="default" className="w-full mt-2 bg-[#003366] hover:bg-[#002244]">Kontakt</Button>
+              <a href="#contact">
+                <Button variant="default" className="w-full mt-2 bg-[#003366] hover:bg-[#002244]">Kontakt</Button>
+              </a>
             </div>
           </div>
         )}
