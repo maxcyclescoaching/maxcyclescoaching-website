@@ -14,7 +14,7 @@ export const Navbar = () => {
               <img 
                 src="/lovable-uploads/logo_black.png" 
                 alt="MaxCyclesCoaching Logo" 
-                className="h-14 w-auto" // Increased from h-12 to h-14
+                className="h-16 w-auto"
               />
             </a>
           </div>
