@@ -90,14 +90,44 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
             Leistungen
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <service.icon className="w-12 h-12 text-secondary mb-4" />
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
-              </div>
-            ))}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* 1:1 Coaching */}
+            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-2xl font-semibold mb-6 text-[#003366]">1:1 Coaching</h3>
+              <ul className="space-y-4 text-left">
+                <li className="flex items-start">
+                  <Target className="w-6 h-6 text-[#003366] mt-1 mr-3 flex-shrink-0" />
+                  <span>Individueller Trainingsplan basierend auf deinen Zielen und deinem Zeitplan</span>
+                </li>
+                <li className="flex items-start">
+                  <Users className="w-6 h-6 text-[#003366] mt-1 mr-3 flex-shrink-0" />
+                  <span>Regelmäßiges Feedback und Anpassungen deines Trainingsplans</span>
+                </li>
+                <li className="flex items-start">
+                  <Bike className="w-6 h-6 text-[#003366] mt-1 mr-3 flex-shrink-0" />
+                  <span>Direkter Zugang zu professioneller Coaching-Unterstützung</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Leistungsdiagnostik */}
+            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-2xl font-semibold mb-6 text-[#003366]">Individuelle Leistungsdiagnostik</h3>
+              <ul className="space-y-4 text-left">
+                <li className="flex items-start">
+                  <Target className="w-6 h-6 text-[#003366] mt-1 mr-3 flex-shrink-0" />
+                  <span>Detaillierte Analyse deiner Trainingsdaten</span>
+                </li>
+                <li className="flex items-start">
+                  <Users className="w-6 h-6 text-[#003366] mt-1 mr-3 flex-shrink-0" />
+                  <span>Optimierung der Leistung durch datenbasierte Erkenntnisse</span>
+                </li>
+                <li className="flex items-start">
+                  <Bike className="w-6 h-6 text-[#003366] mt-1 mr-3 flex-shrink-0" />
+                  <span>Kontinuierliche Verfolgung deiner Fortschritte</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -117,24 +147,6 @@ const Index = () => {
     </div>
   );
 };
-
-const services = [
-  {
-    icon: Target,
-    title: "Individueller Trainingsplan",
-    description: "Maßgeschneiderte Trainingsprogramme, die auf deine spezifischen Ziele, deinen Zeitplan und dein aktuelles Fitnesslevel abgestimmt sind."
-  },
-  {
-    icon: Users,
-    title: "Persönliches Coaching",
-    description: "Regelmäßiges Feedback und Anpassungen deines Trainingsplans mit direktem Zugang zu professioneller Coaching-Unterstützung."
-  },
-  {
-    icon: Bike,
-    title: "Leistungsanalyse",
-    description: "Detaillierte Analyse deiner Trainingsdaten zur Optimierung der Leistung und Verfolgung deiner Fortschritte."
-  }
-];
 
 const achievements = [
   "Lizenzierter Radsport-Trainer",
