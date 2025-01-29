@@ -48,9 +48,11 @@ const Index = () => {
               <p className="text-gray-600 mb-6">
                 Mit umfangreicher Erfahrung im Wettkampf-Radsport und als Coach widme ich mich der Entwicklung von Radfahrern aller Leistungsstufen. Ob du dich auf deine erste Sportveranstaltung vorbereitest oder Podiumsplätze anstrebst - mein personalisierter Coaching-Ansatz verbindet wissenschaftliche Trainingsprinzipien mit praktischer Erfahrung.
               </p>
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
-                Mehr über meinen Ansatz
-              </Button>
+              <a href="#philosophy">
+                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+                  Mehr über meinen Ansatz
+                </Button>
+              </a>
             </div>
             <div className="bg-accent rounded-lg p-8">
               <ul className="space-y-4">
