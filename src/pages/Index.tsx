@@ -3,6 +3,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Bike, Target, Users } from "lucide-react";
 import { useState } from "react";
 import { ServiceDialog } from "@/components/ServiceDialog";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { useToast } from "@/components/ui/use-toast";
 
 const Index = () => {
   const [isPhilosophyOpen, setIsPhilosophyOpen] = useState(false);
@@ -229,55 +236,54 @@ const Index = () => {
 
         {/* Contact Section */}
         <section id="contact" className="py-20 bg-primary text-white" aria-label="Kontakt">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Kontakt</h2>
-          <p className="text-xl mb-8">
-            Bereit, deine Ziele zu erreichen? Lass uns gemeinsam daran arbeiten.
-          </p>
-          <Button size="lg" variant="secondary">
-            Kontaktiere mich
-          </Button>
-        </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Kontakt</h2>
+            <p className="text-xl mb-8 text-center">
+              Bereit, deine Ziele zu erreichen? Lass uns gemeinsam daran arbeiten.
+            </p>
+            
+            <ContactForm />
+          </div>
         </section>
-      </main>
 
-      {/* Footer Section */}
-      <footer className="bg-gray-100 py-6" role="contentinfo">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
-            <div>
-              © {new Date().getFullYear()} MaxCyclesCoaching. Alle Rechte vorbehalten.
-            </div>
-            <div className="mt-4 md:mt-0">
-              <a href="#" className="hover:text-gray-900">Impressum</a>
-              <span className="mx-2">|</span>
-              <a href="#" className="hover:text-gray-900">Datenschutz</a>
+        {/* Footer Section */}
+        <footer className="bg-gray-100 py-6" role="contentinfo">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+              <div>
+                © {new Date().getFullYear()} MaxCyclesCoaching. Alle Rechte vorbehalten.
+              </div>
+              <div className="mt-4 md:mt-0">
+                <a href="#" className="hover:text-gray-900">Impressum</a>
+                <span className="mx-2">|</span>
+                <a href="#" className="hover:text-gray-900">Datenschutz</a>
+              </div>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
 
-      {/* Dialogs */}
-      <ServiceDialog
-        isOpen={isPhilosophyOpen}
-        onClose={() => setIsPhilosophyOpen(false)}
-        title="Mein Coaching-Ansatz"
-        description="Mein Coaching-Ansatz basiert auf einer engen Zusammenarbeit mit jedem einzelnen Athleten. Durch die Kombination von wissenschaftlichen Trainingsprinzipien und praktischer Erfahrung entwickle ich maßgeschneiderte Trainingspläne, die optimal auf deine individuellen Ziele und Bedürfnisse abgestimmt sind."
-      />
+        {/* Dialogs */}
+        <ServiceDialog
+          isOpen={isPhilosophyOpen}
+          onClose={() => setIsPhilosophyOpen(false)}
+          title="Mein Coaching-Ansatz"
+          description="Mein Coaching-Ansatz basiert auf einer engen Zusammenarbeit mit jedem einzelnen Athleten. Durch die Kombination von wissenschaftlichen Trainingsprinzipien und praktischer Erfahrung entwickle ich maßgeschneiderte Trainingspläne, die optimal auf deine individuellen Ziele und Bedürfnisse abgestimmt sind."
+        />
 
-      <ServiceDialog
-        isOpen={isCoachingOpen}
-        onClose={() => setIsCoachingOpen(false)}
-        title="1:1 Coaching Details"
-        description="Das 1:1 Coaching bietet dir eine vollständig personalisierte Betreuung. Du erhältst einen auf dich zugeschnittenen Trainingsplan, der sich kontinuierlich an deine Fortschritte anpasst. Regelmäßige Feedback-Gespräche und Anpassungen des Plans gewährleisten eine optimale Entwicklung. Die monatliche Gebühr beträgt 99€, ohne Mindestlaufzeit."
-      />
+        <ServiceDialog
+          isOpen={isCoachingOpen}
+          onClose={() => setIsCoachingOpen(false)}
+          title="1:1 Coaching Details"
+          description="Das 1:1 Coaching bietet dir eine vollständig personalisierte Betreuung. Du erhältst einen auf dich zugeschnittenen Trainingsplan, der sich kontinuierlich an deine Fortschritte anpasst. Regelmäßige Feedback-Gespräche und Anpassungen des Plans gewährleisten eine optimale Entwicklung. Die monatliche Gebühr beträgt 99€, ohne Mindestlaufzeit."
+        />
 
-      <ServiceDialog
-        isOpen={isDiagnosticsOpen}
-        onClose={() => setIsDiagnosticsOpen(false)}
-        title="Leistungsdiagnostik Details"
-        description="Die individuelle Leistungsdiagnostik umfasst eine umfassende Analyse deiner aktuellen Fitness und Leistungsfähigkeit. Durch modernste Methoden und Tools können wir deine Stärken und Verbesserungspotenziale identifizieren. Die Analyse kostet einmalig 149€ und beinhaltet eine detaillierte Auswertung sowie Handlungsempfehlungen."
-      />
+        <ServiceDialog
+          isOpen={isDiagnosticsOpen}
+          onClose={() => setIsDiagnosticsOpen(false)}
+          title="Leistungsdiagnostik Details"
+          description="Die individuelle Leistungsdiagnostik umfasst eine umfassende Analyse deiner aktuellen Fitness und Leistungsfähigkeit. Durch modernste Methoden und Tools können wir deine Stärken und Verbesserungspotenziale identifizieren. Die Analyse kostet einmalig 149€ und beinhaltet eine detaillierte Auswertung sowie Handlungsempfehlungen."
+        />
+      </main>
     </div>
   );
 };
@@ -288,5 +294,109 @@ const achievements = [
   "Spezialisiert auf Straßenrad- und Zeitfahrtraining",
   "Nachgewiesene Erfolge in der Athletenentwicklung"
 ];
+
+const ContactForm = () => {
+  const { toast } = useToast();
+
+  const formSchema = z.object({
+    name: z.string().min(2, "Name muss mindestens 2 Zeichen lang sein"),
+    email: z.string().email("Bitte geben Sie eine gültige E-Mail-Adresse ein"),
+    message: z.string().min(10, "Nachricht muss mindestens 10 Zeichen lang sein"),
+  });
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+  });
+
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    console.log("Form submitted with values:", values);
+    
+    // Create mailto link with form data
+    const subject = encodeURIComponent("Neue Kontaktanfrage von MaxCyclesCoaching");
+    const body = encodeURIComponent(
+      `Name: ${values.name}\nEmail: ${values.email}\n\nNachricht:\n${values.message}`
+    );
+    const mailtoLink = `mailto:maxcyclescoaching@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Open default email client
+    window.location.href = mailtoLink;
+    
+    // Show success message
+    toast({
+      title: "Erfolgreich!",
+      description: "Die E-Mail wurde in Ihrem E-Mail-Programm geöffnet. Bitte senden Sie diese ab.",
+    });
+    
+    // Reset form
+    form.reset();
+  };
+
+  return (
+    <div className="max-w-2xl mx-auto bg-white rounded-lg p-8 text-gray-900">
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <FormField
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Name</FormLabel>
+                <FormControl>
+                  <Input placeholder="Ihr Name" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>E-Mail</FormLabel>
+                <FormControl>
+                  <Input type="email" placeholder="ihre.email@beispiel.de" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          
+          <FormField
+            control={form.control}
+            name="message"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Nachricht</FormLabel>
+                <FormControl>
+                  <Textarea 
+                    placeholder="Ihre Nachricht an uns" 
+                    className="min-h-[150px]"
+                    {...field} 
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          
+          <Button 
+            type="submit" 
+            size="lg"
+            className="w-full bg-[#003366] hover:bg-[#002244]"
+          >
+            Nachricht senden
+          </Button>
+        </form>
+      </Form>
+    </div>
+  );
+};
 
 export default Index;
