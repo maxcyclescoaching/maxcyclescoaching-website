@@ -51,7 +51,7 @@ const Index = () => {
                 Mit umfangreicher Erfahrung im Wettkampf-Radsport und als Coach widme ich mich der Entwicklung von Radfahrern aller Leistungsstufen. Ob du dich auf deine erste Sportveranstaltung vorbereitest oder Podiumsplätze anstrebst - mein personalisierter Coaching-Ansatz verbindet wissenschaftliche Trainingsprinzipien mit praktischer Erfahrung.
               </p>
               <a href="#philosophy">
-                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+                <Button variant="secondary" className="text-white">
                   Mehr über meinen Ansatz
                 </Button>
               </a>
@@ -96,15 +96,15 @@ const Index = () => {
               <h3 className="text-2xl font-semibold mb-6 text-[#003366]">1:1 Coaching</h3>
               <ul className="space-y-4 text-left">
                 <li className="flex items-start">
-                  <Target className="w-6 h-6 text-[#003366] mt-1 mr-3 flex-shrink-0" />
+                  <Target className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
                   <span>Individueller Trainingsplan basierend auf deinen Zielen und deinem Zeitplan</span>
                 </li>
                 <li className="flex items-start">
-                  <Users className="w-6 h-6 text-[#003366] mt-1 mr-3 flex-shrink-0" />
+                  <Users className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
                   <span>Regelmäßiges Feedback und Anpassungen deines Trainingsplans</span>
                 </li>
                 <li className="flex items-start">
-                  <Bike className="w-6 h-6 text-[#003366] mt-1 mr-3 flex-shrink-0" />
+                  <Bike className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
                   <span>Direkter Zugang zu professioneller Coaching-Unterstützung</span>
                 </li>
               </ul>
@@ -115,15 +115,15 @@ const Index = () => {
               <h3 className="text-2xl font-semibold mb-6 text-[#003366]">Individuelle Leistungsdiagnostik</h3>
               <ul className="space-y-4 text-left">
                 <li className="flex items-start">
-                  <Target className="w-6 h-6 text-[#003366] mt-1 mr-3 flex-shrink-0" />
+                  <Target className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
                   <span>Detaillierte Analyse deiner Trainingsdaten</span>
                 </li>
                 <li className="flex items-start">
-                  <Users className="w-6 h-6 text-[#003366] mt-1 mr-3 flex-shrink-0" />
+                  <Users className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
                   <span>Optimierung der Leistung durch datenbasierte Erkenntnisse</span>
                 </li>
                 <li className="flex items-start">
-                  <Bike className="w-6 h-6 text-[#003366] mt-1 mr-3 flex-shrink-0" />
+                  <Bike className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
                   <span>Kontinuierliche Verfolgung deiner Fortschritte</span>
                 </li>
               </ul>
