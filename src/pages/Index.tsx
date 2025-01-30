@@ -1,8 +1,14 @@
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Bike, Target, Users } from "lucide-react";
+import { useState } from "react";
+import { ServiceDialog } from "@/components/ServiceDialog";
 
 const Index = () => {
+  const [isPhilosophyOpen, setIsPhilosophyOpen] = useState(false);
+  const [isCoachingOpen, setIsCoachingOpen] = useState(false);
+  const [isDiagnosticsOpen, setIsDiagnosticsOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -50,11 +56,13 @@ const Index = () => {
               <p className="text-gray-600 mb-6">
                 Mit umfangreicher Erfahrung im Wettkampf-Radsport und als Coach widme ich mich der Entwicklung von Radfahrern aller Leistungsstufen. Ob du dich auf deine erste Sportveranstaltung vorbereitest oder Podiumsplätze anstrebst - mein personalisierter Coaching-Ansatz verbindet wissenschaftliche Trainingsprinzipien mit praktischer Erfahrung.
               </p>
-              <a href="#philosophy">
-                <Button variant="secondary" className="text-white">
-                  Mehr über meinen Ansatz
-                </Button>
-              </a>
+              <Button 
+                variant="secondary" 
+                className="text-white"
+                onClick={() => setIsPhilosophyOpen(true)}
+              >
+                Mehr über meinen Ansatz
+              </Button>
             </div>
             <div className="bg-accent rounded-lg p-8">
               <ul className="space-y-4">
@@ -93,8 +101,9 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {/* 1:1 Coaching */}
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl font-semibold mb-6 text-[#003366]">1:1 Coaching</h3>
-              <ul className="space-y-4 text-left">
+              <h3 className="text-2xl font-semibold mb-2 text-[#003366]">1:1 Coaching</h3>
+              <p className="text-lg text-gray-600 mb-6">99€/Monat, ohne Mindestlaufzeit</p>
+              <ul className="space-y-4 text-left mb-6">
                 <li className="flex items-start">
                   <Target className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
                   <span>Individueller Trainingsplan basierend auf deinen Zielen und deinem Zeitplan</span>
@@ -108,12 +117,27 @@ const Index = () => {
                   <span>Direkter Zugang zu professioneller Coaching-Unterstützung</span>
                 </li>
               </ul>
+              <div className="space-y-3">
+                <Button 
+                  variant="secondary" 
+                  className="w-full text-white"
+                  onClick={() => setIsCoachingOpen(true)}
+                >
+                  Mehr erfahren
+                </Button>
+                <a href="#contact">
+                  <Button variant="outline" className="w-full">
+                    Anfragen
+                  </Button>
+                </a>
+              </div>
             </div>
 
             {/* Leistungsdiagnostik */}
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl font-semibold mb-6 text-[#003366]">Individuelle Leistungsdiagnostik</h3>
-              <ul className="space-y-4 text-left">
+              <h3 className="text-2xl font-semibold mb-2 text-[#003366]">Individuelle Leistungsdiagnostik</h3>
+              <p className="text-lg text-gray-600 mb-6">149€</p>
+              <ul className="space-y-4 text-left mb-6">
                 <li className="flex items-start">
                   <Target className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
                   <span>Detaillierte Analyse deiner Trainingsdaten</span>
@@ -127,6 +151,20 @@ const Index = () => {
                   <span>Kontinuierliche Verfolgung deiner Fortschritte</span>
                 </li>
               </ul>
+              <div className="space-y-3">
+                <Button 
+                  variant="secondary" 
+                  className="w-full text-white"
+                  onClick={() => setIsDiagnosticsOpen(true)}
+                >
+                  Mehr erfahren
+                </Button>
+                <a href="#contact">
+                  <Button variant="outline" className="w-full">
+                    Anfragen
+                  </Button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -139,15 +177,15 @@ const Index = () => {
           <div className="space-y-8">
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <p className="text-xl mb-4">"Das Coaching hat meine Leistung auf ein neues Level gehoben. Ich habe meine persönlichen Bestzeiten erreicht!"</p>
-              <p className="font-semibold">- Max Mustermann</p>
+              <p className="font-semibold text-secondary">- Max Mustermann</p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <p className="text-xl mb-4">"Dank der individuellen Betreuung fühle ich mich bestens vorbereitet für meine Wettkämpfe."</p>
-              <p className="font-semibold">- Anna Müller</p>
+              <p className="font-semibold text-secondary">- Anna Müller</p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <p className="text-xl mb-4">"Die Leistungsdiagnostik hat mir geholfen, meine Schwächen zu erkennen und gezielt daran zu arbeiten."</p>
-              <p className="font-semibold">- Peter Schmidt</p>
+              <p className="font-semibold text-secondary">- Peter Schmidt</p>
             </div>
           </div>
         </div>
@@ -165,6 +203,44 @@ const Index = () => {
           </Button>
         </div>
       </section>
+
+      {/* Footer Section */}
+      <footer className="bg-gray-100 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+            <div>
+              © {new Date().getFullYear()} MaxCyclesCoaching. Alle Rechte vorbehalten.
+            </div>
+            <div className="mt-4 md:mt-0">
+              <a href="#" className="hover:text-gray-900">Impressum</a>
+              <span className="mx-2">|</span>
+              <a href="#" className="hover:text-gray-900">Datenschutz</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      {/* Dialogs */}
+      <ServiceDialog
+        isOpen={isPhilosophyOpen}
+        onClose={() => setIsPhilosophyOpen(false)}
+        title="Mein Coaching-Ansatz"
+        description="Mein Coaching-Ansatz basiert auf einer engen Zusammenarbeit mit jedem einzelnen Athleten. Durch die Kombination von wissenschaftlichen Trainingsprinzipien und praktischer Erfahrung entwickle ich maßgeschneiderte Trainingspläne, die optimal auf deine individuellen Ziele und Bedürfnisse abgestimmt sind."
+      />
+
+      <ServiceDialog
+        isOpen={isCoachingOpen}
+        onClose={() => setIsCoachingOpen(false)}
+        title="1:1 Coaching Details"
+        description="Das 1:1 Coaching bietet dir eine vollständig personalisierte Betreuung. Du erhältst einen auf dich zugeschnittenen Trainingsplan, der sich kontinuierlich an deine Fortschritte anpasst. Regelmäßige Feedback-Gespräche und Anpassungen des Plans gewährleisten eine optimale Entwicklung. Die monatliche Gebühr beträgt 99€, ohne Mindestlaufzeit."
+      />
+
+      <ServiceDialog
+        isOpen={isDiagnosticsOpen}
+        onClose={() => setIsDiagnosticsOpen(false)}
+        title="Leistungsdiagnostik Details"
+        description="Die individuelle Leistungsdiagnostik umfasst eine umfassende Analyse deiner aktuellen Fitness und Leistungsfähigkeit. Durch modernste Methoden und Tools können wir deine Stärken und Verbesserungspotenziale identifizieren. Die Analyse kostet einmalig 149€ und beinhaltet eine detaillierte Auswertung sowie Handlungsempfehlungen."
+      />
     </div>
   );
 };
