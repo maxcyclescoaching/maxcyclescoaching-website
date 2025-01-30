@@ -9,12 +9,48 @@ const Index = () => {
   const [isCoachingOpen, setIsCoachingOpen] = useState(false);
   const [isDiagnosticsOpen, setIsDiagnosticsOpen] = useState(false);
 
+  // Add structured data for Google
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "SportsClub",
+    "name": "MaxCyclesCoaching",
+    "description": "Professionelles Radsport-Coaching, maßgeschneidert auf deine Ziele. Von Anfängern bis zu Elite-Athleten.",
+    "image": "/lovable-uploads/hero_img.JPEG",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "DE"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "1:1 Coaching",
+        "price": "99",
+        "priceCurrency": "EUR",
+        "description": "Individueller Trainingsplan basierend auf deinen Zielen und deinem Zeitplan"
+      },
+      {
+        "@type": "Offer",
+        "name": "Leistungsdiagnostik",
+        "price": "149",
+        "priceCurrency": "EUR",
+        "description": "Detaillierte Analyse deiner Trainingsdaten"
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Add structured data script */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="relative h-screen bg-[#003366] animate-fade-in">
+      <main>
+        {/* Hero Section */}
+        <section className="relative h-screen bg-[#003366] animate-fade-in" aria-label="Hero">
         <div className="absolute inset-0">
           <img 
             src="/lovable-uploads/hero_img.JPEG" 
@@ -43,10 +79,10 @@ const Index = () => {
             </a>
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20">
+        {/* About Section */}
+        <section id="about" className="py-20" aria-label="Über mich">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
             Über mich
@@ -76,10 +112,10 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* Philosophy Section */}
-      <section id="philosophy" className="py-20 bg-accent">
+        {/* Philosophy Section */}
+        <section id="philosophy" className="py-20 bg-accent" aria-label="Philosophie">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
             Philosophie
@@ -90,10 +126,10 @@ const Index = () => {
             </p>
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-20">
+        {/* Services Section */}
+        <section id="services" className="py-20" aria-label="Leistungen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
             Leistungen
@@ -168,10 +204,10 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 bg-gray-100">
+        {/* Testimonials Section */}
+        <section id="testimonials" className="py-20 bg-gray-100" aria-label="Testimonials">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-[#003366]">Das sagen meine Athlet:innen</h2>
           <div className="space-y-8">
@@ -189,10 +225,10 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+        </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-primary text-white">
+        {/* Contact Section */}
+        <section id="contact" className="py-20 bg-primary text-white" aria-label="Kontakt">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Kontakt</h2>
           <p className="text-xl mb-8">
@@ -202,10 +238,11 @@ const Index = () => {
             Kontaktiere mich
           </Button>
         </div>
-      </section>
+        </section>
+      </main>
 
       {/* Footer Section */}
-      <footer className="bg-gray-100 py-6">
+      <footer className="bg-gray-100 py-6" role="contentinfo">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
             <div>
