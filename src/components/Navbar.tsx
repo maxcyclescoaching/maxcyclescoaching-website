@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Navbar = () => {
@@ -28,6 +28,15 @@ export const Navbar = () => {
             <a href="#about" className="text-[#003366] hover:text-opacity-80">Über mich</a>
             <a href="#philosophy" className="text-[#003366] hover:text-opacity-80">Philosophie</a>
             <a href="#services" className="text-[#003366] hover:text-opacity-80">Leistungen</a>
+            <a 
+              href="https://www.instagram.com/maxcyclescoaching" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[#003366] hover:text-opacity-80"
+              aria-label="Folge uns auf Instagram"
+            >
+              <Instagram className="w-6 h-6" />
+            </a>
             <a href="#contact">
               <Button variant="default" className="bg-[#003366] hover:bg-[#002244]">Kontakt</Button>
             </a>
@@ -68,6 +77,16 @@ export const Navbar = () => {
                 onClick={handleLinkClick}
               >
                 Leistungen
+              </a>
+              <a 
+                href="https://www.instagram.com/maxcyclescoaching"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block px-3 py-2 text-[#003366] hover:text-opacity-80"
+                onClick={handleLinkClick}
+                aria-label="Folge uns auf Instagram"
+              >
+                <Instagram className="w-6 h-6 inline-block mr-2" /> Instagram
               </a>
               <a href="#contact" onClick={handleLinkClick}>
                 <Button variant="default" className="w-full mt-2 bg-[#003366] hover:bg-[#002244]">Kontakt</Button>
