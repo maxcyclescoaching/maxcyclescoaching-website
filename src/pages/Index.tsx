@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Bike, Target, Users } from "lucide-react";
+import { ArrowRight, Bike, Target, Users, Instagram } from "lucide-react";
 import { useState } from "react";
 import { ServiceDialog } from "@/components/ServiceDialog";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -247,13 +247,24 @@ const Index = () => {
         </section>
 
         {/* Footer Section */}
+
+        {/* Footer Section */}
         <footer className="bg-gray-100 py-6" role="contentinfo">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
               <div>
                 © {new Date().getFullYear()} MaxCyclesCoaching. Alle Rechte vorbehalten.
               </div>
-              <div className="mt-4 md:mt-0">
+              <div className="mt-4 md:mt-0 flex items-center space-x-4">
+                <a 
+                  href="https://www.instagram.com/maxcyclescoaching" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-[#003366] transition-colors"
+                  aria-label="Folge uns auf Instagram"
+                >
+                  <Instagram className="w-5 h-5" />
+                </a>
                 <a href="#" className="hover:text-gray-900">Impressum</a>
                 <span className="mx-2">|</span>
                 <a href="#" className="hover:text-gray-900">Datenschutz</a>
