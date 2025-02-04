@@ -110,15 +110,10 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-gray-600 mb-6">
-                  Mit umfangreicher Erfahrung im Wettkampf-Radsport und als Coach widme ich mich der Entwicklung von Radfahrern aller Leistungsstufen. Ob du dich auf deine erste Sportveranstaltung vorbereitest oder Podiumsplätze anstrebst - mein personalisierter Coaching-Ansatz verbindet wissenschaftliche Trainingsprinzipien mit praktischer Erfahrung.
+                  Hi, ich bin Max, leidenschaftlicher Radsportler und Coach. Seit 2021 widme ich mich mit voller Begeisterung dem Radsport und biete seit Ende 2023 individuelles 1:1 Coaching und Leistungsdiagnostiken an. Zudem habe ich Anfang 2025 die German Cycling (BDR) Zertifizierung zum BasisCoach erhalten.<br />
+                  Mein Wissen baue ich kontinuierlich aus - durch Fachliteratur, Studien und praxisnahe Erfahrungen. Dieses wissenschaftlich fundierte Know-how bildet die Grundlage meiner Trainingsphilosophie, die ich gezielt auf die individuellen Bedürfnisse meiner Athleten übertrage. <br />
+                  Mein Ziel? Dich dabei zu unterstützen, dein volles Potenzial auf dem Rad auszuschöpfen!
                 </p>
-                <Button 
-                  variant="secondary" 
-                  className="text-white"
-                  onClick={() => setIsPhilosophyOpen(true)}
-                >
-                  Mehr über meinen Ansatz
-                </Button>
               </div>
               <div className="bg-accent rounded-lg p-8">
                 <ul className="space-y-4">
@@ -160,6 +155,13 @@ const Index = () => {
             <p className="text-gray-600 mb-8">
               Meine Coaching-Philosophie basiert auf einem ganzheitlichen Ansatz, der nicht nur die physische Leistung, sondern auch mentale Stärke und Ernährung berücksichtigt. Jeder Athlet ist einzigartig und verdient einen individuell zugeschnittenen Trainingsplan.
             </p>
+            <Button 
+                  variant="secondary" 
+                  className="text-white"
+                  onClick={() => setIsPhilosophyOpen(true)}
+                >
+                  Mehr über meinen Ansatz
+            </Button>
           </div>
         </div>
         </section>
