@@ -1,4 +1,3 @@
-```typescript
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Bike, Target, Users } from "lucide-react";
@@ -427,4 +426,3 @@ const ContactForm = () => {
 };
 
 export default Index;
-```
