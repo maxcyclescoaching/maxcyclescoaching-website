@@ -12,9 +12,13 @@ import * as z from "zod";
 import { useToast } from "@/components/ui/use-toast";
 import { LightboxDialog } from "@/components/LightboxDialog";
 
+const startYear = 2021;
+const currentYear = new Date().getFullYear();
+const experienceYears = currentYear - startYear;
+
 const achievements = [
   "German Cycling (BDR) zertifizierter Coach",
-  "Über 4 Jahre Wettkampferfahrung",
+  `Über ${experienceYears} Jahre Wettkampferfahrung`,
   "Spezialisiert auf Straßenradsport",
   "Nachweisbare Erfolge in der Athletenentwicklung"
 ];
@@ -276,7 +280,7 @@ const Index = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
               <div>
-                © {new Date().getFullYear()} MaxCyclesCoaching. Alle Rechte vorbehalten.
+                © ${currentYear} MaxCyclesCoaching. Alle Rechte vorbehalten.
               </div>
               <div className="mt-4 md:mt-0 space-x-4">
                 <a href="#" className="hover:text-gray-900">Impressum</a>
