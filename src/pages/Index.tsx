@@ -77,7 +77,7 @@ const Index = () => {
               MaxCyclesCoaching
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-              Professionelles Radsport-Coaching, maßgeschneidert auf deine Ziele. Von Anfängern bis zu Elite-Athleten.
+              Professionelles Radsport-Coaching, maßgeschneidert auf deine Ziele. Von Amateuren bis zu Elite-Athleten.
             </p>
             <a href="#about">
               <Button size="lg" className="bg-[#003366] hover:bg-[#002244] text-white">
@@ -290,10 +290,10 @@ const Index = () => {
 };
 
 const achievements = [
-  "Lizenzierter Radsport-Trainer",
-  "Über 10 Jahre Wettkampferfahrung",
-  "Spezialisiert auf Straßenrad- und Zeitfahrtraining",
-  "Nachgewiesene Erfolge in der Athletenentwicklung"
+  "German Cycling (BDR) zertifizierter Coach",
+  "Über 4 Jahre Wettkampferfahrung",
+  "Spezialisiert auf Straßenradsport",
+  "Nachweisbare Erfolge in der Athletenentwicklung"
 ];
 
 const ContactForm = () => {
