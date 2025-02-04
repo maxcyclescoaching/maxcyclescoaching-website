@@ -10,11 +10,13 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useToast } from "@/components/ui/use-toast";
+import { LightboxDialog } from "@/components/LightboxDialog";
 
 const Index = () => {
   const [isPhilosophyOpen, setIsPhilosophyOpen] = useState(false);
   const [isCoachingOpen, setIsCoachingOpen] = useState(false);
   const [isDiagnosticsOpen, setIsDiagnosticsOpen] = useState(false);
+  const [isCertificateOpen, setIsCertificateOpen] = useState(false);
 
   // Add structured data for Google
   const structuredData = {
@@ -90,35 +92,43 @@ const Index = () => {
 
         {/* About Section */}
         <section id="about" className="py-20" aria-label="Über mich">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-            Über mich
-          </h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-gray-600 mb-6">
-                Mit umfangreicher Erfahrung im Wettkampf-Radsport und als Coach widme ich mich der Entwicklung von Radfahrern aller Leistungsstufen. Ob du dich auf deine erste Sportveranstaltung vorbereitest oder Podiumsplätze anstrebst - mein personalisierter Coaching-Ansatz verbindet wissenschaftliche Trainingsprinzipien mit praktischer Erfahrung.
-              </p>
-              <Button 
-                variant="secondary" 
-                className="text-white"
-                onClick={() => setIsPhilosophyOpen(true)}
-              >
-                Mehr über meinen Ansatz
-              </Button>
-            </div>
-            <div className="bg-accent rounded-lg p-8">
-              <ul className="space-y-4">
-                {achievements.map((achievement, index) => (
-                  <li key={index} className="flex items-center text-gray-700">
-                    <Bike className="w-6 h-6 text-secondary mr-3" />
-                    {achievement}
-                  </li>
-                ))}
-              </ul>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
+              Über mich
+            </h2>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <p className="text-gray-600 mb-6">
+                  Mit umfangreicher Erfahrung im Wettkampf-Radsport und als Coach widme ich mich der Entwicklung von Radfahrern aller Leistungsstufen. Ob du dich auf deine erste Sportveranstaltung vorbereitest oder Podiumsplätze anstrebst - mein personalisierter Coaching-Ansatz verbindet wissenschaftliche Trainingsprinzipien mit praktischer Erfahrung.
+                </p>
+                <Button 
+                  variant="secondary" 
+                  className="text-white"
+                  onClick={() => setIsPhilosophyOpen(true)}
+                >
+                  Mehr über meinen Ansatz
+                </Button>
+              </div>
+              <div className="bg-accent rounded-lg p-8">
+                <ul className="space-y-4">
+                  {achievements.map((achievement, index) => (
+                    <li 
+                      key={index} 
+                      className={`flex items-center text-gray-700 ${
+                        index === 0 ? 'cursor-pointer hover:text-[#003366]' : ''
+                      }`}
+                      onClick={() => {
+                        if (index === 0) setIsCertificateOpen(true);
+                      }}
+                    >
+                      <Bike className="w-6 h-6 text-secondary mr-3" />
+                      {achievement}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
         </section>
 
         {/* Philosophy Section */}
@@ -263,6 +273,13 @@ const Index = () => {
             </div>
           </div>
         </footer>
+
+        <LightboxDialog
+          isOpen={isCertificateOpen}
+          onClose={() => setIsCertificateOpen(false)}
+          imageSrc="/lovable-uploads/german_cycling_certificate.png"
+          imageAlt="German Cycling (BDR) Coach Certificate"
+        />
 
         <ServiceDialog
           isOpen={isPhilosophyOpen}
