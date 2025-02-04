@@ -123,19 +123,19 @@ const Index = () => {
                       key={index} 
                       className={`flex items-center text-gray-700 ${
                         index === 0 ? 
-                        'cursor-pointer group transition-all duration-200 hover:text-[#D946EF] relative' : ''
+                        'cursor-pointer group transition-all duration-200 hover:text-[#003366] relative' : ''
                       }`}
                       onClick={() => {
                         if (index === 0) setIsCertificateOpen(true);
                       }}
                     >
                       <Bike className={`w-6 h-6 mr-3 ${
-                        index === 0 ? 'text-[#D946EF] group-hover:scale-110 transition-transform' : 'text-secondary'
+                        index === 0 ? 'text-[#003366] group-hover:scale-110 transition-transform' : 'text-secondary'
                       }`} />
                       {index === 0 ? (
                         <span className="inline-flex items-center">
                           {achievement}
-                          <span className="ml-2 text-xs text-[#D946EF] font-medium">(Zertifikat ansehen)</span>
+                          <span className="ml-2 text-xs text-[#003366] font-medium">(Zertifikat ansehen)</span>
                         </span>
                       ) : achievement}
                     </li>
@@ -270,8 +270,6 @@ const Index = () => {
             <ContactForm />
           </div>
         </section>
-
-        {/* Footer Section */}
 
         {/* Footer Section */}
         <footer className="bg-gray-100 py-6" role="contentinfo">
