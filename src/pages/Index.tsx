@@ -130,7 +130,7 @@ const Index = () => {
                       }}
                     >
                       <Bike className={`w-6 h-6 mr-3 ${
-                        index === 0 ? 'text-[#003366] group-hover:scale-110 transition-transform' : 'text-secondary'
+                        index === 0 ? 'text-secondary group-hover:text-[#003366] transition-colors' : 'text-secondary'
                       }`} />
                       {index === 0 ? (
                         <span className="inline-flex items-center">
