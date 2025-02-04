@@ -291,7 +291,7 @@ const Index = () => {
 
 const achievements = [
   "German Cycling (BDR) zertifizierter Coach",
-  "Über 4 Jahre Wettkampferfahrung",
+  "Über {new Date().getFullYear() - 2021} Jahre Wettkampferfahrung",
   "Spezialisiert auf Straßenradsport",
   "Nachweisbare Erfolge in der Athletenentwicklung"
 ];
