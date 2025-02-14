@@ -115,7 +115,7 @@ const Index = () => {
                   Mein Ziel? Dich dabei zu unterstützen, dein volles Potenzial auf dem Rad auszuschöpfen!
                 </p>
               </div>
-              <div className="bg-accent rounded-lg p-8">
+              <div className="bg-accent rounded-lg p-8 self-start">
                 <ul className="space-y-4">
                   {achievements.map((achievement, index) => (
                     <li 
