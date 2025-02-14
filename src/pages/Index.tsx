@@ -306,8 +306,7 @@ const Index = () => {
           isOpen={isPhilosophyOpen}
           onClose={() => setIsPhilosophyOpen(false)}
           title="Mein Coaching-Ansatz"
-          description="Mein Ansatz basiert auf strukturierten Trainingsblöcken, die individuell auf die Athlet:innen abgestimmt sind. Ich setze dabei bewusst auf kleine, intendierte Anpassungen, um den Fortschritt messbar und nachhaltig steuerbar zu machen. <br /><br />
-          Die Wochenplanung erfolgt flexibel in einem Rhythmus von 1-3 Wochen über TrainingPeaks. So kann das Training optimal auf Alltag, Ernährung und Regeneration abgestimmt werden, um eine ganzheitliche Belastungssteuerung zu gewährleisten. Gleichzeitig bleibt der Fokus stets auf der langfristigen Leistungsentwicklung, damit die Höchstform genau zum richtigen Zeitpunkt erreicht wird."
+          description="Ein effektives Training beginnt mit einer fundierten Analyse: Zunächst werte ich die spezifischen Wettkampfanforderungen und das individuelle Athletenprofil aus, welches zuvor durch eine Leistungsdiagnostik ermittelt wird. So lassen sich Stärken und Potenziale ebenso identifizieren wie gezielte Ansatzpunkte für Verbesserungen."
         />
 
         <ServiceDialog
