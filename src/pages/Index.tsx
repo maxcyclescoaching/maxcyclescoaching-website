@@ -109,7 +109,7 @@ const Index = () => {
             </h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600">
                   Hi, ich bin Max, leidenschaftlicher Radsportler und Coach. Seit 2021 widme ich mich mit voller Begeisterung dem Radsport und biete seit Ende 2023 individuelles 1:1 Coaching und Leistungsdiagnostiken an. Zudem habe ich Anfang 2025 die German Cycling (BDR) Zertifizierung zum BasisCoach erhalten.<br />
                   Mein Wissen baue ich kontinuierlich aus - durch Fachliteratur, Studien und praxisnahe Erfahrungen. Dieses wissenschaftlich fundierte Know-how bildet die Grundlage meiner Trainingsphilosophie, die ich gezielt auf die individuellen Bedürfnisse meiner Athleten übertrage. <br />
                   Mein Ziel? Dich dabei zu unterstützen, dein volles Potenzial auf dem Rad auszuschöpfen!
