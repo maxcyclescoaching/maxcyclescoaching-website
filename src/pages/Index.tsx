@@ -107,13 +107,18 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
               Über mich
             </h2>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-12 items-start">
               <div>
                 <p className="text-gray-600 mb-6">
-                  Hi, ich bin Max, leidenschaftlicher Radsportler und Coach. Seit 2021 widme ich mich mit voller Begeisterung dem Radsport und biete seit Ende 2023 individuelles 1:1 Coaching und Leistungsdiagnostiken an. Zudem habe ich Anfang 2025 die German Cycling (BDR) Zertifizierung zum BasisCoach erhalten.<br />
-                  Mein Wissen baue ich kontinuierlich aus - durch Fachliteratur, Studien und praxisnahe Erfahrungen. Dieses wissenschaftlich fundierte Know-how bildet die Grundlage meiner Trainingsphilosophie, die ich gezielt auf die individuellen Bedürfnisse meiner Athleten übertrage. <br />
-                  Mein Ziel? Dich dabei zu unterstützen, dein volles Potenzial auf dem Rad auszuschöpfen!
+                  Mit umfangreicher Erfahrung im Wettkampf-Radsport und als Coach widme ich mich der Entwicklung von Radfahrern aller Leistungsstufen. Ob du dich auf deine erste Sportveranstaltung vorbereitest oder Podiumsplätze anstrebst - mein personalisierter Coaching-Ansatz verbindet wissenschaftliche Trainingsprinzipien mit praktischer Erfahrung.
                 </p>
+                <Button 
+                  variant="secondary" 
+                  className="text-white"
+                  onClick={() => setIsPhilosophyOpen(true)}
+                >
+                  Mehr über meinen Ansatz
+                </Button>
               </div>
               <div className="bg-accent rounded-lg p-8">
                 <ul className="space-y-4">
@@ -128,15 +133,17 @@ const Index = () => {
                         if (index === 0) setIsCertificateOpen(true);
                       }}
                     >
-                      <Bike className={`w-6 h-6 mr-3 ${
+                      <Bike className={`w-6 h-6 mr-3 flex-shrink-0 ${
                         index === 0 ? 'text-secondary group-hover:text-[#003366] transition-colors' : 'text-secondary'
                       }`} />
-                      {index === 0 ? (
-                        <span className="inline-flex items-center">
-                          {achievement}
-                          <span className="ml-2 text-xs text-[#003366] font-medium">(Zertifikat ansehen)</span>
-                        </span>
-                      ) : achievement}
+                      <span className="flex-1">
+                        {index === 0 ? (
+                          <span className="inline-flex items-center">
+                            {achievement}
+                            <span className="ml-2 text-xs text-[#003366] font-medium">(Zertifikat ansehen)</span>
+                          </span>
+                        ) : achievement}
+                      </span>
                     </li>
                   ))}
                 </ul>
