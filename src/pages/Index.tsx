@@ -153,7 +153,7 @@ const Index = () => {
           </h2>
           <div className="text-center max-w-3xl mx-auto">
             <p className="text-gray-600 mb-8">
-              Meine Coaching-Philosophie basiert auf einem ganzheitlichen Ansatz, der nicht nur die physische Leistung, sondern auch mentale Stärke und Ernährung berücksichtigt. Jeder Athlet ist einzigartig und verdient einen individuell zugeschnittenen Trainingsplan.
+            Ein effektives Training beginnt mit einer fundierten Analyse: Zunächst werte ich die spezifischen Wettkampfanforderungen und das individuelle Athletenprofil aus, welches zuvor durch eine Leistungsdiagnostik ermittelt wird. So lassen sich Stärken und Potenziale ebenso identifizieren wie gezielte Ansatzpunkte für Verbesserungen.
             </p>
             <Button 
                   variant="secondary" 
@@ -304,7 +304,7 @@ const Index = () => {
           isOpen={isPhilosophyOpen}
           onClose={() => setIsPhilosophyOpen(false)}
           title="Mein Coaching-Ansatz"
-          description="Mein Coaching-Ansatz basiert auf einer engen Zusammenarbeit mit jedem einzelnen Athleten. Durch die Kombination von wissenschaftlichen Trainingsprinzipien und praktischer Erfahrung entwickle ich maßgeschneiderte Trainingspläne, die optimal auf deine individuellen Ziele und Bedürfnisse abgestimmt sind."
+          description="Mein Ansatz basiert auf strukturierten Trainingsblöcken, die individuell auf die Athlet:innen abgestimmt sind. Ich setze dabei bewusst auf kleine, intendierte Anpassungen, um den Fortschritt messbar und nachhaltig steuerbar zu machen. Die Wochenplanung erfolgt flexibel in einem Rhythmus von 1-3 Wochen über TrainingPeaks. So kann das Training optimal auf Alltag, Ernährung und Regeneration abgestimmt werden, um eine ganzheitliche Belastungssteuerung zu gewährleisten. Gleichzeitig bleibt der Fokus stets auf der langfristigen Leistungsentwicklung, damit die Höchstform genau zum richtigen Zeitpunkt erreicht wird."
         />
 
         <ServiceDialog
