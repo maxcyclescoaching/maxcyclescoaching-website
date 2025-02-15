@@ -190,7 +190,7 @@ const Index = () => {
                 </li>
                 <li className="flex items-start">
                   <Gauge className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
-                  <span>Regelmäßige Leistungsdiagnostik</span>
+                  <span>Regelmäßige Leistungsdiagnostiken</span>
                 </li>
                 <li className="flex items-start">
                   <Trophy className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
@@ -220,7 +220,7 @@ const Index = () => {
             {/* Leistungsdiagnostik */}
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <h3 className="text-2xl font-semibold mb-2 text-[#003366]">Individuelle Leistungsdiagnostik</h3>
-              <p className="text-lg text-gray-600 mb-6">149€</p>
+              <p className="text-lg text-gray-600 mb-6">149€/Diagnostik</p>
               <ul className="space-y-4 text-left mb-6">
                 <li className="flex items-start">
                   <ActivitySquare className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
