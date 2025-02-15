@@ -182,15 +182,23 @@ const Index = () => {
               <ul className="space-y-4 text-left mb-6">
                 <li className="flex items-start">
                   <Target className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
-                  <span>Individueller Trainingsplan basierend auf deinen Zielen und deinem Zeitplan</span>
+                  <span>Maßgeschneiderte Trainingsplanung</span>
                 </li>
                 <li className="flex items-start">
                   <Users className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
-                  <span>Regelmäßiges Feedback und Anpassungen deines Trainingsplans</span>
+                  <span>Detaillierte Analyse</span>
                 </li>
                 <li className="flex items-start">
                   <Bike className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
-                  <span>Direkter Zugang zu professioneller Coaching-Unterstützung</span>
+                  <span>Regelmäßige Leistungsdiagnostik</span>
+                </li>
+                <li className="flex items-start">
+                  <Bike className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                  <span>Strategische Wettkampfvorbereitung</span>
+                </li>
+                <li className="flex items-start">
+                  <Bike className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                  <span>Persönlicher Support</span>
                 </li>
               </ul>
               <div className="space-y-3">
@@ -216,15 +224,23 @@ const Index = () => {
               <ul className="space-y-4 text-left mb-6">
                 <li className="flex items-start">
                   <Target className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
-                  <span>Detaillierte Analyse deiner Trainingsdaten</span>
+                  <span>Umfassende Testung</span>
                 </li>
                 <li className="flex items-start">
                   <Users className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
-                  <span>Optimierung der Leistung durch datenbasierte Erkenntnisse</span>
+                  <span>Umfangreiche Auswertung</span>
                 </li>
                 <li className="flex items-start">
                   <Bike className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
-                  <span>Kontinuierliche Verfolgung deiner Fortschritte</span>
+                  <span>Gezielte Trainingsoptimierung</span>
+                </li>
+                <li className="flex items-start">
+                  <Bike className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                  <span>Langfristige Entwicklung</span>
+                </li>
+                <li className="flex items-start">
+                  <Bike className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                  <span>Flexible Protokolle</span>
                 </li>
               </ul>
               <div className="space-y-3">
