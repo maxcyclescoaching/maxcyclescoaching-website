@@ -180,24 +180,24 @@ const Index = () => {
               <h3 className="text-2xl font-semibold mb-2 text-[#003366]">1:1 Coaching</h3>
               <p className="text-lg text-gray-600 mb-6">99€/Monat, ohne Mindestlaufzeit</p>
               <ul className="space-y-4 text-left mb-6">
-                <li className="flex items-start">
-                  <Calendar className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                <li className="flex items-center">
+                  <Calendar className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
                   <span>Maßgeschneiderte Trainingsplanung</span>
                 </li>
-                <li className="flex items-start">
-                  <LineChart className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                <li className="flex items-center">
+                  <LineChart className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
                   <span>Detaillierte Analyse</span>
                 </li>
-                <li className="flex items-start">
-                  <Gauge className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                <li className="flex items-center">
+                  <Gauge className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
                   <span>Regelmäßige Leistungsdiagnostiken</span>
                 </li>
-                <li className="flex items-start">
-                  <Trophy className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                <li className="flex items-center">
+                  <Trophy className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
                   <span>Strategische Wettkampfvorbereitung</span>
                 </li>
-                <li className="flex items-start">
-                  <MessageCircle className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                <li className="flex items-center">
+                  <MessageCircle className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
                   <span>Persönlicher Support</span>
                 </li>
               </ul>
@@ -222,24 +222,24 @@ const Index = () => {
               <h3 className="text-2xl font-semibold mb-2 text-[#003366]">Individuelle Leistungsdiagnostik</h3>
               <p className="text-lg text-gray-600 mb-6">149€/Diagnostik</p>
               <ul className="space-y-4 text-left mb-6">
-                <li className="flex items-start">
-                  <ActivitySquare className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                <li className="flex items-center">
+                  <ActivitySquare className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
                   <span>Umfassende Testung</span>
                 </li>
-                <li className="flex items-start">
-                  <Brain className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                <li className="flex items-center">
+                  <Brain className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
                   <span>Umfangreiche Auswertung</span>
                 </li>
-                <li className="flex items-start">
-                  <Target className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                <li className="flex items-center">
+                  <Target className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
                   <span>Gezielte Trainingsoptimierung</span>
                 </li>
-                <li className="flex items-start">
-                  <LineChart className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                <li className="flex items-center">
+                  <LineChart className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
                   <span>Langfristige Entwicklung</span>
                 </li>
-                <li className="flex items-start">
-                  <Timer className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                <li className="flex items-center">
+                  <Timer className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
                   <span>Flexible Protokolle</span>
                 </li>
               </ul>
