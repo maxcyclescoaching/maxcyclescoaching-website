@@ -15,28 +15,11 @@ interface ServiceDialogProps {
 }
 
 export function ServiceDialog({ isOpen, onClose, title, description }: ServiceDialogProps) {
-  const formattedDescription = description.split('\n\n').map((paragraph, index) => {
-    // Check if the paragraph starts with a number followed by a dot
-    const isHeadline = /^\d+\./.test(paragraph);
-    
-    if (isHeadline) {
-      // Split the headline into number and text
-      const [number, ...rest] = paragraph.split(' ');
-      const text = rest.join(' ');
-      
-      return (
-        <p key={index} className="mb-4 last:mb-0">
-          <span className="font-bold">{number} {text}</span>
-        </p>
-      );
-    }
-    
-    return (
-      <p key={index} className="mb-4 last:mb-0">
-        {paragraph}
-      </p>
-    );
-  });
+  const formattedDescription = description.split('\n\n').map((paragraph, index) => (
+    <p key={index} className="mb-4 last:mb-0">
+      {paragraph}
+    </p>
+  ));
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
