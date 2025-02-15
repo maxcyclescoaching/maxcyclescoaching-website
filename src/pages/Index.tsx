@@ -331,7 +331,7 @@ Die Wochenplanung erfolgt flexibel in einem Rhythmus von 1-3 Wochen über Traini
           isOpen={isCoachingOpen}
           onClose={() => setIsCoachingOpen(false)}
           title="1:1 Coaching Details"
-          description="1. Maßgeschneiderte Trainingsplanung
+          description="<b>1. Maßgeschneiderte Trainingsplanung</b>
 Gemeinsam entwickeln wir einen Trainingsplan, der perfekt auf deine Saisonziele, deine verfügbare Zeit und deinen Alltag zugeschnitten ist – für nachhaltigen Fortschritt ohne Überlastung.
 
 2. Detaillierte Analyse
