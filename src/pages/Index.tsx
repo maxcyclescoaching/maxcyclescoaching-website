@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Bike, Target, Users } from "lucide-react";
+import { ArrowRight, Bike, Target, Users, Calendar, LineChart, Trophy, MessageCircle, ActivitySquare, Gauge, Brain, Timer } from "lucide-react";
 import { useState } from "react";
 import { ServiceDialog } from "@/components/ServiceDialog";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -181,23 +181,23 @@ const Index = () => {
               <p className="text-lg text-gray-600 mb-6">99€/Monat, ohne Mindestlaufzeit</p>
               <ul className="space-y-4 text-left mb-6">
                 <li className="flex items-start">
-                  <Target className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                  <Calendar className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
                   <span>Maßgeschneiderte Trainingsplanung</span>
                 </li>
                 <li className="flex items-start">
-                  <Users className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                  <LineChart className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
                   <span>Detaillierte Analyse</span>
                 </li>
                 <li className="flex items-start">
-                  <Bike className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                  <Gauge className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
                   <span>Regelmäßige Leistungsdiagnostik</span>
                 </li>
                 <li className="flex items-start">
-                  <Bike className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                  <Trophy className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
                   <span>Strategische Wettkampfvorbereitung</span>
                 </li>
                 <li className="flex items-start">
-                  <Bike className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                  <MessageCircle className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
                   <span>Persönlicher Support</span>
                 </li>
               </ul>
@@ -223,23 +223,23 @@ const Index = () => {
               <p className="text-lg text-gray-600 mb-6">149€</p>
               <ul className="space-y-4 text-left mb-6">
                 <li className="flex items-start">
-                  <Target className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                  <ActivitySquare className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
                   <span>Umfassende Testung</span>
                 </li>
                 <li className="flex items-start">
-                  <Users className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                  <Brain className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
                   <span>Umfangreiche Auswertung</span>
                 </li>
                 <li className="flex items-start">
-                  <Bike className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                  <Target className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
                   <span>Gezielte Trainingsoptimierung</span>
                 </li>
                 <li className="flex items-start">
-                  <Bike className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                  <LineChart className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
                   <span>Langfristige Entwicklung</span>
                 </li>
                 <li className="flex items-start">
-                  <Bike className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
+                  <Timer className="w-6 h-6 text-secondary mt-1 mr-3 flex-shrink-0" />
                   <span>Flexible Protokolle</span>
                 </li>
               </ul>
@@ -322,7 +322,7 @@ const Index = () => {
           isOpen={isPhilosophyOpen}
           onClose={() => setIsPhilosophyOpen(false)}
           title="Mein Coaching-Ansatz"
-          description="Mein Ansatz basiert auf strukturierten Trainingsblöcken, die individuell auf die Athlet:innen abgestimmt sind. Ich setze dabei bewusst auf kleine, intendierte Anpassungen, um den Fortschritt messbar und nachhaltig steuerbar zu machen.
+          description="Mein Ansatz basiert auf strukturierten Trainingsblöcken, die individuell auf die Athleten abgestimmt sind. Ich setze dabei bewusst auf kleine, intendierte Anpassungen, um den Fortschritt messbar und nachhaltig steuerbar zu machen.
 
 Die Wochenplanung erfolgt flexibel in einem Rhythmus von 1-3 Wochen über TrainingPeaks. So kann das Training optimal auf Alltag, Ernährung und Regeneration abgestimmt werden, um eine ganzheitliche Belastungssteuerung zu gewährleisten. Gleichzeitig bleibt der Fokus stets auf der langfristigen Leistungsentwicklung, damit die Höchstform genau zum richtigen Zeitpunkt erreicht wird."
         />
