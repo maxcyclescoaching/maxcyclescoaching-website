@@ -331,14 +331,40 @@ Die Wochenplanung erfolgt flexibel in einem Rhythmus von 1-3 Wochen über Traini
           isOpen={isCoachingOpen}
           onClose={() => setIsCoachingOpen(false)}
           title="1:1 Coaching Details"
-          description="Das 1:1 Coaching bietet dir eine vollständig personalisierte Betreuung. Du erhältst einen auf dich zugeschnittenen Trainingsplan, der sich kontinuierlich an deine Fortschritte anpasst. Regelmäßige Feedback-Gespräche und Anpassungen des Plans gewährleisten eine optimale Entwicklung. Die monatliche Gebühr beträgt 99€, ohne Mindestlaufzeit."
+          description="1. Maßgeschneiderte Trainingsplanung
+Gemeinsam entwickeln wir einen Trainingsplan, der perfekt auf deine Saisonziele, deine verfügbare Zeit und deinen Alltag zugeschnitten ist – für nachhaltigen Fortschritt ohne Überlastung.
+
+2. Detaillierte Analyse
+In regelmäßigen Gesprächen betrachten wir nicht nur deine Trainingsdaten, sondern auch Faktoren wie Ernährung, Schlaf und Stress. So entsteht ein ganzheitliches Bild, das dir hilft, dein volles Potenzial auszuschöpfen.
+
+3. Regelmäßige Leistungsdiagnostik
+Alle 3 Monate überprüfen wir deinen aktuellen Leistungsstand durch gezielte Tests. So erkennst du Fortschritte frühzeitig und kannst deine Trainingsreize optimal anpassen.
+
+4. Strategische Vorbereitung
+Ob Wettkampf, persönliche Bestzeit oder neues Fitnesslevel: Wir entwickeln gemeinsam eine Strategie, die dich Schritt für Schritt an dein Ziel bringt – inklusive mentaler Tipps und Taktikempfehlungen.
+
+5. Persönlicher Support
+Du profitierst von einer schnellen und direkten Kommunikation (8–18 Uhr) mit einer garantierten Antwortzeit von maximal 4 Stunden. Bei Bedarf vereinbaren wir gerne ein persönliches Telefon- oder Online-Gespräch, um offene Fragen zu klären und dich bestmöglich zu unterstützen."
         />
 
         <ServiceDialog
           isOpen={isDiagnosticsOpen}
           onClose={() => setIsDiagnosticsOpen(false)}
           title="Leistungsdiagnostik Details"
-          description="Die individuelle Leistungsdiagnostik umfasst eine umfassende Analyse deiner aktuellen Fitness und Leistungsfähigkeit. Durch modernste Methoden und Tools können wir deine Stärken und Verbesserungspotenziale identifizieren. Die Analyse kostet einmalig 149€ und beinhaltet eine detaillierte Auswertung sowie Handlungsempfehlungen."
+          description="1. Umfassende Testung
+Erhalte ein ganzheitliches Bild deiner aktuellen Fitness: Wir messen mithilfe modernster Technologien (z.B. mobiles Laktatmessgerät, Muskelsauerstoff- und Herzfrequenzmessungen) alle relevanten Parameter, um deinen Leistungsstand präzise zu erfassen.
+
+2. Detaillierte Auswertung
+Wir analysieren deine Werte umfassend und verständlich. Du erfährst genau, wie du in Bezug auf Ausdauer, Kraft und Regeneration aufgestellt bist – die Basis für deine optimale Trainingsplanung.
+
+3. Gezielte Trainingsoptimierung
+Auf Grundlage der Testergebnisse erstellen wir individuelle Empfehlungen, um dein Training maximal effizient zu gestalten. So kannst du gezielt an Schwachstellen arbeiten und schneller Fortschritte erzielen.
+
+4. Langfristige Entwicklung
+Dein Erfolg steht im Fokus: Durch regelmäßige Wiederholungen der Diagnostik und einen fortlaufenden Abgleich deiner Daten kannst du deine Entwicklung kontinuierlich verfolgen und steuern.
+
+5. Flexible Protokolle
+Egal, ob im Labor oder draußen auf deiner Lieblingsstrecke – wir passen die Testbedingungen an deine Ziele und Anforderungen an. Damit erhältst du eine realistische Einschätzung deiner Leistung unter echten Bedingungen."
         />
       </main>
     </div>
