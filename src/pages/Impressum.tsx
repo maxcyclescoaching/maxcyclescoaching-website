@@ -23,7 +23,7 @@ const Impressum = () => {
             E-Mail: maxcyclescoaching@gmail.com</p>
 
             <h2>Gewerbeanmeldung</h2>
-            <p>Die Gewerbeerlaubnis nach &#91;Nummer des Paragraphen&#93; GewO wurde am 27.01.2025 von folgender Stelle erteilt: Stadtverwaltung Freital Gewerbeamt.</p>
+            <p>Die Gewerbeerlaubnis wurde am 27.01.2025 von folgender Stelle erteilt: Stadtverwaltung Freital Gewerbeamt.</p>
 
             <h2>Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle</h2>
             <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
