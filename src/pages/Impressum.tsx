@@ -1,4 +1,3 @@
-
 import { Navbar } from "@/components/Navbar";
 
 const Impressum = () => {
@@ -38,4 +37,3 @@ const Impressum = () => {
 };
 
 export default Impressum;
-

@@ -1,4 +1,3 @@
-
 import { Navbar } from "@/components/Navbar";
 
 const Datenschutz = () => {
@@ -50,4 +49,3 @@ const Datenschutz = () => {
 };
 
 export default Datenschutz;
-
