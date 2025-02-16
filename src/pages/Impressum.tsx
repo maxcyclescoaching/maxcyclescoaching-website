@@ -9,10 +9,6 @@ const Impressum = () => {
           <h1 className="text-3xl font-bold text-[#003366] mb-8">Impressum</h1>
           
           <div className="prose prose-lg">
-            <h2>Angaben gemäß § 5 TMG</h2>
-            <p>MaxCyclesCoaching</p>
-            <h1>Impressum</h1>
-
             <p>Maximilian Lohr<br />
             MaxCyclesCoaching<br />
             Heimst&auml;ttenweg 23<br />
