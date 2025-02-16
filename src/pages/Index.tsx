@@ -29,7 +29,6 @@ const Index = () => {
   const [isDiagnosticsOpen, setIsDiagnosticsOpen] = useState(false);
   const [isCertificateOpen, setIsCertificateOpen] = useState(false);
 
-  // Add structured data for Google
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SportsClub",
@@ -60,7 +59,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Add structured data script */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -69,7 +67,6 @@ const Index = () => {
       <Navbar />
       
       <main>
-        {/* Hero Section */}
         <section className="relative h-screen bg-[#003366] animate-fade-in" aria-label="Hero">
         <div className="absolute inset-0">
           <img 
@@ -101,7 +98,6 @@ const Index = () => {
         </div>
         </section>
 
-        {/* About Section */}
         <section id="about" className="py-20" aria-label="Über mich">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
@@ -145,7 +141,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Philosophy Section */}
         <section id="philosophy" className="py-20 bg-accent" aria-label="Philosophie">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
@@ -168,14 +163,12 @@ const Index = () => {
         </div>
         </section>
 
-        {/* Services Section */}
         <section id="services" className="py-20" aria-label="Leistungen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
             Leistungen
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {/* 1:1 Coaching */}
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <h3 className="text-2xl font-semibold mb-2 text-[#003366]">1:1 Coaching</h3>
               <p className="text-lg text-gray-600 mb-6">99€/Monat, ohne Mindestlaufzeit</p>
@@ -217,7 +210,6 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Leistungsdiagnostik */}
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <h3 className="text-2xl font-semibold mb-2 text-[#003366]">Individuelle Leistungsdiagnostik</h3>
               <p className="text-lg text-gray-600 mb-6">149€/Diagnostik</p>
@@ -262,7 +254,6 @@ const Index = () => {
         </div>
         </section>
 
-        {/* Testimonials Section */}
         <section id="testimonials" className="py-20 bg-gray-100" aria-label="Testimonials">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-[#003366]">Das sagen meine Athlet:innen</h2>
@@ -283,7 +274,6 @@ const Index = () => {
         </div>
         </section>
 
-        {/* Contact Section */}
         <section id="contact" className="py-20 bg-primary text-white" aria-label="Kontakt">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Kontakt</h2>
@@ -295,7 +285,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Footer Section */}
         <footer className="bg-gray-100 py-6" role="contentinfo">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
@@ -322,50 +311,78 @@ const Index = () => {
           isOpen={isPhilosophyOpen}
           onClose={() => setIsPhilosophyOpen(false)}
           title="Mein Coaching-Ansatz"
-          description="Mein Ansatz basiert auf strukturierten Trainingsblöcken, die individuell auf die Athleten abgestimmt sind. Ich setze dabei bewusst auf kleine, intendierte Anpassungen, um den Fortschritt messbar und nachhaltig steuerbar zu machen.
-
-Die Wochenplanung erfolgt flexibel in einem Rhythmus von 1-3 Wochen über TrainingPeaks. So kann das Training optimal auf Alltag, Ernährung und Regeneration abgestimmt werden, um eine ganzheitliche Belastungssteuerung zu gewährleisten. Gleichzeitig bleibt der Fokus stets auf der langfristigen Leistungsentwicklung, damit die Höchstform genau zum richtigen Zeitpunkt erreicht wird."
-        />
+        >
+          <div className="space-y-4">
+            <p>Mein Ansatz basiert auf strukturierten Trainingsblöcken, die individuell auf die Athleten abgestimmt sind. Ich setze dabei bewusst auf kleine, intendierte Anpassungen, um den Fortschritt messbar und nachhaltig steuerbar zu machen.</p>
+            <p>Die Wochenplanung erfolgt flexibel in einem Rhythmus von 1-3 Wochen über TrainingPeaks. So kann das Training optimal auf Alltag, Ernährung und Regeneration abgestimmt werden, um eine ganzheitliche Belastungssteuerung zu gewährleisten. Gleichzeitig bleibt der Fokus stets auf der langfristigen Leistungsentwicklung, damit die Höchstform genau zum richtigen Zeitpunkt erreicht wird.</p>
+          </div>
+        </ServiceDialog>
 
         <ServiceDialog
           isOpen={isCoachingOpen}
           onClose={() => setIsCoachingOpen(false)}
           title="1:1 Coaching Details"
-          description="1. Maßgeschneiderte Trainingsplanung
-Gemeinsam entwickeln wir einen Trainingsplan, der perfekt auf deine Saisonziele, deine verfügbare Zeit und deinen Alltag zugeschnitten ist – für nachhaltigen Fortschritt ohne Überlastung.
+        >
+          <div className="space-y-4">
+            <div>
+              <p className="font-bold">1. Maßgeschneiderte Trainingsplanung</p>
+              <p>Gemeinsam entwickeln wir einen Trainingsplan, der perfekt auf deine Saisonziele, deine verfügbare Zeit und deinen Alltag zugeschnitten ist – für nachhaltigen Fortschritt ohne Überlastung.</p>
+            </div>
 
-2. Detaillierte Analyse
-In regelmäßigen Gesprächen betrachten wir nicht nur deine Trainingsdaten, sondern auch Faktoren wie Ernährung, Schlaf und Stress. So entsteht ein ganzheitliches Bild, das dir hilft, dein volles Potenzial auszuschöpfen.
+            <div>
+              <p className="font-bold">2. Detaillierte Analyse</p>
+              <p>In regelmäßigen Gesprächen betrachten wir nicht nur deine Trainingsdaten, sondern auch Faktoren wie Ernährung, Schlaf und Stress. So entsteht ein ganzheitliches Bild, das dir hilft, dein volles Potenzial auszuschöpfen.</p>
+            </div>
 
-3. Regelmäßige Leistungsdiagnostik
-Alle 3 Monate überprüfen wir deinen aktuellen Leistungsstand durch gezielte Tests. So erkennst du Fortschritte frühzeitig und kannst deine Trainingsreize optimal anpassen.
+            <div>
+              <p className="font-bold">3. Regelmäßige Leistungsdiagnostik</p>
+              <p>Alle 3 Monate überprüfen wir deinen aktuellen Leistungsstand durch gezielte Tests. So erkennst du Fortschritte frühzeitig und kannst deine Trainingsreize optimal anpassen.</p>
+            </div>
 
-4. Strategische Vorbereitung
-Ob Wettkampf, persönliche Bestzeit oder neues Fitnesslevel: Wir entwickeln gemeinsam eine Strategie, die dich Schritt für Schritt an dein Ziel bringt – inklusive mentaler Tipps und Taktikempfehlungen.
+            <div>
+              <p className="font-bold">4. Strategische Vorbereitung</p>
+              <p>Ob Wettkampf, persönliche Bestzeit oder neues Fitnesslevel: Wir entwickeln gemeinsam eine Strategie, die dich Schritt für Schritt an dein Ziel bringt – inklusive mentaler Tipps und Taktikempfehlungen.</p>
+            </div>
 
-5. Persönlicher Support
-Du profitierst von einer schnellen und direkten Kommunikation (8–18 Uhr) mit einer garantierten Antwortzeit von maximal 4 Stunden. Bei Bedarf vereinbaren wir gerne ein persönliches Telefon- oder Online-Gespräch, um offene Fragen zu klären und dich bestmöglich zu unterstützen."
-        />
+            <div>
+              <p className="font-bold">5. Persönlicher Support</p>
+              <p>Du profitierst von einer schnellen und direkten Kommunikation (8–18 Uhr) mit einer garantierten Antwortzeit von maximal 4 Stunden. Bei Bedarf vereinbaren wir gerne ein persönliches Telefon- oder Online-Gespräch, um offene Fragen zu klären und dich bestmöglich zu unterstützen.</p>
+            </div>
+          </div>
+        </ServiceDialog>
 
         <ServiceDialog
           isOpen={isDiagnosticsOpen}
           onClose={() => setIsDiagnosticsOpen(false)}
           title="Leistungsdiagnostik Details"
-          description="1. Umfassende Testung
-Erhalte ein ganzheitliches Bild deiner aktuellen Fitness: Wir messen mithilfe modernster Technologien (z.B. mobiles Laktatmessgerät, Muskelsauerstoff- und Herzfrequenzmessungen) alle relevanten Parameter, um deinen Leistungsstand präzise zu erfassen.
+        >
+          <div className="space-y-4">
+            <div>
+              <p className="font-bold">1. Umfassende Testung</p>
+              <p>Erhalte ein ganzheitliches Bild deiner aktuellen Fitness: Wir messen mithilfe modernster Technologien (z.B. mobiles Laktatmessgerät, Muskelsauerstoff- und Herzfrequenzmessungen) alle relevanten Parameter, um deinen Leistungsstand präzise zu erfassen.</p>
+            </div>
 
-2. Detaillierte Auswertung
-Wir analysieren deine Werte umfassend und verständlich. Du erfährst genau, wie du in Bezug auf Ausdauer, Kraft und Regeneration aufgestellt bist – die Basis für deine optimale Trainingsplanung.
+            <div>
+              <p className="font-bold">2. Detaillierte Auswertung</p>
+              <p>Wir analysieren deine Werte umfassend und verständlich. Du erfährst genau, wie du in Bezug auf Ausdauer, Kraft und Regeneration aufgestellt bist – die Basis für deine optimale Trainingsplanung.</p>
+            </div>
 
-3. Gezielte Trainingsoptimierung
-Auf Grundlage der Testergebnisse erstellen wir individuelle Empfehlungen, um dein Training maximal effizient zu gestalten. So kannst du gezielt an Schwachstellen arbeiten und schneller Fortschritte erzielen.
+            <div>
+              <p className="font-bold">3. Gezielte Trainingsoptimierung</p>
+              <p>Auf Grundlage der Testergebnisse erstellen wir individuelle Empfehlungen, um dein Training maximal effizient zu gestalten. So kannst du gezielt an Schwachstellen arbeiten und schneller Fortschritte erzielen.</p>
+            </div>
 
-4. Langfristige Entwicklung
-Dein Erfolg steht im Fokus: Durch regelmäßige Wiederholungen der Diagnostik und einen fortlaufenden Abgleich deiner Daten kannst du deine Entwicklung kontinuierlich verfolgen und steuern.
+            <div>
+              <p className="font-bold">4. Langfristige Entwicklung</p>
+              <p>Dein Erfolg steht im Fokus: Durch regelmäßige Wiederholungen der Diagnostik und einen fortlaufenden Abgleich deiner Daten kannst du deine Entwicklung kontinuierlich verfolgen und steuern.</p>
+            </div>
 
-5. Flexible Protokolle
-Egal, ob im Labor oder draußen auf deiner Lieblingsstrecke – wir passen die Testbedingungen an deine Ziele und Anforderungen an. Damit erhältst du eine realistische Einschätzung deiner Leistung unter echten Bedingungen."
-        />
+            <div>
+              <p className="font-bold">5. Flexible Protokolle</p>
+              <p>Egal, ob im Labor oder draußen auf deiner Lieblingsstrecke – wir passen die Testbedingungen an deine Ziele und Anforderungen an. Damit erhältst du eine realistische Einschätzung deiner Leistung unter echten Bedingungen.</p>
+            </div>
+          </div>
+        </ServiceDialog>
       </main>
     </div>
   );
@@ -392,23 +409,19 @@ const ContactForm = () => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     console.log("Form submitted with values:", values);
     
-    // Create mailto link with form data
     const subject = encodeURIComponent("Neue Kontaktanfrage von MaxCyclesCoaching");
     const body = encodeURIComponent(
       `Name: ${values.name}\nEmail: ${values.email}\n\nNachricht:\n${values.message}`
     );
     const mailtoLink = `mailto:maxcyclescoaching@gmail.com?subject=${subject}&body=${body}`;
     
-    // Open default email client
     window.location.href = mailtoLink;
     
-    // Show success message
     toast({
       title: "Erfolgreich!",
       description: "Die E-Mail wurde in Ihrem E-Mail-Programm geöffnet. Bitte senden Sie diese ab.",
     });
     
-    // Reset form
     form.reset();
   };
 

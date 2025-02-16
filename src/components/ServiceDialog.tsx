@@ -11,23 +11,19 @@ interface ServiceDialogProps {
   isOpen: boolean;
   onClose: () => void;
   title: string;
-  description: string;
+  children: React.ReactNode;
 }
 
-export function ServiceDialog({ isOpen, onClose, title, description }: ServiceDialogProps) {
-  const formattedDescription = description.split('\n\n').map((paragraph, index) => (
-    <p key={index} className="mb-4 last:mb-0">
-      {paragraph}
-    </p>
-  ));
-
+export function ServiceDialog({ isOpen, onClose, title, children }: ServiceDialogProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
-          <DialogDescription className="text-left mt-4 whitespace-pre-line">
-            {formattedDescription}
+          <DialogDescription className="text-left mt-4">
+            <div className="prose prose-sm">
+              {children}
+            </div>
           </DialogDescription>
         </DialogHeader>
       </DialogContent>
