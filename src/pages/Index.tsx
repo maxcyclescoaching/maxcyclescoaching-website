@@ -292,9 +292,9 @@ const Index = () => {
                 © {currentYear} MaxCyclesCoaching. Alle Rechte vorbehalten.
               </div>
               <div className="mt-4 md:mt-0 space-x-4">
-                <a href="#" className="hover:text-gray-900">Impressum</a>
+                <a href="/impressum" className="hover:text-gray-900">Impressum</a>
                 <span className="mx-2">|</span>
-                <a href="#" className="hover:text-gray-900">Datenschutz</a>
+                <a href="/datenschutz" className="hover:text-gray-900">Datenschutz</a>
               </div>
             </div>
           </div>
