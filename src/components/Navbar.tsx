@@ -1,6 +1,8 @@
+
 import { useState } from "react";
 import { Menu, X, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,20 +16,20 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center space-x-3">
-            <a href="#" onClick={handleLinkClick}>
+            <Link to="/" onClick={handleLinkClick}>
               <img 
                 src="/lovable-uploads/logo_black.png" 
                 alt="MaxCyclesCoaching Logo" 
                 className="h-14 w-auto"
               />
-            </a>
+            </Link>
           </div>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-[#003366] hover:text-opacity-80">Über mich</a>
-            <a href="#philosophy" className="text-[#003366] hover:text-opacity-80">Philosophie</a>
-            <a href="#services" className="text-[#003366] hover:text-opacity-80">Leistungen</a>
+            <a href="/#about" className="text-[#003366] hover:text-opacity-80">Über mich</a>
+            <a href="/#philosophy" className="text-[#003366] hover:text-opacity-80">Philosophie</a>
+            <a href="/#services" className="text-[#003366] hover:text-opacity-80">Leistungen</a>
             <a 
               href="https://www.instagram.com/maxcyclescoaching" 
               target="_blank" 
@@ -37,7 +39,7 @@ export const Navbar = () => {
             >
               <Instagram className="w-6 h-6" />
             </a>
-            <a href="#contact">
+            <a href="/#contact">
               <Button variant="default" className="bg-[#003366] hover:bg-[#002244]">Kontakt</Button>
             </a>
           </div>
@@ -58,21 +60,21 @@ export const Navbar = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <a 
-                href="#about" 
+                href="/#about" 
                 className="block px-3 py-2 text-[#003366] hover:text-opacity-80"
                 onClick={handleLinkClick}
               >
                 Über mich
               </a>
               <a 
-                href="#philosophy" 
+                href="/#philosophy" 
                 className="block px-3 py-2 text-[#003366] hover:text-opacity-80"
                 onClick={handleLinkClick}
               >
                 Philosophie
               </a>
               <a 
-                href="#services" 
+                href="/#services" 
                 className="block px-3 py-2 text-[#003366] hover:text-opacity-80"
                 onClick={handleLinkClick}
               >
@@ -88,7 +90,7 @@ export const Navbar = () => {
               >
                 <Instagram className="w-6 h-6 inline-block mr-2" /> Instagram
               </a>
-              <a href="#contact" onClick={handleLinkClick}>
+              <a href="/#contact" onClick={handleLinkClick}>
                 <Button variant="default" className="w-full mt-2 bg-[#003366] hover:bg-[#002244]">Kontakt</Button>
               </a>
             </div>
