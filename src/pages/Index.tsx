@@ -325,6 +325,7 @@ const Index = () => {
         >
           <div className="space-y-4">
             <div>
+              <br />
               <p className="font-bold">1. Maßgeschneiderte Trainingsplanung</p>
               <p>Gemeinsam entwickeln wir einen Trainingsplan, der perfekt auf deine Saisonziele, deine verfügbare Zeit und deinen Alltag zugeschnitten ist – für nachhaltigen Fortschritt ohne Überlastung.</p>
             </div>
@@ -358,6 +359,7 @@ const Index = () => {
         >
           <div className="space-y-4">
             <div>
+              <br />
               <p className="font-bold">1. Umfassende Testung</p>
               <p>Erhalte ein ganzheitliches Bild deiner aktuellen Fitness: Wir messen mithilfe modernster Technologien (z.B. mobiles Laktatmessgerät, Muskelsauerstoff- und Herzfrequenzmessungen) alle relevanten Parameter, um deinen Leistungsstand präzise zu erfassen.</p>
             </div>
