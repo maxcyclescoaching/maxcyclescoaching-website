@@ -106,10 +106,10 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-gray-600">
-                Hi, ich bin Max – zertifizierter Radsportcoach und leidenschaftlicher Athlet. <br />
-                Meine Schwerpunkte liegen auf individuellem 1:1 Coaching und präzisen Laktat-Leistungsdiagnostiken, die ich seit Ende 2023 anbiete. <br />
-                Dabei setze ich auf eine datenbasierte Trainingssteuerung, gestützt durch aktuelle sportwissenschaftliche Erkenntnisse, Fachliteratur und praxisnahe Erfahrung. <br />
-                Mein Ziel? Dich dabei zu unterstützen, dein volles Potenzial auf dem Rad auszuschöpfen!        
+                Hi, ich bin Max – <b>zertifizierter Radsportcoach</b> und <b>leidenschaftlicher Athlet</b>. <br />
+                Meine Schwerpunkte liegen auf <b>individuellem 1:1 Coaching</b> und präzisen <b>Laktat-Leistungsdiagnostiken</b>, die ich seit Ende 2023 anbiete. <br />
+                Dabei setze ich auf eine <b>datenbasierte Trainingssteuerung</b>, gestützt durch aktuelle <b>sportwissenschaftliche Erkenntnisse</b>, Fachliteratur und <b>praxisnahe Erfahrung</b>. <br />
+                Mein Ziel? Dich dabei zu unterstützen, dein <b>volles Potenzial auf dem Rad auszuschöpfen</b>!        
                 </p>
               </div>
               <div className="bg-accent rounded-lg p-8 self-start">
