@@ -106,10 +106,10 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-gray-600">
-                  Hi, ich bin Max – zertifizierter Radsportcoach und leidenschaftlicher Athlet.
-                  Seit 2021 lebe ich den Radsport und unterstütze seit Ende 2023 Athleten mit individuellem 1:1 Coaching sowie präzisen Leistungsdiagnostiken. 
-                  Durch kontinuierliche Weiterbildung, gestützt auf Fachliteratur, Studien und praktische Erfahrungen, entwickle ich wissenschaftlich fundierte Trainingskonzepte <br />
-                  Mein Ziel? Dich dabei zu unterstützen, dein volles Potenzial auf dem Rad auszuschöpfen!
+                  Hi, ich bin Max – zertifizierter Radsportcoach und leidenschaftlicher Athlet. <br />
+                  Seit 2021 beschäftige ich mich intensiv mit Training, Leistungsdiagnostiken und wissenschaftlichen Ansätzen, um Athleten bestmöglich zu unterstützen. Seit Ende 2023 biete ich individuelles 1:1 Coaching sowie präzise Leistungsdiagnostiken an. 
+                  Mein Wissen erweitere ich kontinuierlich durch Fachliteratur, Studien und praxisnahe Erfahrungen, um Trainingspläne gezielt auf die individuellen Bedürfnisse meiner Athleten abzustimmen.
+                  Mein Ziel? Dich dabei zu unterstützen, dein volles Potenzial auf dem Rad auszuschöpfen! <br />               
                 </p>
               </div>
               <div className="bg-accent rounded-lg p-8 self-start">
