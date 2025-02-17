@@ -106,8 +106,9 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-gray-600">
-                  Hi, ich bin Max, leidenschaftlicher Radsportler und Coach. Seit 2021 widme ich mich mit voller Begeisterung dem Radsport und biete seit Ende 2023 individuelles 1:1 Coaching und Leistungsdiagnostiken an. Zudem habe ich Anfang 2025 die German Cycling (BDR) Zertifizierung zum BasisCoach erhalten.<br />
-                  Mein Wissen baue ich kontinuierlich aus - durch Fachliteratur, Studien und praxisnahe Erfahrungen. Dieses wissenschaftlich fundierte Know-how bildet die Grundlage meiner Trainingsphilosophie, die ich gezielt auf die individuellen Bedürfnisse meiner Athleten übertrage. <br />
+                  Hi, ich bin Max – zertifizierter Radsportcoach und leidenschaftlicher Athlet.
+                  Seit 2021 lebe ich den Radsport und unterstütze seit Ende 2023 Athleten mit individuellem 1:1 Coaching sowie präzisen Leistungsdiagnostiken. 
+                  Durch kontinuierliche Weiterbildung, gestützt auf Fachliteratur, Studien und praktische Erfahrungen, entwickle ich wissenschaftlich fundierte Trainingskonzepte <br />
                   Mein Ziel? Dich dabei zu unterstützen, dein volles Potenzial auf dem Rad auszuschöpfen!
                 </p>
               </div>
