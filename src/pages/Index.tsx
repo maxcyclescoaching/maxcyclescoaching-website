@@ -116,7 +116,7 @@ const Index = () => {
                   {achievements.map((achievement, index) => (
                     <li 
                       key={index} 
-                      className={`flex items-start text-gray-700 ${
+                      className={`flex items-center text-gray-700 ${
                         index === 0 ? 
                         'cursor-pointer group transition-all duration-200 hover:text-[#003366] relative' : ''
                       }`}
