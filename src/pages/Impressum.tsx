@@ -12,8 +12,6 @@ const Impressum = () => {
           <div className="prose prose-lg">
             <div className="space-y-6">
               <h2 className="text-2xl font-bold text-[#003366]">Angaben gemäß § 5 TMG</h2>
-              <p>MaxCyclesCoaching</p>
-
               <p>Maximilian Lohr<br />
               MaxCyclesCoaching<br />
               Heimstättenweg 23<br />
@@ -30,7 +28,7 @@ const Impressum = () => {
               <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
             </div>
 
-            <p className="mt-8">Quelle: <a href="https://www.e-recht24.de/impressum-generator.html" className="text-[#003366] hover:underline">https://www.e-recht24.de/impressum-generator.html</a></p>
+            <p className="mt-8">Quelle: <a href="https://www.e-recht24.de" className="text-[#003366] hover:underline">https://www.e-recht24.de</a></p>
           </div>
         </div>
       </main>
