@@ -116,7 +116,7 @@ const Index = () => {
                   {achievements.map((achievement, index) => (
                     <li 
                       key={index} 
-                      className={`flex items-center text-gray-700 ${
+                      className={`flex items-start text-gray-700 ${
                         index === 0 ? 
                         'cursor-pointer group transition-all duration-200 hover:text-[#003366] relative' : ''
                       }`}
@@ -124,7 +124,7 @@ const Index = () => {
                         if (index === 0) setIsCertificateOpen(true);
                       }}
                     >
-                      <Bike className={`w-6 h-6 mr-3 ${
+                      <Bike className={`w-6 h-6 mr-3 flex-shrink-0 ${
                         index === 0 ? 'text-secondary group-hover:text-[#003366] transition-colors' : 'text-secondary'
                       }`} />
                       {index === 0 ? (
