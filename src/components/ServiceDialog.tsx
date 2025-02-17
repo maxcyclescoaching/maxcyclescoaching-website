@@ -2,7 +2,6 @@
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
@@ -17,15 +16,11 @@ interface ServiceDialogProps {
 export function ServiceDialog({ isOpen, onClose, title, children }: ServiceDialogProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle>{title}</DialogTitle>
-          <DialogDescription className="text-left mt-4">
-            <div className="prose prose-sm">
-              {children}
-            </div>
-          </DialogDescription>
+          <DialogTitle className="text-[#003366]">{title}</DialogTitle>
         </DialogHeader>
+        {children}
       </DialogContent>
     </Dialog>
   );

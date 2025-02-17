@@ -15,7 +15,7 @@ interface LightboxDialogProps {
 export function LightboxDialog({ isOpen, onClose, imageSrc, imageAlt }: LightboxDialogProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[800px] p-0">
+      <DialogContent className="sm:max-w-[800px] p-0 max-h-[90vh] overflow-y-auto">
         <DialogDescription className="m-0">
           <img 
             src={imageSrc} 
