@@ -257,7 +257,7 @@ const Index = () => {
 
         <section id="testimonials" className="py-20 bg-gray-100" aria-label="Testimonials">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-[#003366]">Das sagen meine Athlet:innen</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-[#003366]">Das sagen meine Athlet*innen</h2>
           <div className="space-y-8">
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <p className="text-xl mb-4">"Das Coaching hat meine Leistung auf ein neues Level gehoben. Ich habe meine persönlichen Bestzeiten erreicht!"</p>
@@ -314,8 +314,8 @@ const Index = () => {
           title="Mein Coaching-Ansatz"
         >
           <div className="space-y-4">
-            <p>Mein Ansatz basiert auf strukturierten Trainingsblöcken, die individuell auf die Athleten abgestimmt sind. Ich setze dabei bewusst auf kleine, intendierte Anpassungen, um den Fortschritt messbar und nachhaltig steuerbar zu machen.</p>
-            <p>Die Wochenplanung erfolgt flexibel in einem Rhythmus von 1-3 Wochen über TrainingPeaks. So kann das Training optimal auf Alltag, Ernährung und Regeneration abgestimmt werden, um eine ganzheitliche Belastungssteuerung zu gewährleisten. Gleichzeitig bleibt der Fokus stets auf der langfristigen Leistungsentwicklung, damit die Höchstform genau zum richtigen Zeitpunkt erreicht wird.</p>
+            <p>Mein Ansatz basiert auf strukturierten Trainingsblöcken, die individuell auf die Athlet*innen abgestimmt sind. Ich setze dabei bewusst auf kleine, intendierte Anpassungen, um den Fortschritt messbar und nachhaltig steuerbar zu machen.</p>
+            <p>Die Wochenplanung erfolgt flexibel in einem Rhythmus von 1 bis 3 Wochen über TrainingPeaks. So kann das Training optimal auf Alltag, Ernährung und Regeneration abgestimmt werden, um eine ganzheitliche Belastungssteuerung zu gewährleisten. Gleichzeitig bleibt der Fokus stets auf der langfristigen Leistungsentwicklung, damit die Höchstform genau zum richtigen Zeitpunkt erreicht wird.</p>
           </div>
         </ServiceDialog>
 
