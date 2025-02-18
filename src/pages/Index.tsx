@@ -150,8 +150,8 @@ const Index = () => {
           <div className="text-center max-w-3xl mx-auto">
             <p className="text-gray-600 mb-8">
             Ein <b>effektives Training</b> beginnt mit einer <b>fundierten Analyse</b>: <br />
-            Zunächst werte ich die <b>spezifischen Wettkampfanforderungen</b> und das <b>individuelle Athletenprofil</b> aus, welches zuvor durch eine Leistungsdiagnostik ermittelt wird. <br />
-            So lassen sich <b>Stärken und Potenziale</b> ebenso identifizieren wie <b>gezielte Ansatzpunkte für Verbesserungen</b>.
+            Zunächst erfasse ich deine <b>Wettkampfziele</b> und erstelle ein <b>individuelles</b> Athletenprofil mittels einer detaillierten <b>Leistungsdiagnostik.</b> <br />
+            So erkennen wir nicht nur deine <b>Stärken</b>, sondern identifizieren auch gezielt <b>Potenziale</b> – der Schlüssel zu <b>nachhaltigen Verbesserungen</b>.
             </p>
             <Button 
                   variant="secondary" 
