@@ -322,7 +322,7 @@ const Index = () => {
         <ServiceDialog
           isOpen={isCoachingOpen}
           onClose={() => setIsCoachingOpen(false)}
-          title="1:1 Coaching Details"
+          title="1:1 Coaching – Details"
         >
           <div className="space-y-4">
             <div>
@@ -356,7 +356,7 @@ const Index = () => {
         <ServiceDialog
           isOpen={isDiagnosticsOpen}
           onClose={() => setIsDiagnosticsOpen(false)}
-          title="Leistungsdiagnostik Details"
+          title="Leistungsdiagnostik – Details"
         >
           <div className="space-y-4">
             <div>
