@@ -68,34 +68,37 @@ const Index = () => {
       
       <main>
         <section className="relative h-screen bg-[#003366] animate-fade-in" aria-label="Hero">
-        <div className="absolute inset-0">
-          <img 
-            src="/lovable-uploads/hero_img.JPEG" 
-            alt="Hero Background" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-[#003366]/60" />
-        </div>
-        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
-          <div className="text-center text-white">
+          <div className="absolute inset-0">
             <img 
-              src="/lovable-uploads/logo_white.png" 
-              alt="MaxCyclesCoaching Logo" 
-              className="h-24 sm:h-32 w-auto mx-auto mb-6 sm:mb-8"
+              src="/lovable-uploads/hero_img.JPEG" 
+              alt="Hero Background" 
+              className="w-full h-full object-cover"
             />
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6">
-              MaxCyclesCoaching
-            </h1>
-            <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-              Professionelles Radsport-Coaching, maßgeschneidert auf deine Ziele. Von Amateuren bis zu Elite-Athleten.
-            </p>
-            <a href="#about">
-              <Button size="lg" className="bg-[#003366] hover:bg-[#002244] text-white">
-                Starte jetzt <ArrowRight className="ml-2" />
-              </Button>
-            </a>
+            <div className="absolute inset-0 bg-[#003366]/70" />
           </div>
-        </div>
+          <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+            <div className="text-center text-white">
+              <img 
+                src="/lovable-uploads/logo_white.png" 
+                alt="MaxCyclesCoaching Logo" 
+                className="h-24 sm:h-32 w-auto mx-auto mb-6 sm:mb-8"
+              />
+              <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mb-4 sm:mb-6 text-shadow-lg">
+                MaxCyclesCoaching
+              </h1>
+              <p className="text-xl sm:text-2xl md:text-3xl mb-8 sm:mb-10 max-w-3xl mx-auto px-4 font-medium text-shadow">
+                Professionelles Radsport-Coaching, maßgeschneidert auf deine Ziele. Von Amateuren bis zu Elite-Athleten.
+              </p>
+              <a href="#about">
+                <Button 
+                  size="lg" 
+                  className="bg-[#F97316] hover:bg-[#EA580C] text-white transform hover:scale-105 transition-all duration-200 text-lg py-6 px-8"
+                >
+                  Starte jetzt <ArrowRight className="ml-2 w-6 h-6" />
+                </Button>
+              </a>
+            </div>
+          </div>
         </section>
 
         <section id="about" className="py-20" aria-label="Über mich">
@@ -170,82 +173,88 @@ const Index = () => {
             Leistungen
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl font-semibold mb-2 text-[#003366]">1:1 Coaching</h3>
+            <div className="bg-gradient-to-br from-white to-blue-50 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
+              <div className="flex items-center gap-3 mb-4">
+                <Users className="w-8 h-8 text-[#0EA5E9]" />
+                <h3 className="text-2xl font-semibold text-[#003366]">1:1 Coaching</h3>
+              </div>
               <p className="text-lg text-gray-600 mb-6">99€/Monat, ohne Mindestlaufzeit</p>
               <ul className="space-y-4 text-left mb-6">
                 <li className="flex items-center">
-                  <Calendar className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
+                  <Calendar className="w-6 h-6 text-[#0EA5E9] mr-3 flex-shrink-0" />
                   <span>Maßgeschneiderte Trainingsplanung</span>
                 </li>
                 <li className="flex items-center">
-                  <LineChart className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
+                  <LineChart className="w-6 h-6 text-[#0EA5E9] mr-3 flex-shrink-0" />
                   <span>Detaillierte Analyse</span>
                 </li>
                 <li className="flex items-center">
-                  <Gauge className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
+                  <Gauge className="w-6 h-6 text-[#0EA5E9] mr-3 flex-shrink-0" />
                   <span>Regelmäßige Leistungsdiagnostiken</span>
                 </li>
                 <li className="flex items-center">
-                  <Trophy className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
+                  <Trophy className="w-6 h-6 text-[#0EA5E9] mr-3 flex-shrink-0" />
                   <span>Strategische Wettkampfvorbereitung</span>
                 </li>
                 <li className="flex items-center">
-                  <MessageCircle className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
+                  <MessageCircle className="w-6 h-6 text-[#0EA5E9] mr-3 flex-shrink-0" />
                   <span>Persönlicher Support</span>
                 </li>
               </ul>
               <div className="space-y-3">
                 <Button 
                   variant="secondary" 
-                  className="w-full text-white"
+                  className="w-full text-white bg-[#0EA5E9] hover:bg-[#0284C7]"
                   onClick={() => setIsCoachingOpen(true)}
                 >
                   Mehr erfahren
                 </Button>
                 <a href="#contact">
-                  <Button variant="outline" className="w-full">
+                  <Button variant="outline" className="w-full border-[#0EA5E9] text-[#0EA5E9] hover:bg-blue-50">
                     Anfragen
                   </Button>
                 </a>
               </div>
             </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl font-semibold mb-2 text-[#003366]">Individuelle Leistungsdiagnostik</h3>
+            <div className="bg-gradient-to-br from-white to-orange-50 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100">
+              <div className="flex items-center gap-3 mb-4">
+                <ActivitySquare className="w-8 h-8 text-[#F97316]" />
+                <h3 className="text-2xl font-semibold text-[#003366]">Individuelle Leistungsdiagnostik</h3>
+              </div>
               <p className="text-lg text-gray-600 mb-6">149€/Diagnostik</p>
               <ul className="space-y-4 text-left mb-6">
                 <li className="flex items-center">
-                  <ActivitySquare className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
+                  <ActivitySquare className="w-6 h-6 text-[#F97316] mr-3 flex-shrink-0" />
                   <span>Umfassende Testung</span>
                 </li>
                 <li className="flex items-center">
-                  <Brain className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
+                  <Brain className="w-6 h-6 text-[#F97316] mr-3 flex-shrink-0" />
                   <span>Umfangreiche Auswertung</span>
                 </li>
                 <li className="flex items-center">
-                  <Target className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
+                  <Target className="w-6 h-6 text-[#F97316] mr-3 flex-shrink-0" />
                   <span>Gezielte Trainingsoptimierung</span>
                 </li>
                 <li className="flex items-center">
-                  <LineChart className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
+                  <LineChart className="w-6 h-6 text-[#F97316] mr-3 flex-shrink-0" />
                   <span>Langfristige Entwicklung</span>
                 </li>
                 <li className="flex items-center">
-                  <Timer className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
+                  <Timer className="w-6 h-6 text-[#F97316] mr-3 flex-shrink-0" />
                   <span>Flexible Protokolle</span>
                 </li>
               </ul>
               <div className="space-y-3">
                 <Button 
                   variant="secondary" 
-                  className="w-full text-white"
+                  className="w-full text-white bg-[#F97316] hover:bg-[#EA580C]"
                   onClick={() => setIsDiagnosticsOpen(true)}
                 >
                   Mehr erfahren
                 </Button>
                 <a href="#contact">
-                  <Button variant="outline" className="w-full">
+                  <Button variant="outline" className="w-full border-[#F97316] text-[#F97316] hover:bg-orange-50">
                     Anfragen
                   </Button>
                 </a>
@@ -258,18 +267,48 @@ const Index = () => {
         <section id="testimonials" className="py-20 bg-gray-100" aria-label="Testimonials">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-[#003366]">Das sagen meine Athlet*innen</h2>
-          <div className="space-y-8">
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+              <div className="flex flex-col items-center mb-4">
+                <div className="w-16 h-16 bg-gray-200 rounded-full mb-4"></div>
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
               <p className="text-xl mb-4">"Das Coaching hat meine Leistung auf ein neues Level gehoben. Ich habe meine persönlichen Bestzeiten erreicht!"</p>
-              <p className="font-semibold text-secondary">- Max Mustermann</p>
+              <p className="font-semibold text-[#003366]">- Max Mustermann</p>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+              <div className="flex flex-col items-center mb-4">
+                <div className="w-16 h-16 bg-gray-200 rounded-full mb-4"></div>
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
               <p className="text-xl mb-4">"Dank der individuellen Betreuung fühle ich mich bestens vorbereitet für meine Wettkämpfe."</p>
-              <p className="font-semibold text-secondary">- Anna Müller</p>
+              <p className="font-semibold text-[#003366]">- Anna Müller</p>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+              <div className="flex flex-col items-center mb-4">
+                <div className="w-16 h-16 bg-gray-200 rounded-full mb-4"></div>
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
               <p className="text-xl mb-4">"Die Leistungsdiagnostik hat mir geholfen, meine Schwächen zu erkennen und gezielt daran zu arbeiten."</p>
-              <p className="font-semibold text-secondary">- Peter Schmidt</p>
+              <p className="font-semibold text-[#003366]">- Peter Schmidt</p>
             </div>
           </div>
         </div>
@@ -278,8 +317,8 @@ const Index = () => {
         <section id="contact" className="py-20 bg-primary text-white" aria-label="Kontakt">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Kontakt</h2>
-            <p className="text-xl mb-8 text-center">
-              Bereit, deine Ziele zu erreichen? Lass uns gemeinsam daran arbeiten.
+            <p className="text-2xl mb-12 text-center font-medium">
+              Lass uns gemeinsam dein nächstes Leistungslevel erreichen!
             </p>
             
             <ContactForm />
@@ -481,9 +520,9 @@ const ContactForm = () => {
           <Button 
             type="submit" 
             size="lg"
-            className="w-full bg-[#003366] hover:bg-[#002244]"
+            className="w-full bg-[#F97316] hover:bg-[#EA580C] text-xl py-6 transform hover:scale-105 transition-all duration-200"
           >
-            Nachricht senden
+            Nachricht senden <ArrowRight className="ml-2 w-6 h-6" />
           </Button>
         </form>
       </Form>

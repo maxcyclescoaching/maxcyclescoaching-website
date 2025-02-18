@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -29,7 +30,7 @@ export default {
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#22D3EE", // remember as alternative: #EC4899
+          DEFAULT: "#22D3EE",
           foreground: "#FFFFFF",
         },
         accent: {
@@ -77,7 +78,25 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 1s ease-out",
       },
+      textShadow: {
+        sm: '0 1px 2px rgba(0, 0, 0, 0.2)',
+        DEFAULT: '0 2px 4px rgba(0, 0, 0, 0.2)',
+        lg: '0 8px 16px rgba(0, 0, 0, 0.3)',
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ addUtilities }: { addUtilities: any }) {
+      const newUtilities = {
+        '.text-shadow': {
+          textShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+        },
+        '.text-shadow-lg': {
+          textShadow: '0 8px 16px rgba(0, 0, 0, 0.3)',
+        },
+      }
+      addUtilities(newUtilities)
+    },
+  ],
 } satisfies Config;
