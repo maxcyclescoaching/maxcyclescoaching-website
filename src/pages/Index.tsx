@@ -89,10 +89,10 @@ const Index = () => {
               <p className="text-xl sm:text-2xl md:text-3xl mb-8 sm:mb-10 max-w-3xl mx-auto px-4 font-medium text-shadow">
                 Professionelles Radsport-Coaching, maßgeschneidert auf deine Ziele. Von Amateuren bis zu Elite-Athleten.
               </p>
-              <a href="#about">
+              <a href="#services">
                 <Button 
                   size="lg" 
-                  className="bg-[#F97316] hover:bg-[#EA580C] text-white transform hover:scale-105 transition-all duration-200 text-lg py-6 px-8"
+                  className="bg-[#0EA5E9] hover:bg-[#0284C7] text-white transform hover:scale-105 transition-all duration-200 text-lg py-6 px-8"
                 >
                   Starte jetzt <ArrowRight className="ml-2 w-6 h-6" />
                 </Button>
@@ -201,7 +201,7 @@ const Index = () => {
                   <span>Persönlicher Support</span>
                 </li>
               </ul>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 <Button 
                   variant="secondary" 
                   className="w-full text-white bg-[#0EA5E9] hover:bg-[#0284C7]"
@@ -217,44 +217,44 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-white to-orange-50 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100">
+            <div className="bg-gradient-to-br from-white to-[#E8F0F8] p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
               <div className="flex items-center gap-3 mb-4">
-                <ActivitySquare className="w-8 h-8 text-[#F97316]" />
-                <h3 className="text-2xl font-semibold text-[#003366]">Individuelle Leistungsdiagnostik</h3>
+                <ActivitySquare className="w-8 h-8 text-[#0EA5E9]" />
+                <h3 className="text-2xl font-semibold text-[#403E43]">Individuelle Leistungsdiagnostik</h3>
               </div>
               <p className="text-lg text-gray-600 mb-6">149€/Diagnostik</p>
               <ul className="space-y-4 text-left mb-6">
                 <li className="flex items-center">
-                  <ActivitySquare className="w-6 h-6 text-[#F97316] mr-3 flex-shrink-0" />
-                  <span>Umfassende Testung</span>
+                  <ActivitySquare className="w-6 h-6 text-[#0EA5E9] mr-3 flex-shrink-0" />
+                  <span className="text-[#403E43]">Umfassende Testung</span>
                 </li>
                 <li className="flex items-center">
-                  <Brain className="w-6 h-6 text-[#F97316] mr-3 flex-shrink-0" />
-                  <span>Umfangreiche Auswertung</span>
+                  <Brain className="w-6 h-6 text-[#0EA5E9] mr-3 flex-shrink-0" />
+                  <span className="text-[#403E43]">Umfangreiche Auswertung</span>
                 </li>
                 <li className="flex items-center">
-                  <Target className="w-6 h-6 text-[#F97316] mr-3 flex-shrink-0" />
-                  <span>Gezielte Trainingsoptimierung</span>
+                  <Target className="w-6 h-6 text-[#0EA5E9] mr-3 flex-shrink-0" />
+                  <span className="text-[#403E43]">Gezielte Trainingsoptimierung</span>
                 </li>
                 <li className="flex items-center">
-                  <LineChart className="w-6 h-6 text-[#F97316] mr-3 flex-shrink-0" />
-                  <span>Langfristige Entwicklung</span>
+                  <LineChart className="w-6 h-6 text-[#0EA5E9] mr-3 flex-shrink-0" />
+                  <span className="text-[#403E43]">Langfristige Entwicklung</span>
                 </li>
                 <li className="flex items-center">
-                  <Timer className="w-6 h-6 text-[#F97316] mr-3 flex-shrink-0" />
-                  <span>Flexible Protokolle</span>
+                  <Timer className="w-6 h-6 text-[#0EA5E9] mr-3 flex-shrink-0" />
+                  <span className="text-[#403E43]">Flexible Protokolle</span>
                 </li>
               </ul>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 <Button 
                   variant="secondary" 
-                  className="w-full text-white bg-[#F97316] hover:bg-[#EA580C]"
+                  className="w-full text-white bg-[#0FA0CE] hover:bg-[#0EA5E9]"
                   onClick={() => setIsDiagnosticsOpen(true)}
                 >
                   Mehr erfahren
                 </Button>
                 <a href="#contact">
-                  <Button variant="outline" className="w-full border-[#F97316] text-[#F97316] hover:bg-orange-50">
+                  <Button variant="outline" className="w-full border-[#0FA0CE] text-[#0FA0CE] hover:bg-[#E8F0F8]">
                     Anfragen
                   </Button>
                 </a>
@@ -520,7 +520,7 @@ const ContactForm = () => {
           <Button 
             type="submit" 
             size="lg"
-            className="w-full bg-[#F97316] hover:bg-[#EA580C] text-xl py-6 transform hover:scale-105 transition-all duration-200"
+            className="w-full bg-[#0EA5E9] hover:bg-[#0284C7] text-xl py-6 transform hover:scale-105 transition-all duration-200"
           >
             Nachricht senden <ArrowRight className="ml-2 w-6 h-6" />
           </Button>
