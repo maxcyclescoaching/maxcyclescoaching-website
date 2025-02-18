@@ -478,7 +478,7 @@ const ContactForm = () => {
               <FormItem>
                 <FormLabel>Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="Ihr Name" {...field} />
+                  <Input placeholder="Dein Name" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -492,7 +492,7 @@ const ContactForm = () => {
               <FormItem>
                 <FormLabel>E-Mail</FormLabel>
                 <FormControl>
-                  <Input type="email" placeholder="ihre.email@beispiel.de" {...field} />
+                  <Input type="email" placeholder="max.mustermann@beispiel.de" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -507,7 +507,7 @@ const ContactForm = () => {
                 <FormLabel>Nachricht</FormLabel>
                 <FormControl>
                   <Textarea 
-                    placeholder="Ihre Nachricht an uns" 
+                    placeholder="Deine Nachricht" 
                     className="min-h-[150px]"
                     {...field} 
                   />
