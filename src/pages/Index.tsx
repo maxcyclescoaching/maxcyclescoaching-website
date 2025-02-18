@@ -149,9 +149,9 @@ const Index = () => {
           </h2>
           <div className="text-center max-w-3xl mx-auto">
             <p className="text-gray-600 mb-8">
-            Ein effektives Training beginnt mit einer fundierten Analyse: <br />
-            Zunächst werte ich die spezifischen Wettkampfanforderungen und das individuelle Athletenprofil aus, welches zuvor durch eine Leistungsdiagnostik ermittelt wird. <br />
-            So lassen sich Stärken und Potenziale ebenso identifizieren wie gezielte Ansatzpunkte für Verbesserungen.
+            Ein <b>effektives Training</b> beginnt mit einer <b>fundierten Analyse</b>: <br />
+            Zunächst werte ich die <b>spezifischen Wettkampfanforderungen</b> und das <b>individuelle Athletenprofil</b> aus, welches zuvor durch eine Leistungsdiagnostik ermittelt wird. <br />
+            So lassen sich <b>Stärken und Potenziale</b> ebenso identifizieren wie <b>gezielte Ansatzpunkte für Verbesserungen</b>.
             </p>
             <Button 
                   variant="secondary" 
