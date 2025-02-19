@@ -92,7 +92,8 @@ const Index = () => {
               <a href="#services">
                 <Button 
                   size="lg" 
-                  className="bg-[#0EA5E9] hover:bg-[#0284C7] text-white transform hover:scale-105 transition-all duration-200 text-lg py-6 px-8"
+                  variant="secondary"
+                  className="text-white transform hover:scale-105 transition-all duration-200 text-lg py-6 px-8"
                 >
                   Starte jetzt <ArrowRight className="ml-2 w-6 h-6" />
                 </Button>
