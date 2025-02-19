@@ -67,14 +67,14 @@ const Index = () => {
       <Navbar />
       
       <main>
-        <section className="relative h-screen bg-[#003366] animate-fade-in" aria-label="Hero">
+        <section className="relative h-screen bg-primary animate-fade-in" aria-label="Hero">
           <div className="absolute inset-0">
             <img 
               src="/lovable-uploads/hero_img.JPEG" 
               alt="Hero Background" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-[#003366]/70" />
+            <div className="absolute inset-0 bg-primary/70" />
           </div>
           <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
             <div className="text-center text-white">
@@ -123,19 +123,19 @@ const Index = () => {
                       key={index} 
                       className={`flex items-center text-gray-700 ${
                         index === 0 ? 
-                        'cursor-pointer group transition-all duration-200 hover:text-[#003366] relative' : ''
+                        'cursor-pointer group transition-all duration-200 hover:text-primary relative' : ''
                       }`}
                       onClick={() => {
                         if (index === 0) setIsCertificateOpen(true);
                       }}
                     >
                       <Bike className={`w-6 h-6 mr-3 flex-shrink-0 ${
-                        index === 0 ? 'text-secondary group-hover:text-[#003366] transition-colors' : 'text-secondary'
+                        index === 0 ? 'text-secondary group-hover:text-primary transition-colors' : 'text-secondary'
                       }`} />
                       {index === 0 ? (
                         <span className="inline-flex items-center">
                           {achievement}
-                          <span className="ml-2 text-xs text-[#003366] font-medium">(Zertifikat ansehen)</span>
+                          <span className="ml-2 text-xs text-primary font-medium">(Zertifikat ansehen)</span>
                         </span>
                       ) : achievement}
                     </li>
@@ -174,44 +174,44 @@ const Index = () => {
             Leistungen
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-white to-blue-50 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
+            <div className="bg-gradient-to-br from-white to-[#E8F0F8] p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
               <div className="flex items-center gap-3 mb-4">
-                <Users className="w-8 h-8 text-[#22D3EE]" />
-                <h3 className="text-2xl font-semibold text-[#003366]">1:1 Coaching</h3>
+                <Users className="w-8 h-8 text-secondary" />
+                <h3 className="text-2xl font-semibold text-primary">1:1 Coaching</h3>
               </div>
               <p className="text-lg text-gray-600 mb-6">99€/Monat, ohne Mindestlaufzeit</p>
               <ul className="space-y-4 text-left mb-6">
                 <li className="flex items-center">
-                  <Calendar className="w-6 h-6 text-[#22D3EE] mr-3 flex-shrink-0" />
+                  <Calendar className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
                   <span>Maßgeschneiderte Trainingsplanung</span>
                 </li>
                 <li className="flex items-center">
-                  <LineChart className="w-6 h-6 text-[#22D3EE] mr-3 flex-shrink-0" />
+                  <LineChart className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
                   <span>Detaillierte Analyse</span>
                 </li>
                 <li className="flex items-center">
-                  <Gauge className="w-6 h-6 text-[#22D3EE] mr-3 flex-shrink-0" />
+                  <Gauge className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
                   <span>Regelmäßige Leistungsdiagnostiken</span>
                 </li>
                 <li className="flex items-center">
-                  <Trophy className="w-6 h-6 text-[#22D3EE] mr-3 flex-shrink-0" />
+                  <Trophy className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
                   <span>Strategische Wettkampfvorbereitung</span>
                 </li>
                 <li className="flex items-center">
-                  <MessageCircle className="w-6 h-6 text-[#22D3EE] mr-3 flex-shrink-0" />
+                  <MessageCircle className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
                   <span>Persönlicher Support</span>
                 </li>
               </ul>
               <div className="space-y-4">
                 <Button 
                   variant="secondary" 
-                  className="w-full text-white bg-[#22D3EE] hover:bg-[#0284C7]"
+                  className="w-full text-white"
                   onClick={() => setIsCoachingOpen(true)}
                 >
                   Mehr erfahren
                 </Button>
                 <a href="#contact">
-                  <Button variant="outline" className="w-full border-[#22D3EE] text-[#22D3EE] hover:bg-blue-50">
+                  <Button variant="outline" className="w-full">
                     Anfragen
                   </Button>
                 </a>
@@ -220,42 +220,42 @@ const Index = () => {
 
             <div className="bg-gradient-to-br from-white to-[#E8F0F8] p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
               <div className="flex items-center gap-3 mb-4">
-                <ActivitySquare className="w-8 h-8 text-[#1E3A8A]" />
-                <h3 className="text-2xl font-semibold text-[#003366]">Individuelle Leistungsdiagnostik</h3>
+                <ActivitySquare className="w-8 h-8 text-primary" />
+                <h3 className="text-2xl font-semibold text-primary">Individuelle Leistungsdiagnostik</h3>
               </div>
               <p className="text-lg text-gray-600 mb-6">149€/Diagnostik</p>
               <ul className="space-y-4 text-left mb-6">
                 <li className="flex items-center">
-                  <ActivitySquare className="w-6 h-6 text-[#1E3A8A] mr-3 flex-shrink-0" />
-                  <span className="text-[#403E43]">Umfassende Testung</span>
+                  <ActivitySquare className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
+                  <span className="text-primary">Umfassende Testung</span>
                 </li>
                 <li className="flex items-center">
-                  <Brain className="w-6 h-6 text-[#1E3A8A] mr-3 flex-shrink-0" />
-                  <span className="text-[#403E43]">Umfangreiche Auswertung</span>
+                  <Brain className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
+                  <span className="text-primary">Umfangreiche Auswertung</span>
                 </li>
                 <li className="flex items-center">
-                  <Target className="w-6 h-6 text-[#1E3A8A] mr-3 flex-shrink-0" />
-                  <span className="text-[#403E43]">Gezielte Trainingsoptimierung</span>
+                  <Target className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
+                  <span className="text-primary">Gezielte Trainingsoptimierung</span>
                 </li>
                 <li className="flex items-center">
-                  <LineChart className="w-6 h-6 text-[#1E3A8A] mr-3 flex-shrink-0" />
-                  <span className="text-[#403E43]">Langfristige Entwicklung</span>
+                  <LineChart className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
+                  <span className="text-primary">Langfristige Entwicklung</span>
                 </li>
                 <li className="flex items-center">
-                  <Timer className="w-6 h-6 text-[#1E3A8A] mr-3 flex-shrink-0" />
-                  <span className="text-[#403E43]">Flexible Protokolle</span>
+                  <Timer className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
+                  <span className="text-primary">Flexible Protokolle</span>
                 </li>
               </ul>
               <div className="space-y-4">
                 <Button 
                   variant="secondary" 
-                  className="w-full text-white bg-[#1E3A8A] hover:bg-[#0EA5E9]"
+                  className="w-full text-white"
                   onClick={() => setIsDiagnosticsOpen(true)}
                 >
                   Mehr erfahren
                 </Button>
                 <a href="#contact">
-                  <Button variant="outline" className="w-full border-[#1E3A8A] text-[#1E3A8A] hover:bg-[#E8F0F8]">
+                  <Button variant="outline" className="w-full">
                     Anfragen
                   </Button>
                 </a>
@@ -267,7 +267,7 @@ const Index = () => {
 
         <section id="testimonials" className="py-20 bg-gray-100" aria-label="Testimonials">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-[#003366]">Das sagen meine Athlet*innen</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary">Das sagen meine Athlet*innen</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
               <div className="flex flex-col items-center mb-4">
@@ -281,7 +281,7 @@ const Index = () => {
                 </div>
               </div>
               <p className="text-xl mb-4">"Das Coaching hat meine Leistung auf ein neues Level gehoben. Ich habe meine persönlichen Bestzeiten erreicht!"</p>
-              <p className="font-semibold text-[#003366]">- Max Mustermann</p>
+              <p className="font-semibold text-primary">- Max Mustermann</p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
               <div className="flex flex-col items-center mb-4">
@@ -295,7 +295,7 @@ const Index = () => {
                 </div>
               </div>
               <p className="text-xl mb-4">"Dank der individuellen Betreuung fühle ich mich bestens vorbereitet für meine Wettkämpfe."</p>
-              <p className="font-semibold text-[#003366]">- Anna Müller</p>
+              <p className="font-semibold text-primary">- Anna Müller</p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
               <div className="flex flex-col items-center mb-4">
@@ -309,7 +309,7 @@ const Index = () => {
                 </div>
               </div>
               <p className="text-xl mb-4">"Die Leistungsdiagnostik hat mir geholfen, meine Schwächen zu erkennen und gezielt daran zu arbeiten."</p>
-              <p className="font-semibold text-[#003366]">- Peter Schmidt</p>
+              <p className="font-semibold text-primary">- Peter Schmidt</p>
             </div>
           </div>
         </div>
@@ -521,7 +521,8 @@ const ContactForm = () => {
           <Button 
             type="submit" 
             size="lg"
-            className="w-full bg-[#0EA5E9] hover:bg-[#0284C7] text-xl py-6 transform hover:scale-105 transition-all duration-200"
+            variant="default"
+            className="w-full text-xl py-6 transform hover:scale-105 transition-all duration-200"
           >
             Nachricht senden <ArrowRight className="ml-2 w-6 h-6" />
           </Button>
