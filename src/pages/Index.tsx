@@ -95,7 +95,7 @@ const Index = () => {
                   variant="secondary"
                   className="text-white transform hover:scale-105 transition-all duration-200 text-lg py-6 px-8"
                 >
-                  Starte jetzt <ArrowRight className="ml-2 w-6 h-6" />
+                  Starte jetzt <ArrowRight className="ml-1 w-6 h-6" />
                 </Button>
               </a>
             </div>
@@ -205,13 +205,13 @@ const Index = () => {
               <div className="space-y-4">
                 <Button 
                   variant="secondary" 
-                  className="w-full text-white"
+                  className="w-full text-white mb-1"
                   onClick={() => setIsCoachingOpen(true)}
                 >
                   Mehr erfahren
                 </Button>
                 <a href="#contact">
-                  <Button variant="outline" className="w-full">
+                  <Button variant="outline_secondary" className="w-full">
                     Anfragen
                   </Button>
                 </a>
@@ -249,13 +249,13 @@ const Index = () => {
               <div className="space-y-4">
                 <Button 
                   variant="secondary" 
-                  className="w-full text-white"
+                  className="w-full text-white mb-1"
                   onClick={() => setIsDiagnosticsOpen(true)}
                 >
                   Mehr erfahren
                 </Button>
                 <a href="#contact">
-                  <Button variant="outline" className="w-full">
+                  <Button variant="outline_primary" className="w-full">
                     Anfragen
                   </Button>
                 </a>
