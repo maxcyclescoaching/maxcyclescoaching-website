@@ -521,10 +521,10 @@ const ContactForm = () => {
           <Button 
             type="submit" 
             size="lg"
-            variant="default"
+            variant="secondary"
             className="w-full text-xl py-6 transform hover:scale-105 transition-all duration-200"
           >
-            Nachricht senden <ArrowRight className="ml-2 w-6 h-6" />
+            Nachricht senden <ArrowRight className="ml-1 w-6 h-6" />
           </Button>
         </form>
       </Form>
