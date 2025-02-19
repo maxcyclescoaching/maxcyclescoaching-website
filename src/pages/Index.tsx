@@ -176,42 +176,42 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-br from-white to-blue-50 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
               <div className="flex items-center gap-3 mb-4">
-                <Users className="w-8 h-8 text-[#0EA5E9]" />
+                <Users className="w-8 h-8 text-[#22D3EE]" />
                 <h3 className="text-2xl font-semibold text-[#003366]">1:1 Coaching</h3>
               </div>
               <p className="text-lg text-gray-600 mb-6">99€/Monat, ohne Mindestlaufzeit</p>
               <ul className="space-y-4 text-left mb-6">
                 <li className="flex items-center">
-                  <Calendar className="w-6 h-6 text-[#0EA5E9] mr-3 flex-shrink-0" />
+                  <Calendar className="w-6 h-6 text-[#22D3EE] mr-3 flex-shrink-0" />
                   <span>Maßgeschneiderte Trainingsplanung</span>
                 </li>
                 <li className="flex items-center">
-                  <LineChart className="w-6 h-6 text-[#0EA5E9] mr-3 flex-shrink-0" />
+                  <LineChart className="w-6 h-6 text-[#22D3EE] mr-3 flex-shrink-0" />
                   <span>Detaillierte Analyse</span>
                 </li>
                 <li className="flex items-center">
-                  <Gauge className="w-6 h-6 text-[#0EA5E9] mr-3 flex-shrink-0" />
+                  <Gauge className="w-6 h-6 text-[#22D3EE] mr-3 flex-shrink-0" />
                   <span>Regelmäßige Leistungsdiagnostiken</span>
                 </li>
                 <li className="flex items-center">
-                  <Trophy className="w-6 h-6 text-[#0EA5E9] mr-3 flex-shrink-0" />
+                  <Trophy className="w-6 h-6 text-[#22D3EE] mr-3 flex-shrink-0" />
                   <span>Strategische Wettkampfvorbereitung</span>
                 </li>
                 <li className="flex items-center">
-                  <MessageCircle className="w-6 h-6 text-[#0EA5E9] mr-3 flex-shrink-0" />
+                  <MessageCircle className="w-6 h-6 text-[#22D3EE] mr-3 flex-shrink-0" />
                   <span>Persönlicher Support</span>
                 </li>
               </ul>
               <div className="space-y-4">
                 <Button 
                   variant="secondary" 
-                  className="w-full text-white bg-[#0EA5E9] hover:bg-[#0284C7]"
+                  className="w-full text-white bg-[#22D3EE] hover:bg-[#0284C7]"
                   onClick={() => setIsCoachingOpen(true)}
                 >
                   Mehr erfahren
                 </Button>
                 <a href="#contact">
-                  <Button variant="outline" className="w-full border-[#0EA5E9] text-[#0EA5E9] hover:bg-blue-50">
+                  <Button variant="outline" className="w-full border-[#22D3EE] text-[#22D3EE] hover:bg-blue-50">
                     Anfragen
                   </Button>
                 </a>
@@ -220,42 +220,42 @@ const Index = () => {
 
             <div className="bg-gradient-to-br from-white to-[#E8F0F8] p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
               <div className="flex items-center gap-3 mb-4">
-                <ActivitySquare className="w-8 h-8 text-[#0EA5E9]" />
-                <h3 className="text-2xl font-semibold text-[#403E43]">Individuelle Leistungsdiagnostik</h3>
+                <ActivitySquare className="w-8 h-8 text-[#1E3A8A]" />
+                <h3 className="text-2xl font-semibold text-[#003366]">Individuelle Leistungsdiagnostik</h3>
               </div>
               <p className="text-lg text-gray-600 mb-6">149€/Diagnostik</p>
               <ul className="space-y-4 text-left mb-6">
                 <li className="flex items-center">
-                  <ActivitySquare className="w-6 h-6 text-[#0EA5E9] mr-3 flex-shrink-0" />
+                  <ActivitySquare className="w-6 h-6 text-[#1E3A8A] mr-3 flex-shrink-0" />
                   <span className="text-[#403E43]">Umfassende Testung</span>
                 </li>
                 <li className="flex items-center">
-                  <Brain className="w-6 h-6 text-[#0EA5E9] mr-3 flex-shrink-0" />
+                  <Brain className="w-6 h-6 text-[#1E3A8A] mr-3 flex-shrink-0" />
                   <span className="text-[#403E43]">Umfangreiche Auswertung</span>
                 </li>
                 <li className="flex items-center">
-                  <Target className="w-6 h-6 text-[#0EA5E9] mr-3 flex-shrink-0" />
+                  <Target className="w-6 h-6 text-[#1E3A8A] mr-3 flex-shrink-0" />
                   <span className="text-[#403E43]">Gezielte Trainingsoptimierung</span>
                 </li>
                 <li className="flex items-center">
-                  <LineChart className="w-6 h-6 text-[#0EA5E9] mr-3 flex-shrink-0" />
+                  <LineChart className="w-6 h-6 text-[#1E3A8A] mr-3 flex-shrink-0" />
                   <span className="text-[#403E43]">Langfristige Entwicklung</span>
                 </li>
                 <li className="flex items-center">
-                  <Timer className="w-6 h-6 text-[#0EA5E9] mr-3 flex-shrink-0" />
+                  <Timer className="w-6 h-6 text-[#1E3A8A] mr-3 flex-shrink-0" />
                   <span className="text-[#403E43]">Flexible Protokolle</span>
                 </li>
               </ul>
               <div className="space-y-4">
                 <Button 
                   variant="secondary" 
-                  className="w-full text-white bg-[#0FA0CE] hover:bg-[#0EA5E9]"
+                  className="w-full text-white bg-[#1E3A8A] hover:bg-[#0EA5E9]"
                   onClick={() => setIsDiagnosticsOpen(true)}
                 >
                   Mehr erfahren
                 </Button>
                 <a href="#contact">
-                  <Button variant="outline" className="w-full border-[#0FA0CE] text-[#0FA0CE] hover:bg-[#E8F0F8]">
+                  <Button variant="outline" className="w-full border-[#1E3A8A] text-[#1E3A8A] hover:bg-[#E8F0F8]">
                     Anfragen
                   </Button>
                 </a>
