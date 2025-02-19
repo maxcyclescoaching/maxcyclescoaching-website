@@ -211,7 +211,7 @@ const Index = () => {
                   Mehr erfahren
                 </Button>
                 <a href="#contact">
-                  <Button variant="outline" className="w-full border-secondary text-secondary">
+                  <Button variant="outline" className="w-full border-secondary text-secondary hover:bg-secondary/80 hover:text-secondary/80">
                     Anfragen
                   </Button>
                 </a>
@@ -255,7 +255,7 @@ const Index = () => {
                   Mehr erfahren
                 </Button>
                 <a href="#contact">
-                  <Button variant="outline" className="w-full border-primary text-primary">
+                  <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/80 hover:text-primary/80">
                     Anfragen
                   </Button>
                 </a>
