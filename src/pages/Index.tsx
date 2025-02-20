@@ -37,22 +37,32 @@ const Index = () => {
     "image": "/lovable-uploads/hero_img.JPEG",
     "address": {
       "@type": "PostalAddress",
-      "addressCountry": "DE"
+      "addressCountry": "DE",
+      "adressLocality": "Dresden",
+      "postalCode": "01189"
     },
+    "email": "maxcyclescoaching@gmail.com",
+    "sameAs": [
+      "https://www.instagram.com/maxcyclescoaching",
+    ],
     "offers": [
       {
         "@type": "Offer",
         "name": "1:1 Coaching",
         "price": "99",
         "priceCurrency": "EUR",
-        "description": "Individueller Trainingsplan basierend auf deinen Zielen und deinem Zeitplan"
+        "description": "Individueller Trainingsplan basierend auf deinen Zielen und deinem Zeitplan",
+        "availability": "https://schema.org/InStock",
+        "url": "https://maxcyclescoaching.com/#services"
       },
       {
         "@type": "Offer",
         "name": "Leistungsdiagnostik",
         "price": "149",
         "priceCurrency": "EUR",
-        "description": "Detaillierte Analyse deiner Trainingsdaten"
+        "description": "Persönliche Diagnostik mittels Laktat und Muskelsauerstoffmessung deines metabolischen Profils",
+        "availability": "https://schema.org/InStock",
+        "url": "https://maxcyclescoaching.com/#services"
       }
     ]
   };
