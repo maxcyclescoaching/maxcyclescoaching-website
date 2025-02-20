@@ -16,7 +16,7 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center space-x-3">
-            <a href="#hero">
+            <a href="/#hero">
               <img 
                 src="/lovable-uploads/logo_black.png" 
                 alt="MaxCyclesCoaching Logo" 
