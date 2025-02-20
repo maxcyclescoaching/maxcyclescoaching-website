@@ -83,7 +83,7 @@ const Index = () => {
                 alt="MaxCyclesCoaching Logo" 
                 className="h-24 sm:h-32 w-auto mx-auto mb-6 sm:mb-8"
               />
-              <h1 className="text-4xl sm:text-6xl md:text-7xl lg: text-8xl font-bold mb-4 sm:mb-6 text-shadow-lg">
+              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6 text-shadow-lg">
                 MaxCyclesCoaching
               </h1>
               <p className="text-xl sm:text-2xl md:text-3xl mb-8 sm:mb-10 max-w-3xl mx-auto px-4 font-medium text-shadow">
