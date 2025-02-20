@@ -67,7 +67,7 @@ const Index = () => {
       <Navbar />
       
       <main>
-        <section className="relative h-screen bg-primary animate-fade-in" aria-label="Hero">
+        <section id="hero" className="relative h-screen bg-primary animate-fade-in" aria-label="Hero">
           <div className="absolute inset-0">
             <img 
               src="/lovable-uploads/hero_img.JPEG" 
