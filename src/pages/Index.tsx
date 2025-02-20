@@ -248,7 +248,7 @@ const Index = () => {
               </ul>
               <div className="space-y-4">
                 <Button 
-                  variant="secondary" 
+                  variant="default" 
                   className="w-full text-white mb-1"
                   onClick={() => setIsDiagnosticsOpen(true)}
                 >
