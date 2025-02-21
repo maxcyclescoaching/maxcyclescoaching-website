@@ -132,7 +132,7 @@ const Index = () => {
                   {achievements.map((achievement, index) => (
                     <li 
                       key={index} 
-                      className={`flex items-center text-gray-700 text-mdlg ${
+                      className={`flex items-center text-gray-700 md:text-mdlg ${
                         index === 0 ? 
                         'cursor-pointer group transition-all duration-200 hover:text-primary relative' : ''
                       }`}
