@@ -127,12 +127,12 @@ const Index = () => {
                 Mein Ziel? Dich dabei zu unterstützen, dein <b>volles Potenzial auf dem Rad auszuschöpfen</b>!        
                 </p>
               </div>
-              <div className="bg-accent rounded-lg p-10 self-centert">
+              <div className="bg-accent rounded-lg p-10 self-center">
                 <ul className="space-y-5">
                   {achievements.map((achievement, index) => (
                     <li 
                       key={index} 
-                      className={`flex items-center text-gray-700 text-lg ${
+                      className={`flex items-center text-gray-700 text-mdlg ${
                         index === 0 ? 
                         'cursor-pointer group transition-all duration-200 hover:text-primary relative' : ''
                       }`}

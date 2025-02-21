@@ -57,6 +57,9 @@ export default {
       spacing: {
         10: "2.5rem",
       },
+      fontSize: {
+        "mdlg": "1.075rem",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
