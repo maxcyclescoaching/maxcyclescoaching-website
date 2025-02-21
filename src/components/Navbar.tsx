@@ -20,7 +20,7 @@ export const Navbar = () => {
               <img 
                 src="/lovable-uploads/logo_black.svg" 
                 alt="MaxCyclesCoaching Logo" 
-                className="h-14 w-auto"
+                className="h-11 w-auto"
               />
             </a>
           </div>
