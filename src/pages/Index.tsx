@@ -123,7 +123,7 @@ const Index = () => {
                 Hi, ich bin Max – <b>zertifizierter Radsportcoach</b> und <b>leidenschaftlicher Athlet</b>. <br />
                 Seit 2021 fahre ich ambitioniert Rennrad und konnte dabei auch schon einige persönliche Erfolge feiern. <br />
                 Meine Schwerpunkte als Coach liegen auf <b>individuellem 1:1 Coaching</b> und <b>Laktat-Leistungsdiagnostiken</b>, die ich seit Ende 2023 anbiete. <br />
-                Aufgrund meines Wirtschaftsinformatik-Studiums an der HTW-Dresden liegt mir die Arbeit mit <b>wissenschaftliche Studien und Fachliteratur</b> – ergänzt durch wertvolle <b>Erfahrungen</b> aus dem <b>Training</b> und <b>Wettkampf</b>. <br />
+                Aufgrund meines Wirtschaftsinformatik-Studiums an der HTW-Dresden liegt mir die Arbeit mit <b>wissenschaftlichen Studien und Fachliteratur</b> – ergänzt durch wertvolle <b>Erfahrungen</b> aus dem <b>Training</b> und <b>Wettkampf</b>. <br />
                 Mein Ziel? Dich dabei zu unterstützen, dein <b>volles Potenzial auf dem Rad auszuschöpfen</b>!        
                 </p>
               </div>
