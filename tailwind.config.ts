@@ -54,6 +54,9 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      spacing: {
+        10: "2.5rem",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

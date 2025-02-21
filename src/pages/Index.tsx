@@ -123,16 +123,16 @@ const Index = () => {
                 Hi, ich bin Max – <b>zertifizierter Radsportcoach</b> und <b>leidenschaftlicher Athlet</b>. <br />
                 Seit 2021 fahre ich ambitioniert Rennrad und konnte dabei auch schon einige persönliche Erfolge feiern. <br />
                 Meine Schwerpunkte als Coach liegen auf <b>individuellem 1:1 Coaching</b> und <b>Laktat-Leistungsdiagnostiken</b>, die ich seit Ende 2023 anbiete. <br />
-                Aufgrund meines Wirtschaftsinformatik-Studiums an der HTW-Dresden liegt mir die Arbeit mit <b>wissenschaftliche Studien und Fachliteratur</b> – ergänzt durch wertvolle Erfahrungen aus dem Training und Wettkampf. <br />
+                Aufgrund meines Wirtschaftsinformatik-Studiums an der HTW-Dresden liegt mir die Arbeit mit <b>wissenschaftliche Studien und Fachliteratur</b> – ergänzt durch wertvolle <b>Erfahrungen</b> aus dem <b>Training</b> und <b>Wettkampf</b>. <br />
                 Mein Ziel? Dich dabei zu unterstützen, dein <b>volles Potenzial auf dem Rad auszuschöpfen</b>!        
                 </p>
               </div>
-              <div className="bg-accent rounded-lg p-8 self-start">
-                <ul className="space-y-4">
+              <div className="bg-accent rounded-lg p-10 self-centert">
+                <ul className="space-y-5">
                   {achievements.map((achievement, index) => (
                     <li 
                       key={index} 
-                      className={`flex items-center text-gray-700 ${
+                      className={`flex items-center text-gray-700 text-lg ${
                         index === 0 ? 
                         'cursor-pointer group transition-all duration-200 hover:text-primary relative' : ''
                       }`}
