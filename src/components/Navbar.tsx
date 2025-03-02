@@ -18,7 +18,7 @@ export const Navbar = () => {
           <div className="flex items-center space-x-3">
             <a href="/#hero">
               <img 
-                src="/lovable-uploads/logo_black.svg" 
+                src="/images/logo_black.svg" 
                 alt="MaxCyclesCoaching Logo" 
                 className="h-11 w-auto"
               />

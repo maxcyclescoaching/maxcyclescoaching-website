@@ -34,7 +34,7 @@ const Index = () => {
     "@type": "SportsClub",
     "name": "MaxCyclesCoaching",
     "description": "Professionelles Radsport-Coaching, maßgeschneidert auf deine Ziele. Von Anfängern bis zu Elite-Athleten.",
-    "image": "/lovable-uploads/hero_img.JPEG",
+    "image": "/images/hero_img.JPEG",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "DE",
@@ -80,7 +80,7 @@ const Index = () => {
         <section id="hero" className="relative h-screen bg-primary animate-fade-in" aria-label="Hero">
           <div className="absolute inset-0">
             <img 
-              src="/lovable-uploads/hero_img.JPEG" 
+              src="/images/hero_img.JPEG" 
               alt="Hero Background" 
               className="w-full h-full object-cover"
             />
@@ -89,7 +89,7 @@ const Index = () => {
           <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
             <div className="text-center text-white">
               <img 
-                src="/lovable-uploads/logo_white.png" 
+                src="/images/logo_white.png" 
                 alt="MaxCyclesCoaching Logo" 
                 className="h-24 sm:h-32 w-auto mx-auto mb-6 sm:mb-8"
               />
@@ -355,7 +355,7 @@ const Index = () => {
         <LightboxDialog
           isOpen={isCertificateOpen}
           onClose={() => setIsCertificateOpen(false)}
-          imageSrc="/lovable-uploads/german_cycling_certificate.png"
+          imageSrc="/images/german_cycling_certificate.png"
           imageAlt="German Cycling (BDR) Coach Certificate"
         />
 
