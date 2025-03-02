@@ -30,6 +30,9 @@ const Impressum = () => {
 
               <h2 className="text-2xl font-bold text-primary break-words sm:whitespace-nowrap">Verbraucherstreitbeilegung/Universalschlichtungsstelle</h2>
               <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+              <h2 className="text-2xl font-bold text-primary">Credits</h2>
+              <p>Hauptbild mit freundlicher Genehmigung von Nora Henker: https://norahenker.de</p>
             </div>
 
             <p className="mt-8">Quelle: <a href="https://www.e-recht24.de/impressum-generator.html" className="text-primary hover:underline">https://www.e-recht24.de/impressum-generator.html</a></p>
