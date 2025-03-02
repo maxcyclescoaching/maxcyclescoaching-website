@@ -79,7 +79,7 @@ const Index = () => {
               alt="Hero Background" 
               className="w-full h-full object-cover"
               loading="eager" 
-              fetchpriority="high"
+              fetchPriority="high"
             />
             <div className="absolute inset-0 bg-primary/40" />
           </div>
