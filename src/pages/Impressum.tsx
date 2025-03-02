@@ -32,10 +32,10 @@ const Impressum = () => {
               <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
 
               <h2 className="text-2xl font-bold text-primary">Credits</h2>
-              <p>Hauptbild mit freundlicher Genehmigung von Nora Henker: <a href="https://norahenker.de/" className="text-primary hover:underline">https://norahenker.de</a></p>
+              <p>Hauptbild mit freundlicher Genehmigung von Nora Henker: <a href="https://norahenker.de/" target="_blank" className="text-primary hover:underline">https://norahenker.de</a></p>
             </div>
 
-            <p className="mt-8">Quelle: <a href="https://www.e-recht24.de/impressum-generator.html" className="text-primary hover:underline">https://www.e-recht24.de/impressum-generator.html</a></p>
+            <p className="mt-8">Quelle: <a href="https://www.e-recht24.de/impressum-generator.html" target="_blank" className="text-primary hover:underline">https://www.e-recht24.de/impressum-generator.html</a></p>
           </div>
         </div>
       </main>

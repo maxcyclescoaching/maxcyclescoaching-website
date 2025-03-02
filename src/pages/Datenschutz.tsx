@@ -57,7 +57,7 @@ const Datenschutz = () => {
               <h3 className="text-xl font-bold text-primary">Widerspruch gegen Werbe-E-Mails</h3> <p>Der Nutzung von im Rahmen der Impressumspflicht ver&ouml;ffentlichten Kontaktdaten zur &Uuml;bersendung von nicht ausdr&uuml;cklich angeforderter Werbung und Informationsmaterialien wird hiermit widersprochen. Die Betreiber der Seiten behalten sich ausdr&uuml;cklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-E-Mails, vor.</p>
             </div>
 
-            <p className="mt-8">Quelle: <a href="https://www.e-recht24.de" className="text-primary hover:underline">https://www.e-recht24.de</a></p>
+            <p className="mt-8">Quelle: <a href="https://www.e-recht24.de" target="_blank" className="text-primary hover:underline">https://www.e-recht24.de</a></p>
           </div>
         </div>
       </main>
