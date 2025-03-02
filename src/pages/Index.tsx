@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Bike, Target, Users, Calendar, LineChart, Trophy, MessageCircle, ActivitySquare, Gauge, Brain, Timer } from "lucide-react";
+import { ArrowRight, Bike, Target, Users, Calendar, LineChart, Trophy, MessageCircle, ActivitySquare, Gauge, NotebookPen, Timer, FlaskConical } from "lucide-react";
 import { useState } from "react";
 import { ServiceDialog } from "@/components/ServiceDialog";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -117,11 +117,11 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
               Über mich
             </h2>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-center md:text-left grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-gray-600">
                 Hi, ich bin Max – <b>zertifizierter Radsportcoach</b> und <b>leidenschaftlicher Athlet</b>. <br />
-                Seit 2021 fahre ich ambitioniert Rennrad und konnte dabei auch schon einige persönliche Erfolge feiern. <br />
+                Seit meiner Jugend fahre ich ambitioniert Rennrad und konnte dabei auch schon einige persönliche Erfolge feiern. <br />
                 Meine Schwerpunkte als Coach liegen auf <b>individuellem 1:1 Coaching</b> und <b>Laktat-Leistungsdiagnostiken</b>, die ich seit Ende 2023 anbiete. <br />
                 Aufgrund meines Wirtschaftsinformatik-Studiums an der HTW-Dresden liegt mir die Arbeit mit <b>wissenschaftlichen Studien und Fachliteratur</b> – ergänzt durch wertvolle <b>Erfahrungen</b> aus <b>Training</b> und <b>Wettkampf</b>. <br />
                 Mein Ziel? Dich dabei zu unterstützen, dein <b>volles Potenzial auf dem Rad auszuschöpfen</b>!        
@@ -237,11 +237,11 @@ const Index = () => {
               <p className="text-lg text-gray-600 mb-6">149€/Diagnostik</p>
               <ul className="space-y-4 text-left mb-6">
                 <li className="flex items-center">
-                  <ActivitySquare className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
+                  <FlaskConical className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
                   <span className="text-primary">Umfassende Testung</span>
                 </li>
                 <li className="flex items-center">
-                  <Brain className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
+                  <NotebookPen className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
                   <span className="text-primary">Umfangreiche Auswertung</span>
                 </li>
                 <li className="flex items-center">
@@ -330,7 +330,7 @@ const Index = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Kontakt</h2>
             <p className="text-2xl mb-12 text-center font-medium">
-              Lass uns gemeinsam dein nächstes Leistungslevel erreichen!
+              Lass uns gemeinsam dein volles Potenzial auszuschöpfen!
             </p>
             
             <ContactForm />
