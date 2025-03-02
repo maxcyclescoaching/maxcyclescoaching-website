@@ -1,10 +1,9 @@
 
-import { useState } from "react";
+import { useState, memo } from "react";
 import { Menu, X, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
-export const Navbar = () => {
+const NavbarComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLinkClick = () => {
@@ -101,3 +100,5 @@ export const Navbar = () => {
     </nav>
   );
 };
+
+export const Navbar = memo(NavbarComponent);
