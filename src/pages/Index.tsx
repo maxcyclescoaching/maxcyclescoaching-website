@@ -126,7 +126,7 @@ const Index = () => {
                 </p>
               </div>
               <div className="bg-accent rounded-lg p-10 self-center">
-                <ul className="space-y-5">
+                <ul className="space-y-5 text-left">
                   {achievements.map((achievement, index) => (
                     <li 
                       key={index} 
