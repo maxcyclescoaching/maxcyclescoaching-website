@@ -289,7 +289,7 @@ const Index = () => {
                     ))}
                   </div>
                 </div>
-                <p className="text-xl mb-4">"Das Coaching hat meine Leistung auf ein neues Level gehoben. Ich habe meine persönlichen Bestzeiten erreicht!"</p>
+                <p className="text-xl text-center mb-4">"Das Coaching hat meine Leistung auf ein neues Level gehoben. Ich habe meine persönlichen Bestzeiten erreicht!"</p>
                 <p className="font-semibold text-primary">- Max Mustermann</p>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
@@ -303,7 +303,7 @@ const Index = () => {
                     ))}
                   </div>
                 </div>
-                <p className="text-xl mb-4">"Dank der individuellen Betreuung fühle ich mich bestens vorbereitet für meine Wettkämpfe."</p>
+                <p className="text-xl text-center mb-4">"Dank der individuellen Betreuung fühle ich mich bestens vorbereitet für meine Wettkämpfe."</p>
                 <p className="font-semibold text-primary">- Anna Müller</p>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
@@ -321,7 +321,7 @@ const Index = () => {
                     ))}
                   </div>
                 </div>
-                <p className="text-xl mb-4">"Max lebt den Radsport, das merkt man. Er ist immer auf dem aktuellsten Stand und versucht, das Beste aus jedem Sportler durch gezieltes Training herauszuholen."</p>
+                <p className="text-xl text-center mb-4">"Max lebt den Radsport, das merkt man. <br /> Er ist immer auf dem aktuellsten Stand und versucht, das Beste aus jedem Sportler durch gezieltes Training herauszuholen."</p>
                 <p className="font-semibold text-primary">- Jeremias Zieher, Dresden</p>
               </div>
             </div>
