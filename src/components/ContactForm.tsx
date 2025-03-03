@@ -8,7 +8,8 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Loader2 } from "lucide-react";
+import emailjs from 'emailjs-com';
 
 const formSchema = z.object({
   name: z.string().min(2, "Name muss mindestens 2 Zeichen lang sein"),
@@ -18,6 +19,7 @@ const formSchema = z.object({
 
 export const ContactForm = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -29,22 +31,39 @@ export const ContactForm = () => {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    console.log("Form submitted with values:", values);
-    
-    const subject = encodeURIComponent("Neue Kontaktanfrage von MaxCyclesCoaching");
-    const body = encodeURIComponent(
-      `Name: ${values.name}\nEmail: ${values.email}\n\nNachricht:\n${values.message}`
-    );
-    const mailtoLink = `mailto:maxcyclescoaching@gmail.com?subject=${subject}&body=${body}`;
-    
-    window.location.href = mailtoLink;
-    
-    toast({
-      title: "Erfolgreich!",
-      description: "Die E-Mail wurde in Ihrem E-Mail-Programm geöffnet. Bitte senden Sie diese ab.",
-    });
-    
-    form.reset();
+    setIsSubmitting(true);
+
+    try {
+      const templateParams = {
+        from_name: values.name,
+        from_email: values.email,
+        message: values.message,
+        to_name: 'MaxCyclesCoaching',
+      };
+
+      await emailjs.send(
+        'service_maxcycles', // replace with your EmailJS service ID
+        'template_contact_form', // replace with your EmailJS template ID
+        templateParams,
+        'your_public_key' // replace with your EmailJS public key
+      );
+
+      toast({
+        title: "Erfolgreich!",
+        description: "Vielen Dank für deine Nachricht. Wir werden uns bald bei dir melden.",
+      });
+      
+      form.reset();
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast({
+        title: "Fehler",
+        description: "Es gab ein Problem beim Senden der Nachricht. Bitte versuche es später noch einmal.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -101,9 +120,18 @@ export const ContactForm = () => {
             type="submit" 
             size="lg"
             variant="secondary"
+            disabled={isSubmitting}
             className="w-full text-xl py-6 transform hover:scale-105 transition-all duration-200"
           >
-            Nachricht senden <ArrowRight className="ml-1 w-6 h-6" />
+            {isSubmitting ? (
+              <>
+                <Loader2 className="mr-2 h-6 w-6 animate-spin" /> Wird gesendet...
+              </>
+            ) : (
+              <>
+                Nachricht senden <ArrowRight className="ml-1 w-6 h-6" />
+              </>
+            )}
           </Button>
         </form>
       </Form>
