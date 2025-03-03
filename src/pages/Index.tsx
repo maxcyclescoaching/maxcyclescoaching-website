@@ -81,7 +81,7 @@ const Index = () => {
                 loading="eager" 
                 fetchPriority="high"
             />
-            <div className="absolute inset-0 bg-primary/40" />
+            <div className="absolute inset-0 bg-primary/25" />
           </div>
           <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
             <div className="text-center text-white">
