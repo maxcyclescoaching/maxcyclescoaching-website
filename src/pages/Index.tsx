@@ -323,7 +323,15 @@ const Index = () => {
                 </div>
                 <p className="text-xl text-center mb-4">"Max lebt den Radsport, das merkt man. <br /> Er ist immer auf dem aktuellsten Stand und versucht, das Beste aus jedem Sportler durch gezieltes Training herauszuholen."</p>
                 <p className="font-semibold text-primary">- Jeremias Zieher, Dresden</p>
-                <a href="https://www.strava.com/athletes/23108452" target="_blank" className="text-primary hover:underline">Strava</a>
+                <a 
+                  href="https://www.strava.com/athletes/23108452" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary hover:text-[#fc4c01] mt-2 font-medium transition-colors duration-200"
+                >
+                  <img src="/images/strava.svg" alt="Strava" className="w-5 h-5 transition-transform duration-200 group-hover:scale-110" />
+                  <span className="border-b border-transparent hover:border-[#fc4c01]">Auf Strava folgen</span>
+                </a>
               </div>
             </div>
           </div>
