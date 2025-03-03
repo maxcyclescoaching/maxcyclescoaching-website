@@ -42,15 +42,18 @@
     <meta property="twitter:image" content="/images/hero_img.JPEG" />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://maxcyclescoaching.com/" />
+    <link rel="canonical" href="https://maxcyclescoaching.com/" /> 
+  </head>
 
+  <body>
     <script>
       (function () {
         var isIE = !!window.documentMode;
+        var isIEInEdgeMode = /Trident\/7.0;.*rv:11.0/.test(navigator.userAgent);
         var isOldEdge = !isIE && !!window.StyleMedia;
         var isVeryOld = typeof window.IntersectionObserver === "undefined";
-    
-        if (isIE || isOldEdge || isVeryOld) {
+
+        if (isIE || isIEInEdgeMode || isOldEdge || isVeryOld) {
           document.body.innerHTML =
             '<div style="position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: white; padding: 20px; text-align: center;">' +
             '<div style="max-width: 400px; border: 2px solid #FFD700; background: #FFF8DC; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">' +
@@ -59,10 +62,7 @@
             '</div></div>';
         }
       })();
-    </script>    
-  </head>
-
-  <body>
+    </script>  
     <div id="root"></div>
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
