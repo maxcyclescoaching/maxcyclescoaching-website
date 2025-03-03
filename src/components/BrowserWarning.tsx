@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { AlertTriangle } from "lucide-react";
 
@@ -6,15 +5,17 @@ const BrowserWarning = () => {
   const [isIncompatible, setIsIncompatible] = useState(false);
 
   useEffect(() => {
-    // Check for Internet Explorer
-    const isIE = !!document.documentMode;
-    
-    // Check for old Edge (non-Chromium)
-    const isOldEdge = !isIE && !!window.StyleMedia;
-    
-    // Check for very old browsers that don't support modern features
+    const userAgent = navigator.userAgent;
+
+    // Detect Internet Explorer (IE 11 and below)
+    const isIE = /MSIE|Trident/.test(userAgent);
+
+    // Detect old Edge (non-Chromium, EdgeHTML)
+    const isOldEdge = /Edge\/\d+/.test(userAgent) && !/Edg\//.test(userAgent);
+
+    // Check for very old browsers that lack modern features
     const isVeryOld = typeof window.IntersectionObserver === "undefined";
-    
+
     setIsIncompatible(isIE || isOldEdge || isVeryOld);
   }, []);
 
