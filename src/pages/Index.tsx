@@ -308,7 +308,11 @@ const Index = () => {
               </div>
               <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
                 <div className="flex flex-col items-center mb-4">
-                  <div className="w-16 h-16 bg-gray-200 rounded-full mb-4"></div>
+                  <img 
+                    src="/images/jeremias_profile_img.jpg" 
+                    alt="Profilbild von Jeremias Zieher" 
+                    className="w-16 h-16 rounded-full mb-4"
+                  />
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -317,8 +321,8 @@ const Index = () => {
                     ))}
                   </div>
                 </div>
-                <p className="text-xl mb-4">"Die Leistungsdiagnostik hat mir geholfen, meine Schwächen zu erkennen und gezielt daran zu arbeiten."</p>
-                <p className="font-semibold text-primary">- Peter Schmidt</p>
+                <p className="text-xl mb-4">"Max lebt den Radsport, das merkt man. Er ist immer auf dem aktuellsten Stand und versucht, das Beste aus jedem Sportler durch gezieltes Training herauszuholen."</p>
+                <p className="font-semibold text-primary">- Jeremias Zieher, Dresden</p>
               </div>
             </div>
           </div>
