@@ -293,7 +293,7 @@ const Index = () => {
                     ))}
                   </div>
                 </div>
-                <p className="text-lg text-center mb-4">"Hier kommt noch ein schöner Text hin :)"</p>
+                <p className="text-lg text-center mb-4">"Die professionell Leistungsdiagnostik ist dem aktuellsten Stand. <br/> Man erhält eine ausführliche Auswertung sowie Trainingstipps zur Leistungssteigerung. Danke Max!"</p>
                 <p className="font-semibold text-primary">- Mandy, Lommatzsch</p>
                 <a 
                   href="https://www.strava.com/activities/11117887697" 
@@ -418,7 +418,7 @@ const Index = () => {
             <div>
               <br />
               <p className="font-bold">1. Maßgeschneiderte Trainingsplanung</p>
-              <p>Gemeinsam entwickeln wir einen Trainingsplan, der perfekt auf deine Saisonziele, deine verfügbare Zeit und deinen Alltag zugeschnitten ist – für nachhaltigen Fortschritt ohne Überlastung.</p>
+              <p>Gemeinsam entwickeln wir einen Trainingsplan, der perfekt auf deine Saisonziele, deine verfügbare Zeit und deinen Alltag zugeschnitten ist – für nachhaltigen Fortschritt ohne Überlastung. <br/> Perfekt für Straßenradsportler, MTB- und Gravelfahrer sowie Duathleten!</p>
             </div>
 
             <div>
