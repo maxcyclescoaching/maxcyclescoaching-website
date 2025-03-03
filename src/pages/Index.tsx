@@ -74,16 +74,13 @@ const Index = () => {
       <main>
         <section id="hero" className="relative h-screen bg-primary animate-fade-in" aria-label="Hero">
           <div className="absolute inset-0">
-          <picture>
-            <source srcSet="/images/hero_img.webp" type="image/webp" />
             <img 
-              src="/images/hero_img.JPEG" 
-              alt="Cyclist in front of beautiful landscape" 
-              className="w-full h-full object-cover"
-              loading="eager" 
-              fetchPriority="high"
+                src="/images/hero_img.webp" 
+                alt="Cyclist in front of beautiful landscape" 
+                className="w-full h-full object-cover"
+                loading="eager" 
+                fetchPriority="high"
             />
-          </picture>
             <div className="absolute inset-0 bg-primary/40" />
           </div>
           <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
