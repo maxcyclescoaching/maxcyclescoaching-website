@@ -29,7 +29,7 @@ const Index = () => {
     "@type": "SportsClub",
     "name": "MaxCyclesCoaching",
     "description": "Professionelles Radsport-Coaching, maßgeschneidert auf deine Ziele. Von Anfängern bis zu Elite-Athleten.",
-    "image": "/images/hero_img.JPEG",
+    "image": "/images/hero_img.webp",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "DE",
