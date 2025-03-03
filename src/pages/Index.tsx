@@ -276,11 +276,15 @@ const Index = () => {
 
         <section id="testimonials" className="py-20 bg-gray-100" aria-label="Testimonials">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary">Das sagen meine Athlet*innen</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary">Das sagen meine Kund*innen</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
                 <div className="flex flex-col items-center mb-2">
-                  <div className="w-16 h-16 bg-gray-200 rounded-full mb-4"></div>
+                  <img 
+                    src="/images/mandy_profile_img.jpg" 
+                    alt="Profilbild von Mandy Salzmann" 
+                    className="w-16 h-16 rounded-full mb-4"
+                  />
                   <div className="flex gap-1">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -289,12 +293,25 @@ const Index = () => {
                     ))}
                   </div>
                 </div>
-                <p className="text-xl text-center mb-4">"Das Coaching hat meine Leistung auf ein neues Level gehoben. Ich habe meine persönlichen Bestzeiten erreicht!"</p>
-                <p className="font-semibold text-primary">- Max Mustermann</p>
+                <p className="text-lg text-center mb-4">"Hier kommt noch ein schöner Text hin :)"</p>
+                <p className="font-semibold text-primary">- Mandy, Lommatzsch</p>
+                <a 
+                  href="https://www.strava.com/activities/11117887697" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[#fc4c01] hover:text-[#fc4c01]/50 mt-2 font-medium transition-colors duration-200"
+                >
+                  <img src="/images/strava.svg" alt="Strava" className="w-5 h-5 transition-transform duration-200 group-hover:scale-110" />
+                  <span className="border-b border-transparent hover:border-[#fc4c01]">Auf Strava ansehen</span>
+                </a>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
                 <div className="flex flex-col items-center mb-2">
-                  <div className="w-16 h-16 bg-gray-200 rounded-full mb-4"></div>
+                  <img 
+                    src="/images/ken_profile_img.jpg" 
+                    alt="Profilbild von Ken Wagner" 
+                    className="w-16 h-16 rounded-full mb-4"
+                  />
                   <div className="flex gap-1">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -303,8 +320,17 @@ const Index = () => {
                     ))}
                   </div>
                 </div>
-                <p className="text-xl text-center mb-4">"Dank der individuellen Betreuung fühle ich mich bestens vorbereitet für meine Wettkämpfe."</p>
-                <p className="font-semibold text-primary">- Anna Müller</p>
+                <p className="text-lg text-center mb-4">"Hier kommt noch ein schöner Text hin :)"</p>
+                <p className="font-semibold text-primary">- Ken Wagner, Dresden</p>
+                <a 
+                  href="https://www.strava.com/activities/11092079227" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[#fc4c01] hover:text-[#fc4c01]/50 mt-2 font-medium transition-colors duration-200"
+                >
+                  <img src="/images/strava.svg" alt="Strava" className="w-5 h-5 transition-transform duration-200 group-hover:scale-110" />
+                  <span className="border-b border-transparent hover:border-[#fc4c01]">Auf Strava ansehen</span>
+                </a>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
                 <div className="flex flex-col items-center mb-2">
@@ -321,16 +347,16 @@ const Index = () => {
                     ))}
                   </div>
                 </div>
-                <p className="text-xl text-center mb-4">"Max lebt den Radsport, das merkt man. <br /> Er ist immer auf dem aktuellsten Stand und versucht, das Beste aus jedem Sportler durch gezieltes Training herauszuholen."</p>
+                <p className="text-lg text-center mb-4">"Max lebt den Radsport, das merkt man. <br /> Er ist immer auf dem aktuellsten Stand und versucht, das Beste aus jedem Sportler durch gezieltes Training herauszuholen."</p>
                 <p className="font-semibold text-primary">- Jeremias Zieher, Dresden</p>
                 <a 
-                  href="https://www.strava.com/athletes/23108452" 
+                  href="https://www.strava.com/activities/11092079227" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-primary hover:text-[#fc4c01] mt-2 font-medium transition-colors duration-200"
+                  className="inline-flex items-center gap-2 text-[#fc4c01] hover:text-[#fc4c01]/50 mt-2 font-medium transition-colors duration-200"
                 >
                   <img src="/images/strava.svg" alt="Strava" className="w-5 h-5 transition-transform duration-200 group-hover:scale-110" />
-                  <span className="border-b border-transparent hover:border-[#fc4c01]">Auf Strava folgen</span>
+                  <span className="border-b border-transparent hover:border-[#fc4c01]">Auf Strava ansehen</span>
                 </a>
               </div>
             </div>
