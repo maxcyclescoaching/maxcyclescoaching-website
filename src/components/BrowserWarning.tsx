@@ -37,7 +37,6 @@ const BrowserWarning = () => {
             rel="noopener noreferrer"
             className="flex flex-col items-center hover:text-primary"
           >
-            <img src="/images/browsers/chrome.png" alt="Chrome" className="h-10 w-10" />
             <span className="mt-1 text-sm">Chrome</span>
           </a>
           <a 
@@ -46,7 +45,6 @@ const BrowserWarning = () => {
             rel="noopener noreferrer"
             className="flex flex-col items-center hover:text-primary"
           >
-            <img src="/images/browsers/firefox.png" alt="Firefox" className="h-10 w-10" />
             <span className="mt-1 text-sm">Firefox</span>
           </a>
           <a 
@@ -55,7 +53,6 @@ const BrowserWarning = () => {
             rel="noopener noreferrer"
             className="flex flex-col items-center hover:text-primary"
           >
-            <img src="/images/browsers/edge.png" alt="Edge" className="h-10 w-10" />
             <span className="mt-1 text-sm">Edge</span>
           </a>
           <a 
@@ -64,7 +61,6 @@ const BrowserWarning = () => {
             rel="noopener noreferrer"
             className="flex flex-col items-center hover:text-primary"
           >
-            <img src="/images/browsers/safari.png" alt="Safari" className="h-10 w-10" />
             <span className="mt-1 text-sm">Safari</span>
           </a>
         </div>
