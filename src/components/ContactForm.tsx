@@ -42,10 +42,10 @@ export const ContactForm = () => {
       };
 
       await emailjs.send(
-        'service_maxcycles', // replace with your EmailJS service ID
-        'template_contact_form', // replace with your EmailJS template ID
+        'service_5qpb3yc', // replace with your EmailJS service ID
+        'template_pl451cu', // replace with your EmailJS template ID
         templateParams,
-        'your_public_key' // replace with your EmailJS public key
+        'WssuZiUGQBn1sT-NA' // replace with your EmailJS public key
       );
 
       toast({
