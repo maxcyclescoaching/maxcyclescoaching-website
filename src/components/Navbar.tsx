@@ -1,21 +1,37 @@
 
-import { useState, memo } from "react";
+import { useState, memo, useCallback } from "react";
 import { Menu, X, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const NavbarComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleLinkClick = () => {
+  const handleLinkClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+    // Close the menu when a link is clicked
     setIsMenuOpen(false);
-  };
+    
+    // Handle smooth scrolling for anchor links
+    const href = e.currentTarget.getAttribute('href');
+    if (href?.startsWith('#')) {
+      e.preventDefault();
+      const targetId = href.slice(1);
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    }
+  }, []);
 
   return (
     <nav className="bg-white/90 shadow-sm backdrop-blur-sm fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center space-x-3">
-            <a href="/#hero">
+            <a href="/#hero" onClick={handleLinkClick}>
               <img 
                 src="/images/logo_black.svg" 
                 alt="MaxCyclesCoaching Logo" 
@@ -26,9 +42,9 @@ const NavbarComponent = () => {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="/#about" className="text-[#003366] hover:text-opacity-80">Über mich</a>
-            <a href="/#philosophy" className="text-[#003366] hover:text-opacity-80">Philosophie</a>
-            <a href="/#services" className="text-[#003366] hover:text-opacity-80">Leistungen</a>
+            <a href="/#about" className="text-[#003366] hover:text-opacity-80" onClick={handleLinkClick}>Über mich</a>
+            <a href="/#philosophy" className="text-[#003366] hover:text-opacity-80" onClick={handleLinkClick}>Philosophie</a>
+            <a href="/#services" className="text-[#003366] hover:text-opacity-80" onClick={handleLinkClick}>Leistungen</a>
             <a 
               href="https://www.instagram.com/maxcyclescoaching" 
               target="_blank" 
@@ -38,7 +54,7 @@ const NavbarComponent = () => {
             >
               <Instagram className="w-6 h-6" />
             </a>
-            <a href="/#contact">
+            <a href="/#contact" onClick={handleLinkClick}>
               <Button variant="default" className="bg-[#003366] hover:bg-[#002244]">Kontakt</Button>
             </a>
           </div>
