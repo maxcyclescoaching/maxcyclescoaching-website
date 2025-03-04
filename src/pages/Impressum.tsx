@@ -14,8 +14,6 @@ const Impressum = () => {
           <div className="prose prose-lg">
             <div className="space-y-6">
               <h2 className="text-2xl font-bold text-primary">Angaben gemäß § 5 TMG</h2>
-              <p>MaxCyclesCoaching</p>
-
               <p>Maximilian Lohr<br />
               MaxCyclesCoaching<br />
               Heimstättenweg 23<br />
