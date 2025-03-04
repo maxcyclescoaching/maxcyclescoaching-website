@@ -1,3 +1,4 @@
+
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Bike, Target, Users, Calendar, LineChart, Trophy, MessageCircle, ActivitySquare, Gauge, NotebookPen, Timer, FlaskConical } from "lucide-react";
@@ -293,7 +294,9 @@ const Index = () => {
                     ))}
                   </div>
                 </div>
-                <p className="text-lg md:text-base text-center flex-grow mb-4">"Die umfangreiche Leistungsdiagnostik ist professionell und auf dem aktuellsten Stand. <br/> Man erhält hinterher nicht nur eine ausführliche Auswertung, sondern auch eine Anleitung und Tipps für das zukünftige Training, um leistungsfähiger sprich besser zu werden. Danke Max!"</p>
+                <div className="flex flex-col flex-grow justify-center">
+                  <p className="text-lg md:text-base text-center mb-4">"Die umfangreiche Leistungsdiagnostik ist professionell und auf dem aktuellsten Stand. <br/> Man erhält hinterher nicht nur eine ausführliche Auswertung, sondern auch eine Anleitung und Tipps für das zukünftige Training, um leistungsfähiger sprich besser zu werden. Danke Max!"</p>
+                </div>
                 <div className="mt-auto">
                   <p className="font-semibold text-primary">- Mandy, Lommatzsch</p>
                   <a 
@@ -322,7 +325,9 @@ const Index = () => {
                     ))}
                   </div>
                 </div>
-                <p className="text-lg text-center flex-grow mb-4">"Durch Max konnte ich an meinen Schwächen arbeiten, meine FTP deutlich steigern und beim Dreiländergiro 2024 den 13. Platz von 1500 Startern erreichen. Danke Max 🥳💪"</p>
+                <div className="flex flex-col flex-grow justify-center">
+                  <p className="text-lg text-center mb-4">"Durch Max konnte ich an meinen Schwächen arbeiten, meine FTP deutlich steigern und beim Dreiländergiro 2024 den 13. Platz von 1500 Startern erreichen. Danke Max 🥳💪"</p>
+                </div>
                 <div className="mt-auto">
                   <p className="font-semibold text-primary">- Ken Wagner, Dresden</p>
                   <a 
@@ -351,7 +356,9 @@ const Index = () => {
                     ))}
                   </div>
                 </div>
-                <p className="text-lg text-center flex-grow mb-4">"Max lebt den Radsport, das merkt man. <br /> Er ist immer auf dem aktuellsten Stand und versucht, das Beste aus jedem Sportler durch gezieltes Training herauszuholen."</p>
+                <div className="flex flex-col flex-grow justify-center">
+                  <p className="text-lg text-center mb-4">"Max lebt den Radsport, das merkt man. <br /> Er ist immer auf dem aktuellsten Stand und versucht, das Beste aus jedem Sportler durch gezieltes Training herauszuholen."</p>
+                </div>
                 <div className="mt-auto">
                   <p className="font-semibold text-primary">- Jeremias Zieher, Dresden</p>
                   <a 
