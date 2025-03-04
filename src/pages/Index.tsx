@@ -331,7 +331,7 @@ const Index = () => {
                 <div className="mt-auto">
                   <p className="font-semibold text-primary">- Ken Wagner, Dresden</p>
                   <a 
-                    href="https://www.strava.com/activities/11092079227" 
+                    href="https://www.strava.com/activities/11773171164" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-[#fc4c01] hover:text-[#fc4c01]/50 mt-2 font-medium transition-colors duration-200"
