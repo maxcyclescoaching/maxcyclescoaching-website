@@ -281,7 +281,7 @@ const Index = () => {
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
                 <div className="flex flex-col items-center mb-2">
                   <img 
-                    src="/images/mandy_profile_img.jpg" 
+                    src="/images/mandy_profile_img.png" 
                     alt="Profilbild von Mandy Salzmann" 
                     className="w-16 h-16 rounded-full mb-4"
                   />
@@ -293,7 +293,7 @@ const Index = () => {
                     ))}
                   </div>
                 </div>
-                <p className="text-lg text-center mb-4">"Die professionell Leistungsdiagnostik ist dem aktuellsten Stand. <br/> Man erhält eine ausführliche Auswertung sowie Trainingstipps zur Leistungssteigerung. Danke Max!"</p>
+                <p className="text-lg md:text-base text-center mb-4">"Die umfangreiche Leistungsdiagnostik ist professionell und auf dem aktuellsten Stand. <br/> Man erhält hinterher nicht nur eine ausführliche Auswertung, sondern auch eine Anleitung und Tipps für das zukünftige Training, um leistungsfähiger sprich besser zu werden. Danke Max!"</p>
                 <p className="font-semibold text-primary">- Mandy, Lommatzsch</p>
                 <a 
                   href="https://www.strava.com/activities/11117887697" 
@@ -320,7 +320,7 @@ const Index = () => {
                     ))}
                   </div>
                 </div>
-                <p className="text-lg text-center mb-4">"Hier kommt noch ein schöner Text hin :)"</p>
+                <p className="text-lg text-center mb-4">"Durch Max konnte ich an meinen Schwächen arbeiten, meine FTP deutlich steigern und beim Dreiländergiro 2024 den 13. Platz von 1500 Startern erreichen. Danke Max 🥳💪"</p>
                 <p className="font-semibold text-primary">- Ken Wagner, Dresden</p>
                 <a 
                   href="https://www.strava.com/activities/11092079227" 
