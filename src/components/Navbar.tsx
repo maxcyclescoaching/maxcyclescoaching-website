@@ -29,7 +29,7 @@ const NavbarComponent = () => {
         });
       }
     }
-  };
+  }, [setIsMenuOpen]);
 
   return (
     <nav className="bg-white/90 shadow-sm backdrop-blur-sm fixed w-full z-50">
