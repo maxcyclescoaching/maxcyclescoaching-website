@@ -278,7 +278,7 @@ const Index = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary">Das sagen meine Kund*innen</h2>
             <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+              <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
                 <div className="flex flex-col items-center mb-2">
                   <img 
                     src="/images/mandy_profile_img.png" 
@@ -293,19 +293,21 @@ const Index = () => {
                     ))}
                   </div>
                 </div>
-                <p className="text-lg md:text-base text-center mb-4">"Die umfangreiche Leistungsdiagnostik ist professionell und auf dem aktuellsten Stand. <br/> Man erhält hinterher nicht nur eine ausführliche Auswertung, sondern auch eine Anleitung und Tipps für das zukünftige Training, um leistungsfähiger sprich besser zu werden. Danke Max!"</p>
-                <p className="font-semibold text-primary">- Mandy, Lommatzsch</p>
-                <a 
-                  href="https://www.strava.com/activities/11117887697" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#fc4c01] hover:text-[#fc4c01]/50 mt-2 font-medium transition-colors duration-200"
-                >
-                  <img src="/images/strava.svg" alt="Strava" className="w-5 h-5 transition-transform duration-200 group-hover:scale-110" />
-                  <span className="border-b border-transparent hover:border-[#fc4c01]">Auf Strava ansehen</span>
-                </a>
+                <p className="text-lg md:text-base text-center flex-grow mb-4">"Die umfangreiche Leistungsdiagnostik ist professionell und auf dem aktuellsten Stand. <br/> Man erhält hinterher nicht nur eine ausführliche Auswertung, sondern auch eine Anleitung und Tipps für das zukünftige Training, um leistungsfähiger sprich besser zu werden. Danke Max!"</p>
+                <div className="mt-auto">
+                  <p className="font-semibold text-primary">- Mandy, Lommatzsch</p>
+                  <a 
+                    href="https://www.strava.com/activities/11117887697" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-[#fc4c01] hover:text-[#fc4c01]/50 mt-2 font-medium transition-colors duration-200"
+                  >
+                    <img src="/images/strava.svg" alt="Strava" className="w-5 h-5 transition-transform duration-200 group-hover:scale-110" />
+                    <span className="border-b border-transparent hover:border-[#fc4c01]">Auf Strava ansehen</span>
+                  </a>
+                </div>
               </div>
-              <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+              <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
                 <div className="flex flex-col items-center mb-2">
                   <img 
                     src="/images/ken_profile_img.jpeg" 
@@ -320,19 +322,21 @@ const Index = () => {
                     ))}
                   </div>
                 </div>
-                <p className="text-lg text-center mb-4">"Durch Max konnte ich an meinen Schwächen arbeiten, meine FTP deutlich steigern und beim Dreiländergiro 2024 den 13. Platz von 1500 Startern erreichen. Danke Max 🥳💪"</p>
-                <p className="font-semibold text-primary">- Ken Wagner, Dresden</p>
-                <a 
-                  href="https://www.strava.com/activities/11092079227" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#fc4c01] hover:text-[#fc4c01]/50 mt-2 font-medium transition-colors duration-200"
-                >
-                  <img src="/images/strava.svg" alt="Strava" className="w-5 h-5 transition-transform duration-200 group-hover:scale-110" />
-                  <span className="border-b border-transparent hover:border-[#fc4c01]">Auf Strava ansehen</span>
-                </a>
+                <p className="text-lg text-center flex-grow mb-4">"Durch Max konnte ich an meinen Schwächen arbeiten, meine FTP deutlich steigern und beim Dreiländergiro 2024 den 13. Platz von 1500 Startern erreichen. Danke Max 🥳💪"</p>
+                <div className="mt-auto">
+                  <p className="font-semibold text-primary">- Ken Wagner, Dresden</p>
+                  <a 
+                    href="https://www.strava.com/activities/11092079227" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-[#fc4c01] hover:text-[#fc4c01]/50 mt-2 font-medium transition-colors duration-200"
+                  >
+                    <img src="/images/strava.svg" alt="Strava" className="w-5 h-5 transition-transform duration-200 group-hover:scale-110" />
+                    <span className="border-b border-transparent hover:border-[#fc4c01]">Auf Strava ansehen</span>
+                  </a>
+                </div>
               </div>
-              <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+              <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
                 <div className="flex flex-col items-center mb-2">
                   <img 
                     src="/images/jeremias_profile_img.jpg" 
@@ -347,17 +351,19 @@ const Index = () => {
                     ))}
                   </div>
                 </div>
-                <p className="text-lg text-center mb-4">"Max lebt den Radsport, das merkt man. <br /> Er ist immer auf dem aktuellsten Stand und versucht, das Beste aus jedem Sportler durch gezieltes Training herauszuholen."</p>
-                <p className="font-semibold text-primary">- Jeremias Zieher, Dresden</p>
-                <a 
-                  href="https://www.strava.com/activities/11092079227" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#fc4c01] hover:text-[#fc4c01]/50 mt-2 font-medium transition-colors duration-200"
-                >
-                  <img src="/images/strava.svg" alt="Strava" className="w-5 h-5 transition-transform duration-200 group-hover:scale-110" />
-                  <span className="border-b border-transparent hover:border-[#fc4c01]">Auf Strava ansehen</span>
-                </a>
+                <p className="text-lg text-center flex-grow mb-4">"Max lebt den Radsport, das merkt man. <br /> Er ist immer auf dem aktuellsten Stand und versucht, das Beste aus jedem Sportler durch gezieltes Training herauszuholen."</p>
+                <div className="mt-auto">
+                  <p className="font-semibold text-primary">- Jeremias Zieher, Dresden</p>
+                  <a 
+                    href="https://www.strava.com/activities/11092079227" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-[#fc4c01] hover:text-[#fc4c01]/50 mt-2 font-medium transition-colors duration-200"
+                  >
+                    <img src="/images/strava.svg" alt="Strava" className="w-5 h-5 transition-transform duration-200 group-hover:scale-110" />
+                    <span className="border-b border-transparent hover:border-[#fc4c01]">Auf Strava ansehen</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
