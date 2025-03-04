@@ -308,7 +308,7 @@ const Index = () => {
               <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
                 <div className="flex flex-col items-center mb-2">
                   <img 
-                    src="/images/ken_profile_img.jpg" 
+                    src="/images/ken_profile_img.jpeg" 
                     alt="Profilbild von Ken Wagner" 
                     className="w-16 h-16 rounded-full mb-4"
                   />
