@@ -395,7 +395,7 @@ const Index = () => {
               <div>
                 © {currentYear} MaxCyclesCoaching. Alle Rechte vorbehalten.
               </div>
-              <div className="mt-4 md:mt-0 space-x-1 sm:space-x-4">
+              <div className="text-sm sm:text-base mt-4 md:mt-0 space-x-1 sm:space-x-4">
                 <a href="mailto:maxcyclescoaching@gmail.com" className="hover:text-gray-900">E-Mail: maxcyclescoaching@gmail.com</a>
                 <span className="mx-2">|</span>
                 <a href="/impressum" className="hover:text-gray-900">Impressum</a>
