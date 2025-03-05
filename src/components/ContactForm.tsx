@@ -42,7 +42,7 @@ export const ContactForm = () => {
       };
 
       await emailjs.send(
-        'service_cg3zojt', // EmailJS service ID
+        'service_5qpb3yc', // EmailJS service ID
         'template_pl451cu', // EmailJS template ID
         templateParams,
         'WssuZiUGQBn1sT-NA' // EmailJS public key
