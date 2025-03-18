@@ -121,7 +121,7 @@ const Index = () => {
                 <p className="text-gray-600">
                 Hi, ich bin Max – <b>zertifizierter Radsportcoach</b> und <b>leidenschaftlicher Athlet</b>. <br />
                 Seit meiner Jugend fahre ich ambitioniert Rennrad und konnte dabei auch schon einige persönliche Erfolge feiern. <br />
-                Meine Schwerpunkte als Coach liegen auf <b>individuellem 1:1 Coaching</b> und <b>Laktat-Leistungsdiagnostiken</b>, die ich seit Ende 2023 anbiete. <br />
+                Meine Schwerpunkte liegen auf <b>individuellem 1:1 Coaching für ambitionierte Radsportler</b> und <b>Laktat-Leistungsdiagnostiken</b>, die ich seit Ende 2023 anbiete. <br />
                 Aufgrund meines Wirtschaftsinformatik-Studiums an der HTW-Dresden liegt mir die Arbeit mit <b>wissenschaftlichen Studien und Fachliteratur</b> – ergänzt durch wertvolle <b>Erfahrungen</b> aus <b>Training</b> und <b>Wettkampf</b>. <br />
                 Mein Ziel? Dich dabei zu unterstützen, dein <b>volles Potenzial auf dem Rad auszuschöpfen</b>!        
                 </p>
@@ -164,7 +164,7 @@ const Index = () => {
             <div className="text-center max-w-3xl mx-auto">
               <p className="text-gray-600 mb-8">
               Ein <b>effektives Training</b> beginnt mit einer <b>fundierten Analyse</b>: <br />
-              Zunächst erfasse ich deine <b>Wettkampfziele</b> und erstelle ein <b>individuelles</b> Athletenprofil mittels einer detaillierten <b>Leistungsdiagnostik.</b> <br />
+              Zunächst erfasse ich deine <b>Wettkampfziele</b> und erstelle ein <b>individuelles Athletenprofil</b> basierend auf vorhandenen Trainingsdaten und einer detaillierten <b>Leistungsdiagnostik</b> (Vor-Ort oder Remote). <br />
               So erkennen wir nicht nur deine <b>Stärken</b>, sondern identifizieren auch gezielt <b>Potenziale</b> – der Schlüssel zu <b>nachhaltigen Verbesserungen</b>.
               </p>
               <Button 
@@ -222,7 +222,7 @@ const Index = () => {
                   </Button>
                   <a href="#contact">
                     <Button variant="outline" className="w-full border-secondary text-secondary hover:text-secondary/50">
-                      Anfragen
+                      Unverbindlich Anfragen
                     </Button>
                   </a>
                 </div>
@@ -266,7 +266,7 @@ const Index = () => {
                   </Button>
                   <a href="#contact">
                     <Button variant="outline" className="w-full border-primary text-primary hover:text-primary/50">
-                      Anfragen
+                      Unverbindlich Anfragen
                     </Button>
                   </a>
                 </div>
@@ -331,7 +331,7 @@ const Index = () => {
                 <div className="mt-auto">
                   <p className="font-semibold text-primary">- Ken Wagner, Dresden</p>
                   <a 
-                    href="https://www.strava.com/activities/11773171164" 
+                    href="https://www.strava.com/athletes/6711546" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-[#fc4c01] hover:text-[#fc4c01]/50 mt-2 font-medium transition-colors duration-200"
@@ -380,7 +380,7 @@ const Index = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Kontakt</h2>
             <p className="text-2xl mb-12 text-center font-medium">
-              Lass uns gemeinsam dein volles Potenzial auszuschöpfen!
+              Lass uns gemeinsam dein volles Potenzial auszuschöpfen! <br/> Frage einfach über das Formular ein unverbindliches Erstgespräch fürs Coaching oder eine Diagnostik an!
             </p>
             
             <Suspense fallback={<div className="h-96 flex items-center justify-center text-white">Formular wird geladen...</div>}>
@@ -420,7 +420,7 @@ const Index = () => {
         >
           <div className="space-y-4">
             <p>Mein Ansatz basiert auf strukturierten Trainingsblöcken, die individuell auf die Athlet*innen abgestimmt sind. Ich setze dabei bewusst auf kleine, intendierte Anpassungen, um den Fortschritt messbar und nachhaltig steuerbar zu machen.</p>
-            <p>Die Wochenplanung erfolgt flexibel in einem Rhythmus von 1 bis 3 Wochen über TrainingPeaks. So kann das Training optimal auf Alltag, Ernährung und Regeneration abgestimmt werden, um eine ganzheitliche Belastungssteuerung zu gewährleisten. Gleichzeitig bleibt der Fokus stets auf der langfristigen Leistungsentwicklung, damit die Höchstform genau zum richtigen Zeitpunkt erreicht wird.</p>
+            <p>Die Wochenplanung erfolgt flexibel in einem Rhythmus von 1 bis 3 Wochen über TrainingPeaks. So kann das Training optimal auf Alltag, Ernährung und Regenerationsstatus abgestimmt werden, um eine ganzheitliche Belastungssteuerung zu gewährleisten. Gleichzeitig bleibt der Fokus stets auf der langfristigen Leistungsentwicklung, damit die Höchstform genau zum richtigen Zeitpunkt erreicht wird.</p>
           </div>
         </ServiceDialog>
 
@@ -438,12 +438,12 @@ const Index = () => {
 
             <div>
               <p className="font-bold">2. Detaillierte Analyse</p>
-              <p>In regelmäßigen Gesprächen betrachten wir nicht nur deine Trainingsdaten, sondern auch Faktoren wie Ernährung, Schlaf und Stress. So entsteht ein ganzheitliches Bild, das dir hilft, dein volles Potenzial auszuschöpfen.</p>
+              <p>In regelmäßigen Gesprächen betrachten wir nicht nur deine Trainingsdaten, sondern auch Faktoren wie Ernährung, Schlaf und Stress. So entsteht ein ganzheitliches Bild, das uns hilft, dein volles Potenzial auszuschöpfen.</p>
             </div>
 
             <div>
               <p className="font-bold">3. Regelmäßige Leistungsdiagnostik</p>
-              <p>Alle 3 Monate überprüfen wir deinen aktuellen Leistungsstand durch gezielte Tests. So erkennst du Fortschritte frühzeitig und kannst deine Trainingsreize optimal anpassen.</p>
+              <p>Alle 3 Monate überprüfen wir deinen aktuellen Leistungsstand durch gezielte Tests. So erkennen wir Fortschritte frühzeitig und können deine Trainingsreize optimal anpassen. <br/> Dabei können die Tests entweder in Form von einer vergünstigten Laktat-Leistungsdiagnostik Vor-Ort oder über Leistungstests bei dir zu Hause bzw. auf der Straße durchgeführt werden.</p>
             </div>
 
             <div>
