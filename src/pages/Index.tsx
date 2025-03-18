@@ -80,7 +80,7 @@ const Index = () => {
                 alt="Cyclist in front of beautiful landscape" 
                 className="w-full h-full object-cover"
                 loading="eager" 
-                fetchPriority="high"
+                fetchpriority="high"
             />
             <div className="absolute inset-0 bg-primary/25" />
           </div>
