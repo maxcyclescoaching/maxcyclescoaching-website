@@ -34,7 +34,6 @@ export const ContactForm = () => {
 
   // Automatically send test email every 14 days
   useEffect(() => {
-    sendTestEmail(); // Send test email immediately on mount
     const interval = setInterval(() => {
       sendTestEmail();
     }, 1209600000); // Every 14 days in milliseconds
