@@ -10,6 +10,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { ArrowRight, Loader2 } from "lucide-react";
 import emailjs from 'emailjs-com';
+import { useEffect } from "react";
+import { sendTestEmail } from "src/components/sendTestEmail.tsx";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name muss mindestens 2 Zeichen lang sein"),
@@ -29,6 +31,15 @@ export const ContactForm = () => {
       message: "",
     },
   });
+
+  // Automatically send test email every 14 days
+  useEffect(() => {
+    const interval = setInterval(() => {
+      sendTestEmail();
+    }, 1209600000); // Every 14 days in milliseconds
+
+  return () => clearInterval(interval); // Cleanup on unmount
+}, []);
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
