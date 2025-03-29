@@ -11,7 +11,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { ArrowRight, Loader2 } from "lucide-react";
 import emailjs from 'emailjs-com';
 import { useEffect } from "react";
-import { sendTestEmail } from "src/components/sendTestEmail.tsx";
+import { sendTestEmail } from "@/components/sendTestEmail.tsx";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name muss mindestens 2 Zeichen lang sein"),
