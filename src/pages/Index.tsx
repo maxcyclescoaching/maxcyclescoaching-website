@@ -1,10 +1,11 @@
-
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Bike, Target, Users, Calendar, LineChart, Trophy, MessageCircle, ActivitySquare, Gauge, NotebookPen, Timer, FlaskConical } from "lucide-react";
-import { useState, lazy, Suspense, useMemo } from "react";
+import { useState, lazy, Suspense, useMemo, useEffect } from "react";
 import { ServiceDialog } from "@/components/ServiceDialog";
 import { LightboxDialog } from "@/components/LightboxDialog";
+import { SiteFooter } from "@/components/SiteFooter";
+import { Helmet } from "react-helmet-async";
 
 const ContactForm = lazy(() => import("@/components/ContactForm"));
 
@@ -13,10 +14,23 @@ const currentYear = new Date().getFullYear();
 const experienceYears = currentYear - startYear;
 
 const Index = () => {
+  const canonicalUrl = "https://maxcyclescoaching.de/";
   const [isPhilosophyOpen, setIsPhilosophyOpen] = useState(false);
   const [isCoachingOpen, setIsCoachingOpen] = useState(false);
   const [isDiagnosticsOpen, setIsDiagnosticsOpen] = useState(false);
   const [isCertificateOpen, setIsCertificateOpen] = useState(false);
+
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, []);
 
   const achievements = useMemo(() => [
     "German Cycling (BDR) zertifizierter Coach",
@@ -64,15 +78,28 @@ const Index = () => {
   }), []);
 
   return (
-    <div className="min-h-screen bg-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
+    <div className="min-h-screen bg-white flex flex-col">
+      <Helmet>
+        <title>MaxCycles Coaching | Rennrad + Radsport Coaching & Leistungsdiagnostik</title>
+        <meta
+          name="description"
+          content="Professionelles Radsport-Coaching und individuelle Leistungsdiagnostik: maßgeschneiderte Trainingsplanung für ambitionierte Radsportler."
+        />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="MaxCycles Coaching | Rennrad + Radsport Coaching & Leistungsdiagnostik" />
+        <meta
+          property="og:description"
+          content="Professionelles Radsport-Coaching, maßgeschneidert auf deine Ziele. Von Amateuren bis zu Elite-Athleten."
+        />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+      </Helmet>
       
       <Navbar />
       
-      <main>
+      <main className="flex-grow">
         <section id="hero" className="relative h-screen bg-primary animate-fade-in" aria-label="Hero">
           <div className="absolute inset-0">
             <img 
@@ -389,23 +416,6 @@ const Index = () => {
           </div>
         </section>
 
-        <footer className="bg-gray-100 py-6" role="contentinfo">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
-              <div>
-                © {currentYear} MaxCyclesCoaching. Alle Rechte vorbehalten.
-              </div>
-              <div className="text-sm sm:text-base mt-4 md:mt-0 space-x-1 sm:space-x-4">
-                <a href="mailto:maxcyclescoaching@gmail.com" className="hover:text-gray-900">E-Mail: maxcyclescoaching@gmail.com</a>
-                <span className="mx-2">|</span>
-                <a href="/impressum" className="hover:text-gray-900">Impressum</a>
-                <span className="mx-2">|</span>
-                <a href="/datenschutz" className="hover:text-gray-900">Datenschutz</a>
-              </div>
-            </div>
-          </div>
-        </footer>
-
         <LightboxDialog
           isOpen={isCertificateOpen}
           onClose={() => setIsCertificateOpen(false)}
@@ -491,6 +501,7 @@ const Index = () => {
             </div>
           </div>
         </ServiceDialog>
+        <SiteFooter showEmail />
       </main>
     </div>
   );

@@ -5,9 +5,9 @@ const Datenschutz = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       <Navbar />
-      <main className="pt-20 pb-16">
+      <main className="flex-grow pt-20 pb-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-primary mb-8">Datenschutzerklärung</h1>
           
