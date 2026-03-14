@@ -56,7 +56,7 @@ const NavbarComponent = () => {
                     Verpflegungsrechner
                   </a>
                   <a
-                    href="/tools/übersetzungsrechner"
+                    href="/tools/uebersetzungsrechner"
                     className="block px-4 py-2 text-sm text-[#003366] hover:bg-accent"
                     onClick={handleLinkClick}
                   >
@@ -144,7 +144,7 @@ const NavbarComponent = () => {
                     Verpflegungsrechner
                   </a>
                   <a 
-                    href="/tools/übersetzungsrechner" 
+                    href="/tools/uebersetzungsrechner" 
                     className="block px-6 py-3 text-[#003366] hover:bg-accent rounded-md active:bg-accent/80 transition-colors text-sm"
                     onClick={handleLinkClick}
                   >

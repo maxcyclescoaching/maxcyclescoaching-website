@@ -1,11 +1,28 @@
 
 import { Navbar } from "@/components/Navbar";
+import { SiteFooter } from "@/components/SiteFooter";
+import { Helmet } from "react-helmet-async";
 
 const Datenschutz = () => {
-  const currentYear = new Date().getFullYear();
+  const canonicalUrl = "https://maxcyclescoaching.de/datenschutz";
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
+      <Helmet>
+        <title>Datenschutzerklärung | MaxCyclesCoaching</title>
+        <meta
+          name="description"
+          content="Datenschutzerklärung von MaxCyclesCoaching mit Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO."
+        />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content="Datenschutzerklärung | MaxCyclesCoaching" />
+        <meta
+          property="og:description"
+          content="Datenschutzerklärung von MaxCyclesCoaching mit allen DSGVO-relevanten Informationen."
+        />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <Navbar />
       <main className="flex-grow pt-20 pb-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,20 +72,7 @@ const Datenschutz = () => {
         </div>
       </main>
 
-      <footer className="bg-gray-100 py-6" role="contentinfo">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
-            <div>
-              © {currentYear} MaxCyclesCoaching. Alle Rechte vorbehalten.
-            </div>
-            <div className="mt-4 md:mt-0 space-x-4">
-              <a href="/impressum" className="hover:text-gray-900">Impressum</a>
-              <span className="mx-2">|</span>
-              <a href="/datenschutz" className="hover:text-gray-900">Datenschutz</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter showEmail />
     </div>
   );
 };

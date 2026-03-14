@@ -19,6 +19,8 @@ export const SiteFooter = ({ showEmail = false }: SiteFooterProps) => {
                 <span className="hidden sm:inline">|</span>
               </>
             )}
+            <a href="/" className="hover:text-gray-900">Startseite</a>
+            <span className="hidden sm:inline">|</span>
             <a href="/impressum" className="hover:text-gray-900">Impressum</a>
             <span className="hidden sm:inline">|</span>
             <a href="/datenschutz" className="hover:text-gray-900">Datenschutz</a>

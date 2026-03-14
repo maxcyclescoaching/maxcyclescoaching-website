@@ -63,7 +63,7 @@ const Index = () => {
         "priceCurrency": "EUR",
         "description": "Individueller Trainingsplan basierend auf deinen Zielen und deinem Zeitplan",
         "availability": "https://schema.org/InStock",
-        "url": "https://maxcyclescoaching.com/#services"
+        "url": "https://maxcyclescoaching.de/#services"
       },
       {
         "@type": "Offer",
@@ -72,7 +72,7 @@ const Index = () => {
         "priceCurrency": "EUR",
         "description": "Persönliche Diagnostik mittels Laktat und Muskelsauerstoffmessung deines metabolischen Profils",
         "availability": "https://schema.org/InStock",
-        "url": "https://maxcyclescoaching.com/#services"
+        "url": "https://maxcyclescoaching.de/#services"
       }
     ]
   }), []);
