@@ -80,16 +80,16 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <Helmet>
-        <title>MaxCycles Coaching | Rennrad + Radsport Coaching & Leistungsdiagnostik</title>
+        <title>Rennrad Coaching: Individuelles Training aus Dresden ab 99€/Monat</title>
         <meta
           name="description"
-          content="Professionelles Radsport-Coaching und individuelle Leistungsdiagnostik: maßgeschneiderte Trainingsplanung für ambitionierte Radsportler."
+          content="Starte jetzt mit professionellem Rennrad Coaching – Individuelle Trainingspläne, persönliche Online-Betreuung und Motivation für deine Ziele."
         />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="MaxCycles Coaching | Rennrad + Radsport Coaching & Leistungsdiagnostik" />
+        <meta property="og:title" content="Rennrad Coaching: Individuelles Training aus Dresden ab 99€/Monat" />
         <meta
           property="og:description"
-          content="Professionelles Radsport-Coaching, maßgeschneidert auf deine Ziele. Von Amateuren bis zu Elite-Athleten."
+          content="Starte jetzt mit professionellem Rennrad Coaching – Individuelle Trainingspläne, persönliche Online-Betreuung und Motivation für deine Ziele."
         />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
@@ -100,7 +100,7 @@ const Index = () => {
       <Navbar />
       
       <main className="flex-grow">
-        <section id="hero" className="relative h-screen bg-primary animate-fade-in" aria-label="Hero">
+        <section id="hero" className="relative min-h-[100svh] bg-primary animate-fade-in" aria-label="Hero">
           <div className="absolute inset-0">
             <img 
                 src="/images/hero_img.webp" 
@@ -111,27 +111,44 @@ const Index = () => {
             />
             <div className="absolute inset-0 bg-primary/25" />
           </div>
-          <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center">
-            <div className="text-center text-white">
+          <div className="relative min-h-[100svh] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 lg:py-24 flex items-center justify-center">
+            <div className="w-full text-center text-white">
               <img 
                 src="/images/logo_white.png" 
                 alt="MaxCyclesCoaching Logo" 
-                className="h-24 sm:h-32 w-auto mx-auto mb-6 sm:mb-8"
+                className="h-28 sm:h-32 w-auto mx-auto mb-6 sm:mb-8"
                 loading="eager"
               />
-              <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6 text-shadow-lg">
-                MaxCyclesCoaching
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-5 sm:mb-7 text-shadow-lg">
+                Individuelles Rennrad-Coaching für ambitionierte Radsportler
               </h1>
-              <p className="text-xl sm:text-2xl md:text-3xl mb-8 sm:mb-10 max-w-3xl mx-auto px-4 font-medium text-shadow">
-                Professionelles Radsport-Coaching, maßgeschneidert auf deine Ziele. Von Amateuren bis zu Elite-Athleten.
-              </p>
+              <div className="grid grid-cols-3 gap-1.5 sm:gap-4 max-w-5xl mx-auto mb-6 sm:mb-10">
+                <div className="rounded-lg bg-white/15 backdrop-blur-sm border border-white/30 px-1.5 py-2 sm:px-5 sm:py-5 min-h-[96px] sm:min-h-[132px] flex flex-col justify-center">
+                  <p className="text-xl sm:text-4xl font-bold leading-tight">+25W</p>
+                  <p className="text-[11px] sm:text-base font-medium mt-1 leading-snug">
+                    <span className="sm:hidden">FTP-Plus pro Jahr</span>
+                    <span className="hidden sm:inline">FTP-Verbesserung pro Jahr</span>
+                  </p>
+                </div>
+                <div className="rounded-lg bg-white/15 backdrop-blur-sm border border-white/30 px-1.5 py-2 sm:px-5 sm:py-5 min-h-[96px] sm:min-h-[132px] flex flex-col justify-center">
+                  <p className="text-xl sm:text-4xl font-bold leading-tight">Ab 99€</p>
+                  <p className="text-[11px] sm:text-base font-medium mt-1 leading-snug">pro Monat</p>
+                </div>
+                <div className="rounded-lg bg-white/15 backdrop-blur-sm border border-white/30 px-1.5 py-2 sm:px-5 sm:py-5 min-h-[96px] sm:min-h-[132px] flex flex-col justify-center">
+                  <p className="text-xl sm:text-4xl font-bold leading-tight">2000+</p>
+                  <p className="text-[11px] sm:text-base font-medium mt-1 leading-snug">
+                    <span className="sm:hidden">analysierte Einheiten</span>
+                    <span className="hidden sm:inline">analysierte Trainingseinheiten</span>
+                  </p>
+                </div>
+              </div>
               <a href="#services">
                 <Button 
                   size="lg" 
                   variant="secondary"
-                  className="text-white transform hover:scale-105 transition-all duration-200 text-lg py-6 px-8"
+                  className="text-white transform hover:scale-105 transition-all duration-200 text-2xl py-9 px-14 shadow-xl shadow-black/30"
                 >
-                  Starte jetzt <ArrowRight className="ml-1 w-6 h-6" />
+                  Starte jetzt <ArrowRight className="ml-2 w-8 h-8" />
                 </Button>
               </a>
             </div>
@@ -140,9 +157,9 @@ const Index = () => {
 
         <section id="about" className="py-20" aria-label="Über mich">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
+            <h3 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
               Über mich
-            </h2>
+            </h3>
             <div className="text-center md:text-left grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-gray-600">
@@ -185,9 +202,9 @@ const Index = () => {
 
         <section id="philosophy" className="py-20 bg-accent" aria-label="Philosophie">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
+            <h3 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
               Philosophie
-            </h2>
+            </h3>
             <div className="text-center max-w-3xl mx-auto">
               <p className="text-gray-600 mb-8">
               Ein <b>effektives Training</b> beginnt mit einer <b>fundierten Analyse</b>: <br />
@@ -214,7 +231,7 @@ const Index = () => {
               <div className="bg-gradient-to-br from-white to-[#E8F0F8] p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
                 <div className="flex items-center gap-3 mb-4">
                   <Users className="w-8 h-8 text-secondary" />
-                  <h3 className="text-2xl font-semibold text-primary">1:1 Coaching</h3>
+                  <h2 className="text-2xl font-semibold text-primary">1:1 Radsport Coaching</h2>
                 </div>
                 <p className="text-lg text-gray-600 mb-6">99€/Monat, ohne Mindestlaufzeit</p>
                 <ul className="space-y-4 text-left mb-6">
@@ -258,7 +275,7 @@ const Index = () => {
               <div className="bg-gradient-to-br from-white to-[#E8F0F8] p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
                 <div className="flex items-center gap-3 mb-4">
                   <ActivitySquare className="w-8 h-8 text-primary" />
-                  <h3 className="text-2xl font-semibold text-primary">Individuelle Leistungsdiagnostik</h3>
+                  <h2 className="text-2xl font-semibold text-primary">Individuelle Leistungsdiagnostik</h2>
                 </div>
                 <p className="text-lg text-gray-600 mb-6">149€/Diagnostik</p>
                 <ul className="space-y-4 text-left mb-6">
@@ -304,7 +321,7 @@ const Index = () => {
 
         <section id="testimonials" className="py-20 bg-gray-100" aria-label="Testimonials">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary">Das sagen meine Kund*innen</h2>
+            <h3 className="text-3xl md:text-4xl font-bold mb-8 text-primary">Das sagen meine Kund*innen</h3>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
                 <div className="flex flex-col items-center mb-2">
@@ -405,7 +422,7 @@ const Index = () => {
 
         <section id="contact" className="py-20 bg-primary text-white" aria-label="Kontakt">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">Kontakt</h2>
+            <h3 className="text-3xl md:text-4xl font-bold text-center mb-8">Kontakt</h3>
             <p className="text-2xl mb-12 text-center font-medium">
               Lass uns gemeinsam dein volles Potenzial auszuschöpfen! <br/> Frage einfach über das Formular ein unverbindliches Erstgespräch fürs Coaching oder eine Diagnostik an!
             </p>
