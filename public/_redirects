@@ -1,2 +1,3 @@
-https://maxcyclescoaching.netlify.app/* https://www.maxcyclescoaching.de/:splat 301!
+https://www.maxcyclescoaching.de/* https://maxcyclescoaching.de/:splat 301!
+https://maxcyclescoaching.netlify.app/* https://maxcyclescoaching.de/:splat 301!
 /*    /index.html   200
