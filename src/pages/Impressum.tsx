@@ -1,28 +1,10 @@
 
 import { Navbar } from "@/components/Navbar";
 import { SiteFooter } from "@/components/SiteFooter";
-import { Helmet } from "react-helmet-async";
 
 const Impressum = () => {
-  const canonicalUrl = "https://maxcyclescoaching.de/impressum";
-
   return (
     <div className="min-h-screen bg-white flex flex-col">
-      <Helmet>
-        <title>Impressum | MaxCyclesCoaching</title>
-        <meta
-          name="description"
-          content="Impressum von MaxCyclesCoaching mit allen Pflichtangaben nach § 5 TMG und Kontaktinformationen."
-        />
-        <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Impressum | MaxCyclesCoaching" />
-        <meta
-          property="og:description"
-          content="Impressum von MaxCyclesCoaching mit allen Pflichtangaben und Kontaktinformationen."
-        />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:type" content="website" />
-      </Helmet>
       <Navbar />
       <main className="flex-grow pt-20 pb-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

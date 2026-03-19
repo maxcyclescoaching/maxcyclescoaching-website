@@ -21,7 +21,6 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Helmet } from "react-helmet-async";
 
 const ContactForm = lazy(() => import("@/components/ContactForm"));
 
@@ -35,7 +34,6 @@ const OetztalerBlog = () => {
       year: "numeric",
     }), [publicationDate]
   );
-  const canonicalUrl = "https://maxcyclescoaching.de/blog/oetztaler";
 
   const faqItems = useMemo(
     () => [
@@ -272,61 +270,8 @@ const OetztalerBlog = () => {
     [currentYear]
   );
 
-  /* ================= SEO Structured Data ================= */
-
-  const structuredData = useMemo(() => ({
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": `Ötztaler Radmarathon ${currentYear} – Strecke, Pacing-Strategien & Training-Tipps`,
-    "description": "Analyse der Strecke des Ötztaler Radmarathons mit Pacing-Tipps, Leistungsanforderungen und Trainingsstrategien.",
-    "datePublished": publicationDate,
-    "author": {
-      "@type": "Person",
-      "name": "Maximilian Lohr"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "MaxCyclesCoaching"
-    }
-  }), [currentYear, publicationDate]);
-
-  const faqStructuredData = useMemo(
-    () => ({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": faqItems.map((item) => ({
-        "@type": "Question",
-        "name": item.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": item.answerText,
-        },
-      })),
-    }),
-    [faqItems]
-  );
-
   return (
     <div className="min-h-screen bg-white flex flex-col">
-      <Helmet>
-        <title>{`Ötztaler Radmarathon ${currentYear} | Strecke, Pacing & Trainingstipps`}</title>
-        <meta
-          name="description"
-          content={`Ötztaler Radmarathon: Ötztaler Radmarathon ${currentYear}: Streckenanalyse, Watt-Zielwerte, Sub-10, Sub-9, Sub-8 Strategien & Trainingstipps. So bereitest du dich optimal auf 227 km und 5.500 hm vor.`}
-        />
-        <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content={`Ötztaler Radmarathon ${currentYear} | Strecke, Pacing & Trainingstipps`} />
-        <meta
-          property="og:description"
-          content="Alles über Streckenprofil, Leistungsanforderungen und Renntaktik für dein erfolgreiches Finish beim Ötztaler."
-        />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqStructuredData)}</script>
-      </Helmet>
-
       <Navbar />
 
       <main className="flex-grow">

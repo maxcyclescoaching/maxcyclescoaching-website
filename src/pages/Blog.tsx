@@ -4,32 +4,13 @@ import { getSortedBlogPosts } from "@/data/blogPosts";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CalendarDays, ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 import { useMemo } from "react";
 
 const Blog = () => {
   const posts = useMemo(() => getSortedBlogPosts(), []);
 
-  const canonicalUrl = "https://maxcyclescoaching.de/blog";
-
   return (
     <div className="min-h-screen bg-white flex flex-col">
-      <Helmet>
-        <title>Blog | MaxCyclesCoaching – Radsport-Wissen & Trainingstipps</title>
-        <meta
-          name="description"
-          content="Radsport-Blog von MaxCyclesCoaching: Trainingstipps, Rennanalysen, Pacing-Strategien und Ernährungsguides für ambitionierte Radsportler."
-        />
-        <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Blog | MaxCyclesCoaching" />
-        <meta
-          property="og:description"
-          content="Trainingstipps, Rennanalysen und Pacing-Strategien für ambitionierte Radsportler."
-        />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:type" content="website" />
-      </Helmet>
-
       <Navbar />
 
       <main className="flex-grow">

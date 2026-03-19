@@ -5,7 +5,6 @@ import { useState, lazy, Suspense, useMemo, useEffect } from "react";
 import { ServiceDialog } from "@/components/ServiceDialog";
 import { LightboxDialog } from "@/components/LightboxDialog";
 import { SiteFooter } from "@/components/SiteFooter";
-import { Helmet } from "react-helmet-async";
 
 const ContactForm = lazy(() => import("@/components/ContactForm"));
 
@@ -14,7 +13,6 @@ const currentYear = new Date().getFullYear();
 const experienceYears = currentYear - startYear;
 
 const Index = () => {
-  const canonicalUrl = "https://maxcyclescoaching.de/";
   const [isPhilosophyOpen, setIsPhilosophyOpen] = useState(false);
   const [isCoachingOpen, setIsCoachingOpen] = useState(false);
   const [isDiagnosticsOpen, setIsDiagnosticsOpen] = useState(false);
@@ -39,64 +37,8 @@ const Index = () => {
     "Nachweisbare Erfolge in der Athletenentwicklung"
   ], [experienceYears]);
 
-  const structuredData = useMemo(() => ({
-    "@context": "https://schema.org",
-    "@type": "SportsClub",
-    "name": "MaxCyclesCoaching",
-    "description": "Professionelles Radsport-Coaching, maßgeschneidert auf deine Ziele. Von Anfängern bis zu Elite-Athleten.",
-    "image": "/images/hero_img.webp",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "DE",
-      "adressLocality": "Dresden",
-      "postalCode": "01189"
-    },
-    "email": "maxcyclescoaching@gmail.com",
-    "sameAs": [
-      "https://www.instagram.com/maxcyclescoaching",
-    ],
-    "offers": [
-      {
-        "@type": "Offer",
-        "name": "1:1 Coaching",
-        "price": "99",
-        "priceCurrency": "EUR",
-        "description": "Individueller Trainingsplan basierend auf deinen Zielen und deinem Zeitplan",
-        "availability": "https://schema.org/InStock",
-        "url": "https://maxcyclescoaching.de/#services"
-      },
-      {
-        "@type": "Offer",
-        "name": "Leistungsdiagnostik",
-        "price": "149",
-        "priceCurrency": "EUR",
-        "description": "Persönliche Diagnostik mittels Laktat und Muskelsauerstoffmessung deines metabolischen Profils",
-        "availability": "https://schema.org/InStock",
-        "url": "https://maxcyclescoaching.de/#services"
-      }
-    ]
-  }), []);
-
   return (
     <div className="min-h-screen bg-white flex flex-col">
-      <Helmet>
-        <title>Rennrad Coaching: Individuelles Training aus Dresden ab 99€/Monat</title>
-        <meta
-          name="description"
-          content="Starte jetzt mit professionellem Rennrad Coaching – Individuelle Trainingspläne, persönliche Online-Betreuung und Motivation für deine Ziele."
-        />
-        <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Rennrad Coaching: Individuelles Training aus Dresden ab 99€/Monat" />
-        <meta
-          property="og:description"
-          content="Starte jetzt mit professionellem Rennrad Coaching – Individuelle Trainingspläne, persönliche Online-Betreuung und Motivation für deine Ziele."
-        />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
-      </Helmet>
-      
       <Navbar />
       
       <main className="flex-grow">
