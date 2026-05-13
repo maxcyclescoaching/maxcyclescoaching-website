@@ -59,6 +59,9 @@ export function Head() {
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content="article" />
+      <meta property="og:image" content="https://maxcyclescoaching.de/images/oetztaler_rm_2025.avif" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta name="twitter:card" content="summary_large_image" />
       <script type="application/ld+json">{JSON.stringify(articleStructuredData)}</script>
       <script type="application/ld+json">{JSON.stringify(faqStructuredData)}</script>
