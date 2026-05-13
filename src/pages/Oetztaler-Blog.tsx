@@ -281,7 +281,7 @@ const OetztalerBlog = () => {
         <section className="relative h-[60vh] sm:h-[70vh] bg-primary">
           <div className="absolute inset-0">
             <img
-              src="/images/oetztaler_rm_2025.jpg"
+              src="/images/oetztaler_rm_2025.avif"
               alt="Ötztaler Radmarathon - Atmosphäre und Start 2025"
               className="w-full h-full object-cover"
             />

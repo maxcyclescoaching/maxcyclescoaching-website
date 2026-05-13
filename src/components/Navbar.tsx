@@ -44,26 +44,28 @@ const NavbarComponent = () => {
               >
                 Tools und Rechner <ChevronDown className={`ml-1 w-4 h-4 transition-transform ${isToolsOpen ? "rotate-180" : ""}`} />
               </button>
-              {isToolsOpen && (
-                <div
-                  className="absolute left-0 mt-0 w-48 bg-white shadow-lg rounded-md py-2 z-50 border border-gray-100"
+              <div
+                className={`absolute left-0 mt-0 w-48 bg-white shadow-lg rounded-md py-2 z-50 border border-gray-100 overflow-hidden transition-all duration-200 ${
+                  isToolsOpen
+                    ? "opacity-100 pointer-events-auto max-h-48"
+                    : "opacity-0 pointer-events-none max-h-0"
+                }`}
+              >
+                <a
+                  href="/tools/verpflegungsrechner"
+                  className="block px-4 py-2 text-sm text-[#003366] hover:bg-accent"
+                  onClick={handleLinkClick}
                 >
-                  <a
-                    href="/tools/verpflegungsrechner"
-                    className="block px-4 py-2 text-sm text-[#003366] hover:bg-accent"
-                    onClick={handleLinkClick}
-                  >
-                    Verpflegungsrechner
-                  </a>
-                  <a
-                    href="/tools/uebersetzungsrechner"
-                    className="block px-4 py-2 text-sm text-[#003366] hover:bg-accent"
-                    onClick={handleLinkClick}
-                  >
-                    Übersetzungsrechner
-                  </a>
-                </div>
-              )}
+                  Verpflegungsrechner
+                </a>
+                <a
+                  href="/tools/uebersetzungsrechner"
+                  className="block px-4 py-2 text-sm text-[#003366] hover:bg-accent"
+                  onClick={handleLinkClick}
+                >
+                  Übersetzungsrechner
+                </a>
+              </div>
             </div>
 
             <a 
@@ -134,24 +136,26 @@ const NavbarComponent = () => {
                 Tools und Rechner
                 <ChevronDown className={`w-4 h-4 transition-transform ${isToolsOpen ? "rotate-180" : ""}`} />
               </button>
-              {isToolsOpen && (
-                <>
-                  <a 
-                    href="/tools/verpflegungsrechner" 
-                    className="block px-6 py-3 text-[#003366] hover:bg-accent rounded-md active:bg-accent/80 transition-colors text-sm"
-                    onClick={handleLinkClick}
-                  >
-                    Verpflegungsrechner
-                  </a>
-                  <a 
-                    href="/tools/uebersetzungsrechner" 
-                    className="block px-6 py-3 text-[#003366] hover:bg-accent rounded-md active:bg-accent/80 transition-colors text-sm"
-                    onClick={handleLinkClick}
-                  >
-                    Übersetzungsrechner
-                  </a>
-                </>
-              )}
+              <div className={`overflow-hidden transition-all duration-200 ${
+                isToolsOpen
+                  ? "opacity-100 pointer-events-auto max-h-40"
+                  : "opacity-0 pointer-events-none max-h-0"
+              }`}>
+                <a 
+                  href="/tools/verpflegungsrechner" 
+                  className="block px-6 py-3 text-[#003366] hover:bg-accent rounded-md active:bg-accent/80 transition-colors text-sm"
+                  onClick={handleLinkClick}
+                >
+                  Verpflegungsrechner
+                </a>
+                <a 
+                  href="/tools/uebersetzungsrechner" 
+                  className="block px-6 py-3 text-[#003366] hover:bg-accent rounded-md active:bg-accent/80 transition-colors text-sm"
+                  onClick={handleLinkClick}
+                >
+                  Übersetzungsrechner
+                </a>
+              </div>
 
               <a 
                 href="https://www.instagram.com/maxcyclescoaching"

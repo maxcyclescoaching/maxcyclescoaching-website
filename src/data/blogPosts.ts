@@ -19,7 +19,7 @@ const blogPosts: BlogPost[] = [
     description:
       "Analyse der Strecke des Ötztaler Radmarathons mit Pacing-Tipps, Leistungsanforderungen, Ernährungsstrategie und Trainingstipps für ein erfolgreiches Finish.",
     date: "2026-02-23",
-    image: "/images/oetztaler_rm_2025.jpg",
+    image: "/images/oetztaler_rm_2025_thumb.avif",
     imageAlt: "Ötztaler Radmarathon – Atmosphäre und Start 2025",
     tags: ["Radmarathon", "Pacing", "Training", "Ernährung"],
   },
