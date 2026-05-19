@@ -12,7 +12,7 @@ const Übersetzungsrechner = () => {
           <p className="text-gray-600">
             Berechne deine ideale Übersetzung für dein nächstes Event.
           </p>
-          <h2 className="text-lg text-gray-700">Passende Übersetzung (Kettenblatt & Kassette) für jede Strecke und Leistung:</h2>
+          <h2 className="text-lg text-gray-700">Passende Übersetzung (Kettenblatt & Kassette) für jede Strecke und Leistung, damit du deine optimale Trittfrequenz findest:</h2>
         </div>
         <GearCalculator />
       </main>
