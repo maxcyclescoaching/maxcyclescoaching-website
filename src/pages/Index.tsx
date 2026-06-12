@@ -2,6 +2,8 @@ import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Bike, Target, Users, Calendar, LineChart, Trophy, MessageCircle, ActivitySquare, Gauge, NotebookPen, Timer, FlaskConical } from "lucide-react";
 import { useState, lazy, Suspense, useMemo, useEffect } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ServiceDialog } from "@/components/ServiceDialog";
 import { LightboxDialog } from "@/components/LightboxDialog";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -36,6 +38,202 @@ const Index = () => {
     "Spezialisiert auf Straßenradsport",
     "Nachweisbare Erfolge in der Athletenentwicklung"
   ], [experienceYears]);
+
+  const faqItems = useMemo(
+    () => [
+      {
+        key: "coaching-start",
+        question: "Wie kann ich ins Coaching starten?",
+        answer: (
+          <p>
+            Nach einem unverbindlichen Erstgespräch analysiere ich dein bisheriges Training und erarbeite eine
+            Saisonperiodisierung für deine Ziele, deinen Alltag und deine Physiologie. Danach bekommst du einen
+            wöchentlichen Trainingsplan über TrainingPeaks.
+          </p>
+        ),
+        answerText:
+          "Nach einem unverbindlichen Erstgespräch analysiere ich dein Training und erstelle eine individuelle Saisonperiodisierung. Danach bekommst du wöchentlich einen Plan über TrainingPeaks.",
+      },
+      {
+        key: "coaching-zielgruppe",
+        question: "Für wen ist das Coaching geeignet?",
+        answer: (
+          <p>
+            Das Coaching ist für alle geeignet, die ambitioniert Ausdauersport betreiben. Konkrete Ziele helfen uns,
+            das Training klar auszurichten. Ob du neu im Radsport bist oder schon viel Erfahrung hast, ist zweitrangig.
+          </p>
+        ),
+        answerText:
+          "Das Coaching ist für ambitionierte Ausdauersportler geeignet. Entscheidend sind Motivation, Trainingsbereitschaft und klare Ziele, nicht dein bisheriges Leistungsniveau.",
+      },
+      {
+        key: "coaching-voraussetzungen",
+        question: "Welche Voraussetzungen brauche ich für das Coaching?",
+        answer: (
+          <p>
+            Damit wir dein Training sauber analysieren können, brauchst du mindestens einen Radcomputer oder eine Uhr
+            sowie einen Herzfrequenzsensor. Ein Leistungsmesser ist ideal, damit ich die Einheiten noch genauer steuern
+            und auswerten kann.
+          </p>
+        ),
+        answerText:
+          "Für die Analyse brauchst du mindestens einen Radcomputer oder eine Uhr sowie einen Herzfrequenzsensor. Ein Leistungsmesser ist ideal, um das Training genauer zu steuern.",
+      },
+      {
+        key: "coaching-kosten",
+        question: "Wie hoch sind die Kosten und Zahlungsmodalitäten?",
+        answer: (
+          <p>
+            Das 1:1 Coaching kostet 99 € pro Monat. Es gibt keine Mindestlaufzeit. Die Abrechnung erfolgt monatlich nach Ablauf des Abrechnungszeitraums per
+            Banküberweisung. Die Rechnung erhältst du jeweils zu Beginn des Folgemonats.
+          </p>
+        ),
+        answerText:
+          "Das 1:1 Coaching kostet 99 € pro Monat, ohne Mindestlaufzeit. Abgerechnet wird monatlich per Banküberweisung; die Rechnung kommt zu Beginn des Folgemonats.",
+      },
+      {
+        key: "coaching-beginn",
+        question: "Ab wann können wir beginnen?",
+        answer: (
+          <p>
+            Der Einstieg ist grundsätzlich jederzeit möglich. Je früher wir in der Saison starten, desto mehr Zeit haben
+            wir für den Aufbau. Nach dem Erstgespräch kann der erste Plan direkt in der Folgewoche starten.
+          </p>
+        ),
+        answerText:
+          "Der Einstieg ins Coaching ist jederzeit möglich. Nach dem Erstgespräch kann der erste Trainingsplan direkt in der Folgewoche starten.",
+      },
+      {
+        key: "coaching-ablauf",
+        question: "Wie läuft das Coaching konkret ab?",
+        answer: (
+          <p>
+            Ich plane dir jede Woche individuelle Einheiten, lade sie in TrainingPeaks hoch und bewerte deine Daten nach
+            jeder Einheit. So können wir das Training laufend anpassen und bei Bedarf flexibel nachsteuern.
+          </p>
+        ),
+        answerText:
+          "Ich plane dir wöchentlich individuelle Einheiten in TrainingPeaks, bewerte deine Daten nach jeder Einheit und passe das Training laufend an.",
+      },
+      {
+        key: "coaching-kommunikation",
+        question: "Wie oft kommunizieren wir während des Coachings?",
+        answer: (
+          <p>
+            Wir kommunizieren so oft wie nötig, am liebsten direkt über WhatsApp oder SMS. Wenn mir etwas auffällt,
+            melde ich mich proaktiv. Fragen beantworte ich möglichst schnell (meist unter 2h Antwortzeit). Zusätzlich sprechen wir regelmäßig
+            telefonisch über Fortschritte und Anpassungen.
+          </p>
+        ),
+        answerText:
+          "Wir kommunizieren so oft wie nötig, am liebsten direkt über WhatsApp oder SMS. Ich melde mich proaktiv und beantworte Fragen möglichst schnell.",
+      },
+      {
+        key: "coaching-flexibilitaet",
+        question: "Wie flexibel ist das Coaching bei Arbeit, Urlaub, Trainingslager oder Krankheit?",
+        answer: (
+          <p>
+            Das Coaching ist sehr flexibel. Wenn etwas dazwischenkommt, passe ich den Plan kurzfristig an, damit dein
+            Training zu deiner aktuellen Situation passt. Ob Krankheit, Trainingslager oder Stressphase: Wir finden immer
+            eine Lösung.
+          </p>
+        ),
+        answerText:
+          "Das Coaching ist sehr flexibel. Bei Krankheit, Urlaub, Trainingslager oder Stressphasen passe ich den Plan kurzfristig an.",
+      },
+      {
+        key: "coaching-fortschritt",
+        question: "Wie lange dauert es, bis ich Fortschritte sehe?",
+        answer: (
+          <p>
+            Das ist individuell und hängt von deinem Trainingsalter, der bisherigen Struktur und deiner aktuellen Form ab.
+            Erste Verbesserungen sind oft schon im ersten Monat sichtbar. Um ihr volles Leistungspotenzial auszuschöpfen benötigen
+            die meisten Athleten jedoch mehrere Jahre strukturiertest Training. Je länger wir zusammenarbeiten, umso besser können wir
+            das Training so abstimmen, dass du optimal darauf ansprichst.
+          </p>
+        ),
+        answerText:
+          "Erste Verbesserungen sind oft schon im ersten Monat sichtbar. Die Geschwindigkeit hängt von Trainingsalter, bisheriger Struktur und aktueller Form ab.",
+      },
+      {
+        key: "coaching-kuendigung",
+        question: "Welche Kündigungsfrist gilt für das Coaching?",
+        answer: (
+          <p>
+            Die Kündigung ist jederzeit zum Ende eines Abrechnungszeitraums möglich. Es gibt keine Mindestlaufzeit, damit
+            du maximal flexibel bleibst.
+          </p>
+        ),
+        answerText:
+          "Die Kündigung ist jederzeit zum Ende eines Abrechnungszeitraums möglich. Es gibt keine Mindestlaufzeit, sodass du flexibel bleibst.",
+      },
+      {
+        key: "coaching-diagnostik",
+        question: "Bietest du Leistungsdiagnostiken vor Ort an?",
+        answer: (
+          <p>
+            Ja, ich biete Leistungsdiagnostiken vor Ort an. Je nach Ziel können wir außerdem auch alternative Testformen
+            nutzen, damit du eine realistische und praxistaugliche Einschätzung deiner Leistung bekommst.
+          </p>
+        ),
+        answerText:
+          "Ja, Leistungsdiagnostiken vor Ort sind möglich. Je nach Ziel können wir auch alternative Testformen nutzen, damit du eine praxistaugliche Einschätzung bekommst.",
+      },
+      {
+        key: "coaching-mtb-gravel",
+        question: "Ist das Coaching auch für MTB- und Gravel-Radfahrer geeignet?",
+        answer: (
+          <p>
+            Ja, das Coaching eignet sich auch für (Cross Country) MTB- und Gravel-Fahrer. In Sachen Fahrtechnik kann ich remote natürlich nur eingeschränkt helfen, die
+            physiologische Trainingsplanung funktioniert aber für alle Disziplinen gleich gut.
+          </p>
+        ),
+        answerText:
+          "Ja, das Coaching ist auch für MTB- und Gravel-Fahrer geeignet. Die physiologische Trainingsplanung lässt sich gut übertragen.",
+      },
+      {
+        key: "coaching-laufen-triathlon",
+        question: "Bietest du auch Coaching für Läufer und Triathleten an?",
+        answer: (
+          <p>
+            Ja, ich unterstütze dich auch bei Lauf- oder Triathlonzielen. Mein Schwerpunkt bleibt zwar der Radsport und gerade in Sachen Technik
+            kann ich dir beim Laufen und Schwimmen wenig helfen, aber die Gestaltung der Trainingseinheiten kann genauso für Läufer oder Multi-Sportler angepasst werden.
+          </p>
+        ),
+        answerText:
+          "Ja, auch Lauf- und Triathlonziele kann ich begleiten. Der Schwerpunkt liegt auf Radsport, die Trainingsplanung lässt sich aber individuell anpassen.",
+      },
+      {
+        key: "coaching-vorteile",
+        question: "Warum sollte ich mich überhaupt für ein individuelles Coaching entscheiden?",
+        answer: (
+          <p>
+            Eine 1:1-Betreuung ist genauer auf deinen Alltag, deine Zeitverfügbarkeit und deine physiologischen Potenziale
+            abgestimmt als ein Standardplan. Dazu kommen direkter Austausch, regelmäßiges Feedback und bessere
+            Entwicklungsmöglichkeiten.
+          </p>
+        ),
+        answerText:
+          "Ein individuelles Coaching ist präziser auf Alltag, Zeitverfügbarkeit und physiologische Potenziale abgestimmt als ein Standardplan und bietet direkten Austausch sowie Feedback.",
+      },
+    ],
+    []
+  );
+
+  const faqJsonLd = useMemo(() => {
+    return {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqItems.map((f) => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: f.answerText || "",
+        },
+      })),
+    };
+  }, [faqItems]);
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
@@ -362,13 +560,68 @@ const Index = () => {
           </div>
         </section>
 
+        <section id="faq" className="py-6 sm:py-14">
+          <div className="max-w-5xl mx-auto px-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4 text-center">
+              Häufig gestellte Fragen (FAQ)
+            </h2>
+            <p className="text-center text-gray-700 mb-8 sm:mb-10">
+              Kurze Antworten auf die meistgesuchten Fragen zum Thema individuelles Coaching und Trainingsplanung.
+            </p>
+
+            <div className="md:hidden">
+              <Card>
+                <CardContent className="p-0">
+                  <Accordion type="single" collapsible className="w-full">
+                    {faqItems.map((item) => (
+                      <AccordionItem key={item.key} value={item.key}>
+                        <AccordionTrigger className="px-4 sm:px-6 text-left">
+                          {item.question}
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4 sm:px-6 pb-4 text-gray-700 text-base">
+                          {item.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="hidden items-start gap-6 md:grid md:grid-cols-2">
+              {[faqItems.slice(0, Math.ceil(faqItems.length / 2)), faqItems.slice(Math.ceil(faqItems.length / 2))].map(
+                (columnItems, columnIndex) => (
+                  <Card key={columnIndex}>
+                    <CardContent className="p-0">
+                      <Accordion type="single" collapsible className="w-full">
+                        {columnItems.map((item) => (
+                          <AccordionItem key={item.key} value={item.key}>
+                            <AccordionTrigger className="px-4 sm:px-6 text-left">
+                              {item.question}
+                            </AccordionTrigger>
+                            <AccordionContent className="px-4 sm:px-6 pb-4 text-gray-700 text-base">
+                              {item.answer}
+                            </AccordionContent>
+                          </AccordionItem>
+                        ))}
+                      </Accordion>
+                    </CardContent>
+                  </Card>
+                )
+              )}
+            </div>
+
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+          </div>
+        </section>
+
         <section id="contact" className="py-20 bg-primary text-white" aria-label="Kontakt">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3 className="text-3xl md:text-4xl font-bold text-center mb-8">Kontakt</h3>
             <p className="text-2xl mb-12 text-center font-medium">
               Lass uns gemeinsam dein volles Potenzial auszuschöpfen! <br/> Frage einfach über das Formular ein unverbindliches Erstgespräch fürs Coaching oder eine Diagnostik an!
             </p>
-            
+
             <Suspense fallback={<div className="h-96 flex items-center justify-center text-white">Formular wird geladen...</div>}>
               <ContactForm />
             </Suspense>
