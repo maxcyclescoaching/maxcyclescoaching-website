@@ -12,9 +12,9 @@ import { StickyBlogCta } from "@/components/StickyBlogCta";
 
 const ContactForm = lazy(() => import("@/components/ContactForm"));
 
-const OetztalerBlog = () => {
+const KitzbuehelerBlog = () => {
   const currentYear = new Date().getFullYear();
-  const publicationDate = "2026-02-23";
+  const publicationDate = "2026-06-12";
   const formattedPublicationDate = useMemo(() => 
     new Date(publicationDate).toLocaleDateString("de-DE", {
       day: "numeric",
@@ -27,30 +27,31 @@ const OetztalerBlog = () => {
     () => [
       {
         key: "distanz-hm",
-        question: "Wie viele Kilometer und Höhenmeter hat der Ötztaler Radmarathon?",
+        question: "Wie viele Kilometer und Höhenmeter hat der Kitzbüheler Radmarathon?",
         answer: (
           <div className="space-y-2">
             <p>
-              Der Ötztaler Radmarathon ist 227 km lang und hat über 5.500 Höhenmeter. Die Strecke führt
-              über vier Schlüsselanstiege: Kühtai, Brenner, Jaufenpass und Timmelsjoch.
+              Der Kitzbüheler Radmarathon in der Klassik-Variante ist 216 km lang und hat über 4.600 Höhenmeter. Die Strecke führt
+              über fünf Schlüsselanstiege: Pass Thurn, Gerlospass, Kerschbaumer Sattel, Brandenberg und zum Schluss das Kitzbüheler Horn.
+              Die Kitz-Variante lässt das Kitzbüheler Horn weg und kommt damit auf 209 km und 3.800 hm.
             </p>
             <p>
-              Zielzeiten liegen im Bereich von 7h für die Top-Fahrer bis zum Zeitlimit von ca. 14h.
+              Zielzeiten der Klassik-Variante liegen im Bereich von 6h für die Top-Fahrer bis zum Zeitlimit von 12h.
             </p>
           </div>
         ),
         answerText:
-          "Der Ötztaler Radmarathon ist 227 km lang und hat über 5.500 Höhenmeter. Die Strecke führt über vier Schlüsselanstiege: Kühtai, Brenner, Jaufenpass und Timmelsjoch. Zielzeiten reichen grob von ca. 7 Stunden (Top-Fahrer) bis zum Zeitlimit von etwa 14 Stunden.",
+          "Der Kitzbüheler Radmarathon in der Klassik-Variante ist 216 km lang und hat über 4.600 Höhenmeter. Die Strecke führt über fünf Schlüsselanstiege: Pass Thurn, Gerlospass, Kerschbaumer Sattel, Brandenberg und zum Schluss das Kitzbüheler Horn. Zielzeiten reichen grob von ca. 6 Stunden (Top-Fahrer) bis zum Zeitlimit von etwa 12 Stunden.",
       },
       {
         key: "pacing",
-        question: "Welche Pacing-Strategie ist beim Ötztaler Radmarathon sinnvoll?",
+        question: "Welche Pacing-Strategie ist beim Kitzbüheler Radmarathon sinnvoll?",
         answer: (
           <div className="space-y-2">
             <p>
-              Erfolgreiches Pacing ist für den Ötztaler neben der physischen Vorbereitung und Verpflegung der Hauptfaktor.
+              Erfolgreiches Pacing ist für den Kitzbüheler neben der physischen Vorbereitung und Verpflegung der Hauptfaktor.
               Man sollte an den ersten Anstiegen nicht zu schnell fahren, um später weiterhin seine Leistung konstant halten zu können.
-              Zwischen 75-85% der Schwellenleistung (FTP) an den Anstiegen ist für viele Fahrer ein guter Richtwert, um nicht zu überziehen.
+              Zwischen 80-90% der Schwellenleistung (FTP) an den Anstiegen ist für viele Fahrer ein guter Richtwert, um nicht zu überziehen.
             </p>
             <p>
               Eine konkrete Orientierung findest du oben in der Pacing-Sektion inklusive Richtwerten pro Anstieg:
@@ -61,16 +62,16 @@ const OetztalerBlog = () => {
           </div>
         ),
         answerText:
-          "Sinnvolles Pacing bedeutet, an den ersten Anstiegen nicht zu überziehen und über den Tag eine gleichmäßige Intensität zu halten. Für viele ist an den Anstiegen ein Bereich von ca. 75–85% der Schwellenleistung (FTP) ein guter Richtwert, um später nicht einzubrechen.",
+          "Sinnvolles Pacing bedeutet, an den ersten Anstiegen nicht zu überziehen und über den Tag eine gleichmäßige Intensität zu halten. Für viele ist an den Anstiegen ein Bereich von ca. 80–93% der Schwellenleistung (FTP) ein guter Richtwert, um später nicht einzubrechen.",
       },
       {
         key: "zeit-realistisch",
-        question: "Wie lange dauert der Ötztaler Radmarathon und welche Zielzeit ist realistisch?",
+        question: "Wie lange dauert der Kitzbüheler Radmarathon und welche Zielzeit ist realistisch?",
         answer: (
           <div className="space-y-2">
             <p>
               Die Zielzeit hängt von Leistungsfähigkeit (FTP, VO2max etc.), Körpergewicht, Gruppendynamik,
-              Wetter, Verpflegung, Pacing und Renntaktik ab. Die durchschnittliche Finisher-Zeit liegt bei ca. 10 Stunden.
+              Wetter, Verpflegung, Pacing und Renntaktik ab. Die durchschnittliche Finisher-Zeit liegt bei ca. 8,5-9 Stunden.
             </p>
             <p>
               Genaue Richtwerte, welche Zielzeit für dich realistisch ist findest du in der Tabelle der Pacing-Sektion:
@@ -81,16 +82,16 @@ const OetztalerBlog = () => {
           </div>
         ),
         answerText:
-          "Die Zielzeit hängt u.a. von Leistungsfähigkeit (z.B. FTP), Körpergewicht, Gruppendynamik, Wetter, Verpflegung, Pacing und Renntaktik ab. Die durchschnittliche Finisher-Zeit liegt bei etwa 10 Stunden; konkrete Richtwerte stehen in der Zielzeiten-Tabelle in der Pacing-Sektion.",
+          "Die Zielzeit hängt u.a. von Leistungsfähigkeit (z.B. FTP), Körpergewicht, Gruppendynamik, Wetter, Verpflegung, Pacing und Renntaktik ab. Die durchschnittliche Finisher-Zeit liegt bei etwa 8,5-9 Stunden; konkrete Richtwerte stehen in der Zielzeiten-Tabelle in der Pacing-Sektion.",
       },
       {
         key: "watt-sub10",
-        question: "Wie viel Watt bzw. Watt/kg braucht man für eine Sub-10 Stunden Zeit beim Ötztaler Radmarathon?",
+        question: "Wie viel Watt bzw. Watt/kg braucht man für eine Sub-10 Stunden Zeit beim Kitzbüheler Radmarathon?",
         answer: (
           <div className="space-y-2">
             <p>
               Die Zielzeit ist von Wetter, Gruppendynamik und Physiologie des Fahrers oder der Fahrerin abhängig.
-              Mit einer Schwellenleistung (FTP) von 3,5 bis 4 W/kg und einer normalisierten Leistung von 2,5 bis 2,9 W/kg ist eine Sub-10-Stunden-Zeit bei guten Bedingungen realistisch.
+              Mit einer Schwellenleistung (FTP) von 3,0 bis 3,5 W/kg und einer normalisierten Leistung von 2,2 bis 2,5 W/kg ist eine Sub-10-Stunden-Zeit bei guten Bedingungen realistisch.
             </p>
             <p>
               Genaue Richtwerte, welche Zielzeit für dich realistisch ist findest du in der Tabelle der Pacing-Sektion:
@@ -101,16 +102,16 @@ const OetztalerBlog = () => {
           </div>
         ),
         answerText:
-          "Für eine Sub-10h-Zeit sind – je nach Bedingungen, Gruppe und individueller Physiologie – häufig ca. 3,5–4,0 W/kg FTP und eine normalisierte Leistung von etwa 2,5–2,9 W/kg ein realistischer Bereich. Genaue Richtwerte stehen in der Pacing-Sektion.",
+          "Für eine Sub-10h-Zeit sind – je nach Bedingungen, Gruppe und individueller Physiologie – häufig ca. 3,0–3,5 W/kg FTP und eine normalisierte Leistung von etwa 2,2–2,5 W/kg ein realistischer Bereich. Genaue Richtwerte stehen in der Pacing-Sektion.",
       },
       {
         key: "watt-sub9",
-        question: "Wie viel Watt bzw. Watt/kg braucht man für eine Sub-9 Stunden Zeit beim Ötztaler Radmarathon?",
+        question: "Wie viel Watt bzw. Watt/kg braucht man für eine Sub-9 Stunden Zeit beim Kitzbüheler Radmarathon?",
         answer: (
           <div className="space-y-2">
             <p>
               Die Zielzeit ist von Wetter, Gruppendynamik und Physiologie des Fahrers oder der Fahrerin abhängig.
-              Mit einer Schwellenleistung (FTP) von 4 bis 4,5 W/kg und einer normalisierten Leistung von 2,9 bis 3,3 W/kg ist eine Sub-9-Stunden-Zeit bei guten Bedingungen realistisch.
+              Mit einer Schwellenleistung (FTP) von 3,5 bis 4,0 W/kg und einer normalisierten Leistung von 2,5 bis 2,9 W/kg ist eine Sub-9-Stunden-Zeit bei guten Bedingungen realistisch.
             </p>
             <p>
               Genaue Richtwerte, welche Zielzeit für dich realistisch ist findest du in der Tabelle der Pacing-Sektion:
@@ -121,16 +122,16 @@ const OetztalerBlog = () => {
           </div>
         ),
         answerText:
-          "Für eine Sub-9h-Zeit sind – je nach Bedingungen, Gruppe und individueller Physiologie – häufig ca. 4,0–4,5 W/kg FTP und eine normalisierte Leistung von etwa 2,9–3,3 W/kg ein realistischer Bereich. Genaue Richtwerte stehen in der Pacing-Sektion.",
+          "Für eine Sub-9h-Zeit sind – je nach Bedingungen, Gruppe und individueller Physiologie – häufig ca. 3,5–4,0 W/kg FTP und eine normalisierte Leistung von etwa 2,5–2,9 W/kg ein realistischer Bereich. Genaue Richtwerte stehen in der Pacing-Sektion.",
       },
       {
         key: "watt-sub8",
-        question: "Wie viel Watt bzw. Watt/kg braucht man für eine Sub-8 Stunden Zeit beim Ötztaler Radmarathon?",
+        question: "Wie viel Watt bzw. Watt/kg braucht man für eine Sub-8 Stunden Zeit beim Kitzbüheler Radmarathon?",
         answer: (
           <div className="space-y-2">
             <p>
               Die Zielzeit ist von Wetter, Gruppendynamik und Physiologie des Fahrers oder der Fahrerin abhängig.
-              Mit einer Schwellenleistung (FTP) von 4,5 bis 5 W/kg und einer normalisierten Leistung von 3,3 bis 3,6 W/kg ist eine Sub-8-Stunden-Zeit bei guten Bedingungen realistisch.
+              Mit einer Schwellenleistung (FTP) von 4,0 bis 4,5 W/kg und einer normalisierten Leistung von 2,9 bis 3,3 W/kg ist eine Sub-8-Stunden-Zeit bei guten Bedingungen realistisch.
             </p>
             <p>
               Genaue Richtwerte, welche Zielzeit für dich realistisch ist findest du in der Tabelle der Pacing-Sektion:
@@ -141,15 +142,35 @@ const OetztalerBlog = () => {
           </div>
         ),
         answerText:
-          "Für eine Sub-8h-Zeit sind – je nach Bedingungen, Gruppe und individueller Physiologie – häufig ca. 4,5–5,0 W/kg FTP und eine normalisierte Leistung von etwa 3,3–3,6 W/kg ein realistischer Bereich. Genaue Richtwerte stehen in der Pacing-Sektion.",
+          "Für eine Sub-8h-Zeit sind – je nach Bedingungen, Gruppe und individueller Physiologie – häufig ca. 4,0–4,5 W/kg FTP und eine normalisierte Leistung von etwa 2,9–3,3 W/kg ein realistischer Bereich. Genaue Richtwerte stehen in der Pacing-Sektion.",
       },
       {
-        key: "watt-wkg",
-        question: "Wie viel Watt bzw. W/kg braucht man für den Ötztaler?",
+        key: "watt-sub7",
+        question: "Wie viel Watt bzw. Watt/kg braucht man für eine Sub-7 Stunden Zeit beim Kitzbüheler Radmarathon?",
         answer: (
           <div className="space-y-2">
             <p>
-              Da es beim Ötztaler vor allem lange Anstiege im Bereich von 1-2h Fahrzeit gibt, ist die Schwellenleistung (FTP) in Watt pro Kilogramm Körpergewicht der entscheidende Leistungsfaktor.
+              Die Zielzeit ist von Wetter, Gruppendynamik und Physiologie des Fahrers oder der Fahrerin abhängig.
+              Mit einer Schwellenleistung (FTP) von 5,0 bis 5,5 W/kg und einer normalisierten Leistung von 3,6 bis 4,0 W/kg ist eine Sub-7-Stunden-Zeit bei guten Bedingungen realistisch.
+            </p>
+            <p>
+              Genaue Richtwerte, welche Zielzeit für dich realistisch ist findest du in der Tabelle der Pacing-Sektion:
+            </p>
+            <a href="#pacing" className="text-primary hover:underline inline-flex items-center gap-1">
+              Richtwerte &amp; Zielzeiten ansehen <Link className="w-4 h-4" />
+            </a>
+          </div>
+        ),
+        answerText:
+          "Für eine Sub-7h-Zeit sind – je nach Bedingungen, Gruppe und individueller Physiologie – häufig ca. 5,0–5,5 W/kg FTP und eine normalisierte Leistung von etwa 3,6–4,0 W/kg ein realistischer Bereich. Genaue Richtwerte stehen in der Pacing-Sektion.",
+      },
+      {
+        key: "watt-wkg",
+        question: "Wie viel Watt bzw. W/kg braucht man für den Kitzbüheler?",
+        answer: (
+          <div className="space-y-2">
+            <p>
+              Da es beim Kitzbüheler vor allem Anstiege im Bereich von 30 min bis 1 Stunde Fahrzeit gibt, ist die Schwellenleistung (FTP) in Watt pro Kilogramm Körpergewicht der entscheidende Leistungsfaktor.
             </p>
             <p>
               Als Orientierung, welche Leistung du fürs Finish oder für eine bestimmte Zeit brauchst, dient die Zielzeit-Tabelle in der
@@ -161,15 +182,15 @@ const OetztalerBlog = () => {
           </div>
         ),
         answerText:
-          "Entscheidend ist vor allem deine Schwellenleistung (FTP) in Watt pro Kilogramm Körpergewicht, weil es beim Ötztaler lange Anstiege (oft 1–2 Stunden) gibt. Eine praxisnahe Orientierung liefern die W/kg-Leistungsklassen und Zielzeiten in der Pacing-Sektion.",
+          "Entscheidend ist vor allem deine Schwellenleistung (FTP) in Watt pro Kilogramm Körpergewicht, weil es beim Kitzbüheler lange Anstiege (oft 20min bis 1 Stunde) gibt. Eine praxisnahe Orientierung liefern die W/kg-Leistungsklassen und Zielzeiten in der Pacing-Sektion.",
       },
       {
         key: "ernaehrung",
-        question: "Wie viel sollte man beim Ötztaler pro Stunde essen und trinken (Kohlenhydrate)?",
+        question: "Wie viel sollte man beim Kitzbüheler pro Stunde essen und trinken (Kohlenhydrate)?",
         answer: (
           <div className="space-y-2">
             <p>
-              Neben der physischen Vorbereitung ist Ernährung der zweitwichtigste Faktor für deinen erfolgreichen Ötztaler.
+              Neben der physischen Vorbereitung ist Ernährung der zweitwichtigste Faktor für deinen erfolgreichen Kitzbüheler.
               Dabei ist insbesondere die Kohlenhydratzufuhr, die du pro Stunde aufrechterhalten kannst, entscheidend.
               Die genaue Menge ist individuell und hängt von Trainingszustand, Erfahrung und Magen-Darm-Verträglichkeit ab.
               Die meisten Fahrer sollten zwischen 70-120g Kohlenhydrate pro Stunde zu sich nehmen.
@@ -188,14 +209,14 @@ const OetztalerBlog = () => {
       },
       {
         key: "termin",
-        question: `Wann findet der Ötztaler Radmarathon ${currentYear} statt?`,
+        question: `Wann findet der Kitzbüheler Radmarathon ${currentYear} statt?`,
         answer: (
           <div className="space-y-2">
             <p>
-              Der Ötztaler findet traditionell am letzten Sonntag im August statt. Für die exakten Zeiten
+              Der Kitzbüheler findet meist Anfang September statt. Für die exakten Zeiten
               (Start, Cut-offs, Ausgabe Startunterlagen) solltest du dich auf der Webseite des Veranstalters informieren:
             </p>
-            <a href="https://www.soelden.com/de/veranstaltungen-freizeittipps/events/oetztaler-radmarathon" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">
+            <a href="https://kitzbueheler-radmarathon.at/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1">
               Zur offiziellen Veranstaltungsseite <ExternalLink className="w-4 h-4" />
             </a>
             <p>
@@ -208,15 +229,15 @@ const OetztalerBlog = () => {
           </div>
         ),
         answerText:
-          "Der Ötztaler Radmarathon findet traditionell am letzten Sonntag im August statt. Verbindliche Details (Startzeiten, Cut-offs, Startunterlagen) stehen auf der offiziellen Veranstalterseite bzw. in der Ausschreibung.",
+          "Der Kitzbüheler Radmarathon findet meist Anfang September statt. Verbindliche Details (Startzeiten, Cut-offs, Startunterlagen) stehen auf der offiziellen Veranstalterseite bzw. in der Ausschreibung.",
       },
       {
         key: "trainingdauer",
-        question: "Wie lange sollte man für den Ötztaler trainieren (Vorbereitung in Wochen)?",
+        question: "Wie lange sollte man für den Kitzbüheler trainieren (Vorbereitung in Wochen)?",
         answer: (
           <div className="space-y-2">
             <p>
-              Je nach Ausgangsniveau sind 4-5 Monate strukturierte Vorbereitung sinnvoll. Dennoch sollte davor bereits ein gutes
+              Je nach Ausgangsniveau sind 3-4 Monate strukturierte Vorbereitung sinnvoll. Dennoch sollte davor bereits ein gutes
               Grundniveau vorhanden sein.
             </p>
             <p>
@@ -230,20 +251,20 @@ const OetztalerBlog = () => {
           </div>
         ),
         answerText:
-          "Je nach Ausgangsniveau sind etwa 4–5 Monate (ca. 16–24 Wochen) strukturierte Vorbereitung sinnvoll, idealerweise auf Basis eines vorhandenen Grundniveaus. Der wichtigste Faktor ist Konstanz: lieber früh beginnen und regelmäßig trainieren statt kurzfristiges „Paniktraining“.",
+          "Je nach Ausgangsniveau sind etwa 3–4 Monate (ca. 12–16 Wochen) strukturierte Vorbereitung sinnvoll, idealerweise auf Basis eines vorhandenen Grundniveaus. Der wichtigste Faktor ist Konstanz: lieber früh beginnen und regelmäßig trainieren statt kurzfristiges „Paniktraining“.",
       },
       {
         key: "uebersetzung",
-        question: "Welche Übersetzung/Kassette ist für den Ötztaler empfehlenswert?",
+        question: "Welche Übersetzung/Kassette ist für den Kitzbüheler empfehlenswert?",
         answer: (
           <div className="space-y-2">
             <p>
               Die passende Übersetzung ist von deinem Gewicht und deiner Leistungsfähigkeit abhängig
             </p>
             <p>
-              Für viele Fahrer ist ein Setup mit 50/34 oder 52/36 vorne und einer großen Kassette mit 11-32, 11-34 oder 11-36 hinten sinnvoll, damit die langen Anstiege auch bei Ermüdung kontrolliert fahrbar bleiben.
-              Um deine individuelle optimale Übersetzung zu finden, kannst du meinen Übersetzungsrechner nutzen. Für den Ötztaler empfehle ich eine Steigung von 10% einzugeben,
-              da das am Kühtai und Timmelsjoch den steilsten Abschnitten entspricht.
+              Für viele Fahrer ist ein Setup mit 50/34 vorne und einer großen Kassette mit 11-34 oder größer hinten sinnvoll, damit die auch am sehr steilen Kitzbüheler Horn (bis zu 20%) nicht schieben musst.
+              Um deine individuelle optimale Übersetzung zu finden, kannst du meinen Übersetzungsrechner nutzen. Für den Kitzbüheler empfehle ich eine Steigung von 15% oder mehr einzugeben,
+              da das am Kitzbüheler Horn den steilsten Abschnitten entspricht.
               Hier findest du den Übersetzungsrechner:
             </p>
             <a href="/tools/uebersetzungsrechner" target="_blank" className="text-primary hover:underline inline-flex items-center gap-1">
@@ -252,7 +273,7 @@ const OetztalerBlog = () => {
           </div>
         ),
         answerText:
-          "Die passende Übersetzung hängt von Gewicht, Leistungsfähigkeit und bevorzugter Trittfrequenz ab. Für viele ist ein Setup mit 50/34 oder 52/36 vorne und 11-32, 11-34 oder 11-36 hinten sinnvoll, damit die langen Anstiege auch ermüdet kontrolliert fahrbar bleiben. Individuelle Empfehlungen liefert der <a href=\"https://maxcyclescoaching.de/tools/uebersetzungsrechner\" target=\"_blank\">Übersetzungsrechner</a>.",
+          "Die passende Übersetzung hängt von Gewicht, Leistungsfähigkeit und bevorzugter Trittfrequenz ab. Für viele ist ein Setup mit 50/34 vorne und 11-34 oder größer hinten sinnvoll, damit du auch am Kitzbüheler Horn (bis zu 20%) nicht schieben musst. Individuelle Empfehlungen liefert der <a href=\"https://maxcyclescoaching.de/tools/uebersetzungsrechner\" target=\"_blank\">Übersetzungsrechner</a>.",
       },
     ],
     [currentYear]
@@ -285,24 +306,24 @@ const OetztalerBlog = () => {
         <section className="relative h-[60vh] sm:h-[70vh] bg-primary">
           <div className="absolute inset-0">
             <img
-              src="/images/oetztaler_rm_2025.avif"
-              alt="Ötztaler Radmarathon - Atmosphäre und Start 2025"
+              src="/images/kitzbueheler_rm.avif"
+              alt="Kitzbüheler Radmarathon - Atmosphäre Auffahrt Kitzbüheler Horn"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-primary/40" />
             <span className="absolute bottom-2 right-3 flex items-center gap-1 text-white/80 text-[10px] sm:text-xs drop-shadow-md z-10">
-              <Copyright className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> Ötztal Tourismus, Fotograf Jürgen Skarwan
+              <Copyright className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> EXPA Pictures
             </span>
           </div>
 
           <div className="relative h-full flex items-center justify-center text-center text-white px-4 sm:px-6">
             <div>
               <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-                Ötztaler Radmarathon {currentYear} – Strecke, Pacing-Strategien & Training-Tipps
+                Kitzbüheler Radmarathon {currentYear} – Strecke, Pacing-Strategien & Training-Tipps
               </h1>
 
               <p className="text-base sm:text-xl max-w-3xl mx-auto">
-                Alles über Streckenprofil, Leistungsanforderungen und Renntaktik für dein erfolgreiches Finish beim Ötztaler.
+                Alles über Streckenprofil, Leistungsanforderungen und Renntaktik für dein erfolgreiches Finish beim Kitzbüheler.
               </p>
             </div>
           </div>
@@ -337,11 +358,11 @@ const OetztalerBlog = () => {
 
         <section id="einleitung" className="py-10 sm:py-16 max-w-4xl mx-auto px-4">
           <p className="text-lg text-gray-700">
-            Der Ötztaler Radmarathon gilt als einer der härtesten Jedermann-Radmarathons Europas. 
-            Mit 227 Kilometern und über 5.500 Höhenmetern verlangt das Rennen nicht nur enorme Ausdauer,
+            Der Kitzbüheler Radmarathon gilt als einer der härtesten Jedermann-Radmarathons Europas. 
+            Mit 216 Kilometern und über 4.600 Höhenmetern verlangt das Rennen nicht nur enorme Ausdauer,
             sondern vor allem eine intelligente Pacing-Strategie und strukturierte Vorbereitung. <br/>
-            Als Coach gibt es kaum ein Rennen, das ich so häufig in der Vorbereitung meiner Athletinnen und Athleten als Zielwettkampf habe, wie den Ötztaler.
-            Daher möchte ich dir im Folgenden meine gesammelten Erfahrungen über die Strecke, Training, Pacing und Vorbereitung für deinen erfolgreichen Ötztaler {currentYear} weitergeben.
+            Als Coach ist gerade in den letzten Jahren die Nachfrage nach dem Kitzbüheler als Zielevent enorm gestiegen.
+            Daher möchte ich dir im Folgenden meine gesammelten Erfahrungen über die Strecke, Training, Pacing und Vorbereitung für deinen erfolgreichen Kitzbüheler {currentYear} weitergeben.
           </p>
         </section>
 
@@ -352,17 +373,17 @@ const OetztalerBlog = () => {
           <div className="max-w-5xl mx-auto px-4">
 
             <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-6 sm:mb-10 text-center">
-              Ötztaler Radmarathon Strecke – Profil, Pässe & Höhenmeter
+              Kitzbüheler Radmarathon Strecke – Profil, Pässe & Höhenmeter
             </h2>
 
             <div id="cta-startpoint" className="mb-8 sm:mb-12 scroll-mt-24">
               <img 
-                src="/images/oetztaler_elevation_profile.png" 
-                alt="Höhenprofil Ötztaler Radmarathon - Kühtai, Brenner, Jaufenpass, Timmelsjoch" 
+                src="/images/kitzbueheler_elevation_profile.png" 
+                alt="Höhenprofil Kitzbüheler Radmarathon - Pass Thurn, Gerlospass, Kerschbaumer Sattel, Brandenberg und Kitzbüheler Horn" 
                 className="w-full h-auto rounded-lg shadow-lg bg-black p-1 sm:p-10"
               />
               <p className="text-center text-sm text-gray-500 mt-2">
-                Das offizielle Höhenprofil: 227km und 5500hm mit vier bekannten Alpenpässen.
+                Das offizielle Höhenprofil: 216km und 4600hm mit fünf großen Anstiegen.
               </p>
             </div>
 
@@ -370,14 +391,13 @@ const OetztalerBlog = () => {
 
               <div className="space-y-2">
                 <div className="flex items-center gap-3 sm:gap-4">
-                  <Route className="w-6 h-6 sm:w-8 sm:h-8 text-secondary shrink-0" />
-                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 1: Sölden bis Oetz</h3>
+                  <Mountain className="w-6 h-6 sm:w-8 sm:h-8 text-secondary shrink-0" />
+                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 1: Von Kitzbühel über den Pass Thurn</h3>
                 </div>
                 <p>
-                  Nach dem Start geht es zunächst ca. 31km weitestgehend bergab bis nach Oetz, wo später der 
-                  erste Anstieg zum Kühtai beginnt. Hier ist es wichtig, Energie für die folgenden Anstiege zu sparen.
-                  Daher sollte man möglichst viel in der Gruppe im Windschatten fahren und die Durchschnittsleistung
-                  möglichst niedrig halten, auch Antritte über der Schwelle (FTP) sollten vermieden werden.
+                  Nach dem Start geht es direkt ca. 18km durchgehend bergauf auf den Pass Thurn. Der Anstieg ist dabei mit ca. 3% Durchschnittssteigung
+                  relativ flach und wird nur gegen Ende kurzfristig steiler. Daher ist es hier sehr wichtig eine gute Gruppe zu finden und im Windschatten
+                  Energie für die späteren Anstiege zu sparen. Antritte oberhalb der Schwelle (FTP) sollten trotz der Hektik zum Start vermieden werden.
                   Auch sollte man hier schon beginnen sich für die kommenden Kilometer zu verpflegen.
                 </p>
               </div>
@@ -385,99 +405,138 @@ const OetztalerBlog = () => {
 
               <div className="space-y-2">
                 <div className="flex items-center gap-3 sm:gap-4">
-                  <Mountain className="w-6 h-6 sm:w-8 sm:h-8 text-secondary shrink-0" />
-                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 2: Kühtai</h3>
-                </div>
-                <p>
-                  Das Kühtai ist der erste von vier Anstiegen und mit 17,5km Länge und durchschnittlich ca. 7% Steigung ein erster Test, wie sich die Beine heute anfühlen.
-                  Der Anstieg lässt sich dabei in drei Abschnitte unterteilen: Der erste 8km lange Teil bis kurz vor Ochsengarten hat ca. 8,3% Durchschnittssteigung. 
-                  Danach folgen ca. 3 flacherer Kilometer mit ca. 4,1% Steigung im Schnitt. 
-                  Die letzten 6,5km sind ungleichmäßiger als der erste Teil und haben im Schnitt ca. 6,4% Steigung, wobei es hier anfangs auch einige steile Abschnitte mit bis zu 15% Steigung gibt.
-                </p>
-              </div>
-
-              <div className="space-y-2">
-                <div className="flex items-center gap-3 sm:gap-4">
                   <TrendingDown className="w-6 h-6 sm:w-8 sm:h-8 text-secondary shrink-0" />
-                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 3: Abfahrt vom Kühtai nach Kematen</h3>
+                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 2: Abfahrt vom Pass Thurn nach Mittersill</h3>
                 </div>
                 <p>
-                  Die Abfahrt vom Kühtai ist technisch wenig anspruchsvoll und verläuft größtenteils gerade ohne enge Kurven. Deswegen werden hier oft auch extrem hohe 
-                  Geschwindigkeiten von über 100km/h erreicht. In der Abfahrt sollte man eine möglichst aerodynamische Position einnehmen, um Energie zu sparen.
-                </p>
-              </div>
-
-              <div className="space-y-2">
-                <div className="flex items-center gap-3 sm:gap-4">
-                  <Mountain className="w-6 h-6 sm:w-8 sm:h-8 text-secondary shrink-0" />
-                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 4: Brennerpass</h3>
-                </div>
-                <p>
-                  Der längste, aber moderateste Anstieg mit über 35km Länge und ca. 2% Steigung. Hier entscheidet die Gruppe, wie schnell man fährt.
-                  Je nach Gruppengröße empfiehlt es sich hier möglichst viel Windschatten zu fahren. Auch ist hier wieder genug Zeit zum Verpflegen.
-                  Im oberen Teil des Brenners gibt es einige kurze, aber steile Rampen. Hier sollte man möglichst wenig über der Schwelle fahren und nur so wenig Leistung aufbringen, wie nötig, um die Gruppe nicht zu verlieren. 
-                  Es ist wichtig, hier nicht zu überziehen.
+                  Darauf folgt direkt die erste Abfahrt des Tages. Diese findet auf einer sehr breiten Straße mit wenigen Kurven statt, ist
+                  also insgesamt wenig technisch anspruchsvoll. Daher wird hier oft sehr schnell gefahren. Da man hier keine Zeit gutmachen kann, sollte
+                  man möglichst einfach in seiner Gruppe bleiben und die Abfahrt zur Regeneration nutzen.
+                  Wichtig ist hier zudem, dass es aufgrund der frühen Uhrzeit und der Höhe von über 1.250m noch recht kühl sein kann. Daher sollte man sich vorm Start genau überlegen,
+                  was man direkt anzieht und was man oben auf dem Pass noch drüber ziehen kann, um in der Abfahrt nicht auszukühlen.
                 </p>
               </div>
 
               <div className="space-y-2">
                 <div className="flex items-center gap-3 sm:gap-4">
                   <Route className="w-6 h-6 sm:w-8 sm:h-8 text-secondary shrink-0" />
-                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 5: Brenner bis Sterzing</h3>
+                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 3: Mittersill bis Wald im Pinzgau</h3>
                 </div>
                 <p>
-                  Die Abfahrt vom Brenner ist ähnlich wie die Auffahrt recht flach. Hier ist es wieder wichtig in der Gruppe zu bleiben und möglichst viel Windschatten zu fahren.
+                  Der dritte Streckenabschnitt ist ca. 22km lang und der langweiligste Teil der Veranstaltung. Man fährt auf einer großen Bundesstraße flach
+                  bis zum Fuße des Gerlospasses. Hier ist es wichtig einfach in der Gruppe zu bleiben und nicht versuchen alleine vorzufahren. Der Abschnitt eignet sich auch gut,
+                  um nochmal Flüssigkeit und Kohlenhydrate zu sich zu nehmen.
                 </p>
               </div>
 
               <div className="space-y-2">
                 <div className="flex items-center gap-3 sm:gap-4">
                   <Mountain className="w-6 h-6 sm:w-8 sm:h-8 text-secondary shrink-0" />
-                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 6: Jaufenpass</h3>
+                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 4: Gerlospass</h3>
                 </div>
                 <p>
-                  Der Hauptteil des Jaufenpass ist ca. 15km lang und hat konstante 7,5% Steigung. Hier entscheidet sich, ob man seine Zielzeit erreichen kann oder nicht. 
-                  Auch zeigt sich, wie gut die Verpflegung und die Pacing-Strategie bisher funktioniert haben. 
-                  Auch wenn der Anstieg alleine schon Herausforderung genug ist, sollte man hier noch Energie für das kommende Timmelsjoch sparen. Dieses ist nämlich fast doppelt so lang.
+                  Der zeitmäßig (neben dem Kitzbüheler Horn) längste Anstieg des Tages mit ca. 11,5 km Länge und 5,6% Durchschnittssteigung. Auch wenn die Steigung erstmal moderat erscheint, sollte man wissen, dass 
+                  der Anstieg eher zweigeteilt ist. Der erste Teil ist mit fast 10% Steigung auf 3 km sehr steil und hat einige noch steilere Rampen. Da man sich hier noch recht frisch fühlt,
+                  ist es umso wichtiger ständig seine Herzfrequenz- und Leistungswerte zu kontrollieren und sich zurückzuhalten. In der Mitte des Gerlospasses wird es dann zwischenzeitlich flacher
+                  und geht z.T. sogar leicht bergab. Hier sollte man sich nochmal für die letzten Kilometer verpflegen, welche wieder steiler werden.
+                  Oben zieht sich der Anstieg dann nochmal ein Stück bei geringeren Steigungsprozenten.
                 </p>
               </div>
 
               <div className="space-y-2">
                 <div className="flex items-center gap-3 sm:gap-4">
                   <TrendingDown className="w-6 h-6 sm:w-8 sm:h-8 text-secondary shrink-0" />
-                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 7: Abfahrt vom Jaufenpass nach St. Leonhard</h3>
+                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 5: Abfahrt vom Gerlospass</h3>
                 </div>
                 <p>
-                  Die Abfahrt vom Jaufenpass ist technisch anspruchsvoll mit vielen engen Kurven. Hier kann man gute Fahrtechnik beweisen und Zeit gut machen.
-                  Man sollte jedoch nicht vergessen, dass man schon viel geleistet hat und entsprechend müde ist. Daher ist Vorsicht geboten, um nicht zu stürzen oder sich zu verletzen.
-                  Auch muss man hier nochmal Verpflegung zu sich nehmen, um die Energiespeicher für die letzten harten Kilometer aufzufüllen.
+                  Die Abfahrt vom Gerlospass ist flacher als der Anstieg und gerade die ersten 16 km bergab sind mit -2,4% Steigung in einer guten Gruppe deutlich angenehmer.
+                  Der untere Teil der Abfahrt wird dann steiler, schneller und technischer. Abfahrtsliebhaber kommen in den schnellen Kurven und Serpentinen voll auf ihre Kosten.
+                  Dennoch kann man auch hier keine wirkliche Zeit gut machen und sollte auf die Gruppe warten.
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <Route className="w-6 h-6 sm:w-8 sm:h-8 text-secondary shrink-0" />
+                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 6: Zell am Ziller bis Imming</h3>
+                </div>
+                <p>
+                  Der nächste flache Teil ist landschaftlich schöner, aber genauso wenig anspruchsvoll wie das Flachstück vorm Gerlospass.
+                  Hier gilt es wieder sich zu verpflegen und mit der Gruppe zusammen die Strecke effizient zurückzulegen.
                 </p>
               </div>
 
               <div className="space-y-2">
                 <div className="flex items-center gap-3 sm:gap-4">
                   <Mountain className="w-6 h-6 sm:w-8 sm:h-8 text-secondary shrink-0" />
-                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 8: Timmelsjoch</h3>
+                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 7: Kerschbaumer Sattel</h3>
                 </div>
                 <p>
-                  Auf die Abfahrt nach St. Leonhard folgt direkt der finale und zeitmäßig längste Anstieg des Ötztalers. Er entscheidet über Zielzeit und Rennerfolg.
-                  Insgesamt ist er ca. 29km lang und hat ca. 6,2% Durchschnittssteigung. Auch hier gibt es im mittleren Teil des Anstiegs ein ca. 4km langes Flachstück mit unter 2% Steigung.
-                  Danach folgen die letzten knapp 10km mit 7,5% Steigung im Schnitt. Hier wird jeder leiden. Hinzu kommt noch die Höhe von bis zu 2474m. Damit ist das Timmelsjoch auch der
-                  höchste Anstieg des Rennens. Auf über 2000m Höhe sinkt die Sauerstoffsättigung im Blut deutlich, wodurch man ca. 8% Leistungsverlust einrechnen muss.
+                  Der Kerschbaumer Sattel ist ca. 6 km lang und hat über 9% sehr konstante Durchschnittssteigung. Hier zeigt sich das erste Mal,
+                  ob man in der ersten Streckenhälfte bereits überzogen hat. Vorteilhaft sind hier gleichmäßiges Pacing und gute Verpflegung davor.
+                  Auf dem Gipfel gibt es zudem eine Verpflegungsstelle, wo man mit relativ wenig Zeitverlust nochmal die Flaschen auffüllen kann.
                 </p>
               </div>
 
               <div className="space-y-2">
                 <div className="flex items-center gap-3 sm:gap-4">
                   <TrendingDown className="w-6 h-6 sm:w-8 sm:h-8 text-secondary shrink-0" />
-                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 9: Spitze Timmelsjoch bis Sölden</h3>
+                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 8: Abfahrt vom Kerschbaumer Sattel bis Kramsach </h3>
                 </div>
                 <p>
-                  Der letzte Abschnitt des Ötztalers ist eine 20km lange Abfahrt zurück nach Sölden. Jetzt heißt es nur noch die bisherige Leistung nach Hause zu bringen.
-                  Die Abfahrt ist gerade im oberen Teil anspruchsvoll und ohne Schutzplanken an den Seiten der Straße sollte man hier besonders aufmerksam fahren.
-                  Zudem gibt es in der Abfahrt nochmal eine kleine ca. 1km lange Gegenrampe, wo man seine letzten Kräfte nochmal mobilisieren kann.
-                  Gegen Ende der Abfahrt wird die Strecke nochmal flacher und man sollte hier nochmal eine aerodynamische Position einnehmen und die letzten Energiereserven ausschöpfen.
-                  Im besten Fall fährt man nicht ganz alleine.
+                  Die Abfahrt vom Kerschbaumer Sattel ist eng, kurvig und hat nicht den besten Straßenbelag. Zudem gibt es keine Schutzplanken an den Seiten der Straße.
+                  Deswegen muss man sich hier zu höchster Konzentration zwingen. Danach geht noch wenige Kilometer flach bis Kramsach, wo dann der Brandenberg beginnt.
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <Mountain className="w-6 h-6 sm:w-8 sm:h-8 text-secondary shrink-0" />
+                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 9: Brandenberg</h3>
+                </div>
+                <p>
+                  Der Bergauf-Teil der Schleife zum Brandenberg ist zwar mit 12 km insgesamt recht lang, aber auch mit unter 3% Durchschnittssteigung ziemlich flach.
+                  Der Anstieg ist dabei dreigeteilt mit einer kurzen und einer längeren Abfahrt dazwischen. Die tatsächlichen Bergauf-Passagen sind mit 5-6% Steigung jedoch trotzdem moderat
+                  und eher gleichmäßig. Sollte man sich hier in einer kleinen Gruppe befinden, ist das von Vorteil.
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <TrendingDown className="w-6 h-6 sm:w-8 sm:h-8 text-secondary shrink-0" />
+                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 10: Abfahrt vom Brandenberg</h3>
+                </div>
+                <p>
+                  Die Abfahrt vom Brandenberg ist steiler als die Auffahrt, aber breiter als die Kerschbaumer-Abfahrt. Dennoch gibt es sehr schnelle Kurven
+                  und technische Passagen. Auch hier sollte man seine Konzentration hochhalten, um sicher und zügig runterzukommen.
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <Route className="w-6 h-6 sm:w-8 sm:h-8 text-secondary shrink-0" />
+                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 11: Kramsach bis Grub</h3>
+                </div>
+                <p>
+                  Das letzte Flachstück des Tages ist mit über 60 km zugleich das mit Abstand Längste. Dabei wird man mit der Vorermüdung dennoch die zwei kleinen Rampen zwischendrin merken,
+                  die auf einen warten. Trotzdem ist hier eine gut laufende Gruppe ganz wichtig und man sollte je nach Gruppegröße, aktuellem Körpergefühl und Zielzeit hier auch mal mit Führungsarbeit leisten.
+                  Zudem ist die lange Passage gut dafür geeignet sich zu verpflegen und seelisch und moralisch auf die Leiden am Kitzbüheler Horn vorzubereiten.
+                  Die Kitz-Strecke biegt jedoch davor ab und kommt ohne den finalen Anstieg wieder in Kitzbühel am Ziel an.
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <Mountain className="w-6 h-6 sm:w-8 sm:h-8 text-secondary shrink-0" />
+                  <h3 className="font-semibold text-lg sm:text-xl m-0">Teil 12: Bergankunft am Kitzbüheler Horn</h3>
+                </div>
+                <p>
+                  Der letzte Brecher des Tages: Hier entscheidet sich, ob man seine Zielzeit erreicht oder ob man sich die Blöße geben muss am Horn zu schieben. 
+                  Das Kitzbüheler Horn ist insgesamt knapp 7 km lang und hat fast 13% Durchschnittssteigung. Hinzu kommen mehrere Rampen von über 20%. Damit ist das einer der steilsten Alpenanstiege, die man so fahren kann.
+                  Hinzu kommt möglicherweise die Mittagshitze, die bei den Steigungsprozenten selbst bei unter 20° spürbar sein wird. Im etwas flacheren ersten Teilstück des Anstiegs sollte man sich lieber noch etwas schonen,
+                  um später noch über die Rampen zu kommen. Am Anstieg wünscht man sich, egal wie leicht die Übersetzung schon ist, noch einige Gänge mehr.
+                  Ansonsten gibt es hier wenig zu sagen. Man kann einfach nur noch fahren, was geht und sich von den Zuschauern treiben lassen. Wenn man dann die längsten 7 km seines Lebens überstanden hat, wird man oben von
+                  einer tollen Aussicht und einer großartigen Stimmung empfangen. Und das Gefühl, es geschafft zu haben, ist nach diesen Strapazen umso schöner.
                 </p>
               </div>
 
@@ -492,7 +551,7 @@ const OetztalerBlog = () => {
           <div className="max-w-4xl mx-auto px-4">
 
             <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-6 sm:mb-10 text-center">
-              Optimale Pacing-Strategie für den Ötztaler Radmarathon
+              Optimale Pacing-Strategie für den Kitzbüheler Radmarathon
             </h2>
 
             <div className="space-y-6 sm:space-y-8 text-gray-700">
@@ -526,32 +585,32 @@ const OetztalerBlog = () => {
                         <TableRow>
                           <TableCell className="font-medium px-1 sm:px-4">2,5 – 3 W/kg</TableCell>
                           <TableCell className="px-1 sm:px-4">1,8 – 2,2 W/kg</TableCell>
-                          <TableCell className="px-1 sm:px-4">12h – 14h <span className="hidden sm:inline">(Zeitlimit)</span></TableCell>
+                          <TableCell className="px-1 sm:px-4">10h – 12h <span className="hidden sm:inline">(Zeitlimit)</span></TableCell>
                         </TableRow>
                         <TableRow>
                           <TableCell className="font-medium px-1 sm:px-4">3 – 3,5 W/kg</TableCell>
                           <TableCell className="px-1 sm:px-4">2,2 – 2,5 W/kg</TableCell>
-                          <TableCell className="px-1 sm:px-4">Sub-12 Stunden</TableCell>
+                          <TableCell className="px-1 sm:px-4">Sub-10 Stunden</TableCell>
                         </TableRow>
                         <TableRow>
                           <TableCell className="font-medium px-1 sm:px-4">3,5 – 4 W/kg</TableCell>
                           <TableCell className="px-1 sm:px-4">2,5 – 2,9 W/kg</TableCell>
-                          <TableCell className="px-1 sm:px-4">Sub-10 Stunden</TableCell>
+                          <TableCell className="px-1 sm:px-4">Sub-9 Stunden</TableCell>
                         </TableRow>
                         <TableRow>
                           <TableCell className="font-medium px-1 sm:px-4">4 – 4,5 W/kg</TableCell>
                           <TableCell className="px-1 sm:px-4">2,9 – 3,3 W/kg</TableCell>
-                          <TableCell className="px-1 sm:px-4">Sub-9 Stunden</TableCell>
+                          <TableCell className="px-1 sm:px-4">Sub-8 Stunden</TableCell>
                         </TableRow>
                         <TableRow>
                           <TableCell className="font-medium px-1 sm:px-4">4,5 – 5 W/kg</TableCell>
                           <TableCell className="px-1 sm:px-4">3,3 – 3,6 W/kg</TableCell>
-                          <TableCell className="px-1 sm:px-4">Sub-8 Stunden</TableCell>
+                          <TableCell className="px-1 sm:px-4">Sub 7:30 Stunden</TableCell>
                         </TableRow>
                         <TableRow>
                           <TableCell className="font-medium px-1 sm:px-4">5 – 5,5 W/kg</TableCell>
                           <TableCell className="px-1 sm:px-4">3,6 – 4 W/kg</TableCell>
-                          <TableCell className="px-1 sm:px-4">unter 7h30</TableCell>
+                          <TableCell className="px-1 sm:px-4">unter 7h</TableCell>
                         </TableRow>
                       </TableBody>
                     </Table>
@@ -562,11 +621,11 @@ const OetztalerBlog = () => {
                 <div className="flex items-center gap-3 sm:gap-4">
                   <Gauge className="w-6 h-6 sm:w-8 sm:h-8 text-secondary shrink-0" />
                   <h3 className="font-semibold text-lg sm:text-xl m-0">
-                    Warum ist Pacing so wichtig für den Ötztaler?
+                    Warum ist Pacing so wichtig für den Kitzbüheler?
                   </h3>
                 </div>
                 <p>
-                  Der Ötztaler Radmarathon ist mit ca. 10 Stunden durchschnittlicher Dauer eines der längsten Radmarathons Europas.
+                  Der Kitzbüheler Radmarathon ist mit ca. 9 Stunden durchschnittlicher Dauer eines der längsten Radmarathons Europas.
                   Dementsprechend ist es besonders wichtig, eine konkrete Pacing-Strategie zu verfolgen. Ansonsten droht ein Einbruch in der zweiten Rennhälfte,
                   wodurch das Rennen weniger Spaß macht und die Zielzeit deutlich schlechter ausfällt als geplant. 
                 </p>
@@ -576,14 +635,14 @@ const OetztalerBlog = () => {
                 <div className="flex items-center gap-3 sm:gap-4">
                   <Target className="w-6 h-6 sm:w-8 sm:h-8 text-secondary shrink-0" />
                   <h3 className="font-semibold text-lg sm:text-xl m-0">
-                    Leistungsanforderungen der vier Alpenpässe des Ötztalers
+                    Leistungsanforderungen der fünf großen Anstiege des Kitzbühelers
                   </h3>
                 </div>
                 <Card className="mt-4">
                     <CardHeader>
-                      <CardTitle className="text-lg sm:text-xl">Richtwerte für die 4 Schlüsselabschnitte</CardTitle>
+                      <CardTitle className="text-lg sm:text-xl">Richtwerte für die 5 Schlüsselabschnitte</CardTitle>
                       <CardDescription>
-                        Die meisten Fahrer bewegen sich insgesamt bei einem Intensitätsfaktor (IF) von ca. 0,7 – 0,8, also 70-80% der Schwellenleistung stehen am Ende als normalisierte Leistung da.
+                        Die meisten Fahrer bewegen sich insgesamt bei einem Intensitätsfaktor (IF) von ca. 0,7 – 0,82, also 70-82% der Schwellenleistung stehen am Ende als normalisierte Leistung da.
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-5">
@@ -611,35 +670,39 @@ const OetztalerBlog = () => {
                           </TableHeader>
                           <TableBody>
                             <TableRow>
-                              <TableCell className="font-medium px-1 sm:px-4">Kühtai</TableCell>
-                              <TableCell className="px-1 sm:px-4">17,5 km</TableCell>
-                              <TableCell className="px-1 sm:px-4">~7%</TableCell>
-                              <TableCell className="px-1 sm:px-4">78–85%</TableCell>
-                              <TableCell className="px-1 sm:px-4">~1h 20m</TableCell>
+                              <TableCell className="font-medium px-1 sm:px-4">Pass Thurn</TableCell>
+                              <TableCell className="px-1 sm:px-4">17,6 km</TableCell>
+                              <TableCell className="px-1 sm:px-4">2,8%</TableCell>
+                              <TableCell className="px-1 sm:px-4">74–82%</TableCell>
+                              <TableCell className="px-1 sm:px-4">~42min</TableCell>
                             </TableRow>
                             <TableRow>
-                              <TableCell className="font-medium px-1 sm:px-4">Brenner</TableCell>
-                              <TableCell className="px-1 sm:px-4">35 km</TableCell>
-                              <TableCell className="px-1 sm:px-4">~2%</TableCell>
-                              <TableCell className="px-1 sm:px-4">65–75%</TableCell>
-                              <TableCell className="px-1 sm:px-4">~1h 25m</TableCell>
+                              <TableCell className="font-medium px-1 sm:px-4">Gerlospass</TableCell>
+                              <TableCell className="px-1 sm:px-4">11,5 km</TableCell>
+                              <TableCell className="px-1 sm:px-4">5,6%</TableCell>
+                              <TableCell className="px-1 sm:px-4">81–89%</TableCell>
+                              <TableCell className="px-1 sm:px-4">~45min</TableCell>
                             </TableRow>
                             <TableRow>
-                              <TableCell className="font-medium px-1 sm:px-4">Jaufen</TableCell>
-                              <TableCell className="px-1 sm:px-4">15 km</TableCell>
-                              <TableCell className="px-1 sm:px-4">~7,5%</TableCell>
-                              <TableCell className="px-1 sm:px-4">78–85%</TableCell>
-                              <TableCell className="px-1 sm:px-4">~1h 10m</TableCell>
+                              <TableCell className="font-medium px-1 sm:px-4">Kerschbaumer Sattel</TableCell>
+                              <TableCell className="px-1 sm:px-4">5,9 km</TableCell>
+                              <TableCell className="px-1 sm:px-4">9,2%</TableCell>
+                              <TableCell className="px-1 sm:px-4">83–91%</TableCell>
+                              <TableCell className="px-1 sm:px-4">~30min</TableCell>
                             </TableRow>
                             <TableRow>
-                              <TableCell className="font-medium px-1 sm:px-4">
-                                <span className="sm:hidden">Timmelsj.</span>
-                                <span className="hidden sm:inline">Timmelsjoch</span>
-                              </TableCell>
-                              <TableCell className="px-1 sm:px-4">29 km</TableCell>
-                              <TableCell className="px-1 sm:px-4">~6,2%</TableCell>
-                              <TableCell className="px-1 sm:px-4">70–78%</TableCell>
-                              <TableCell className="px-1 sm:px-4">~2h 5m</TableCell>
+                              <TableCell className="font-medium px-1 sm:px-4">Brandenberg</TableCell>
+                              <TableCell className="px-1 sm:px-4">12,1 km</TableCell>
+                              <TableCell className="px-1 sm:px-4">2,8%</TableCell>
+                              <TableCell className="px-1 sm:px-4">79–87%</TableCell>
+                              <TableCell className="px-1 sm:px-4">~40min</TableCell>
+                            </TableRow>
+                            <TableRow>
+                              <TableCell className="font-medium px-1 sm:px-4">Kitzbüheler Horn</TableCell>
+                              <TableCell className="px-1 sm:px-4">6,7 km</TableCell>
+                              <TableCell className="px-1 sm:px-4">12,6%</TableCell>
+                              <TableCell className="px-1 sm:px-4">84–92%</TableCell>
+                              <TableCell className="px-1 sm:px-4">~50min</TableCell>
                             </TableRow>
                           </TableBody>
                         </Table>
@@ -654,8 +717,8 @@ const OetztalerBlog = () => {
                             etwas höher ansetzen.
                           </p>
                           <p className="mt-2">
-                            Am Kühtai, Jaufenpass und Timmelsjoch kann der erste Teil oft ca. 5% intensiver gefahren werden als
-                            der zweite Teil, da dieser in der Höhe liegt – trotzdem: gleichmäßig bleiben schlägt „zu hart starten“.
+                            An den ungleichmäßigeren Anstiegen (z.B. Gerlospass und Brandenberg) sollte man in den steileren Stücken mehr Leistung
+                            abrufen und in den schnelleren Passagen dafür etwas rausnehmen.
                           </p>
                         </AlertDescription>
                       </Alert>
@@ -703,7 +766,7 @@ const OetztalerBlog = () => {
                   </ul>
                   <p>
                     Unten findest du einen Rechner, um die individuelle Kohlenhydrat-, Salz- und Flüssigkeitszufuhr für
-                    deinen Ötztaler zu berechnen. Wichtig: Die Strategie muss im Training erprobt werden.
+                    deinen Kitzbüheler zu berechnen. Wichtig: Die Strategie muss im Training erprobt werden.
                   </p>
                 </CardContent>
               </Card>
@@ -722,7 +785,7 @@ const OetztalerBlog = () => {
           <div className="max-w-5xl mx-auto px-4">
 
             <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-6 sm:mb-10 text-center">
-              Trainingsplanung & Vorbereitung für den Ötztaler Radmarathon
+              Trainingsplanung & Vorbereitung für den Kitzbüheler Radmarathon
             </h2>
 
             <div className="space-y-6 sm:space-y-8 text-gray-700">
@@ -735,7 +798,7 @@ const OetztalerBlog = () => {
                 </CardHeader>
                 <CardContent className="space-y-4 leading-relaxed">
                   <p>
-                    Der Ötztaler findet jedes Jahr am letzten Sonntag im August statt. Eine gute Saisonplanung hilft dir,
+                    Der Kitzbüheler findet meist Anfang September statt. Eine gute Saisonplanung hilft dir,
                     über Monate konstant zu trainieren – ohne dich zu überlasten.
                   </p>
                   <p>
@@ -791,7 +854,7 @@ const OetztalerBlog = () => {
                 </CardHeader>
                 <CardContent className="space-y-4 leading-relaxed">
                   <p>
-                    Für den Ötztaler sind vor allem VO2max, FTP, VLAmax und Ermüdungsresistenz (Fatigue Resistance)
+                    Für den Kitzbüheler sind vor allem VO2max, FTP, VLAmax und Ermüdungsresistenz (Fatigue Resistance)
                     relevant. Hier die Kurzfassung, wie du sie in der Praxis adressierst:
                   </p>
 
@@ -811,7 +874,7 @@ const OetztalerBlog = () => {
                     <div className="rounded-lg border bg-background p-4">
                       <h4 className="font-semibold text-primary">FTP</h4>
                       <p className="mt-2 text-sm text-muted-foreground">
-                        Schwelle: ca. 1h-Leistung – zentral für die langen Alpenanstiege.
+                        Schwelle: ca. 1h-Leistung – zentral für die langen Anstiege.
                       </p>
                       <ul className="mt-3 list-disc pl-5 space-y-1">
                         <li>Viel Zeit knapp unter FTP (z.B. 4×12min @ 88–94%)</li>
@@ -858,10 +921,10 @@ const OetztalerBlog = () => {
                   <div>
                     <h4 className="text-lg font-semibold text-primary">Lange Trainingseinheiten</h4>
                     <p className="mt-2">
-                      Der Ötztaler ist ein langes Rennen – lange Einheiten sind daher Pflicht. In der akuten
+                      Der Kitzbüheler ist ein langes Rennen – lange Einheiten sind daher Pflicht. In der akuten
                       Vorbereitungsphase (ca. 2 – 3 Monate vorher) sind mindestens alle 2 Wochen 4 – 8h sinnvoll.
                       Starte sehr locker (ca. 50 – 65% FTP) und steigere die Dauer schrittweise.
-                      Für fortgeschrittene Fahrer können hier auch Intervalle unterhalb der FTP (z.B. 4x45min Renntempo) eingebaut werden.
+                      Für fortgeschrittene Fahrer können hier auch Intervalle unterhalb der FTP (z.B. 6x20min Renntempo) eingebaut werden.
                     </p>
                   </div>
 
@@ -886,7 +949,7 @@ const OetztalerBlog = () => {
                     <ul className="mt-3 list-disc pl-5 space-y-1">
                       <li>Produkte/Mengen wie im Rennen verwenden (Magenverträglichkeit testen)</li>
                       <li>Steigere schrittweise, z.B. Start bei 60 - 90g/h und jede Woche bei spezifischen Einheiten 5 – 10 g/h mehr</li>
-                      <li>Wenn es zu Problemen kommt: reduzieren und Verpflegungsstrategie fürs Rennen entsprechend anpassen</li>
+                      <li>Wenn es zu Problemen kommt: Menge reduzieren und Verpflegungsstrategie fürs Rennen entsprechend anpassen</li>
                     </ul>
                   </div>
                 </CardContent>
@@ -902,7 +965,7 @@ const OetztalerBlog = () => {
         <section id="faq" className="py-12 sm:py-20 bg-accent">
           <div className="max-w-4xl mx-auto px-4">
             <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4 text-center">
-              FAQ: Ötztaler Radmarathon – häufige Fragen
+              FAQ: Kitzbüheler Radmarathon – häufige Fragen
             </h2>
             <p className="text-center text-gray-700 mb-8 sm:mb-10">
               Kurze Antworten auf die meistgesuchten Fragen zu Strecke, Training, Pacing und Verpflegung.
@@ -934,7 +997,7 @@ const OetztalerBlog = () => {
           <div className="max-w-4xl mx-auto text-center px-4">
 
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
-              Individuelle Vorbereitung - Coaching für den Ötztaler Radmarathon
+              Individuelle Vorbereitung - Coaching für den Kitzbüheler Radmarathon
             </h2>
 
             <p className="text-lg sm:text-xl mb-6 sm:mb-8">
@@ -974,7 +1037,7 @@ const OetztalerBlog = () => {
       </main>
 
       <StickyBlogCta
-        raceName="Ötztaler Radmarathon"
+        raceName="Kitzbüheler Radmarathon"
         contactHref="#contact"
         servicesHref="/#services"
       />
@@ -985,4 +1048,4 @@ const OetztalerBlog = () => {
   );
 };
 
-export default OetztalerBlog;
+export default KitzbuehelerBlog;

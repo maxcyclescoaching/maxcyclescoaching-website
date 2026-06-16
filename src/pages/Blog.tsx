@@ -3,7 +3,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { getSortedBlogPosts } from "@/data/blogPosts";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CalendarDays, ArrowRight } from "lucide-react";
+import { CalendarDays, ArrowRight, Copyright } from "lucide-react";
 import { useMemo } from "react";
 
 const Blog = () => {
@@ -56,6 +56,12 @@ const Blog = () => {
                               className="w-full h-48 md:h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                               loading="lazy"
                             />
+                            {post.imageCredit ? (
+                              <span className="absolute bottom-2 right-3 flex items-center gap-1 text-white/80 text-[10px] sm:text-xs drop-shadow-md z-10">
+                                <Copyright className="w-3 h-3" />
+                                {post.imageCredit}
+                              </span>
+                            ) : null}
                           </div>
 
                           {/* Text */}

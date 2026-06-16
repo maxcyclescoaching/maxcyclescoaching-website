@@ -5,6 +5,7 @@ export interface BlogPost {
   date: string; // ISO format: YYYY-MM-DD
   image: string;
   imageAlt: string;
+  imageCredit?: string;
   tags: string[];
 }
 
@@ -21,6 +22,18 @@ const blogPosts: BlogPost[] = [
     date: "2026-02-23",
     image: "/images/oetztaler_rm_2025_thumb.avif",
     imageAlt: "Ötztaler Radmarathon – Atmosphäre und Start 2025",
+    imageCredit: "Ötztal Tourismus, Fotograf Jürgen Skarwan",
+    tags: ["Radmarathon", "Pacing", "Training", "Ernährung"],
+  },
+  {
+    slug: "kitzbueheler",
+    title: "Kitzbüheler Radmarathon – Strecke, Pacing-Strategien & Training-Tipps",
+    description:
+      "Template-Artikel zum Kitzbüheler Radmarathon: Streckenanalyse, Pacing- & Trainingstipps. Passe den Inhalt an die tatsächliche Strecke an.",
+    date: "2026-06-12",
+    image: "/images/kitzbueheler_rm_thumb.avif",
+    imageAlt: "Kitzbüheler Radmarathon – Atmosphäre Auffahrt Kitzbüheler Horn",
+    imageCredit: "EXPA Pictures",
     tags: ["Radmarathon", "Pacing", "Training", "Ernährung"],
   },
 ];
