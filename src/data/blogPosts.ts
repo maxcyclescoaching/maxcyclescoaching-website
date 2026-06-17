@@ -29,7 +29,7 @@ const blogPosts: BlogPost[] = [
     slug: "kitzbueheler",
     title: "Kitzbüheler Radmarathon – Strecke, Pacing-Strategien & Training-Tipps",
     description:
-      "Template-Artikel zum Kitzbüheler Radmarathon: Streckenanalyse, Pacing- & Trainingstipps. Passe den Inhalt an die tatsächliche Strecke an.",
+      "Analyse der Strecke des Kitzbüheler Radmarathons mit Pacing-Tipps, Leistungsanforderungen, Ernährungsstrategie und Trainingstipps für ein erfolgreiches Finish.",
     date: "2026-06-12",
     image: "/images/kitzbueheler_rm_thumb.avif",
     imageAlt: "Kitzbüheler Radmarathon – Atmosphäre Auffahrt Kitzbüheler Horn",
