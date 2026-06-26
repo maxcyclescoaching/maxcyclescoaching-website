@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -8,7 +7,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
-import { ArrowRight, Loader2 } from "lucide-react";
+import { ArrowRight, Loader2, Mail } from "lucide-react"; // Mail-Icon hinzugefügt
 import emailjs from 'emailjs-com';
 
 const formSchema = z.object({
@@ -20,6 +19,9 @@ const formSchema = z.object({
 export const ContactForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
+
+  // SCHALTER: Auf 'true' setzen, um den Hinweis für Kontaktformular-Fehler anzuzeigen. 
+  const IS_TEMPORARILY_DISABLED = true;
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -66,6 +68,27 @@ export const ContactForm = () => {
     }
   };
 
+  // Temporärer Hinweis bei Fehler mit Kontaktformular
+  if (IS_TEMPORARILY_DISABLED) {
+    return (
+      <div className="max-w-2xl mx-auto bg-white rounded-lg p-10 text-gray-900 text-center shadow-sm border border-gray-100">
+        <Mail className="w-12 h-12 mx-auto text-gray-400 mb-4" />
+        <h3 className="text-2xl font-semibold mb-2">Kontaktformular vorübergehend deaktiviert</h3>
+        <p className="text-gray-600 mb-6">
+          Aufgrund von technischen Wartungsarbeiten ist dieses Formular kurzzeitig nicht verfügbar. 
+          Bitte kontaktiere mich in der Zwischenzeit für Anfragen direkt per E-Mail:
+        </p>
+        <a 
+          href="mailto:maxcyclescoaching@gmail.com" 
+          className="inline-flex items-center justify-center px-6 py-3 bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-md font-medium transition-colors"
+        >
+          maxcyclescoaching@gmail.com
+        </a>
+      </div>
+    );
+  }
+
+  // Das normale Formular, falls der Schalter auf false steht
   return (
     <div className="max-w-2xl mx-auto bg-white rounded-lg p-8 text-gray-900">
       <Form {...form}>
