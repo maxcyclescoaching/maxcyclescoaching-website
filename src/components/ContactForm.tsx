@@ -21,7 +21,7 @@ export const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
 
   // SCHALTER: Auf 'true' setzen, um den Hinweis für Kontaktformular-Fehler anzuzeigen. 
-  const IS_TEMPORARILY_DISABLED = true;
+  const IS_TEMPORARILY_DISABLED = false;
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
