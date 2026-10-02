@@ -1,11 +1,10 @@
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Bike, Target, Users, Calendar, LineChart, Trophy, MessageCircle, ActivitySquare, Gauge, NotebookPen, Timer, FlaskConical } from "lucide-react";
+import { ArrowRight, Flag, Mountain, Route, Target, Users, Calendar, LineChart, Trophy, MessageCircle, ActivitySquare, Gauge, NotebookPen, Timer, FlaskConical } from "lucide-react";
 import { useState, lazy, Suspense, useMemo, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ServiceDialog } from "@/components/ServiceDialog";
-import { LightboxDialog } from "@/components/LightboxDialog";
 import { SiteFooter } from "@/components/SiteFooter";
 
 const ContactForm = lazy(() => import("@/components/ContactForm"));
@@ -14,11 +13,36 @@ const startYear = 2021;
 const currentYear = new Date().getFullYear();
 const experienceYears = currentYear - startYear;
 
+const cyclingCategories = [
+  {
+    href: "/coaching/radsport/radmarathon-gravel",
+    title: "Radmarathons und Gravel-Rennen",
+    description: "Individuelle Vorbereitung für lange Straßenrennen, anspruchsvolle Anstiege und Gravel-Events.",
+    icon: Route,
+  },
+  {
+    href: "/coaching/radsport/ultracycling",
+    title: "Ultracycling-Events",
+    description: "Strukturiertes Training für lange Distanzen, hohe Eigenständigkeit und Belastungen über viele Stunden oder Tage.",
+    icon: Timer,
+  },
+  {
+    href: "/coaching/radsport/lizenz-rundstrecke",
+    title: "Lizenz- und Rundstreckenrennen",
+    description: "Leistungsorientierte Planung für wiederholte harte Belastungen, Renntaktik und gezielte Formhöhepunkte.",
+    icon: Flag,
+  },
+  {
+    href: "/coaching/radsport/xco-xcm",
+    title: "Cross Country Mountainbike",
+    description: "Coaching für XCO und XCM mit Fokus auf Leistung, Technik und renntypische Belastungen.",
+    icon: Mountain,
+  },
+];
+
 const Index = () => {
-  const [isPhilosophyOpen, setIsPhilosophyOpen] = useState(false);
   const [isCoachingOpen, setIsCoachingOpen] = useState(false);
   const [isDiagnosticsOpen, setIsDiagnosticsOpen] = useState(false);
-  const [isCertificateOpen, setIsCertificateOpen] = useState(false);
 
   useEffect(() => {
     if (window.location.hash) {
@@ -31,13 +55,6 @@ const Index = () => {
       }
     }
   }, []);
-
-  const achievements = useMemo(() => [
-    "German Cycling (BDR) zertifizierter Coach",
-    `Über ${experienceYears} Jahre Wettkampferfahrung`,
-    "Spezialisiert auf Straßenradsport",
-    "Nachweisbare Erfolge in der Athletenentwicklung"
-  ], [experienceYears]);
 
   const faqItems = useMemo(
     () => [
@@ -295,73 +312,6 @@ const Index = () => {
           </div>
         </section>
 
-        <section id="about" className="py-20" aria-label="Über mich">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-              Über mich
-            </h3>
-            <div className="text-center md:text-left grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <p className="text-gray-600">
-                Hi, ich bin Max – <b>zertifizierter Radsportcoach</b> und <b>leidenschaftlicher Athlet</b>. <br />
-                Seit meiner Jugend fahre ich ambitioniert Rennrad und konnte dabei auch schon einige persönliche Erfolge feiern. <br />
-                Meine Schwerpunkte liegen auf <b>individuellem 1:1 Coaching für ambitionierte Radsportler</b> und <b>Laktat-Leistungsdiagnostiken</b>, die ich seit Ende 2023 anbiete. <br />
-                Aufgrund meines Wirtschaftsinformatik-Studiums an der HTW-Dresden liegt mir die Arbeit mit <b>wissenschaftlichen Studien und Fachliteratur</b> – ergänzt durch wertvolle <b>Erfahrungen</b> aus <b>Training</b> und <b>Wettkampf</b>. <br />
-                Mein Ziel? Dich dabei zu unterstützen, dein <b>volles Potenzial auf dem Rad auszuschöpfen</b>!        
-                </p>
-              </div>
-              <div className="bg-accent rounded-lg p-10 self-center">
-                <ul className="space-y-5 text-left">
-                  {achievements.map((achievement, index) => (
-                    <li 
-                      key={index} 
-                      className={`flex items-center text-gray-700 md:text-mdlg ${
-                        index === 0 ? 
-                        'cursor-pointer group transition-all duration-200 hover:text-primary relative' : ''
-                      }`}
-                      onClick={() => {
-                        if (index === 0) setIsCertificateOpen(true);
-                      }}
-                    >
-                      <Bike className={`w-6 h-6 mr-3 flex-shrink-0 ${
-                        index === 0 ? 'text-secondary group-hover:text-primary transition-colors' : 'text-secondary'
-                      }`} />
-                      {index === 0 ? (
-                        <span className="inline-flex items-center">
-                          {achievement}
-                          <span className="ml-2 text-xs text-primary font-medium">(Zertifikat ansehen)</span>
-                        </span>
-                      ) : achievement}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="philosophy" className="py-20 bg-accent" aria-label="Philosophie">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-              Philosophie
-            </h3>
-            <div className="text-center max-w-3xl mx-auto">
-              <p className="text-gray-600 mb-8">
-              Ein <b>effektives Training</b> beginnt mit einer <b>fundierten Analyse</b>: <br />
-              Zunächst erfasse ich deine <b>Wettkampfziele</b> und erstelle ein <b>individuelles Athletenprofil</b> basierend auf vorhandenen Trainingsdaten und einer detaillierten <b>Leistungsdiagnostik</b> (Vor-Ort oder Remote). <br />
-              So erkennen wir nicht nur deine <b>Stärken</b>, sondern identifizieren auch gezielt <b>Potenziale</b> – der Schlüssel zu <b>nachhaltigen Verbesserungen</b>.
-              </p>
-              <Button 
-                  variant="secondary" 
-                  className="text-white"
-                  onClick={() => setIsPhilosophyOpen(true)}
-                >
-                  Mehr über meinen Ansatz
-              </Button>
-            </div>
-          </div>
-        </section>
-
         <section id="services" className="py-20" aria-label="Leistungen">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
@@ -455,6 +405,46 @@ const Index = () => {
                   </a>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="coaching" className="py-20 bg-accent" aria-label="Radsport-Coaching Kategorien">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mb-10">
+              <p className="text-sm font-semibold uppercase tracking-widest text-secondary mb-3">
+                Radsport-Coaching
+              </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                Coaching für dein Radsportziel
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Ob lange Distanz, Gravel, Lizenzrennen oder Cross Country: Wähle den Bereich, der zu
+                deinem nächsten Ziel passt. Die Trainingsplanung wird individuell auf dich, deinen
+                Alltag und deine Wettkampfanforderungen abgestimmt.
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              {cyclingCategories.map((category) => {
+                const Icon = category.icon;
+                return (
+                  <a key={category.href} href={category.href} className="group block">
+                    <Card className="h-full transition-shadow hover:shadow-lg">
+                      <CardContent className="pt-6">
+                        <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                          <Icon className="w-5 h-5" />
+                        </div>
+                        <h3 className="text-xl font-semibold text-primary mb-3">{category.title}</h3>
+                        <p className="text-gray-600 leading-relaxed">{category.description}</p>
+                        <div className="mt-5 inline-flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all">
+                          Mehr zum Coaching <ArrowRight className="w-4 h-4" />
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </a>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -627,24 +617,6 @@ const Index = () => {
             </Suspense>
           </div>
         </section>
-
-        <LightboxDialog
-          isOpen={isCertificateOpen}
-          onClose={() => setIsCertificateOpen(false)}
-          imageSrc="/images/german_cycling_certificate.png"
-          imageAlt="German Cycling (BDR) Coach Certificate"
-        />
-
-        <ServiceDialog
-          isOpen={isPhilosophyOpen}
-          onClose={() => setIsPhilosophyOpen(false)}
-          title="Mein Coaching-Ansatz"
-        >
-          <div className="space-y-4">
-            <p>Mein Ansatz basiert auf strukturierten Trainingsblöcken, die individuell auf die Athlet*innen abgestimmt sind. Ich setze dabei bewusst auf kleine, intendierte Anpassungen, um den Fortschritt messbar und nachhaltig steuerbar zu machen.</p>
-            <p>Die Wochenplanung erfolgt flexibel in einem Rhythmus von 1 bis 3 Wochen über TrainingPeaks. So kann das Training optimal auf Alltag, Ernährung und Regenerationsstatus abgestimmt werden, um eine ganzheitliche Belastungssteuerung zu gewährleisten. Gleichzeitig bleibt der Fokus stets auf der langfristigen Leistungsentwicklung, damit die Höchstform genau zum richtigen Zeitpunkt erreicht wird.</p>
-          </div>
-        </ServiceDialog>
 
         <ServiceDialog
           isOpen={isCoachingOpen}

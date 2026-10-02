@@ -24,6 +24,8 @@ export const SiteFooter = ({ showEmail = false }: SiteFooterProps) => {
             <a href="/impressum" className="hover:text-gray-900">Impressum</a>
             <span className="hidden sm:inline">|</span>
             <a href="/datenschutz" className="hover:text-gray-900">Datenschutz</a>
+            <span className="hidden sm:inline">|</span>
+            <a href="/agb" className="hover:text-gray-900">AGB</a>
           </div>
         </div>
       </div>
