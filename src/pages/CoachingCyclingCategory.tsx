@@ -137,16 +137,16 @@ export const CoachingCyclingCategory = ({ config }: CoachingCyclingCategoryProps
         <section className="py-14 sm:py-20" aria-label="Nächster Schritt">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Bereit für den nächsten Schritt?</h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">Beschreibe hier kurz den gewünschten nächsten Schritt und verlinke auf dein Erstgespräch oder das Kontaktformular.</p>
+            <p className="text-lg text-gray-600 leading-relaxed mb-8">Interesse geweckt? Dann schreib mir gerne eine Nachricht übers Kontakformular mit paar Infos über dich und deine Ziele und wir vereinbaren im Anschluss einen Termin für ein unverbindliches Erstgespräch.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a href="/#coaching">
+              <a href="#contact">
                 <Button className="w-full sm:w-auto bg-[#003366] hover:bg-[#002244]">
-                  Zu meinen Coaching-Paketen <ArrowRight className="ml-2 h-4 w-4" />
+                  Unverbindlich anfragen
                 </Button>
               </a>
-              <a href="#contact">
+              <a href="/#coaching">
                 <Button variant="outline" className="w-full sm:w-auto border-primary text-primary hover:text-primary/70">
-                  Unverbindlich anfragen
+                  Zu meinen Coaching-Paketen <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </a>
             </div>

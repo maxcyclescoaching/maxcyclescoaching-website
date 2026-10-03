@@ -2,33 +2,31 @@ import { Timer } from "lucide-react";
 import { CoachingCyclingCategory, type CategoryPageConfig } from "@/pages/CoachingCyclingCategory";
 
 const config: CategoryPageConfig = {
-  eyebrow: "Ultracycling-Coaching",
+  eyebrow: "Individuelles 1:1 Coaching für Langstrecken- und Ultra-Radsport Events",
   title: "Ultracycling-Coaching",
-  description: "[Hier beschreibst du deine Erfahrung mit Ultracycling, die von dir betreuten Formate und die besonderen Herausforderungen langer Nonstop- oder Etappen-Events.]",
+  description: "Egal ob Race Around Austria, Transcontinental Race, Race Across Germany oder die Mountain Races - eins haben sie gemeinsam: Sie sind lang. Sehr lang. Wenn du also auf der Suche nach individuellem Coaching mit strukturiertem Training und erfahrungsbasierten Hinweisen zu Verpflegung und Pacing bist, hast du die richtige Seite gefunden. Ob mehrere hundert oder mehrere tausend Kilometer - dank eigener Ultra-Erfahrung und Erfahrung im Coaching mehrerer Ultra-Athlet*innen kann ich dich bei der Vorbereitung auf dein nächstes Event bestens unterstützen.",
   audience: [
     "Athlet*innen vor ihrem ersten Ultra-Event",
     "Erfahrene Ultra-Fahrer*innen mit einem konkreten Ziel",
-    "Sportler*innen für Nonstop- und Etappenrennen",
-    "Fahrer*innen, die Pacing und Selbstversorgung verbessern möchten",
+    "Sportler*innen mit supported oder unsupported Ultras als Saisonziele",
+    "Fahrer*innen, die ihr nächstes Ultra mit mehr Struktur angehen wollen",
   ],
   focus: [
-    { title: "Lange Belastungen vorbereiten", text: "[Beschreibe den Aufbau von Umfang, Dauer und spezifischer Ermüdungsresistenz.]" },
-    { title: "Pacing und Energieversorgung", text: "[Ergänze deinen Ansatz für Tempoentscheidungen, Kohlenhydrate, Flüssigkeit und Magenverträglichkeit.]" },
-    { title: "Schlaf und Selbstmanagement", text: "[Beschreibe Schlafstrategien, Pausen, Navigation, Materialplanung und Entscheidungen unter Ermüdung.]" },
+    { title: "Niedrigintensive Belastung vorbereiten", text: "Ultras sind lang, finden deswegen aber im niedrigintensiven Bereich. Die Grundlagenleistung ist also entscheidend, um in deiner Zielzeit zu finishen. Wir achten im Training daher besonders auf Gesamtvolumen und kontrollierte Einheiten in Zone 2 (Grundlagenausdauer)." },
+    { title: "Lange Trainingseinheiten", text: "Du musst beim Ultra nicht nur lange treten, sondern auch lange auf dem Rad sitzen. Daher integrieren wir in der akuten Vorbereitung lange Simulationseinheiten, in denen Setup, Verpflegung und Pacing geübt werden. Zudem wird durch den hohen Energieumsatz ein wertvoller Trainingsreiz gesetzt." },
+    { title: "Hohe Intensitäten nicht vernachlässigen", text: "Ultra-Fahrer*innen vergessen oft, Belastungen an oder oberhalb der Schwellenleistung (FTP) ins Trainings einzubauen. Dabei sind diese wichtig für die Anhebung der Gesamtleistungsfähigkeit. Daher setzen wir in der Vorbereitung auch auf VO2max- und Schwellenintervalle." },
   ],
   raceFocus: [
-    { title: "Pacing und Energieversorgung", text: "[Beschreibe die Strategie für gleichmäßiges Tempo, Kohlenhydrate, Flüssigkeit und lange Phasen ohne Versorgung.]" },
-    { title: "Schlaf, Pausen und Entscheidungen", text: "[Ergänze deinen Ansatz für Pausen, Schlafmanagement, Navigation und den Umgang mit Ermüdung.]" },
-    { title: "Material und Selbstständigkeit", text: "[Beschreibe Vorbereitung, Reparaturstrategie, Ausrüstung und die Planung von Versorgungspunkten.]" },
+    { title: "Ernährung und Energieversorgung", text: "Das Energiedefizit zu minimieren ist bei Ultra-Rennen entscheidend für deinen Erfolg. Wir besprechen im Vorhinein genau, wie viele Kalorien du auf und abseits des Rads essen musst und wie du diese über den Tag verteilt aufnehmen solltest. Vorher erarbeitete Strategien sorgen hier für Sicherheit im Rennen." },
+    { title: "Schlafstrategie", text: "Wer wie lange schläft ist beim Ultracycling oft entscheidend für die Finish-Zeit und Ergebnisliste. Vor deinen Zielevents legen wir eine für dich individuell abgestimmte Schlaf- und Nap-Strategie fest. So kannst du im Rennen das Beste aus deiner Leistungsfähigkeit machen und musst dich nicht auf emotionale Affektentscheidung verlassen." },
+    { title: "Mentale Stärke", text: "Die meisten Ultra-Fahrer*innen haben die körperlichen Voraussetzungen zum Finishen. Oft entscheidet aber der Kopf, ob du tatsächlich wie erhofft ankommst. Gerne besprechen wir im Vorhinein, wie du mit Tiefs oder geringerer Motivation bei Nacht umgehst und ich gebe dir Tipps, wie du weiterführende mentale Unterstützung findest." },
   ],
   faqs: [
-    { question: "Wie bereite ich mich auf mein erstes Ultracycling-Event vor?", answer: "[Hier deine wichtigsten Schritte für Einsteiger*innen und typische Vorbereitungszeiträume ergänzen.]" },
-    { question: "Wie trainiert man für mehrere lange Tage hintereinander?", answer: "[Hier deinen Ansatz für Ermüdungsresistenz, Regeneration und Back-to-back-Training erklären.]" },
-    { question: "Unterstützt du auch bei Pacing und Verpflegungsstrategie?", answer: "[Hier deinen konkreten Leistungsumfang und die Werkzeuge für die Wettkampfplanung beschreiben.]" },
-    { question: "Wie lange sollte die Vorbereitung auf ein Ultracycling-Rennen dauern?", answer: "[Hier deinen empfohlenen Vorbereitungszeitraum abhängig von Distanz, Höhenmetern und Renndauer ergänzen.]" },
-    { question: "Wie trainiert man Schlafmangel und lange Rennnächte?", answer: "[Hier beschreiben, welche Aspekte planbar sind und wie du Schlafstrategie, Pausen und Belastung vorbereitest.]" },
-    { question: "Wie plane ich die Verpflegung bei einem Ultracycling-Event?", answer: "[Hier deinen Ansatz für Kohlenhydrate, Flüssigkeit, Koffein, Versorgungspunkte und Verträglichkeit eintragen.]" },
-    { question: "Welche Ausrüstung brauche ich für ein Ultracycling-Rennen?", answer: "[Hier deine Empfehlungen zu Material, Ersatzteilen, Navigation, Beleuchtung und Selbstversorgung ergänzen.]" },
+    { question: "Ist das Coaching in Vorbereitung auf mein erstes Ultracycling-Event geeignet?", answer: "Als Einsteiger*in im Ultracycling kann ich dir wertvolle persönliche und Coaching-Erfahrungen weitergeben. Du bist hier also gut aufgehoben." },
+    { question: "Was beinhaltet dein Coaching für Ultra-Events?", answer: "Coaching bedeutet für mich nicht nur individuelle Trainingsplanung, sondern auch gemeinsame Analyse des Zielevent und langfristiges Arbeiten an Potenzialen wie Verpflegung, Pacing, Schlafstrategien und vielem mehr." },
+    { question: "Unterstützt du auch bei Pacing, Schlaf- und Verpflegungsstrategie?", answer: "Ja, das ist ein wichtiger Teil des Coachings. Wir besprechen deine Events im Vorhinein detailliert durch und erarbeiten dabei auch Pacing-, Verpflegungs- und Schlafstrategien." },
+    { question: "Wie lange sollte die Vorbereitung auf ein Ultracycling-Rennen dauern?", answer: "Wer länger als 12h am Stück Radfahren möchte sollte eine gute Grundlagenausdauer mitbringen. Bei vorhandener Grundfitness ist ein Aufbau für Einsteiger über 1-2 Saisons sinnvoll. Für bereits erfahrene Athlet*innen ist eine Vorbereitungszeit von 9 Monaten optimal. Am besten wir besprechen deine individuellen Voraussetzungen im unverbindlichen Erstgespräch und entscheiden dann gemeinsam was realistisch ist." },
+    { question: "Welche Ausrüstung brauche ich für ein Ultracycling-Rennen?", answer: "Was genau du brauchst, hängt von deinem Event ab. Gerne besprechen wir in der konkreten Vorbereitung auf deine Events, was du noch optimieren kannst. Im unverbindlichen Erstgespräch können wir zudem darüber reden, ob dir noch essenzielles Equipment für deinen ersten Ultra fehlen sollte." },
   ],
   icon: Timer,
 };
