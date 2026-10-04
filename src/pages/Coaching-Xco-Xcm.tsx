@@ -2,22 +2,22 @@ import { Mountain } from "lucide-react";
 import { CoachingCyclingCategory, type CategoryPageConfig } from "@/pages/CoachingCyclingCategory";
 
 const config: CategoryPageConfig = {
-  eyebrow: "Cross-Country-MTB-Coaching",
-  title: "Cross Country Mountainbike: XCO & XCM",
-  description: "[Hier deine Erfahrung im Cross-Country-MTB, die betreuten Rennformate und die Verbindung aus Ausdauer, Leistung und Technik beschreiben.]",
+  eyebrow: "Individuelles 1:1 Coaching für XCO und XCM Rennen",
+  title: "Cross Country Mountainbike Coaching",
+  description: "Cross Country Rennen werden im aktuellen Radsport oft übersehen. Dabei ist XC eine der anspruchsvollsten Radsport-Disziplinen. Hochintensive, wiederkehrende Belastungen in Verbindung mit technisch anspruchsvollen Strecken sorgen für besondere Anforderungen ans Training. Du willst dich auf deine nächste XC-Saison strukturiert vorbereiten? Dann unterstütze ich dich gerne mit meinem Coaching-Angebot. In der Vergangenheit durfte ich bereits einige Mountainbiker betreuen und verstehe daher genau, was in der Vorbereitung wichtig ist.",
   audience: [
-    "XCO-Fahrer*innen mit kurzen, intensiven Rennformaten",
-    "XCM-Fahrer*innen mit langen Distanzen und Höhenmetern",
+    "Ambitionierte MTB-Fahrer*innen mit einer anspruchsvollen Rennsaison",
+    "Sportler*innen, die sich strukturiert auf XC-Wettkämpfe vorbereiten möchten",
     "MTB-Einsteiger*innen mit konkretem Wettkampfziel",
-    "Athlet*innen, die Radtraining und Technikentwicklung verbinden möchten",
+    "Athlet*innen, die mehrere Rennformate (z.B. Gravel & XC) kombinieren möchten",
   ],
   focus: [
-    { title: "XCO: Intensität und Technik", text: "[Beschreibe Starts, kurze Anstiege, technische Passagen, wiederholte Spitzen und Fahrtechnik.]" },
-    { title: "XCM: Ausdauer und Pacing", text: "[Ergänze deinen Ansatz für lange Distanzen, Höhenmeter, Ernährung und Ermüdungsmanagement.]" },
-    { title: "Training und Strecke verbinden", text: "[Beschreibe Streckenanalyse, spezifische Einheiten, Material und die Rolle von Techniktraining.]" },
+    { title: "XCO: Repetitive, hochintensive Belastung", text: "Bereits zum Start wird das erste Mal hart in die Pedale getreten. Im weiteren Verlauf sorgen knackige Anstiege und technische Passagen für Belastungsspitzen. Im Training setzen wir daher vermehrt auf intermittierende Belastungen wie 30/30 oder 40/20 Intervalle, um Leistungsspitzen sowie die Erholung davon zu tranieren." },
+    { title: "XCM: Hohe Leistungen über längere Zeiträume", text: "Da Windschatten weniger Einfluss als in anderen Disziplinen hat muss hier oft Solo eine hohe Durchschnittsleistung und hohe Normalisierte Leistung über die Wettkampfdauer erbracht werden. Kontrolliertes Training im Sweetspot- und Schwellenbereich hilft dabei dieses Belastungsprofil vorzubereiten." },
+    { title: "Technische Komponente nicht vernachlässigen", text: "Wenn das Training rein auf die Physiologie optimiert wird geht Techniktraining schnell unter. Dabei ist saubere Fahrtechnik nach hochintensiver Belastung deutlich anspruchsvoller als im ausgeruhten Zustand. Wir integrieren daher bewusst technische Passagen in normale Trainingseinheiten." },
   ],
   raceFocus: [
-    { title: "Renneinteilung und Linienwahl", text: "[Beschreibe, wie du Start, technische Passagen, Anstiege und die Kräfteverteilung im Rennen vorbereitest.]" },
+    { title: "Renneinteilung und Taktik", text: "Um das Maximum aus deiner Leistungsfähigkeit herauszuholen ist gerade im XCO die richtige Taktik entscheidend. Wir besprechen daher deine Rennen vor und nach, damit wir Fehler identifizieren und Verbesserungen umsetzen können." },
     { title: "Verpflegung und Material", text: "[Ergänze deine Empfehlungen für Energieversorgung, Trinkstrategie, Reifen, Luftdruck und Ersatzmaterial.]" },
     { title: "Bedingungen und Technik", text: "[Beschreibe den Einfluss von Wetter, Untergrund, Strecke und technischer Sicherheit auf die Wettkampfstrategie.]" },
   ],
