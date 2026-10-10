@@ -97,7 +97,7 @@ export const CoachingCyclingCategory = ({ config }: CoachingCyclingCategoryProps
         <section className="py-14 sm:py-20 bg-accent" aria-label="Trainingsschwerpunkte">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Trainingsschwerpunkte</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Trainings&shy;schwerpunkte</h2>
               <p className="text-sm font-semibold uppercase tracking-widest text-secondary">Worauf wir im Training für deine spezifischen Ziele achten</p>
             </div>
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">

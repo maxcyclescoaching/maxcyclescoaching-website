@@ -113,8 +113,8 @@ const Index = () => {
         answer: (
           <p>
             Damit wir dein Training sauber analysieren können, brauchst du mindestens einen Radcomputer oder eine Uhr
-            sowie einen Herzfrequenzsensor. Ein Leistungsmesser ist ideal, damit ich die Einheiten noch genauer steuern
-            und auswerten kann.
+            sowie einen Herzfrequenzsensor. Ein Leistungsmesser ist ideal, damit wir die Einheiten noch genauer steuern
+            und auswerten können.
           </p>
         ),
         answerText:
@@ -125,12 +125,20 @@ const Index = () => {
         question: "Wie hoch sind die Kosten und Zahlungsmodalitäten?",
         answer: (
           <p>
-            Das 1:1 Coaching kostet 99 € pro Monat. Es gibt keine Mindestlaufzeit. Die Abrechnung erfolgt monatlich nach Ablauf des Abrechnungszeitraums per
-            Banküberweisung. Die Rechnung erhältst du jeweils zu Beginn des Folgemonats.
+            Das 1:1 Coaching kostet 99–189 € pro Monat. Es gibt keine
+            Mindestlaufzeit. Die Abrechnung erfolgt per Banküberweisung. Die Rechnung erhältst
+            du jeweils zu Beginn des Folgemonats. Genauere Informationen
+            findest du in meinen{" "}
+            <a
+              href="/agb"
+              className="text-primary underline hover:no-underline"
+            >
+              AGB
+            </a>.
           </p>
         ),
         answerText:
-          "Das 1:1 Coaching kostet 99 € pro Monat, ohne Mindestlaufzeit. Abgerechnet wird monatlich per Banküberweisung; die Rechnung kommt zu Beginn des Folgemonats.",
+          "Das 1:1 Coaching kostet 99–189 € pro Monat. Es gibt keine Mindestlaufzeit. Die Abrechnung erfolgt monatlich zum Ersten des Folgemonats per Banküberweisung. Genauere Informationen findest du in meinen AGB.",
       },
       {
         key: "coaching-beginn",
@@ -161,26 +169,30 @@ const Index = () => {
         question: "Wie oft kommunizieren wir während des Coachings?",
         answer: (
           <p>
-            Wir kommunizieren so oft wie nötig, am liebsten direkt über WhatsApp oder SMS. Wenn mir etwas auffällt,
-            melde ich mich proaktiv. Fragen beantworte ich möglichst schnell (meist unter 2h Antwortzeit). Zusätzlich sprechen wir regelmäßig
-            telefonisch über Fortschritte und Anpassungen.
+            Wie oft wir kommunizieren hängt vom gewählten {" "}
+            <a
+              href="/#services"
+              className="text-primary underline hover:no-underline"
+            >
+              Coaching-Paket
+            </a> ab. Im All-Inclusive-Paket ist ein täglicher Austausch per Textnachricht/WhatsApp sowie bis zu zwei Telefonate im Monat enthalten.{" "}
           </p>
         ),
         answerText:
-          "Wir kommunizieren so oft wie nötig, am liebsten direkt über WhatsApp oder SMS. Ich melde mich proaktiv und beantworte Fragen möglichst schnell.",
+          "Im All-Inclusive-Paket ist ein täglicher Austausch per WhatsApp/Textnachricht sowie bis zu zwei Telefonate im Monat enthalten.",
       },
       {
         key: "coaching-flexibilitaet",
         question: "Wie flexibel ist das Coaching bei Arbeit, Urlaub, Trainingslager oder Krankheit?",
         answer: (
           <p>
-            Das Coaching ist sehr flexibel. Wenn etwas dazwischenkommt, passe ich den Plan kurzfristig an, damit dein
+            Das Coaching ist sehr flexibel. Wenn etwas dazwischenkommt, passe ich den Plan bei Wahl des All-Inclusive-Paket kurzfristig an, damit dein
             Training zu deiner aktuellen Situation passt. Ob Krankheit, Trainingslager oder Stressphase: Wir finden immer
             eine Lösung.
           </p>
         ),
         answerText:
-          "Das Coaching ist sehr flexibel. Bei Krankheit, Urlaub, Trainingslager oder Stressphasen passe ich den Plan kurzfristig an.",
+          "Das Coaching ist bei Wahl des All-Inclusive-Paket sehr flexibel. Bei Krankheit, Urlaub, Trainingslager oder Stressphasen passe ich den Plan kurzfristig an.",
       },
       {
         key: "coaching-fortschritt",
@@ -201,32 +213,49 @@ const Index = () => {
         question: "Welche Kündigungsfrist gilt für das Coaching?",
         answer: (
           <p>
-            Die Kündigung ist jederzeit zum Ende eines Abrechnungszeitraums möglich. Es gibt keine Mindestlaufzeit, damit
-            du maximal flexibel bleibst.
+            Die Kündigung ist prinzipiell monatlich möglich. Genaue Informationen je nach Paket findest du in den{" "}
+            <a
+              href="/agb"
+              className="text-primary underline hover:no-underline"
+            >
+              AGB
+            </a>.
           </p>
         ),
         answerText:
-          "Die Kündigung ist jederzeit zum Ende eines Abrechnungszeitraums möglich. Es gibt keine Mindestlaufzeit, sodass du flexibel bleibst.",
+          "Die Kündigung ist prinzipiell monatlich möglich. Genaue Informationen je nach Paket findest du in den AGB.",
       },
       {
         key: "coaching-diagnostik",
         question: "Bietest du Leistungsdiagnostiken vor Ort an?",
         answer: (
           <p>
-            Ja, ich biete Leistungsdiagnostiken vor Ort an. Je nach Ziel können wir außerdem auch alternative Testformen
+            Ja, ich biete Laktat-Leistungsdiagnostiken vor Ort an. Je nach Ziel können wir außerdem auch alternative Testformen
             nutzen, damit du eine realistische und praxistaugliche Einschätzung deiner Leistung bekommst.
           </p>
         ),
         answerText:
-          "Ja, Leistungsdiagnostiken vor Ort sind möglich. Je nach Ziel können wir auch alternative Testformen nutzen, damit du eine praxistaugliche Einschätzung bekommst.",
+          "Ja, Laktat-Leistungsdiagnostiken vor Ort sind möglich. Je nach Ziel können wir auch alternative Testformen nutzen, damit du eine praxistaugliche Einschätzung bekommst.",
       },
       {
         key: "coaching-mtb-gravel",
         question: "Ist das Coaching auch für MTB- und Gravel-Radfahrer geeignet?",
         answer: (
           <p>
-            Ja, das Coaching eignet sich auch für (Cross Country) MTB- und Gravel-Fahrer. In Sachen Fahrtechnik kann ich remote natürlich nur eingeschränkt helfen, die
-            physiologische Trainingsplanung funktioniert aber für alle Disziplinen gleich gut.
+            Ja, das Coaching eignet sich auch für (Cross Country) MTB- und Gravel-Fahrer. Mehr Infos dazu findest du auf der{" "}
+            <a
+              href="/coaching/radsport/radmarathon-gravel"
+              className="text-primary underline hover:no-underline"
+            >
+              Gravel-Coaching
+            </a>
+            {" "} und {" "}
+            <a
+              href="/coaching/radsport/xco-xcm"
+              className="text-primary underline hover:no-underline"
+            >
+              XC-MTB-Coaching
+            </a>{" "}Seite.
           </p>
         ),
         answerText:
@@ -276,6 +305,72 @@ const Index = () => {
     };
   }, [faqItems]);
 
+  const packageFeatures = [
+  {
+    label: "Zielgruppe",
+    icon: Users,
+    basis:
+      "Für Athleten mit konstantem Alltag, die neu ins strukturierte Training einsteigen möchten.",
+    allInclusive:
+      "Für Athleten, die eng begleitet werden und das Maximum aus ihren Möglichkeiten rausholen möchten.",
+  },
+  {
+    label: "Trainingsplanung",
+    icon: SlidersHorizontal,
+    basis:
+      "Vier Wochen im Voraus; keine Plananpassungen innerhalb dieses Zeitraums.",
+    allInclusive:
+      "Rollierende Planung im 1- bis 2-Wochen-Rhythmus; bis zu zwei kurzfristige Anpassungen pro Woche.",
+  },
+  {
+    label: "Analyse & Feedback",
+    icon: CheckCircle2,
+    basis:
+      "Monatliche Analyse des Trainingsblocks inklusive schriftlichem Feedback.",
+    allInclusive:
+      "Analyse jeder Trainingseinheit spätestens am Folgetag nach Eingang der Daten; bei Bedarf direkt mit Feedback.",
+  },
+  {
+    label: "Kommunikation & Telefonate",
+    icon: MessageCircle,
+    basis:
+      "Bis zu zwei Kontakte pro Monat; ein Telefonat alle zwei Monate inklusive.",
+    allInclusive:
+      "Unbegrenzter schriftlicher Kontakt; bis zu zwei Telefonate pro Monat inklusive.",
+  },
+  {
+    label: "Event-Planung",
+    icon: CalendarDays,
+    basis:
+      "Bis zu vier Events pro Jahr; zwei telefonische Vorbesprechungen inklusive.",
+    allInclusive:
+      "Beliebig viele Events; bis zu vier Events mit Vor- und Nachbesprechung pro Jahr.",
+  },
+  {
+    label: "Zusatzleistungen",
+    icon: Sparkles,
+    basis:
+      "Verpflegungshinweise vor und während Trainingseinheiten.",
+    allInclusive:
+      "Zusätzlich zu Basis-Paket: Integration von Krafttraining und bis zu einer Zusatzsportart im Trainingsplan; bis zu zwei Leistungsdiagnostiken pro Jahr zum Vorzugspreis.",
+  },
+] as const;
+
+const coachingPackages = [
+  {
+    key: "basis",
+    name: "Basis-Paket",
+    price: "99 €",
+    featured: false,
+  },
+  {
+    key: "allInclusive",
+    name: "All-Inclusive-Paket",
+    price: "189 €",
+    featured: true,
+  },
+] as const;
+
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <Navbar />
@@ -283,41 +378,59 @@ const Index = () => {
       <main className="flex-grow">
         <section id="hero" className="relative min-h-[100svh] bg-primary animate-fade-in" aria-label="Hero">
           <div className="absolute inset-0">
-            <img 
-                src="/images/hero_img.avif" 
-                alt="Radsportler sprinten vor landschaftlich schönem Hintergrund einen Berg hoch" 
-                className="w-full h-full object-cover"
-                loading="eager" 
-                fetchPriority="high"
+            <img
+              src="/images/hero_img.avif"
+              alt="Radsportler sprinten vor landschaftlich schönem Hintergrund einen Berg hoch"
+              className="w-full h-full object-cover object-[62%_center] min-[550px]:object-center"
+              loading="eager"
+              fetchPriority="high"
             />
             <div className="absolute inset-0 bg-primary/35" />
           </div>
-          <div className="relative min-h-[100svh] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 lg:py-24 flex items-center justify-start">
+          <div className="relative min-h-[100svh] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 md:py-16 lg:py-24 flex items-center justify-start">
             <div className="w-full max-w-4xl text-left text-white">
-              <h1 className="max-w-4xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-5 sm:mb-6 text-shadow-lg">
+              <h1 className="max-w-4xl text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 text-shadow-lg">
                 Mit individuellem Radsport-Coaching zu deiner stärksten Saison.
               </h1>
-              <h2 className="max-w-3xl text-lg sm:text-xl md:text-2xl leading-relaxed text-white/95 mb-7">
+
+              <h2 className="max-w-3xl text-base sm:text-xl md:text-2xl leading-relaxed text-white/95 mb-6 sm:mb-7">
                 Individueller Trainingsplan im Radsport & persönliches 1:1-Coaching für Rennrad, Gravel, XC-MTB und Ultracycling.
               </h2>
-              <ul className="grid gap-3 sm:grid-cols-2 max-w-4xl mb-10 text-sm sm:text-base font-medium">
-                <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-secondary" />Individuelle Trainingsplanung</li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-secondary" />Auf deine Ziele und Bedürfnisse abgestimmt</li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-secondary" />Ernährungs-, Pacing- und Regenerationstipps</li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-secondary" />Täglicher Austausch und Feedback</li>
+
+              <ul className="grid gap-2.5 sm:gap-3 sm:grid-cols-2 max-w-4xl mb-8 sm:mb-10 text-sm sm:text-base font-medium">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-secondary" />
+                  Individuelle Trainingsplanung
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-secondary" />
+                  Auf deine Ziele und Bedürfnisse abgestimmt
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-secondary" />
+                  Ernährungs-, Pacing- und Regenerationstipps
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-secondary" />
+                  Täglicher Austausch und Feedback
+                </li>
               </ul>
+
               <p className="sr-only">
                 Individuelles Radsport-Coaching für ambitionierte Ausdauerathleten
               </p>
-              <a href="#contact">
-                <Button 
-                  size="lg" 
+
+              <a href="#contact" className="block w-full sm:w-auto">
+                <Button
+                  size="lg"
                   variant="secondary"
-                  className="text-white transform hover:scale-105 transition-all duration-200 text-2xl py-9 px-14 shadow-xl shadow-black/30"
+                  className="w-full sm:w-auto text-lg sm:text-2xl py-5 px-6 sm:py-9 sm:px-14 h-auto whitespace-normal sm:whitespace-nowrap leading-snug shadow-xl shadow-black/30 transform sm:hover:scale-105 transition-all duration-200"
                 >
-                  Kostenloses Erstgespräch vereinbaren <ArrowRight className="ml-2 w-8 h-8" />
+                  <span>Kostenloses Erstgespräch vereinbaren</span>
+                  <ArrowRight className="ml-2 h-5 w-5 sm:h-8 sm:w-8 shrink-0" />
                 </Button>
               </a>
+
               <p className="mt-4 text-sm sm:text-base font-medium text-white/95">
                 Unverbindlich anfragen · Keine Mindestlaufzeit
               </p>
@@ -364,53 +477,125 @@ const Index = () => {
               <Sparkles className="h-4 w-4 text-secondary" />
               Individuell geplant · Ohne Mindestlaufzeit
             </div>
-            <div className="overflow-hidden rounded-2xl border border-primary/10 bg-white shadow-xl shadow-primary/10">
-              <Table className="min-w-[820px] [&_tbody_tr:nth-child(odd)]:bg-slate-50/70 [&_tbody_td]:py-5 [&_tbody_td:nth-child(2)]:text-gray-700 [&_tbody_td:nth-child(3)]:bg-[#003366]/[0.035] [&_thead_th]:h-auto [&_thead_th]:px-5 [&_thead_th]:py-6 [&_thead_th:first-child]:bg-slate-100 [&_thead_th:nth-child(2)]:bg-white [&_thead_th:nth-child(3)]:bg-[#003366] [&_thead_th:nth-child(3)]:text-white">
+
+            {/* Mobile & Tablet: Gestapelte Paketkarten bis 1023px */}
+            <div className="grid gap-6 md:hidden">
+              {coachingPackages.map((pkg) => (
+                <div
+                  key={pkg.key}
+                  className={
+                    pkg.featured
+                      ? "relative rounded-2xl border-2 border-primary bg-white p-6 shadow-xl"
+                      : "rounded-2xl border border-primary/10 bg-white p-6 shadow-md"
+                  }
+                >
+                  {pkg.featured && (
+                    <div className="absolute -top-3 left-6 inline-flex items-center gap-1 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-white">
+                      <Sparkles className="h-3 w-3 text-secondary" />
+                      Beliebt
+                    </div>
+                  )}
+
+                  <div
+                    className={`border-b border-gray-100 pb-4 mb-5 ${pkg.featured ? "pt-1" : ""
+                      }`}
+                  >
+                    <h3 className="text-xl font-bold text-primary">
+                      {pkg.name}
+                    </h3>
+
+                    <div className="mt-1 flex items-baseline gap-1">
+                      <span className="text-3xl font-extrabold text-primary">
+                        {pkg.price}
+                      </span>
+                      <span className="text-sm text-gray-500">
+                        / Monat
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4 text-sm">
+                    {packageFeatures.map((feature) => {
+                      const Icon = feature.icon;
+                      const description =
+                        pkg.key === "basis"
+                          ? feature.basis
+                          : feature.allInclusive;
+
+                      return (
+                        <div key={feature.label}>
+                          <span className="mb-1 flex items-center gap-2 font-semibold text-primary">
+                            <Icon className="h-4 w-4 shrink-0 text-secondary" />
+                            {feature.label}
+                          </span>
+
+                          <p className="text-gray-600">
+                            {description}
+                          </p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop: Vergleichstabelle ab 1024px */}
+            <div className="hidden md:block overflow-hidden rounded-2xl border border-primary/10 bg-white shadow-xl shadow-primary/10">
+              <Table className="w-full table-fixed [&_tbody_tr:nth-child(odd)]:bg-slate-50/70 [&_tbody_td]:py-5 [&_tbody_td:nth-child(2)]:text-gray-700 [&_tbody_td:nth-child(3)]:bg-[#003366]/[0.035] [&_thead_th]:h-auto [&_thead_th]:px-5 [&_thead_th]:py-6 [&_thead_th:first-child]:bg-slate-100 [&_thead_th:nth-child(2)]:bg-white [&_thead_th:nth-child(3)]:bg-[#003366] [&_thead_th:nth-child(3)]:text-white">
                 <TableHeader>
                   <TableRow className="bg-accent hover:bg-accent">
-                    <TableHead className="min-w-[220px] text-primary font-semibold">Leistungsumfang</TableHead>
-                    <TableHead className="min-w-[260px] text-primary font-semibold">Basis-Paket · 99 € / Monat</TableHead>
-                    <TableHead className="min-w-[260px] text-primary font-semibold">All-Inclusive-Paket · 189 € / Monat</TableHead>
+                    <TableHead className="w-[28%] text-primary font-semibold">
+                      Leistungsumfang
+                    </TableHead>
+                    <TableHead className="w-[36%] text-primary font-semibold">
+                      Basis-Paket · 99 € / Monat
+                    </TableHead>
+                    <TableHead className="w-[36%] text-primary font-semibold">
+                      All-Inclusive-Paket · 189 € / Monat
+                    </TableHead>
                   </TableRow>
                 </TableHeader>
+
                 <TableBody>
-                  <TableRow>
-                    <TableCell className="font-semibold text-primary"><span className="flex items-center gap-2"><Users className="h-5 w-5 text-secondary" />Zielgruppe</span></TableCell>
-                    <TableCell>Für Athleten mit konstantem Alltag, die neu ins strukturierte Training einsteigen möchten.</TableCell>
-                    <TableCell>Für Athleten, die eng begleitet werden das Maximum aus ihren Möglichkeiten rausholen möchten.</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-semibold text-primary"><span className="flex items-center gap-2"><SlidersHorizontal className="h-5 w-5 text-secondary" />Trainingsplanung</span></TableCell>
-                    <TableCell>Vier Wochen im Voraus; keine Plananpassungen innerhalb dieses Zeitraums.</TableCell>
-                    <TableCell>Rollierende Planung im 1- bis 2-Wochen-Rhythmus; bis zu zwei kurzfristige Anpassungen pro Woche.</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-semibold text-primary"><span className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-secondary" />Analyse & Feedback</span></TableCell>
-                    <TableCell>Monatliche Analyse des Trainingsblocks inklusive schriftlichem Feedback.</TableCell>
-                    <TableCell>Analyse jeder Trainingseinheit spätestens am Folgetag nach Eingang der Daten; bei Bedarf direkt mit Feedback.</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-semibold text-primary"><span className="flex items-center gap-2"><MessageCircle className="h-5 w-5 text-secondary" />Kommunikation & Telefonate</span></TableCell>
-                    <TableCell>Bis zu zwei Kontakte pro Monat; ein Telefonat alle zwei Monate inklusive.</TableCell>
-                    <TableCell>Unbegrenzter schriftlicher Kontakt; bis zu zwei Telefonate pro Monat inklusive.</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-semibold text-primary"><span className="flex items-center gap-2"><CalendarDays className="h-5 w-5 text-secondary" />Event-Planung</span></TableCell>
-                    <TableCell>Bis zu vier Events pro Jahr; zwei telefonische Vorbesprechungen inklusive.</TableCell>
-                    <TableCell>Beliebig viele Events; bis zu vier Events mit Vor- und Nachbesprechung pro Jahr.</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-semibold text-primary"><span className="flex items-center gap-2"><Sparkles className="h-5 w-5 text-secondary" />Zusatzleistungen</span></TableCell>
-                    <TableCell>Verpflegungshinweise vor und während Trainingseinheiten.</TableCell>
-                    <TableCell>Zusätzlich zu Basis-Paket: Integration von Krafttraining und bis zu einer Zusatzsportart im Trainingsplan; bis zu zwei Leistungsdiagnostiken pro Jahr zum Vorzugspreis.</TableCell>
-                  </TableRow>
+                  {packageFeatures.map((feature) => {
+                    const Icon = feature.icon;
+
+                    return (
+                      <TableRow key={feature.label}>
+                        <TableCell className="font-semibold text-primary">
+                          <span className="flex items-center gap-2">
+                            <Icon className="h-5 w-5 shrink-0 text-secondary" />
+                            {feature.label}
+                          </span>
+                        </TableCell>
+
+                        <TableCell>
+                          {feature.basis}
+                        </TableCell>
+
+                        <TableCell>
+                          {feature.allInclusive}
+                        </TableCell>
+                      </TableRow>
+                    );
+                  })}
                 </TableBody>
               </Table>
             </div>
+
+            {/* Gemeinsamer CTA unter beiden Ansichten */}
             <div className="mt-8 text-center">
-              <a href="#contact">
-                <Button size="lg" className="bg-[#003366] hover:bg-[#002244]">
-                  Kostenloses Erstgespräch vereinbaren <ArrowRight className="ml-2 w-5 h-5" />
+              <a
+                href="#contact"
+                className="inline-block w-full sm:w-auto"
+              >
+                <Button
+                  size="lg"
+                  className="w-full text-lg h-auto py-2 sm:text-base sm:h-10 sm:w-auto whitespace-normal bg-[#003366] hover:bg-[#002244]"
+                >
+                  <span>Kostenloses Erstgespräch vereinbaren</span>
+                  <ArrowRight className="ml-2 h-5 w-5 shrink-0" />
                 </Button>
               </a>
             </div>
