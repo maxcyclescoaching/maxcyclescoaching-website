@@ -28,21 +28,6 @@ const UeberMich = () => {
 
   const successStories = [
     {
-      category: "Athleten-Erfolg: Tim Walther",
-      title: "Bohemian Border Bash 2026 - Platz 3 Gesamt",
-      description: "Erster mehrtägiger Ultra für Tim. 1400km schwieriger Gravel. Am Ende sehr glücklich mit dem Podiumsplatz.",
-    },
-    {
-      category: "Athleten-Erfolg: Christian Schellenberg",
-      title: "Liege-Baston-Liege Challenge 2026 - Erster im Ziel",
-      description: "Über 280W Normalized Power für knapp 8 Stunden. Als erster Teilnehmer im Ziel.",
-    },
-    {
-      category: "Athleten-Erfolg: Natalie Gansauge",
-      title: "Erste Ultra-Radsportsaison 2026 - 5x Finish",
-      description: "Nach Verletzungspause zurück in den Radsport. Und in der ersten Saison direkt 5 lange Saisonhighlights gefinisht.",
-    },
-    {
       category: "Eigener Weg",
       title: "Dreiländergiro 2023 Vinschgau - Platz 4 Gesamt",
       description: "Mein erster Radmarathon. Direkt Holzmedaille.",
@@ -169,29 +154,26 @@ const UeberMich = () => {
                 </p>
                 <div className="space-y-4 text-gray-700 leading-relaxed max-w-2xl">
                   <p>
-                    Hi, ich bin Max - <b>zertifizierter Radsportcoach</b> und <b>leidenschaftlicher Athlet</b>. <br/>
-                    Seit ich 16 Jahre alt bin fahre ich ambitioniert Rennrad und interessiere mich
+                    Hi, ich bin Max. Seit ich 16 Jahre alt bin fahre ich ambitioniert Rennrad und interessiere mich
                     für alle Facetten des Ausdauersports.
                   </p>
                   <p>
-                    Von Beginn an setze ich mich intensiv mit Trainingswissenschaft auseinander -
-                    zunächst für mein eigenes Training, seit 2023 auch, um mein Wissen an andere
-                    Athlet*innen weiterzugeben. Aktuelle Studien, praktische Ansätze anderer
-                    Athlet*innen und Coaches sowie meine eigene Erfahrung in der Athletenbetreuung
-                    bilden die Grundlage meiner Arbeit.
+                    Von Beginn an setze ich mich intensiv mit <b>Trainingswissenschaft</b> auseinander -
+                    zunächst für mein eigenes Training; seit 2023 auch, um mein Wissen an andere
+                    Athleten weiterzugeben. Aktuelle Studien, praktische Ansätze anderer
+                    Athleten und Coaches sowie meine eigene <b>Erfahrung in der Athletenbetreuung </b>bilden die Grundlage meiner Arbeit.
                   </p>
                   <p>
-                    Im Januar 2025 habe ich anschließend mein Gewerbe angemeldet und mich damit neben meinem
+                    Im Januar 2025 habe ich mein Gewerbe angemeldet und mich damit neben meinem
                     Wirtschaftsinformatik-Studium an der HTW Dresden selbstständig gemacht. Seither
-                    biete ich individuelles <b>1:1 Online-Coaching für ambitionierte Ausdauerathlet*innen</b> an.
+                    biete ich individuelles <b>1:1 Online-Coaching für ambitionierte Ausdauerathleten</b> an.
                   </p>
                   <p>
-                    Die meisten meiner betreuten Athlet*innen sind im Radsport unterwegs. Auf Wunsch betreue ich
-                    vereinzelt auch Läufer*innen und Triathlet*innen.
+                    Die meisten meiner betreuten Athleten sind im Radsport unterwegs. Auf Wunsch betreue ich
+                    vereinzelt auch Läufer und Triathleten.
                   </p>
                   <p>
-                    Mein Ziel: Dich dabei zu unterstützen, dein <b>volles Potenzial auf dem Rad
-                    auszuschöpfen</b>.
+                    Wer sich einen <b>Trainingsplan erstellen lassen</b> möchte, merkt oft schnell: Ein fixer Plan stößt an Grenzen, wenn Termine und Erschöpfung dazwischenkommen oder du einfach schon lange Ausdauersport betreibst. Mein Ziel ist daher Coaching, das sich an deinen Alltag anpasst – damit du dein <b>volles Potenzial auf dem Rad ausschöpfen</b> kannst.
                   </p>
                 </div>
 
@@ -241,9 +223,9 @@ const UeberMich = () => {
               <p className="text-sm font-semibold uppercase tracking-widest text-secondary mb-3">
                 Entwicklung, die sichtbar wird
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Erfolge und Meilensteine</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Eigene Erfolge und Meilensteine</h2>
               <p className="text-lg text-gray-600 leading-relaxed max-w-4xl">
-                Hier möchte ich einige persönliche Meilensteine und Erfolgsgeschichten aus dem Coaching teilen.
+                Hier möchte ich einige persönliche Meilensteine aus meinem sportlichen Weg teilen.
               </p>
             </div>
 

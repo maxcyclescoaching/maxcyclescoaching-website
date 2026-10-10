@@ -725,7 +725,25 @@ const KitzbuehelerBlog = () => {
                     </CardContent>
                   </Card>
               </div>
-
+              {/* Verlinkung auf Radmarathon-Coaching-Seite */}
+              <div className="rounded-xl border border-primary/15 bg-accent/60 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 mt-6">
+                <div className="space-y-1.5 max-w-2xl">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-secondary">
+                    Gezielte Vorbereitung
+                  </span>
+                  <h3 className="text-lg font-bold text-primary">
+                    Pacing & Trainingsstruktur für deinen Kitzbüheler Radmarathon
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Du möchtest einen individuellen Trainingsplan und professionelles Coaching in der Vorbereitung auf deinen KRM? Erfahre mehr über mein Radmarathon-Coaching.
+                  </p>
+                </div>
+                <a href="/coaching/radsport/radmarathon-gravel" className="shrink-0 w-full sm:w-auto">
+                  <Button variant="outline" className="w-full sm:w-auto border-primary text-primary hover:bg-primary hover:text-white transition-colors">
+                    Zum Radmarathon-Coaching <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -955,7 +973,6 @@ const KitzbuehelerBlog = () => {
                 </CardContent>
               </Card>
             </div>
-
           </div>
         </section>
 

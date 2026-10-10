@@ -1,15 +1,15 @@
-import { Route } from "lucide-react";
+import { Bike } from "lucide-react";
 import { CoachingCyclingCategory, type CategoryPageConfig } from "@/pages/CoachingCyclingCategory";
 
 const config: CategoryPageConfig = {
-  eyebrow: "Individuelles 1:1 Coaching für Radmarathons und Gravel-Rennen",
+  eyebrow: "Individuelles 1:1 Coaching & dynamischer Radmarathon oder Gravel Trainingsplan",
   title: "Radmarathon- und Gravel-Coaching",
-  description: "Ötztaler Radmarathon, The Traka, L'Etape du Tour, Sea Otter und weitere Radmarathons sowie Gravel-Rennen erfreuen sich immer größerer Beliebtheit. Auf der Straße sowie Offroad sind hohe Leistungen über lange Zeit aufrechtzuerhalten. \nGanz egal, ob du dabei eigene Bestzeiten anstrebst, um die Podiumsplätzen mitfahren willst oder dein Ziel einfach ist die gewaltige Distanz zu bewältigen - hier bist du richtig. \nIch unterstütze dich mit spezifischen, zielorientierten Trainingsplänen und nutze meine Erfahrungen, um  mit Tipps zu Pacing, Verpflegung, Wettkampfstrategien und vielem mehr das Maximum aus deinem Körper herauszuholen.",
+  description: "Ötztaler Radmarathon, The Traka, L'Etape du Tour, Sea Otter und weitere Radmarathons sowie Gravel-Rennen erfreuen sich immer größerer Beliebtheit. Auf der Straße sowie Offroad sind hohe Leistungen über lange Zeit aufrechtzuerhalten. \n Ein vorgefertigter Radmarathon Trainingsplan von der Stange stößt bei anspruchsvollen Zielen schnell an Grenzen. Ganz egal, ob du persönliche Bestzeiten anstrebst, um die Podiumsplätzen mitfahren willst oder dein Ziel einfach ist die gewaltige Distanz zu bewältigen - hier bist du richtig. \nIch unterstütze dich mit spezifischen, auf deinen Alltag abgestimmten Trainingsplänen sowie Tipps zu Pacing, Verpflegung, Wettkampfstrategien.",
   audience: [
     "Athlet*innen mit einem konkreten Radmarathon-Ziel",
     "Gravel-Fahrer*innen mit geplanten Langstrecken-Events",
     "Einsteiger*innen sowie ambitionierte Amateurfahrer*innen",
-    "Sportler*innen mit begrenzter Trainingszeit",
+    "Sportler*innen auf der Suche nach einem Rennrad Trainingsplan für Fortgeschrittene",
   ],
   focus: [
     { title: "Ermüdungsresistenz", text: "Entscheidend ist nicht nur deine frische Leistungsfähigkeit, sondern auch wie schnell du nach stundenlanger Vorermüdung noch fahren kannst. Deswegen schauen wir, dass wir über die Saison möglichst viele Trainingsstunden progressiv akkumulieren und spezifische lange Einheiten mit viel Energieumsatz in der Vorbereitung einbauen." },
@@ -22,13 +22,51 @@ const config: CategoryPageConfig = {
     { title: "Strecke, Material und Fahrtechnik", text: "Kleine Details machen über lange Distanzen oft Minuten aus. Deswegen helfe ich dir, dein Equipment (Aerodynamik, Gewicht, Rollwiderstand) zu optimieren, erkläre dir wie du deine Fahrtechnik am besten üben kannst und zeige dir Wege deine Streckenkenntnisse zu verbessern." },
   ],
   faqs: [
-    { question: "Wie lange sollte ich mich auf einen Radmarathon vorbereiten?", answer: "Im Optimalfall erfolgt die Vorbereitung über die gesamte Saison (ab November bzw. 9 Monate vor Start), wenn du schon Erfahrungen im Ausdauersport hast. Kürzere Zeiträume sind auch möglich, aber mehr strukturierte Trainingszeit ist immer von Vorteil." },
-    { question: "Ist das Coaching auch für Gravel-Rennen geeignet?", answer: "Radmarathons und Gravel-Rennen haben oft eine Belastungsdauer von 3 bis 12 Stunden. Die physiologischen Anforderungen dafür sind ähnlich. Deswegen ist mein Coaching für beides bestens geeignet." },
-    { question: "Wie wird das Training in meinen Alltag integriert?", answer: "Wir planen nicht deinen Alltag um das Training herum, sondern besprechen gemeinsam, wann es zeitlich und von der Gesamtbelastung am Sinnvollsten ist zu trainieren. Zudem passe ich dir gerne bei kurzfristigen Änderungen das Training an." },
-    { question: "Wie viele Stunden pro Woche muss ich für einen Radmarathon trainieren?", answer: "Das hängt stark von deiner Vorerfahrung und deinen Ansprüchen an dich selbst ab. Individuelles Coaching macht ab 5 Trainingsstunden pro Woche Sinn. Die Erwartungen müssen aber immer dem Trainingsvolumen entsprechen. Gerne besprechen wir im unverbindlichen Erstgespräch, ob deine Erwartungen realistisch sind." },
-    { question: "Was ist beim Training für Gravel-Rennen anders als beim Straßen-Radmarathon?", answer: "Der Hauptunterschied liegt neben der Radwahl im Belastungsprofil. Radmarathons haben oft mehrere Anstiege gefolgt von Abfahrten und Flachpassagen. Bei Gravel-Rennen wird die Leistung meist gleichmäßiger über das Event abgerufen. Die spezifischen Anforderungen bestimmen die Trainingsinhalte." },
+    { 
+      question: "Warum ist individuelles Coaching besser als ein statischer Radmarathon Trainingsplan?", 
+      answer: "Ein statischer Radmarathon Trainingsplan weiß nicht, ob du krank warst, eine stressige Arbeitswoche hattest oder wie schnell du regenerierst. Bei mir erhältst du einen dynamischen Trainingsplan, der wöchentlich nachjustiert wird, damit du zum Saisonhöhepunkt in Bestform an der Startlinie stehst." 
+    },
+    { 
+      question: "Eignet sich das Coaching als Rennrad Trainingsplan für Fortgeschrittene?", 
+      answer: "Ja, absolut. Fortgeschrittene Athleten stagnieren oft mit generischen Plänen, weil die Reize nicht mehr spezifisch genug sind. Wir analysieren deine Leistungsdaten (Power-Duration-Curve, Schwellenleistung, VLamax) und setzen genau die Reize, die dich über dein bisheriges Plateau heben." 
+    },
+    {
+      question: "Wie lange sollte ich mich auf einen Radmarathon vorbereiten?",
+      answer: "Im Optimalfall erfolgt die Vorbereitung über die gesamte Saison (ab November bzw. neun Monate vor Start), wenn du schon Erfahrungen im Ausdauersport hast. Kürzere Zeiträume sind auch möglich, aber mehr strukturierte Trainingszeit ist immer von Vorteil." 
+    },
+    {
+      question: "Ist das Coaching auch für Gravel-Rennen geeignet?",
+      answer: (
+        <>
+          Radmarathons und Gravel-Rennen haben oft eine Belastungsdauer von 3 bis 12 Stunden.
+          Die physiologischen Anforderungen dafür sind ähnlich. Deswegen ist mein Coaching für
+          beides bestens geeignet. Solltest du Interesse an Gravel-Ultracycling oder
+          Straßenrennen über 300 km haben, findest du mehr Infos auf der{" "}
+          <a
+            href="/coaching/radsport/ultracycling"
+            className="text-primary underline hover:no-underline"
+          >
+            Ultracycling-Seite
+          </a>.
+        </>
+      ),
+      answerText:
+        "Radmarathons und Gravel-Rennen haben oft eine Belastungsdauer von 3 bis 12 Stunden. Die physiologischen Anforderungen dafür sind ähnlich. Deswegen ist mein Coaching für beides bestens geeignet. Solltest du Interesse an Gravel-Ultracycling oder Straßenrennen über 300 km haben, findest du mehr Infos auf der Ultracycling-Seite.",
+    },
+    { 
+      question: "Wie wird das Training in meinen Alltag integriert?", 
+      answer: "Wir planen nicht deinen Alltag um das Training herum, sondern besprechen gemeinsam, wann es zeitlich und von der Gesamtbelastung am Sinnvollsten ist zu trainieren. Zudem passe ich dir gerne bei kurzfristigen Änderungen das Training an." 
+    },
+    { 
+      question: "Wie viele Stunden pro Woche muss ich für einen Radmarathon trainieren?", 
+      answer: "Das hängt stark von deiner Vorerfahrung und deinen Ansprüchen an dich selbst ab. Individuelles Coaching macht ab 5 Trainingsstunden pro Woche Sinn. Die Erwartungen müssen aber immer dem Trainingsvolumen entsprechen. Gerne besprechen wir im unverbindlichen Erstgespräch, ob deine Erwartungen realistisch sind." 
+    },
+    { 
+      question: "Was ist beim Training für Gravel-Rennen anders als beim Straßen-Radmarathon?", 
+      answer: "Der Hauptunterschied liegt neben der Radwahl im Belastungsprofil. Radmarathons haben oft mehrere Anstiege gefolgt von Abfahrten und Flachpassagen. Bei Gravel-Rennen wird die Leistung meist gleichmäßiger über das Event abgerufen. Die spezifischen Anforderungen bestimmen die Trainingsinhalte." 
+    },
   ],
-  icon: Route,
+  icon: Bike,
 };
 
 const CoachingRadmarathonGravel = () => <CoachingCyclingCategory config={config} />;

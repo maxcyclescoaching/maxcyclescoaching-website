@@ -1,7 +1,7 @@
 export function getLizenzRundstreckeSeo() {
   return {
-    title: "Lizenz- und Rundstreckenrennen Coaching | MaxCyclesCoaching",
-    description: "Coaching für Lizenz- und Rundstreckenrennen: Leistungsaufbau, Renntaktik, Saisonplanung und gezielte Formhöhepunkte.",
+    title: "Coaching für Lizenz- und Rundstreckenrennen | MaxCyclesCoaching",
+    description: "Individuelles 1:1 Coaching für Lizenz- und Rundstreckenfahrer: Trainingsplanung, Leistungsaufbau, Renntaktik und Saisonplanung.",
     canonicalUrl: "https://maxcyclescoaching.de/coaching/radsport/lizenz-rundstrecke",
   };
 }

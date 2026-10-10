@@ -1,30 +1,27 @@
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Flag, Mountain, Route, Target, Users, Calendar, LineChart, Trophy, MessageCircle, ActivitySquare, Gauge, NotebookPen, Timer, FlaskConical } from "lucide-react";
-import { useState, lazy, Suspense, useMemo, useEffect } from "react";
+import { ArrowRight, CalendarDays, CheckCircle2, ExternalLink, Flag, MessageCircle, Mountain, Bike, SlidersHorizontal, Sparkles, Waypoints, Trophy, Users } from "lucide-react";
+import { lazy, Suspense, useMemo, useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ServiceDialog } from "@/components/ServiceDialog";
 import { SiteFooter } from "@/components/SiteFooter";
+import { ServiceDialog } from "@/components/ServiceDialog";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 const ContactForm = lazy(() => import("@/components/ContactForm"));
-
-const startYear = 2021;
-const currentYear = new Date().getFullYear();
-const experienceYears = currentYear - startYear;
 
 const cyclingCategories = [
   {
     href: "/coaching/radsport/radmarathon-gravel",
     title: "Radmarathons und Gravel-Rennen",
     description: "Individuelle Vorbereitung für lange Straßenrennen, anspruchsvolle Anstiege und Gravel-Events.",
-    icon: Route,
+    icon: Bike,
   },
   {
     href: "/coaching/radsport/ultracycling",
     title: "Ultracycling-Events",
     description: "Strukturiertes Training für lange Distanzen, hohe Eigenständigkeit und Belastungen über viele Stunden oder Tage.",
-    icon: Timer,
+    icon: Waypoints,
   },
   {
     href: "/coaching/radsport/lizenz-rundstrecke",
@@ -41,8 +38,35 @@ const cyclingCategories = [
 ];
 
 const Index = () => {
-  const [isCoachingOpen, setIsCoachingOpen] = useState(false);
-  const [isDiagnosticsOpen, setIsDiagnosticsOpen] = useState(false);
+  const [selectedSuccessIndex, setSelectedSuccessIndex] = useState<number | null>(null);
+  const athleteSuccessStories = [
+    {
+      category: "Athleten-Erfolg: Tim Walther",
+      title: "Bohemian Border Bash - Platz 3 Gesamt",
+      description: "Erstes mehrtägiges Ultra-Rennen mit Podiumsplatz: Tim bewältigte die rund 1.400 Kilometer der Bohemian Border Bash Race und wurde Dritter der Gesamtwertung.",
+      longdescription: "Tim kam im Dezember 2025 auf mich zu, um sich strukturiert auf seine erste Ultra-Rennsaison 2026 vorzubereiten. \n Von Beginn an war das Bohemian Border Bash Race das Hauptziel. Zuvor hatte Tim bereits drei weitere Ultra-Rennen erfolgreich gefinisht. \n Nach einem erfolgreichen Aufbau über den Winter ging es im Sommer vor allem darum, die Form zu erhalten, Regenerationsphasen einzuhalten und spezifische Reize zu setzen. \n Beim Bohemian Border Bash konnte Tim die geplante Verpflegungs-, Schlaf- und Pacingstrategie konsequent umsetzen. Das schuf die Grundlage für den dritten Platz in der Solo-Gesamtwertung. \n Dafür, dass es sein erstes mehrtägiges Ultra-Rennen mit Ambitionen war, gab es nur wenige Probleme – was bei einem Ultra keineswegs selbstverständlich ist. Die Kohlenhydrat- und Koffeinaufnahme, die Schlafstrategie und das Mindset haben gepasst. \n Tim war sehr zufrieden mit seiner Leistung und freut sich bereits auf die Vorbereitung für die nächste Saison.",
+      athleteQuote: "Max, bester Mann! \n Nach dem letzten Vorbereitungsrennen für das BBBR hat er mein Training nochmal gezielt angepasst und optimiert. \n Fünf Tage vor Start gab es ein ausführliches Strategiegespräch, so dass ich mental wie auch körperlich bestens vorbereitet in das Rennen gestartet bin. \n Dank des Dotwatchings war Max auch während des Rennens immer auf dem Laufenden. Er hat erkannt, dass ich noch eine Schippe drauflegen konnte, und mich darin bestärkt, alles rauszuholen. Das Ergebnis: ein Podiumsplatz! \n Danke Max, hat geklappt!",
+      resultUrl: "https://www.strava.com/activities/20125940790",
+    },
+    {
+      category: "Athleten-Erfolg: Christian Schellenberg",
+      title: "Liège-Bastogne-Liège Challenge - Erster im Ziel",
+      description: "Starker Saisoneinstieg über 245 Kilometer: Christian erreichte nach 7:45 Stunden als erster Teilnehmer das Ziel – mit 283 W Normalized Power und einem langen Solo-Abschnitt.",
+      longdescription: "Christians erstes Rennen der Saison 2026 – und direkt ein starkes Ergebnis. \n Die Zahlen sprechen für sich: 7 Stunden und 45 Minuten Fahrzeit mit 283 W Normalized Power und 252 W Durchschnittsleistung bei einem Körpergewicht von circa 75 kg. Das führte über die 245 Kilometer und 4.130 Höhenmeter zu einem Schnitt von fast 32 km/h. \n Obwohl Christian die letzten 80 km allein gefahren ist, überquerte er als erster Teilnehmer die Ziellinie. Auch ohne offizielle Wertung war das ein toller Einstieg in die Saison. \n Um dieses Ergebnis zu erreichen, haben wir im Winter vor allem an den physiologischen Potenzialen gearbeitet: mit vielen kurzen Sprints auf der Rolle und hochintensiven Intervallen als wirksamen VO2max-Reiz. Von Oktober bis Februar steigerten wir die Zeit in den Intervallzonen oberhalb der Schwelle progressiv, bevor wir anschließend spezifischere Reize im Sweetspot-Bereich setzten. \n So konnte Christian bereits im Frühjahr Top-Leistungen abrufen.",
+      athleteQuote: "Hier kommt ein Zitat hin. Aktuell ist das ein Platzhalter, um die Formatierung besser einschätzen zu können. \n Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et",
+      resultUrl: "https://www.strava.com/",
+    },
+    {
+      category: "Athleten-Erfolg: Natalie Gansauge",
+      title: "Erste Ultra-Radsportsaison - fünf erfolgreiche Finishes",
+      description: "Nach längerer Verletzungspause zurück zu fünf erfolgreichen Langdistanz-Events – von 12- und 24-Stunden-Rennen bis zum ersten Ultra über 500 Kilometer.",
+      longdescription: "Natalie kam im März 2026 auf mich zu, weil sie nach einer verletzungsbedingten Pause in den beiden vergangenen Jahren wieder mehr Rad fahren und sich strukturiert auf ihre Saisonhighlights vorbereiten wollte. \n Im Fokus standen verschiedene Mehrtages- und Ultra-Events, die sie erfolgreich finishen wollte. Am Ende einer erfolgreichen Saison waren ein Finish beim Heavy24-24-Stunden-MTB-Rennen mit persönlicher Bestleistung, ihr erstes Ultra über mehr als 500 km bei der Schleudergang500, das 12-Stunden-MTB-Rennen 2MUCH4YOU, die Mehrtagesfahrt European Peace Ride und das ARC400-Ultrarennen auf der Liste der abgeschlossenen Events. \n Die Saison brachte viele Highlights, aber auch einige Momente, in denen Natalie an den Fähigkeiten ihres Körpers zweifelte. \n Schlussendlich konnten wir einen guten Kompromiss zwischen Trainings- und Erholungsphasen finden, um so viele lange Radevents in der kurzen Zeit zu ermöglichen.",
+      athleteQuote: "Max hat mich wirklich unglaublich gut durch die Saison gebracht und mich so intensiv vorbereitet, dass ich über mich selbst hinauswachsen konnte. Gerade in den Momenten, in denen ich an mir und meinen eigenen Fähigkeiten gezweifelt habe, hat Max es geschafft, die beste Version aus mir herauszuholen. \n Neben dem Erfolg beim Heavy24 - meine persönliche Bestleistung aufzustellen, konnten wir gemeinsam  meine Trainingsfortschritte kontinuierlich voranbringen und sogar den nächsten Schritt in Richtung Ultracycling gehen – auf ein Niveau, an das ich selbst lange nicht geglaubt hätte. \n Seine  Expertise, seine individuelle Betreuung und vor allem unser gemeinsames Wir-Gefühl machen für mich den Unterschied. \n Max ist für mich genau der Coach, den man sich an seiner Seite wünscht.",
+      resultUrl: "https://www.strava.com/activities/19206772192",
+      resultLabel: "Strava-Aktivität ansehen (Schleudergang500)",
+    },
+  ];
+  const selectedSuccessStory = selectedSuccessIndex === null ? null : athleteSuccessStories[selectedSuccessIndex];
 
   useEffect(() => {
     if (window.location.hash) {
@@ -222,12 +246,12 @@ const Index = () => {
       },
       {
         key: "coaching-vorteile",
-        question: "Warum sollte ich mich überhaupt für ein individuelles Coaching entscheiden?",
+        question: "Warum sollte ich mir einen Trainingsplan individuell erstellen lassen statt einen Standardplan zu kaufen?",
         answer: (
           <p>
             Eine 1:1-Betreuung ist genauer auf deinen Alltag, deine Zeitverfügbarkeit und deine physiologischen Potenziale
             abgestimmt als ein Standardplan. Dazu kommen direkter Austausch, regelmäßiges Feedback und bessere
-            Entwicklungsmöglichkeiten.
+            Entwicklungsmöglichkeiten. Schlussendlich kannst du dadurch auch größere Leistungssteigerungen erreichen.
           </p>
         ),
         answerText:
@@ -260,158 +284,144 @@ const Index = () => {
         <section id="hero" className="relative min-h-[100svh] bg-primary animate-fade-in" aria-label="Hero">
           <div className="absolute inset-0">
             <img 
-                src="/images/hero_img.webp" 
-                alt="Cyclist in front of beautiful landscape" 
+                src="/images/hero_img.avif" 
+                alt="Radsportler sprinten vor landschaftlich schönem Hintergrund einen Berg hoch" 
                 className="w-full h-full object-cover"
                 loading="eager" 
                 fetchPriority="high"
             />
-            <div className="absolute inset-0 bg-primary/25" />
+            <div className="absolute inset-0 bg-primary/35" />
           </div>
-          <div className="relative min-h-[100svh] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 lg:py-24 flex items-center justify-center">
-            <div className="w-full text-center text-white">
-              <img 
-                src="/images/logo_white.png" 
-                alt="MaxCyclesCoaching Logo" 
-                className="h-28 sm:h-32 w-auto mx-auto mb-6 sm:mb-8"
-                loading="eager"
-              />
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-5 sm:mb-7 text-shadow-lg">
-                Individuelles Rennrad-Coaching für ambitionierte Radsportler
+          <div className="relative min-h-[100svh] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 lg:py-24 flex items-center justify-start">
+            <div className="w-full max-w-4xl text-left text-white">
+              <h1 className="max-w-4xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-5 sm:mb-6 text-shadow-lg">
+                Mit individuellem Radsport-Coaching zu deiner stärksten Saison.
               </h1>
-              <div className="grid grid-cols-3 gap-1.5 sm:gap-4 max-w-5xl mx-auto mb-6 sm:mb-10">
-                <div className="rounded-lg bg-white/15 backdrop-blur-sm border border-white/30 px-1.5 py-2 sm:px-5 sm:py-5 min-h-[96px] sm:min-h-[132px] flex flex-col justify-center">
-                  <p className="text-xl sm:text-4xl font-bold leading-tight">+25W</p>
-                  <p className="text-[11px] sm:text-base font-medium mt-1 leading-snug">
-                    <span className="sm:hidden">FTP-Plus pro Jahr</span>
-                    <span className="hidden sm:inline">FTP-Verbesserung pro Jahr</span>
-                  </p>
-                </div>
-                <div className="rounded-lg bg-white/15 backdrop-blur-sm border border-white/30 px-1.5 py-2 sm:px-5 sm:py-5 min-h-[96px] sm:min-h-[132px] flex flex-col justify-center">
-                  <p className="text-xl sm:text-4xl font-bold leading-tight">Ab 99€</p>
-                  <p className="text-[11px] sm:text-base font-medium mt-1 leading-snug">pro Monat</p>
-                </div>
-                <div className="rounded-lg bg-white/15 backdrop-blur-sm border border-white/30 px-1.5 py-2 sm:px-5 sm:py-5 min-h-[96px] sm:min-h-[132px] flex flex-col justify-center">
-                  <p className="text-xl sm:text-4xl font-bold leading-tight">2000+</p>
-                  <p className="text-[11px] sm:text-base font-medium mt-1 leading-snug">
-                    <span className="sm:hidden">analysierte Einheiten</span>
-                    <span className="hidden sm:inline">analysierte Trainingseinheiten</span>
-                  </p>
-                </div>
-              </div>
-              <a href="#services">
+              <h2 className="max-w-3xl text-lg sm:text-xl md:text-2xl leading-relaxed text-white/95 mb-7">
+                Individueller Trainingsplan im Radsport & persönliches 1:1-Coaching für Rennrad, Gravel, XC-MTB und Ultracycling.
+              </h2>
+              <ul className="grid gap-3 sm:grid-cols-2 max-w-4xl mb-10 text-sm sm:text-base font-medium">
+                <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-secondary" />Individuelle Trainingsplanung</li>
+                <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-secondary" />Auf deine Ziele und Bedürfnisse abgestimmt</li>
+                <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-secondary" />Ernährungs-, Pacing- und Regenerationstipps</li>
+                <li className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-secondary" />Täglicher Austausch und Feedback</li>
+              </ul>
+              <p className="sr-only">
+                Individuelles Radsport-Coaching für ambitionierte Ausdauerathleten
+              </p>
+              <a href="#contact">
                 <Button 
                   size="lg" 
                   variant="secondary"
                   className="text-white transform hover:scale-105 transition-all duration-200 text-2xl py-9 px-14 shadow-xl shadow-black/30"
                 >
-                  Starte jetzt <ArrowRight className="ml-2 w-8 h-8" />
+                  Kostenloses Erstgespräch vereinbaren <ArrowRight className="ml-2 w-8 h-8" />
+                </Button>
+              </a>
+              <p className="mt-4 text-sm sm:text-base font-medium text-white/95">
+                Unverbindlich anfragen · Keine Mindestlaufzeit
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20" aria-label="Inhalte des Coachings">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mb-10">
+              <p className="text-sm font-semibold uppercase tracking-widest text-secondary mb-3">Coaching-Inhalte</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Was dich im Coaching erwartet</h2>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2">
+              {[
+                { title: "Individuelle Trainingsplanung", text: "Wir schauen uns an, welche Ziele du hast, wo deine Stärken und Potenziale liegen und wie das Training in deinen Alltag passt. Basierend darauf erstelle ich dir, je nach Coaching-Paket, jeweils ein bis vier Wochen im Voraus deinen eigenen Trainingsplan, welchen du dann auf TrainingPeaks abrufen kannst. Bei mir gibt es keine Standard-Pläne, die jeder bekommt." },
+                { title: "Flexibel an deinen Alltag angepasst", text: "Das Training sollte nicht deinen Alltag bestimmen, sondern sich an ihn anpassen. Daher plane ich jede Trainingswoche um deine Termine und Trainingszeiten herum, so dass du dich rein auf die Umsetzung des Trainings fokussieren kannst. Sollte mal etwas dazwischenkommen plane ich dir das Training bei Wahl des All-Inclusive-Paket kurzfristig um." },
+                { title: "Stetiger Austausch und Feedback", text: "Ich schaue mir jede deiner Trainingseinheiten an und gebe dir bei Bedarf Feedback. Wenn du eine Frage hast oder etwas zur Einheit kommentierst antworte ich dir zügig darauf. Zudem telefonieren wir, je nach Coaching-Paket, aller 2-8 Wochen, um uns ausführlicher auszutauschen." },
+                { title: "Ernährung, Schlaf, Regeneration", text: "Auch neben der Trainingseinheit selbst gibt es Faktoren, die Leistung und Trainingsanpassung beeinflussen. Über die Zeit unserer Zusammenarbeit optimieren diese Punkte stetig, damit wir aus jeder Trainingseinheit das Maximum rausholen können." },
+                { title: "Saisonperiodisierung", text: "Du bist dir nicht sicher wie viele Rennen du sinnvoll in deine Saison einbauen kannst? Und wie oft solltest du eigentlich Entlastungwochen einbauen? Wir besprechen vor Saisonstart oder zu Beginn des Coachings genau diese Aspekte, damit du deine Ziele erreichst ohne deine Gesundheit oder eine langfristige Leistungsentwicklung zu vernachlässigen." },
+                { title: "Vorbesprechungen deiner Wettkämpfe", text: "Du arbeitest monatelang auf dein großes Saisonziel hin. Da sollten in der akuten Vorbereitung keine Kompromisse eingegangen werden. Deswegen gibt es vor deinen Hauptrennen immer eine telefonische Vorbesprechung, in der wir alles zu Pacing, Verpflegung, Taktik, Materialwahl und eventuellen Schlafstrategien besprechen." },
+              ].map((item) => (
+                <Card key={item.title} className="h-full">
+                  <CardContent className="pt-6">
+                    <h3 className="text-xl font-semibold text-primary mb-3">{item.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{item.text}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="services" className="py-20 bg-accent" aria-label="Leistungen">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mb-10">
+              <p className="text-sm font-semibold uppercase tracking-widest text-secondary mb-3">Leistungen</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Coaching-Pakete</h2>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Persönlichen Trainingsplan erstellen lassen oder ganzheitliches 1:1 Coaching: Zwei Pakete mit einem Ziel – dich schneller zu machen.
+              </p>
+            </div>
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/10 bg-white px-4 py-2 text-sm font-medium text-primary shadow-sm">
+              <Sparkles className="h-4 w-4 text-secondary" />
+              Individuell geplant · Ohne Mindestlaufzeit
+            </div>
+            <div className="overflow-hidden rounded-2xl border border-primary/10 bg-white shadow-xl shadow-primary/10">
+              <Table className="min-w-[820px] [&_tbody_tr:nth-child(odd)]:bg-slate-50/70 [&_tbody_td]:py-5 [&_tbody_td:nth-child(2)]:text-gray-700 [&_tbody_td:nth-child(3)]:bg-[#003366]/[0.035] [&_thead_th]:h-auto [&_thead_th]:px-5 [&_thead_th]:py-6 [&_thead_th:first-child]:bg-slate-100 [&_thead_th:nth-child(2)]:bg-white [&_thead_th:nth-child(3)]:bg-[#003366] [&_thead_th:nth-child(3)]:text-white">
+                <TableHeader>
+                  <TableRow className="bg-accent hover:bg-accent">
+                    <TableHead className="min-w-[220px] text-primary font-semibold">Leistungsumfang</TableHead>
+                    <TableHead className="min-w-[260px] text-primary font-semibold">Basis-Paket · 99 € / Monat</TableHead>
+                    <TableHead className="min-w-[260px] text-primary font-semibold">All-Inclusive-Paket · 189 € / Monat</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className="font-semibold text-primary"><span className="flex items-center gap-2"><Users className="h-5 w-5 text-secondary" />Zielgruppe</span></TableCell>
+                    <TableCell>Für Athleten mit konstantem Alltag, die neu ins strukturierte Training einsteigen möchten.</TableCell>
+                    <TableCell>Für Athleten, die eng begleitet werden das Maximum aus ihren Möglichkeiten rausholen möchten.</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-semibold text-primary"><span className="flex items-center gap-2"><SlidersHorizontal className="h-5 w-5 text-secondary" />Trainingsplanung</span></TableCell>
+                    <TableCell>Vier Wochen im Voraus; keine Plananpassungen innerhalb dieses Zeitraums.</TableCell>
+                    <TableCell>Rollierende Planung im 1- bis 2-Wochen-Rhythmus; bis zu zwei kurzfristige Anpassungen pro Woche.</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-semibold text-primary"><span className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-secondary" />Analyse & Feedback</span></TableCell>
+                    <TableCell>Monatliche Analyse des Trainingsblocks inklusive schriftlichem Feedback.</TableCell>
+                    <TableCell>Analyse jeder Trainingseinheit spätestens am Folgetag nach Eingang der Daten; bei Bedarf direkt mit Feedback.</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-semibold text-primary"><span className="flex items-center gap-2"><MessageCircle className="h-5 w-5 text-secondary" />Kommunikation & Telefonate</span></TableCell>
+                    <TableCell>Bis zu zwei Kontakte pro Monat; ein Telefonat alle zwei Monate inklusive.</TableCell>
+                    <TableCell>Unbegrenzter schriftlicher Kontakt; bis zu zwei Telefonate pro Monat inklusive.</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-semibold text-primary"><span className="flex items-center gap-2"><CalendarDays className="h-5 w-5 text-secondary" />Event-Planung</span></TableCell>
+                    <TableCell>Bis zu vier Events pro Jahr; zwei telefonische Vorbesprechungen inklusive.</TableCell>
+                    <TableCell>Beliebig viele Events; bis zu vier Events mit Vor- und Nachbesprechung pro Jahr.</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-semibold text-primary"><span className="flex items-center gap-2"><Sparkles className="h-5 w-5 text-secondary" />Zusatzleistungen</span></TableCell>
+                    <TableCell>Verpflegungshinweise vor und während Trainingseinheiten.</TableCell>
+                    <TableCell>Zusätzlich zu Basis-Paket: Integration von Krafttraining und bis zu einer Zusatzsportart im Trainingsplan; bis zu zwei Leistungsdiagnostiken pro Jahr zum Vorzugspreis.</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </div>
+            <div className="mt-8 text-center">
+              <a href="#contact">
+                <Button size="lg" className="bg-[#003366] hover:bg-[#002244]">
+                  Kostenloses Erstgespräch vereinbaren <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </a>
             </div>
           </div>
         </section>
 
-        <section id="services" className="py-20" aria-label="Leistungen">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-              Leistungen
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-white to-[#E8F0F8] p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100">
-                <div className="flex items-center gap-3 mb-4">
-                  <Users className="w-8 h-8 text-secondary" />
-                  <h2 className="text-2xl font-semibold text-primary">1:1 Radsport Coaching</h2>
-                </div>
-                <p className="text-lg text-gray-600 mb-6">99€/Monat, ohne Mindestlaufzeit</p>
-                <ul className="space-y-4 text-left mb-6">
-                  <li className="flex items-center">
-                    <Calendar className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
-                    <span>Maßgeschneiderte Trainingsplanung</span>
-                  </li>
-                  <li className="flex items-center">
-                    <LineChart className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
-                    <span>Detaillierte Analyse</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Gauge className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
-                    <span>Regelmäßige Leistungsdiagnostiken</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Trophy className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
-                    <span>Strategische Wettkampfvorbereitung</span>
-                  </li>
-                  <li className="flex items-center">
-                    <MessageCircle className="w-6 h-6 text-secondary mr-3 flex-shrink-0" />
-                    <span>Persönlicher Support</span>
-                  </li>
-                </ul>
-                <div className="space-y-4">
-                  <Button 
-                    variant="secondary" 
-                    className="w-full text-white mb-1"
-                    onClick={() => setIsCoachingOpen(true)}
-                  >
-                    Mehr erfahren
-                  </Button>
-                  <a href="#contact">
-                    <Button variant="outline" className="w-full border-secondary text-secondary hover:text-secondary/50">
-                      Unverbindlich Anfragen
-                    </Button>
-                  </a>
-                </div>
-              </div>
+        
 
-              <div className="bg-gradient-to-br from-white to-[#E8F0F8] p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
-                <div className="flex items-center gap-3 mb-4">
-                  <ActivitySquare className="w-8 h-8 text-primary" />
-                  <h2 className="text-2xl font-semibold text-primary">Individuelle Leistungsdiagnostik</h2>
-                </div>
-                <p className="text-lg text-gray-600 mb-6">149€/Diagnostik</p>
-                <ul className="space-y-4 text-left mb-6">
-                  <li className="flex items-center">
-                    <FlaskConical className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
-                    <span className="text-primary">Umfassende Testung</span>
-                  </li>
-                  <li className="flex items-center">
-                    <NotebookPen className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
-                    <span className="text-primary">Umfangreiche Auswertung</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Target className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
-                    <span className="text-primary">Gezielte Trainingsoptimierung</span>
-                  </li>
-                  <li className="flex items-center">
-                    <LineChart className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
-                    <span className="text-primary">Langfristige Entwicklung</span>
-                  </li>
-                  <li className="flex items-center">
-                    <Timer className="w-6 h-6 text-primary mr-3 flex-shrink-0" />
-                    <span className="text-primary">Flexible Protokolle</span>
-                  </li>
-                </ul>
-                <div className="space-y-4">
-                  <Button 
-                    variant="default" 
-                    className="w-full text-white mb-1"
-                    onClick={() => setIsDiagnosticsOpen(true)}
-                  >
-                    Mehr erfahren
-                  </Button>
-                  <a href="#contact">
-                    <Button variant="outline" className="w-full border-primary text-primary hover:text-primary/50">
-                      Unverbindlich Anfragen
-                    </Button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="coaching" className="py-20 bg-accent" aria-label="Radsport-Coaching Kategorien">
+        <section id="coaching" className="py-20" aria-label="Radsport-Coaching Kategorien">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mb-10">
+            <div className="max-w-4xl mb-10">
               <p className="text-sm font-semibold uppercase tracking-widest text-secondary mb-3">
                 Radsport-Coaching
               </p>
@@ -419,9 +429,7 @@ const Index = () => {
                 Coaching für dein Radsportziel
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Ob lange Distanz, Gravel, Lizenzrennen oder Cross Country: Wähle den Bereich, der zu
-                deinem nächsten Ziel passt. Die Trainingsplanung wird individuell auf dich, deinen
-                Alltag und deine Wettkampfanforderungen abgestimmt.
+                Erfahre mehr über die verschiedenen Radsport-Disziplinen, für die das Coaching geeignet ist.
               </p>
             </div>
 
@@ -438,7 +446,7 @@ const Index = () => {
                         <h3 className="text-xl font-semibold text-primary mb-3">{category.title}</h3>
                         <p className="text-gray-600 leading-relaxed">{category.description}</p>
                         <div className="mt-5 inline-flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all">
-                          Mehr zum Coaching <ArrowRight className="w-4 h-4" />
+                          Spezifische Coaching-Seite öffnen <ArrowRight className="w-4 h-4" />
                         </div>
                       </CardContent>
                     </Card>
@@ -450,10 +458,13 @@ const Index = () => {
         </section>
 
         <section id="testimonials" className="py-20 bg-gray-100" aria-label="Testimonials">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 className="text-3xl md:text-4xl font-bold mb-8 text-primary">Das sagen meine Kund*innen</h3>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mb-10">
+              <p className="text-sm font-semibold uppercase tracking-widest text-secondary mb-3">Erfahrungen</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Das sagen meine Kunden</h2>
+            </div>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+              <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full text-center">
                 <div className="flex flex-col items-center mb-2">
                   <img 
                     src="/images/mandy_profile_img.png" 
@@ -484,7 +495,7 @@ const Index = () => {
                   </a>
                 </div>
               </div>
-              <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+              <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full text-center">
                 <div className="flex flex-col items-center mb-2">
                   <img 
                     src="/images/ken_profile_img.jpeg" 
@@ -505,7 +516,7 @@ const Index = () => {
                 <div className="mt-auto">
                   <p className="font-semibold text-primary">- Ken Wagner, Dresden</p>
                   <a 
-                    href="https://www.strava.com/athletes/6711546" 
+                    href="https://www.strava.com/activities/11773171164" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-[#fc4c01] hover:text-[#fc4c01]/50 mt-2 font-medium transition-colors duration-200"
@@ -515,7 +526,7 @@ const Index = () => {
                   </a>
                 </div>
               </div>
-              <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+              <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full text-center">
                 <div className="flex flex-col items-center mb-2">
                   <img 
                     src="/images/jeremias_profile_img.jpg" 
@@ -547,17 +558,111 @@ const Index = () => {
                 </div>
               </div>
             </div>
+            <div className="mt-10 text-center">
+              <a
+                href="https://share.google/8GsUJlGPMgwcmqDbf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
+              >
+                Weitere unabhängige Bewertungen auf Google ansehen <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
+
+            <div className="mt-16 pt-12 border-t border-gray-300">
+              <div className="max-w-4xl mx-auto text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="rounded-full bg-secondary/15 p-3">
+                    <Trophy className="w-7 h-7 text-secondary" />
+                  </div>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-primary">Athleten-Erfolge</h3>
+                <p className="mt-3 text-gray-600 leading-relaxed">
+                  Hinter jedem Ergebnis stehen individuelle Ziele, konsequentes Training und eine Planung, die zum Alltag passt.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mt-10 text-left">
+                {athleteSuccessStories.map((story, index) => (
+                  <Card key={story.title} className="flex h-full flex-col bg-white">
+                    <CardContent className="flex flex-1 flex-col pt-6">
+                      <div className="flex items-start gap-3 mb-4">
+                        <Trophy className="w-6 h-6 shrink-0 text-secondary" />
+                        <div>
+                          <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                            {story.category}
+                          </p>
+                          <h4 className="text-lg font-semibold text-primary mt-1">{story.title}</h4>
+                        </div>
+                      </div>
+                      <p className="text-gray-600 leading-relaxed">{story.description}</p>
+                      <Button
+                        type="button"
+                        variant="ghost"
+                        className="mt-auto pt-4 h-auto px-0 text-sm text-primary hover:bg-transparent hover:text-primary/70"
+                        onClick={() => setSelectedSuccessIndex(index)}
+                      >
+                        Mehr erfahren <ArrowRight className="ml-1.5 h-4 w-4" />
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            <ServiceDialog
+              isOpen={selectedSuccessStory !== null}
+              onClose={() => setSelectedSuccessIndex(null)}
+              title={selectedSuccessStory?.title ?? "Athleten-Erfolg"}
+            >
+              {selectedSuccessStory && <div className="space-y-5 text-left">
+                <p className="font-semibold">
+                  {selectedSuccessStory.category}
+                </p>
+                <div className="border-t border-gray-200 pt-5">
+                  <p className="text-gray-700 whitespace-pre-line">
+                    {selectedSuccessStory.longdescription}
+                  </p>
+                </div>
+                {selectedSuccessStory.athleteQuote && (
+                  <div className="border-t border-gray-200 pt-5">
+                    <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+                      Athletenzitat
+                    </p>
+                    <blockquote className="mt-2 border-l-4 border-secondary pl-4 italic text-gray-700 whitespace-pre-line">
+                      „{selectedSuccessStory.athleteQuote}“
+                    </blockquote>
+                  </div>
+                )}
+                {selectedSuccessStory.resultUrl && (
+                  <div className="border-t border-gray-200 pt-5">
+                    <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+                      Ergebnis
+                    </p>
+                    <a
+                      href={selectedSuccessStory.resultUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-2 inline-flex items-center gap-1.5 font-medium text-primary hover:text-primary/70"
+                    >
+                      {selectedSuccessStory.resultLabel ?? "Strava-Aktivität ansehen"} <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </div>
+                )}
+              </div>}
+            </ServiceDialog>
           </div>
         </section>
 
         <section id="faq" className="py-6 sm:py-14">
-          <div className="max-w-5xl mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4 text-center">
-              Häufig gestellte Fragen (FAQ)
-            </h2>
-            <p className="text-center text-gray-700 mb-8 sm:mb-10">
-              Kurze Antworten auf die meistgesuchten Fragen zum Thema individuelles Coaching und Trainingsplanung.
-            </p>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mb-8 sm:mb-10">
+              <p className="text-sm font-semibold uppercase tracking-widest text-secondary mb-3">Häufige Fragen</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4">Antworten rund um dein Coaching</h2>
+              <p className="text-gray-700">
+                Kurze Antworten auf die meistgesuchten Fragen zum individuellen Coaching und zur Trainingsplanung.
+              </p>
+            </div>
 
             <div className="md:hidden">
               <Card>
@@ -607,10 +712,12 @@ const Index = () => {
 
         <section id="contact" className="py-20 bg-primary text-white" aria-label="Kontakt">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 className="text-3xl md:text-4xl font-bold text-center mb-8">Kontakt</h3>
-            <p className="text-2xl mb-12 text-center font-medium">
-              Lass uns gemeinsam dein volles Potenzial auszuschöpfen! <br/> Frage einfach über das Formular ein unverbindliches Erstgespräch fürs Coaching oder eine Diagnostik an!
-            </p>
+            <div className="max-w-4xl mx-auto mb-8 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Starte mit einem unverbindlichen Erstgespräch</h2>
+              <p className="text-lg sm:text-xl font-medium">
+                Schreib mir kurz, worauf du hinarbeitest. Danach klären wir im unverbindlichen Erstgespräch, ob das Coaching zu dir passt.
+              </p>
+            </div>
 
             <Suspense fallback={<div className="h-96 flex items-center justify-center text-white">Formular wird geladen...</div>}>
               <ContactForm />
@@ -618,73 +725,6 @@ const Index = () => {
           </div>
         </section>
 
-        <ServiceDialog
-          isOpen={isCoachingOpen}
-          onClose={() => setIsCoachingOpen(false)}
-          title="1:1 Coaching – Details"
-        >
-          <div className="space-y-4">
-            <div>
-              <br />
-              <p className="font-bold">1. Maßgeschneiderte Trainingsplanung</p>
-              <p>Gemeinsam entwickeln wir einen Trainingsplan, der perfekt auf deine Saisonziele, deine verfügbare Zeit und deinen Alltag zugeschnitten ist – für nachhaltigen Fortschritt ohne Überlastung. <br/> Perfekt für Straßenradsportler, MTB- und Gravelfahrer sowie Duathleten!</p>
-            </div>
-
-            <div>
-              <p className="font-bold">2. Detaillierte Analyse</p>
-              <p>In regelmäßigen Gesprächen betrachten wir nicht nur deine Trainingsdaten, sondern auch Faktoren wie Ernährung, Schlaf und Stress. So entsteht ein ganzheitliches Bild, das uns hilft, dein volles Potenzial auszuschöpfen.</p>
-            </div>
-
-            <div>
-              <p className="font-bold">3. Regelmäßige Leistungsdiagnostik</p>
-              <p>Alle 3 Monate überprüfen wir deinen aktuellen Leistungsstand durch gezielte Tests. So erkennen wir Fortschritte frühzeitig und können deine Trainingsreize optimal anpassen. <br/> Dabei können die Tests entweder in Form von einer vergünstigten Laktat-Leistungsdiagnostik Vor-Ort oder über Leistungstests bei dir zu Hause bzw. auf der Straße durchgeführt werden.</p>
-            </div>
-
-            <div>
-              <p className="font-bold">4. Strategische Vorbereitung</p>
-              <p>Ob Wettkampf, persönliche Bestzeit oder neues Fitnesslevel: Wir entwickeln gemeinsam eine Strategie, die dich Schritt für Schritt an dein Ziel bringt – inklusive mentaler Tipps und Taktikempfehlungen.</p>
-            </div>
-
-            <div>
-              <p className="font-bold">5. Persönlicher Support</p>
-              <p>Du profitierst von einer schnellen und direkten Kommunikation (8–18 Uhr) mit einer garantierten Antwortzeit von maximal 4 Stunden. Bei Bedarf vereinbaren wir gerne ein persönliches Telefon- oder Online-Gespräch, um offene Fragen zu klären und dich bestmöglich zu unterstützen.</p>
-            </div>
-          </div>
-        </ServiceDialog>
-
-        <ServiceDialog
-          isOpen={isDiagnosticsOpen}
-          onClose={() => setIsDiagnosticsOpen(false)}
-          title="Leistungsdiagnostik – Details"
-        >
-          <div className="space-y-4">
-            <div>
-              <br />
-              <p className="font-bold">1. Umfassende Testung</p>
-              <p>Erhalte ein ganzheitliches Bild deiner aktuellen Fitness: Wir messen mithilfe modernster Technologien (z.B. mobiles Laktatmessgerät, Muskelsauerstoff- und Herzfrequenzmessungen) alle relevanten Parameter, um deinen Leistungsstand präzise zu erfassen.</p>
-            </div>
-
-            <div>
-              <p className="font-bold">2. Detaillierte Auswertung</p>
-              <p>Wir analysieren deine Werte umfassend und verständlich. Du erfährst genau, wie du in Bezug auf Ausdauer, Kraft und Regeneration aufgestellt bist – die Basis für deine optimale Trainingsplanung.</p>
-            </div>
-
-            <div>
-              <p className="font-bold">3. Gezielte Trainingsoptimierung</p>
-              <p>Auf Grundlage der Testergebnisse erstellen wir individuelle Empfehlungen, um dein Training maximal effizient zu gestalten. So kannst du gezielt an Schwachstellen arbeiten und schneller Fortschritte erzielen.</p>
-            </div>
-
-            <div>
-              <p className="font-bold">4. Langfristige Entwicklung</p>
-              <p>Dein Erfolg steht im Fokus: Durch regelmäßige Wiederholungen der Diagnostik und einen fortlaufenden Abgleich deiner Daten kannst du deine Entwicklung kontinuierlich verfolgen und steuern.</p>
-            </div>
-
-            <div>
-              <p className="font-bold">5. Flexible Protokolle</p>
-              <p>Egal, ob im Labor oder draußen auf deiner Lieblingsstrecke – wir passen die Testbedingungen an deine Ziele und Anforderungen an. Damit erhältst du eine realistische Einschätzung deiner Leistung unter echten Bedingungen.</p>
-            </div>
-          </div>
-        </ServiceDialog>
         <SiteFooter showEmail />
       </main>
     </div>

@@ -4,18 +4,18 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, type LucideIcon } from "lucide-react";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, type ReactNode } from "react";
 
 const ContactForm = lazy(() => import("@/components/ContactForm"));
 
 export type CategoryPageConfig = {
   eyebrow: string;
   title: string;
-  description: string;
-  audience: string[];
-  focus: { title: string; text: string }[];
-  raceFocus: { title: string; text: string }[];
-  faqs: { question: string; answer: string }[];
+  description: string | ReactNode;
+  audience: (string | ReactNode)[];
+  focus: { title: string; text: string | ReactNode }[];
+  raceFocus: { title: string; text: string | ReactNode }[];
+  faqs: { question: string; answer: string | ReactNode; answerText?: string }[];
   icon: LucideIcon;
 };
 
@@ -25,6 +25,18 @@ type CoachingCyclingCategoryProps = {
 
 export const CoachingCyclingCategory = ({ config }: CoachingCyclingCategoryProps) => {
   const Icon = config.icon;
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: config.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answerText ?? (typeof faq.answer === "string" ? faq.answer : ""),
+      },
+    })),
+  };
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
@@ -56,14 +68,22 @@ export const CoachingCyclingCategory = ({ config }: CoachingCyclingCategoryProps
               <div>
                 <h2 className="text-3xl font-bold text-primary mb-5">Coaching für dein Ziel</h2>
                 <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">{config.description}</p>
+                <div className="mt-7">
+                  <a href="#contact">
+                    <Button size="lg" className="bg-[#003366] hover:bg-[#002244]">
+                      Kostenloses Erstgespräch anfragen <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+                  </a>
+                  <p className="mt-3 text-sm text-gray-600">Unverbindlich · Keine Mindestlaufzeit</p>
+                </div>
               </div>
               <Card className="bg-accent border-none">
                 <CardHeader>
                   <CardTitle className="text-primary">Für wen ist das geeignet?</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  {config.audience.map((item) => (
-                    <div key={item} className="flex items-start gap-3 text-gray-700">
+                  {config.audience.map((item, index) => (
+                    <div key={index} className="flex items-start gap-3 text-gray-700">
                       <CheckCircle2 className="w-5 h-5 mt-0.5 shrink-0 text-secondary" />
                       <span>{item}</span>
                     </div>
@@ -131,17 +151,23 @@ export const CoachingCyclingCategory = ({ config }: CoachingCyclingCategoryProps
                 </Accordion>
               </CardContent>
             </Card>
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c"),
+              }}
+            />
           </div>
         </section>
 
         <section className="py-14 sm:py-20" aria-label="Nächster Schritt">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Bereit für den nächsten Schritt?</h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">Interesse geweckt? Dann schreib mir gerne eine Nachricht übers Kontakformular mit paar Infos über dich und deine Ziele und wir vereinbaren im Anschluss einen Termin für ein unverbindliches Erstgespräch.</p>
+            <p className="text-lg text-gray-600 leading-relaxed mb-8">Schreib mir kurz, worauf du hinarbeitest. Danach klären wir im unverbindlichen Erstgespräch, ob das Coaching zu dir und deinem Ziel passt.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a href="#contact">
                 <Button className="w-full sm:w-auto bg-[#003366] hover:bg-[#002244]">
-                  Unverbindlich anfragen
+                  Unverbindliches Erstgespräch vereinbaren
                 </Button>
               </a>
               <a href="/#coaching">
