@@ -43,7 +43,7 @@ export const CoachingCyclingCategory = ({ config }: CoachingCyclingCategoryProps
       <Navbar />
 
       <main className="flex-grow">
-        <section className="bg-accent pt-24 pb-12 sm:pt-32 sm:pb-16">
+        <section className="bg-accent pt-8 pb-12 sm:py-12">
           <div className="max-w-5xl mx-auto px-4">
             <nav aria-label="Breadcrumb" className="text-sm text-muted-foreground mb-6">
               <a href="/#coaching" className="hover:text-primary">Radsport-Coaching</a>

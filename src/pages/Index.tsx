@@ -375,25 +375,30 @@ const coachingPackages = [
     <div className="min-h-screen bg-white flex flex-col">
       <Navbar />
       
-      <main className="flex-grow">
-        <section id="hero" className="relative min-h-[100svh] bg-primary animate-fade-in" aria-label="Hero">
+      <main className="flex-grow flex flex-col">
+        <section
+          id="hero"
+          className="relative min-h-[calc(100svh-3.5rem)] sm:min-h-[calc(100svh-4rem)] flex items-center bg-primary animate-fade-in"
+          aria-label="Hero"
+        >
           <div className="absolute inset-0">
             <img
               src="/images/hero_img.avif"
               alt="Radsportler sprinten vor landschaftlich schönem Hintergrund einen Berg hoch"
-              className="w-full h-full object-cover object-[62%_center] min-[550px]:object-center"
+              className="w-full h-full object-cover object-[62%_65%] min-[800px]:object-[center_65%]"
               loading="eager"
               fetchPriority="high"
             />
             <div className="absolute inset-0 bg-primary/35" />
           </div>
-          <div className="relative min-h-[100svh] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 md:py-16 lg:py-24 flex items-center justify-start">
+
+          <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 md:py-8 xl:py-16 flex items-center justify-start">
             <div className="w-full max-w-4xl text-left text-white">
-              <h1 className="max-w-4xl text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 text-shadow-lg">
+              <h1 className="max-w-4xl text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 text-shadow-lg">
                 Mit individuellem Radsport-Coaching zu deiner stärksten Saison.
               </h1>
 
-              <h2 className="max-w-3xl text-base sm:text-xl md:text-2xl leading-relaxed text-white/95 mb-6 sm:mb-7">
+              <h2 className="max-w-3xl text-base sm:text-xl md:text-2xl leading-relaxed text-white/95 mb-4 sm:mb-6">
                 Individueller Trainingsplan im Radsport & persönliches 1:1-Coaching für Rennrad, Gravel, XC-MTB und Ultracycling.
               </h2>
 
@@ -424,7 +429,7 @@ const coachingPackages = [
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="w-full sm:w-auto text-lg sm:text-2xl py-5 px-6 sm:py-9 sm:px-14 h-auto whitespace-normal sm:whitespace-nowrap leading-snug shadow-xl shadow-black/30 transform sm:hover:scale-105 transition-all duration-200"
+                  className="w-full sm:w-auto text-lg sm:text-2xl md:text-3xl px-6 sm:px-14 py-3 sm:py-6 xl:py-9 h-auto whitespace-normal sm:whitespace-nowrap leading-snug shadow-xl shadow-black/30 transform sm:hover:scale-105 transition-all duration-200"
                 >
                   <span>Kostenloses Erstgespräch vereinbaren</span>
                   <ArrowRight className="ml-2 h-5 w-5 sm:h-8 sm:w-8 shrink-0" />
@@ -910,7 +915,7 @@ const coachingPackages = [
           </div>
         </section>
 
-        <SiteFooter showEmail />
+        <SiteFooter />
       </main>
     </div>
   );

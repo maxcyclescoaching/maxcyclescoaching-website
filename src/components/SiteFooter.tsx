@@ -2,7 +2,7 @@ type SiteFooterProps = {
   showEmail?: boolean;
 };
 
-export const SiteFooter = ({ showEmail = false }: SiteFooterProps) => {
+export const SiteFooter = ({ showEmail = true }: SiteFooterProps) => {
   const currentYear = new Date().getFullYear();
 
   return (

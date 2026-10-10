@@ -5,7 +5,7 @@ const Agb = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <Navbar />
-      <main className="flex-grow pt-20 pb-16">
+      <main className="flex-grow pt-8 pb-12 sm:py-12">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-primary mb-8">Allgemeine Geschäftsbedingungen (AGB)</h1>
 
@@ -86,7 +86,7 @@ const Agb = () => {
         </div>
       </main>
 
-      <SiteFooter showEmail />
+      <SiteFooter />
     </div>
   );
 };

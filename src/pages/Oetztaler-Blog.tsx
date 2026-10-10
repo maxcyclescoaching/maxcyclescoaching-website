@@ -997,7 +997,7 @@ const OetztalerBlog = () => {
         servicesHref="/#services"
       />
 
-      <SiteFooter showEmail />
+      <SiteFooter />
 
     </div>
   );

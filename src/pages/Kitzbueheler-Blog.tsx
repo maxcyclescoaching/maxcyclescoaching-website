@@ -1059,7 +1059,7 @@ const KitzbuehelerBlog = () => {
         servicesHref="/#services"
       />
 
-      <SiteFooter showEmail />
+      <SiteFooter />
 
     </div>
   );

@@ -127,7 +127,7 @@ const UeberMich = () => {
       <Navbar />
 
       <main className="flex-grow">
-        <section className="pt-24 pb-14 sm:pt-32 sm:pb-20" aria-label="Über mich Inhalte">
+        <section className="pt-8 pb-12 sm:py-12" aria-label="Über mich Inhalte">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] gap-10 lg:gap-20 items-start">
               <figure className="relative order-2 lg:order-1">
