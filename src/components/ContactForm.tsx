@@ -52,7 +52,7 @@ export const ContactForm = () => {
 
       toast({
         title: "Erfolgreich!",
-        description: "Vielen Dank für deine Nachricht. Wir werden uns bald bei dir melden.",
+        description: "Vielen Dank für deine Nachricht. Ich melde mich in der Regel innerhalb der von 12h bei dir.",
       });
       
       form.reset();
@@ -129,7 +129,7 @@ export const ContactForm = () => {
                 <FormLabel>Nachricht</FormLabel>
                 <FormControl>
                   <Textarea 
-                    placeholder="Deine Nachricht" 
+                    placeholder="Welche Trainingsziele hast du im Blick? Ein paar kurze Sätze reichen völlig aus."
                     className="min-h-[150px]"
                     {...field} 
                   />
@@ -152,7 +152,7 @@ export const ContactForm = () => {
               </>
             ) : (
               <>
-                Nachricht senden <ArrowRight className="ml-1 w-6 h-6" />
+                Unverbindlich anfragen <ArrowRight className="ml-1 w-6 h-6" />
               </>
             )}
           </Button>

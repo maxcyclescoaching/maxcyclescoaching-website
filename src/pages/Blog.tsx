@@ -15,8 +15,8 @@ const Blog = () => {
 
       <main className="flex-grow">
         {/* Hero */}
-        <section className="bg-primary pt-24 pb-12 sm:pt-28 sm:pb-16">
-          <div className="max-w-5xl mx-auto px-4 text-center text-white">
+        <section className="bg-accent pt-8 pb-12 sm:py-12">
+          <div className="max-w-5xl mx-auto px-4 text-center text-primary">
             <h1 className="text-3xl sm:text-5xl font-bold mb-4">Blog</h1>
             <p className="text-lg sm:text-xl max-w-2xl mx-auto opacity-90">
               Trainingstipps, Rennanalysen, Pacing-Strategien und mehr – alles

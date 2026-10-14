@@ -6,7 +6,7 @@ const Übersetzungsrechner = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <Navbar />
-      <main className="flex-grow pt-24 pb-20 px-4">
+      <main className="flex-grow pt-8 pb-12 sm:py-12 px-4">
         <div className="max-w-4xl mx-auto text-center mb-10">
           <h1 className="text-4xl font-bold text-primary mb-4">Übersetzungsrechner / Ritzelrechner</h1>
           <p className="text-gray-600">
@@ -17,7 +17,7 @@ const Übersetzungsrechner = () => {
         <GearCalculator />
       </main>
 
-      <SiteFooter showEmail />
+      <SiteFooter />
     </div>
   );
 };

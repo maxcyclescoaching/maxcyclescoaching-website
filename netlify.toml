@@ -4,3 +4,18 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+[dev]
+  targetPort = 8080
+
+[[redirects]]
+  from = "/services"
+  to = "/#services"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact"
+  to = "/#contact"
+  status = 301
+  force = true

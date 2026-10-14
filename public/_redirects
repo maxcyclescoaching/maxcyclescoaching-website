@@ -1,3 +1,6 @@
 https://www.maxcyclescoaching.de/* https://maxcyclescoaching.de/:splat 301!
 https://maxcyclescoaching.netlify.app/* https://maxcyclescoaching.de/:splat 301!
 /tools/%C3%BCbersetzungsrechner /tools/uebersetzungsrechner 301
+/coaching/triathlon / 301
+/coaching/laufen / 301
+/coaching/radsport / 301
